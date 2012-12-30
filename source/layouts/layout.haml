@@ -1,0 +1,96 @@
+<!doctype html>
+
+%html
+  %head
+    %title= data.page.title || "Cappuccino Web Framework - Build Desktop Class Applications in Objective-J and JavaScript"
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %link{:href => "css/main.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %a.scrolltop{:href => "#"}
+      %span up
+
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand.scroller{"data-section" => "body", :href => "index.html"}
+            %img{:alt => "logo", :src => "/img/cappuccino-website-logo.png"}/
+          .nav-collapse.collapse
+            %ul.nav.pull-right
+              %li
+                %a.scroller{"data-section" => "#features", :href => "/"} Features
+              %li
+                %a.scroller{"data-section" => "#download", :href => "/"} Download
+              %li
+                %a.scroller{"data-section" => "#learn", :href => "/"} Learn
+              %li
+                %a{:href => "http://github.com/cappuccino/cappuccino"} Contribute
+              %li
+                %a{:href => "/blog.html"} Blog
+
+    = yield
+
+    #footer
+      .container
+        .row
+          .span6
+            %h3 From the Blog
+            .blog_post
+              .row
+                .span2
+                  %a{:href => "blog.html"}
+                    %img.img-circle{:alt => "post image", :src => "img/pic_blog.png"}/
+                .span4
+                  %a.title{:href => "blog.html"}
+                    Cappuccino 0.9.6
+                  .intro
+                    Cappuccino 0.9.6 introduces more than 100 new features and 400 bug fixes.
+                  .date
+                    December 31. 2012
+          .span6.links
+            %h3 Links
+            .row
+              .span2
+                %h4 Get Started
+                %a
+                  Features
+                %a
+                  Tutorials
+                %a
+                  Download
+              .span2
+                %h4 Contribute
+                %a
+                  Bug reports
+                %a
+                  Source code
+                %a
+                  Wiki
+              .span2
+                %h4 Get Answers
+                %a
+                  Discuss
+                %a
+                  Blog
+                %a
+                  Mailing list
+                %a
+                  IRC Channel
+                %a
+                  FAQ
+
+        %hr
+          .row.copyright
+            .span5
+              %h3 Social
+              %a.social.tw{:href => "https://twitter.com/cappuccino"}
+                %i.i_twitter
+            .span2.offset5.copy
+              %p Copyright &copy; 2012 - Cappuccino Project
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    %script{:src => "js/theme.js"}

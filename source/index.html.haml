@@ -1,0 +1,125 @@
+#hero
+  .container
+    .row.animated.fadeInDown
+      .span12
+        #myCarousel.carousel.slide
+          .carousel-inner
+            .active.item.slide1
+              .row
+                .offset1.span4
+                  %img{:alt => "slide1", :src => "img/cappuccino-icon.png", :style => "width: 280px; margin: auto;"}
+                .span4
+                  %h1
+                    Modern App Development for the Web
+                  %p
+                    Cappuccino is a tightly integrated framework which makes it easy to create advanced web apps. With just a few lines of code you can have an app built with full undo and redo, truly amazing table views, drag and drop and every modern UI appearance and behaviour you might expect on the desktop.
+                  %a.scroller.btn.btn-success.btn-large{"data-section" => "#download", :href => "/"}
+                    Download Cappuccino
+
+            .item.slide2
+              .row
+                .span4.animated.fadeInUpBig
+                  %h1 Write an App, not a Document
+                  %p
+                    HTML and CSS are great technologies for creating documents. Cappuccino is great for creating applications.
+                  %a.btn.btn-success.btn-large.scroller{"data-section" => "#features", :href => "/"}
+                    Learn More
+                .span6.animated.fadeInDownBig
+                  %img{:alt => "slide2", :src => "img/slide2.png"}
+          %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} &lsaquo;
+          %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} &rsaquo;
+#intro
+  .container
+    %h1
+      Cappuccino is an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
+/ features
+#features
+  .container
+    / header
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span Features
+        %hr.right.visible-desktop
+    / feature list
+    .row
+      .span4.feature
+        %img.thumb{:alt => "Objective-J code", :src => "img/feature-objective-j.jpg"}
+        %h3
+          %img{:alt => "Lightning", :src => "img/lightning.png"}
+          Objective-J Language
+        %p.description
+          Objective-J is a powerful object-oriented language which compiles to run in the browser. Because Objective-J is a superset of JavaScript, it's easy to mix and match. Objective-J extends JavaScript with traditional inheritance and Smalltalk/Objective-C style dynamic dispatch.
+        %a.btn.btn-default{:href => "#"} more
+      .span4.feature
+        %img.thumb{:alt => "Fish", :src => "img/feature-widgets.jpg"}/
+        %h3
+          %img{:alt => "Fish", :src => "img/fish.png"}
+          Stunning Controls
+        %p.description
+          Cappuccino's AppKit ships with a huge number of controls, each polished far beyond what's expected on the web. You can quickly build complex apps without reinventing the wheel every time you need a scrollable, sortable, virtual, auto-saves-column-settings table view.
+          <br/><br/><small>* Fish widget not actually included.</small>
+        %a.btn.btn-default{:href => "#"} more
+      .span4.feature
+        %img.thumb{:alt => "XcodeCapp Notification", :src => "img/feature-xcode-capp.png"}/
+        %h3
+          %img{:alt => "Paint brush", :src => "img/brush.png"}
+          Interface Builder
+        %p.description
+          If you have a Mac you can build your Cappuccino user interface in Xcode's Interface Builder, just like you would in Cocoa. Skip the tweak-coordinated-rebuild-test cycle and just place labels and buttons where you need them.
+        %a.btn.btn-default{:href => "#"} more
+#download
+  .container
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span
+          Download
+        %hr.right.visible-desktop
+    .row
+      .offset1.span3
+        %img{:alt => "Box", :src => "img/download-box.png"}
+      .offset1.span6
+        %h3 Latest Version: 0.9.5 (November 16, 2011)
+        %a.btn.btn-primary.btn-large.starter
+          %img{:alt => "Cloud", :src => "img/white-cloud.png"}
+          Starter Package
+
+    .row
+      .span12
+        %p
+          Beyond the starter pack, Cappuccino comes with a number of tools to make it easy to create new applications. With or without the starter pack, you can install all of Cappuccino and accompanying tools with the following command:
+        %pre
+          %code
+            curl https://raw.github.com/cappuccino/cappuccino/v0.9.5/bootstrap.sh >/tmp/cb.sh &amp;&amp; sh /tmp/cb.sh
+
+#learn
+  .container
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span
+          What Next?
+        %hr.right.visible-desktop
+    .row
+      %p
+        Your download includes a README file with a few quick tips on how to get started. We have a more elaborate
+        %a{:href=>"http://cappuccino.org/download/readme.php"} README available online.
+
+      %p
+        You'll also probably want to check out our
+        %a{:href=>"#"}
+          tutorials section.
+        The first one is designed specifically for figuring out what to do the very first time you download Cappuccino.
+
+    .row
+      %h3 Getting the Source
+
+      %p
+        If you'd like the full source, you can check it out from our GitHub repository, or clone it with this command:
+
+        %pre
+          %code
+            git clone git://github.com/cappuccino/cappuccino.git
+
+      %p
+        Learn more about
+        %a{:href=>"#"}
+          contributing.
