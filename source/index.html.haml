@@ -95,31 +95,103 @@
   .container
     %h2.section_header
       %hr.left.visible-desktop
-        %span
-          What Next?
-        %hr.right.visible-desktop
+      %span
+        What Next?
+      %hr.right.visible-desktop
     .row
-      %p
-        Your download includes a README file with a few quick tips on how to get started. We have a more elaborate
-        %a{:href=>"http://cappuccino.org/download/readme.php"} README available online.
+      .span12
+        %p
+          Your download includes a README file with a few quick tips on how to get started. We have a more elaborate
+          %a{:href=>"http://cappuccino.org/download/readme.php"} README available online.
 
-      %p
-        You'll also probably want to check out our
-        %a{:href=>"#"}
-          tutorials section.
-        The first one is designed specifically for figuring out what to do the very first time you download Cappuccino.
+        %p
+          You'll also probably want to check out our
+          %a{:href=>"#"}
+            tutorials section.
+          The first one is designed specifically for figuring out what to do the very first time you download Cappuccino.
 
     .row
-      %h3 Getting the Source
+      .span12
+        %h3 Getting the Source
 
-      %p
-        If you'd like the full source, you can check it out from our GitHub repository, or clone it with this command:
+        %p
+          If you'd like the full source, you can check it out from our GitHub repository, or clone it with this command:
 
-        %pre
-          %code
-            git clone git://github.com/cappuccino/cappuccino.git
+          %pre
+            %code
+              git clone git://github.com/cappuccino/cappuccino.git
 
-      %p
-        Learn more about
-        %a{:href=>"#"}
-          contributing.
+        %p
+          Learn more about
+          %a{:href=>"#"}
+            contributing.
+
+#buzz
+  .container
+    %h2.section_header
+      %hr.left.visible-desktop
+      %span
+        News
+      %hr.right.visible-desktop
+    .row
+      .span5
+        %h3 Highlights
+        .row
+          .buzz-piece
+            .span1
+              %img{:src=>"img/ars.png"}
+            .span4
+              %a{:href=>"http://arstechnica.com/journals/apple.ars/2008/06/26/cocoa-on-the-web-280-north-objective-j-and-cappuccino"}
+                %h4
+                  Cocoa on the web: 280 North, Objective-J, and Cappuccino
+
+              %p ...from what I have experienced using 280 Slides, a future with Cappuccino based-apps is a bright one.
+
+              %strong Chris Foresman, Ars Technica
+
+        .row
+          .buzz-piece
+            .span1
+              %img{:src=>"img/carsonified.png"}
+            .span4
+              %a{:href=>"http://thinkvitamin.com/web-apps/why-objective-j-cappuccino-and-sproutcore-are-completely-changing-the-web-app-industry"}
+                %h4
+                  Why Objective-J, Cappuccino and SproutCore are completely changing the web app industry
+
+              %p ...if you use Cappuccino, those apps will automatically look and behave like ... desktop apps - with zero learning curve on the developer's side. He or she can simply focus on building an kick ass app instead of trying to re-invent basic UI functionality every single time.
+
+              %strong Ryan Carson, Carsonified
+
+        .row
+          .buzz-piece
+            .span1
+              %img{:src=>"img/ajaxian.png"}
+            .span4
+              %a{:href=>"http://ajaxian.com/archives/an-interview-with-280-north-on-objective-j-and-cappuccino"}
+                %h4
+                  An interview with 280 North on Objective-J and Cappuccino
+
+              %p I can see the allure of Objective-J / Cappuccino for building desktop-like Web applications. It gives you a very high level abstraction over the browser. No more DOM. No more CSS layouts, which can be the bane of your existence for a complicated and dynamic layout.
+
+              %strong Dion Almaer, Ajaxian
+      .span6.offset1
+        %h3 From the Blog
+        .blog_post
+          .row
+            .span2
+              %a{:href => "blog.html"}
+                %img.img-circle{:alt => "post image", :src => "img/pic_blog.png"}/
+            .span4
+              %a.title{:href => "blog.html"}
+                %h4
+                  Cappuccino 0.9.6
+              .intro
+                Cappuccino 0.9.6 introduces more than 100 new features and 400 bug fixes.
+              .date
+                December 31. 2012
+
+
+
+
+
+
