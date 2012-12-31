@@ -78,10 +78,23 @@
       .offset1.span3
         %img{:alt => "Box", :src => "img/download-box.png"}
       .offset1.span6
-        %h3 Latest Version: 0.9.5 (November 16, 2011)
-        %a.btn.btn-primary.btn-large.starter
-          %img{:alt => "Cloud", :src => "img/white-cloud.png"}
-          Starter Package
+        .row
+          .span6
+            %h3 Latest Version: 0.9.5 (November 16, 2011)
+        .row
+          .span6
+            %a.btn.btn-primary.btn-large.starter{:style=>'margin-right: 20px;'}
+              %img{:alt => "Cloud", :src => "img/white-cloud.png"}
+              Starter Package
+        .row
+          .span6
+            %ul.download-links
+              %li
+                %a{:href=>"https://github.com/cappuccino/cappuccino/commits/v0.9.5"}
+                  Source Code
+              %li
+                %a{:href=>"/downloads.html"}
+                  Older Versions
 
     .row
       .span12

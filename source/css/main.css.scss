@@ -946,19 +946,32 @@ i {
   }
 }
 
-#download .starter {
-  margin-top: 2em;
-  margin-bottom: 3em;
-  line-height: 15px;
-  img {
-    margin-top: -2px;
-    margin-right: 10px;
+#download {
+  .starter {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 15px;
+    img {
+      margin-top: -2px;
+      margin-right: 10px;
+    }
   }
+
+  ul {
+    margin: 0;
+  }
+  ul.download-links li {
+    display: inline;
+    margin-right: 1em;
+
+  }
+
+  pre {
+    clear: both;
+  }
+
 }
 
-#download pre {
-  clear: both;
-}
 
 #buzz {
   .buzz-piece {
