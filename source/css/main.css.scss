@@ -220,14 +220,6 @@ body {
   }
   .carousel-inner .item {
     min-height: 280px;
-
-    img {
-      max-height: 349px;
-    }
-    &.slide3 img {
-      display: block;
-      margin: 0 auto;
-    }
   }
   .item {
     h1 {
@@ -551,47 +543,13 @@ body {
   .section_header small {
     display: inline-block;
   }
-  #pricing .price_wrapper {
-    &.lite {
-      float: right;
-      right: -30px;
-    }
-    &.standard {
-      left: -30px;
+
+  #hero .carousel-inner .item {
+    &.slide2 img {
+      margin-top: 0px !important;
     }
   }
-  #hero {
-    .carousel-inner .item {
-      &.slide1 {
-        .span6 img {
-          margin-left: 15px;
-        }
-        .span4 {
-          padding-left: 30px;
-        }
-      }
-      &.slide2 .span6 img {
-        margin-left: 30px;
-      }
-    }
-    .item {
-      h1 {
-        font-size: 30px;
-        margin-top: 40px;
-        margin-left: 20px;
-      }
-      p {
-        font-size: 16px;
-        line-height: 24px;
-        margin-left: 20px;
-      }
-      .btn {
-        margin-top: 25px;
-        margin-left: 20px;
-        font-size: 18px;
-      }
-    }
-  }
+
   footer .contact_us {
     input[type="text"], textarea {
       width: 270px;
@@ -612,7 +570,15 @@ body {
   }
   #hero .carousel-inner .item {
     padding: 0px 70px;
+    &.slide1 img {
+      margin-top: 0px;
+    }
+
+    &.slide2 img {
+      margin-top: 40px;
+    }
   }
+
   .navbar .nav .btn-header {
     background: #414A57;
     background: -moz-linear-gradient(top, #414a57 0%, #292f38 100%);
@@ -671,8 +637,12 @@ body {
       font-size: 18px;
       line-height: 18px;
     }
-    .carousel-inner .item.slide2 img {
+    .carousel-inner .item.slide1 img {
       margin-top: 20px;
+    }
+
+    .carousel-inner .item.slide2 img {
+      margin-top: 80px;
     }
   }
   #testimonials .phrases_wrapper .phrase .pic .position {
@@ -734,7 +704,7 @@ body {
       }
     }
     .item .span4 {
-      margin-left: 50px;
+      margin-left: 80px;
     }
   }
 }
@@ -751,16 +721,17 @@ body {
     height: auto;
     .carousel-inner .item {
       padding: 0px 70px;
-    }
-    .item img {
-      /*display: none;*/
-      width: 240px;
-      display: block;
-      margin: 0 auto;
-    }
-    .carousel-inner .item .btn {
-      font-size: 13px;
-      padding: 7px 10px;
+
+      img, &.slide1 img, &.slide2 img {
+        width: 240px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .btn {
+        font-size: 13px;
+        padding: 7px 10px;
+      }
     }
   }
   #footer {
