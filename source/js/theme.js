@@ -24,6 +24,11 @@ $(function () {
     // scroll navigation functionality
     $('.scroller').click(function(){
     	var section = $($(this).data("section"));
+
+        // Just follow the regular link if the section is not on the current page.
+        if (!section.length)
+            return true;
+
     	var top = section.offset().top - 32;
         $("html, body").animate({ scrollTop: top }, 700);
         return false;
