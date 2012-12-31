@@ -1,0 +1,15 @@
+- wrap_layout :layout do
+  #blog_wrapper.blog_post
+    .container
+      .row
+        .span8
+          %h1.header
+            = current_article.title
+          .post_content
+            = yield
+            - if current_article.data.author
+              .author= current_article.data.author
+            - if current_article.date
+              .date= current_article.date.strftime('%b %d, %Y')
+
+        = partial :blog_sidebar

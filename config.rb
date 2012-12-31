@@ -42,7 +42,7 @@ end
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -79,6 +79,13 @@ activate :deploy do |deploy|
   deploy.user = "wireadmin"
   deploy.host = "slevenbits.com"
   deploy.path = "/www/cappuccino-project.org/www/"
+end
+
+activate :blog do |blog|
+  blog.paginate = true
+  blog.prefix = "blog"
+  blog.permalink = "blog/:year/:month/:title.html"
+  blog.layout = "blog_post"
 end
 
 # Build-specific configuration

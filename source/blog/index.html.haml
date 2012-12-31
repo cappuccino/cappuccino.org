@@ -1,0 +1,37 @@
+---
+pageable: true
+layout: blog
+---
+
+%h1.header
+  Blog
+  %hr
+- blog.articles[0...10].each do |current_article|
+  .post
+    .row
+      .span3
+        %a{:href => current_article.url}
+          %img.main_pic{:src => current_article.data.image || "/img/1154865_61618748.jpeg"}
+      .span4.info
+        %a{:href => current_article.url}
+          %h3= current_article.title
+        %p= current_article.summary
+        .post_info
+          .date
+            = current_article.date.strftime('%b %d, %Y')
+    %a.btn{:href => current_article.url} Read
+
+.pagination
+  %ul
+    %li
+      %a{:href => "#"} Prev
+    %li
+      %a{:href => "#"} 1
+    %li
+      %a{:href => "#"} 2
+    %li
+      %a{:href => "#"} 3
+    %li
+      %a{:href => "#"} 4
+    %li
+      %a{:href => "#"} Next

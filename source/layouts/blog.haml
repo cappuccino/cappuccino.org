@@ -1,0 +1,11 @@
+---
+pageable: true
+---
+
+- wrap_layout :layout do
+  #blog_wrapper
+    .container
+      .row
+        .span8
+          = yield
+        = partial :blog_sidebar
