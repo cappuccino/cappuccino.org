@@ -4,9 +4,9 @@
   %head
     %title= data.page.title || "Cappuccino Web Framework - Build Desktop Class Applications in Objective-J and JavaScript"
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-    %link{:href => "css/main.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/css/main.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic", :rel => "stylesheet", :type => "text/css"}
-  %body
+  %body{:class => "folder-" + File.dirname(request.path).parameterize}
     %a.scrolltop{:href => "#"}
       %span up
 
@@ -17,7 +17,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand.scroller{"data-section" => "body", :href => "index.html"}
+          %a.brand{:href => "/"}
             %img{:alt => "logo", :src => "/img/cappuccino-website-logo.png"}/
           .nav-collapse.collapse
             %ul.nav.pull-right
@@ -26,7 +26,7 @@
               %li
                 %a.scroller{"data-section" => "#download", :href => "/"} Download
               %li
-                %a.scroller{"data-section" => "#learn", :href => "/"} Learn
+                %a{:href => "/learn/"} Learn
               %li
                 %a{:href => "http://github.com/cappuccino/cappuccino"} Contribute
               %li
@@ -78,5 +78,5 @@
             .span2.offset5.copy
               %p Copyright &copy; 2012 - Cappuccino Project
     %script{:src => "http://code.jquery.com/jquery-latest.js"}
-    %script{:src => "js/bootstrap.min.js"}
-    %script{:src => "js/theme.js"}
+    %script{:src => "/js/bootstrap.min.js"}
+    %script{:src => "/js/theme.js"}

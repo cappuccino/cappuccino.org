@@ -1,0 +1,46 @@
+- wrap_layout :layout do
+  - prev_topic = nil
+  - next_topic = nil
+  - current_topic = ["Unnamed Topic", "/"]
+
+  .container.learn
+    %h2.section_header
+      %hr.left.visible-desktop
+      %span Learn
+      %hr.right.visible-desktop
+
+    .row
+      .span3
+        %ul.nav.nav-tabs.nav-stacked
+          - data.learn.pages.each_with_index do |a_topic, i|
+            - if i == current_page.data.topic_index
+              - current_topic = a_topic
+            - if i + 1 == current_page.data.topic_index
+              - prev_topic = a_topic
+            - if i - 1 == current_page.data.topic_index
+              - next_topic = a_topic
+
+            %li{:class => i == current_page.data.topic_index ? "active" : nil}
+              %a{:href => "/learn/" + a_topic[1]}
+                = a_topic[0]
+
+      .span9.text-body
+        %h3
+          = current_topic[0]
+        = yield
+
+        .learn-nav
+          - if next_topic
+            %a.btn.btn-primary.pull-right{:href=>"/learn/" + next_topic[1]}
+              Continue to "
+              = next_topic[0]
+              "
+              %i.icon-arrow-right.icon-white
+
+          - if prev_topic
+            %a.btn.btn-standard{:href=>"/learn/" + prev_topic[1]}
+              %i.icon-arrow-left
+              Return to "
+              = prev_topic[0]
+              "
+

@@ -28,6 +28,10 @@
 #   page "/admin/*"
 # end
 
+with_layout :learn do
+  page "/learn/*"
+end
+
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
@@ -52,6 +56,23 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 
 set :images_dir, 'img'
+
+require "redcarpet"
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true,
+               :autolink => true,
+               :smartypants => true,
+               :tables => true,
+               :gh_blockcode => true
+
+require 'rack/codehighlighter'
+require "pygments"
+Pygments.start('/Users/siker/dev/pygments-main/')
+use Rack::Codehighlighter,
+  :pygments,
+  :element => "pre>code",
+  :pattern => /\A:::([-_+\w]+)\s*\n/,
+  :markdown => true
 
 activate :deploy do |deploy|
   deploy.method = :rsync

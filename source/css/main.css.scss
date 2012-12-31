@@ -7,7 +7,7 @@ html {
 
 body {
   position: relative;
-  padding-top: 69px;
+  padding-top: 105px;
   background: #dddce2 url(../img/content_bg.jpg) repeat left top;
   -webkit-font-smoothing: antialiased;
   font-family: 'Lato', sans-serif !important;
@@ -188,7 +188,7 @@ body {
 /* carousel section */
 
 #hero {
-  padding-top: 92px;
+  padding-top: 62px;
   background: #ffffff;
   /* Old browsers */
   background: -moz-linear-gradient(top, white 1%, #f9f9f9 100%);
@@ -988,6 +988,36 @@ i {
   }
 }
 
+body.folder-learn
+{
+  background: white;
+
+  .section_header hr {
+    border-bottom: 2px solid #eee;
+  }
+}
+
+.learn {
+  ul.nav {
+    li a {
+      background: white;
+    }
+    li.active a {
+      color: white;
+      background: #08C;
+    }
+  }
+
+  .text-body {
+    margin-top: -20px;
+  }
+
+  .learn-nav {
+    margin-top: 80px;
+  }
+}
+
+
 #footer .links {
   a {
     display: block;
@@ -997,4 +1027,7 @@ i {
     margin-top: 0;
   }
 }
+
+@import "pygments_style";
+
 
