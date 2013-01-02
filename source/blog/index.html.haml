@@ -25,13 +25,19 @@ layout: blog
 .pagination
   %ul
     %li{:class => prev_page ? "" : "disabled"}
-      %a{:href => prev_page ? prev_page.url : "#"} Prev
+      - if prev_page
+        %a{:href => prev_page.url} Prev
+      - else
+        %span Prev
     - (page_number - 2 ... page_number + 3).select{|i| i > 0 && i <= num_pages}.each do |i|
       - if i == page_number
-        %li.disabled
-          %a= i
+        %li.active
+          %span= i
       - else
         %li
           %a{:href => i > 0 ? "/blog/page/#{i}" : "/blog/"}= i
     %li{:class => next_page ? "" : "disabled"}
-      %a{:href => next_page ? next_page.url : "#"} Next
+      - if next_page
+        %a{:href => next_page.url} Next
+      - else
+        %span Next
