@@ -1,12 +1,13 @@
 ---
 pageable: true
+per_page: 10
 layout: blog
 ---
 
 %h1.header
   Blog
   %hr
-- blog.articles[0...10].each do |current_article|
+- page_articles.each do |current_article|
   .post
     .row
       .span3
@@ -23,15 +24,14 @@ layout: blog
 
 .pagination
   %ul
-    %li
-      %a{:href => "#"} Prev
-    %li
-      %a{:href => "#"} 1
-    %li
-      %a{:href => "#"} 2
-    %li
-      %a{:href => "#"} 3
-    %li
-      %a{:href => "#"} 4
-    %li
-      %a{:href => "#"} Next
+    %li{:class => prev_page ? "" : "disabled"}
+      %a{:href => prev_page ? prev_page.url : "#"} Prev
+    - (page_number - 2 ... page_number + 3).select{|i| i > 0 && i <= num_pages}.each do |i|
+      - if i == page_number
+        %li.disabled
+          %a= i
+      - else
+        %li
+          %a{:href => i > 0 ? "/blog/page/#{i}" : "/blog/"}= i
+    %li{:class => next_page ? "" : "disabled"}
+      %a{:href => next_page ? next_page.url : "#"} Next
