@@ -181,7 +181,7 @@
               %img{:src=>"img/ajaxian.png"}
             .span4
               %a{:href=>"http://ajaxian.com/archives/an-interview-with-280-north-on-objective-j-and-cappuccino"}
-                %h4
+                %h4.title
                   An interview with 280 North on Objective-J and Cappuccino
 
               %p I can see the allure of Objective-J / Cappuccino for building desktop-like Web applications. It gives you a very high level abstraction over the browser. No more DOM. No more CSS layouts, which can be the bane of your existence for a complicated and dynamic layout.
@@ -189,22 +189,13 @@
               %strong Dion Almaer, Ajaxian
       .span6.offset1
         %h3 From the Blog
-        .blog_post
-          .row
-            .span2
-              %a{:href => "blog.html"}
-                %img.img-circle{:alt => "post image", :src => "img/pic_blog.png"}/
-            .span4
-              %a.title{:href => "blog.html"}
-                %h4
-                  Cappuccino 0.9.6
-              .intro
-                Cappuccino 0.9.6 introduces more than 100 new features and 400 bug fixes.
-              .date
-                December 31. 2012
-
-
-
-
-
-
+        - blog.articles[0...3].each do |current_article|
+          .blog_post
+            .row
+              .span6.info
+                %a{:href => current_article.url}
+                  %h4.title= current_article.title
+                %p= current_article.summary
+                .post_info
+                  .date
+                    = current_article.date.strftime('%b %d, %Y')

@@ -1,31 +1,15 @@
 .span3.sidebar.offset1
-  %input.input-large.search-query{:placeholder => "Search", :type => "text"}
-  %h4.sidebar_header
-    Menu
-  %ul.sidebar_menu
-    %li
-      %a{:href => "#"} Suspendisse Semper Ipsum
+  %form#cse-search-box{:action => "http://google.com/cse"}
+    %input{:name => "cx", :type => "hidden", :value => "003886841673136914364:g4k5gxiukag"}/
+    %input{:name => "ie", :type => "hidden", :value => "UTF-8"}/
+    %input.input-large.search-query{:placeholder => "Search", :name => "q", :size => "31", :type => "text"}/
+    / %input.btn{:name => "sa", :type => "submit", :value => "Search"}/
+
   %h4.sidebar_header
     Recent posts
   %ul.recent_posts
-    %li
-      .row
-        .span1
-          %a{:href => "blog-post.html"}
-            %img.thumb{:alt => "thumb post", :src => "img/pic_blog.png"}/
-        .span2
-          %a.link{:href => "blog-post.html"} Suspendisse Semper Ipsum
-    %li
-      .row
-        .span1
-          %a{:href => "blog-post.html"}
-            %img.thumb{:alt => "thumb post", :src => "img/pic_blog.png"}/
-        .span2
-          %a.link{:href => "blog-post.html"} Maecenas Euismod Elit
-    %li
-      .row
-        .span1
-          %a{:href => "blog-post.html"}
-            %img.thumb{:alt => "thumb post", :src => "img/pic_blog.png"}/
-        .span2
-          %a.link{:href => "blog-post.html"} Suspendisse Semper Ipsum
+    - blog.articles[0...3].each do |current_article|
+      %li
+        .row
+          .span3
+            %a{:href => current_article.url}= current_article.title
