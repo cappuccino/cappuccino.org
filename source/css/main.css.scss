@@ -969,14 +969,26 @@ i {
   }
 }
 
-body.folder-learn
+body.folder-learn, body.folder-blog
 {
   background: white;
 
   .section_header hr {
     border-bottom: 2px solid #eee;
   }
+  .blog_post .post_content {
+    border-bottom: 1px solid #C0C1C3;
+    box-shadow: none;
+  }
 }
+
+// While invidual blog pages have a white background, due to the body.folder-blog above, the main /blog/index.html has the normal
+// site background.
+body.file-index-html.folder-blog
+{
+  background: #dddce2 url(../img/content_bg.jpg) repeat left top;
+}
+
 
 .learn {
   ul.nav {
