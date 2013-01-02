@@ -1,0 +1,37 @@
+---
+title: Web Pages and Web Programs
+author: ross
+author_email: ross@280north.com
+wordpress_id: 100
+wordpress_url: http://cappuccino.org/discuss/?p=100
+date: '2008-10-21'
+categories:
+- Cappuccino
+tags: []
+---
+
+
+One of the best practices in modern web design is the concept of graceful degradation (or, if you prefer, progressive enhancement). The basic idea is that when a feature or section on your web page is not compatible with a particular browser, a simpler or alternate version should appear in its place. In other words, assume nothing will work, and then layer on additional functionality when its available. The same principle applies to users who have disabled Javascript; they should still get something that works.
+
+This principle makes a lot of sense for web pages, but it breaks down when considering web programs. To understand why, we need to look at the difference between the two. Web pages are fundamentally about displaying information. The base interaction mechanism on a web page is the hyperlink, which links relevant pieces of information together and ultimately enabled "actions" to be taken on the user's behalf. 
+
+What, then, is a web program? In contrast to a web page, a program is essentially a set of instructions to be executed by a computer. The most interesting programs (at least for our purposes) are the ones that run these instructions in response to a user's action, e.g. clicking the mouse, or typing on the keyboard. The important bit is the ability to perform arbitrary commands, and for that we need a programming language.
+
+In the computer science world, programming languages are generally talked about as being "turing complete". At the most basic level, this principle means that although each programming language may work in its own way, they can all describe exactly the same set of programs -- in fact, they can all express every task a machine can be instructed to perform. Languages that are not turing complete are not programming languages because they can only describe some (usually small) subset of possible tasks.
+
+Why is this important? Because HTML and CSS, the languages of the web, or not turing complete. They can not be used to write programs. Javascript, on the other hand, is a full fledged programming language, and it's the reason that web programs are possible.
+
+We already decided that web pages should work when Javascript is turned off, but when it comes to web programs, is that even possible? After all, there are a limited number of things you can accomplish without the power of a programming language. Until recently, most applications targeting the web were built to run programs on a remote web-server, and then those programs were triggered when users visited a particular link. 
+
+This is a pretty good solution for a large set of problems, but it won't work for all types of applications. Some programs won't work with this traditional model, they need to run completely in the web browser. This means they cannot possibly work when Javascript is turned off. These are what I mean by web programs.
+
+None of this is new information, nor is any of it controversial. It's obvious that web programs have a fundamentally different set of requirements from web pages, and yet for some reason, developers are using the same set of tools to build both. This is one of the reasons we developed Cappuccino.
+
+Cappuccino represents a significant shift in attitudes toward web application development. It was designed specifically and exclusively for writing web programs. None of Cappuccino will work in an environment without Javascript. After all, what use would a program like 280 Slides be without its interactive behavior? The program itself doesn't have any data to display, so there is nothing to degrade to. 
+
+This design decision has encouraged us to make decisions that might otherwise be unwise. Most importantly, it lets us focus on the core problems of building a complex application, and ignore the problems of building a web page. From 10,000 feet, applications are mostly the same. With cappuccino, developers don't need to work against a model that was designed for displaying static documents. Instead, they get to focus on the close up aspects of their particular application.
+
+There's no doubt that web pages are an important part of the web, and will continue to be so in the future. Similarly, the toolset that has been developed over the years around the problems of building a web page will continue to be useful. But thanks to increasingly powerful browser and pervasive broadband Internet access, web programs will be an increasingly important part of the web too. I sincerely hope that Cappuccino will play a role in advancing this new and exciting aspect of the web.
+
+
+

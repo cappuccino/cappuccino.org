@@ -1,0 +1,63 @@
+---
+title: Events
+author: admin
+author_email: ross@280north.com
+wordpress_id: 9
+wordpress_url: http://staging.getcappuccino.org/discuss/?page_id=9
+date: '2008-07-21'
+categories:
+- Uncategorized
+tags: []
+---
+
+
+Interested in having an event? [Let us know](mailto:developers@280north.com), and we'll list it here.   
+
+### Upcoming Events:
+
+### [Kings of Code](http://www.kingsofcode.nl/)
+
+* Speaking!
+* June 29-30, 2009
+* Tuschinski, Amsterdam
+
+### [Future Ruby](http://futureruby.com/)
+
+* Speaking!
+* July 10-12, 2009
+* Toronto, Ontario
+
+### [FOWA London](http://events.carsonified.com/fowa/2009/london)
+
+* Speaking!
+* September 30-October 2, 2009
+* London, UK
+
+### Past Events:
+
+### [Web Directions North](http://north.webdirections.org/)
+
+* Teaching!
+* February 2-7, 2008
+* Denver, Colorado
+* Discount Code: **WDN09RB**
+
+### [Future of Web Apps London 2008](http://futureofwebapps.com/)
+
+* Speaking!
+* October 8-10, 2008
+* London, England
+
+### [JAX Conference 08](http://jax-conf.com/)
+
+* Speaking!
+* October 5-9, 2008
+* San Jose, CA
+
+### [C4[2]](http://rentzsch.com/c4/twoOpen/)
+
+* September 5-7, 2008
+* Chicago, IL
+
+
+

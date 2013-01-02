@@ -1,0 +1,64 @@
+---
+title: Cappuccino 0.9
+author: me1000
+author_email: rclu222@uky.edu
+wordpress_id: 993
+wordpress_url: http://cappuccino.org/discuss/?p=993
+date: '2011-02-23'
+categories:
+- Cappuccino
+- Update
+- Objective-J
+- Releases
+tags: []
+---
+
+
+We're really excited to announce the next major release of Cappuccino, Version 0.9. This massive release includes several killer new components, exciting new features for existing components, and of course a number of bug fixes. Here's a brief overview of some of the compelling things you'll find in Cappuccino 0.9:   
+
+### Bindings
+
+ One of the most exciting features of this release is full Key Value Bindings support. Team members&nbsp;[Klaas Pieter](http://github.com/klaaspieter),&nbsp;[Alexander](http://github.com/aljungberg),&nbsp;[Ross](http://github.com/boucher), and of course&nbsp;[many members of the community](https://github.com/280north/cappuccino/contributors) have put a tremendous amount of work into getting bindings ready for this release.&nbsp;With support for most major components, CPObjectController, CPArrayController, and undo/redo, bindings are already a killer feature. But we've gone one step beyond that and included support for bindings in nib2cib! So not only can you build your Cappuccino interface in Interface Builder, but you can now configure interface bindings in it as well.   
+
+### CPTableView and CPOutlineView
+
+ We were incredibly excited to introduce table views&mdash;one of the most important and versatile components in any widget set&mdash;in our 0.8 release. In 0.9, we've matured the table view to production quality and added its supplemental component, the outline view. CPOutlineView lets you build tables that provide hierarchical data and it inherits from CPTableView, so it already benefits from all the additional work that has gone into the table view.
+
+&nbsp;   
+
+![CPOutlineView](http://cappuccino.org/discuss/wp-content/uploads/2011/02/Screen-shot-2011-02-23-at-12.00.06-PM1.png)CPOutlineView
+
+ Table views now support bindings, group rows, inline editing, column reordering and resizing, and a whole slew of other features. Perhaps the most requested feature that is now supported: variable row heights.
+
+&nbsp;   
+
+![CPTableView Variable Row Heights in CappuTweetie](http://cappuccino.org/discuss/wp-content/uploads/2011/02/variable-row-heights1.png)CPTableView Variable Row Heights in an upcoming Cappuccino demo app
+
+ One of the most important aspects of our table view is performance; we have been very careful not to sacrifice speed for any of these new features. CPTableView will still scroll like butter, even with hundreds of thousands of rows.   
+
+### New Components
+
+ This release also introduces several new features to Cappuccino. You'll find more controls from Cocoa and some new additions specific to Cappuccino. While there are too many to mention them all here, here are some notable additions:   
+
+* **CPAlert**: Totally rewritten for ease of use and featuring a new UI &nbsp;designed by [Sofa](http://madebysofa.com/).
+* **CPBrowser**: We're shipping a great implementation of CPBrowser with this release of Cappuccino. CPBrowser provides columnar layout for displaying hierarchical data. This is very similar to the column view in Mac OS X's Finder.
+* **CPCursor**: A simple API for changing the user's cursor. The class supports a number of cursors from the start or allows you to load your own images.
+* **CPPredicate**: The CPPredicate school of classes gives you a very powerful way to filter through your data. A future release may include robust controls for users to visually edit predicates.
+* **CPStepper**: A control that allows users to incrementally step through values.
+* **CPTokenField**: A powerful text field subclass with support for autocomplete, CPTokenField allows you to build unique token managers, like the address fields in Mac OS X's Mail.app.
+* **NativeHost**_:_ We announced [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/) a few months ago, but this is the first time we've included it with a release of Cappuccino. NativeHost lets you build your Cappuccino application for desktop platforms and distribute it like any other desktop app. Support for Mac OS X is currently included, with Windows and Linux support coming soon.
+
+[](http://cappuccino.org/discuss/wp-content/uploads/2011/02/CPAlert.png)![](http://cappuccino.org/discuss/wp-content/uploads/2011/02/CPAlert1.png)CPAlert
+
+### The Future
+
+ We're extremely proud of this release and all the time and work that has gone into it. We couldn't have made it to this point this without all our contributors (67 and counting!), and a huge thank you goes out to everyone involved. The core team has grown considerably as well, now composed of 7 team members. We also want to thank everyone who has battle hardened this release through rigorous testing and feedback.
+
+But what's next? We have a ton of updates in the pipeline, and the master branch is already far ahead of 0.9. Cappuccino has been open source for over 2 years now, and it has been an amazing ride. The framework has vastly matured and a lot of people would have already slapped the 1.0 sticker on it. However, we've had a concrete goal of quality and completion in mind from the beginning, and can finally see the light at the end of the tunnel. Stay tuned in the upcoming weeks as we discuss our final roadmap toward Cappuccino 1.0!
+
+**-Randy**
+
+You can find a full list of changes&nbsp;[here](http://cappuccino.org/files/v0.9.0-changelog.txt).
+
+
+

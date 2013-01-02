@@ -1,0 +1,97 @@
+---
+title: Cappuccino 0.9.5
+author: Alexander Ljungberg
+author_email: aljungberg@slevenbits.com
+wordpress_id: 1210
+wordpress_url: http://cappuccino.org/discuss/?p=1210
+date: '2011-11-16'
+categories:
+- Cappuccino
+- Update
+- Objective-J
+- Releases
+tags: []
+---
+
+
+Today we are extremely excited to announce Cappuccino 0.9.5, featuring over 90 new features and improvements in addition to numerous bug fixes. Here are some of the new features we think you'll really like.   
+
+### Modern scrollbars
+
+ Cappuccino now features new scrollbars which fade away automatically when not in use, giving more space for the content of your scroll views. If the user's browser does not support or use overlay scrollbars, Cappuccino automatically detects it and falls back to old style scrollbars.   
+
+[![](http://cappuccino.org/discuss/wp-content/uploads/2011/11/scrollview-overlay1.png)](http://cappuccino.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
+
+[![](http://cappuccino.org/discuss/wp-content/uploads/2011/11/scrollview-legacy.png)](http://cappuccino.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
+
+### Documentation Overhaul
+
+ The Cappuccino documentation has not only been extended but also visually refreshed. Many more classes and methods are now in the documentation and it's an easier read.   
+
+[![Cappuccino 0.9.5 documentation screenshot.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/doc-small.png)](http://cappuccino.org/learn/documentation/)
+
+### Popover Widget
+
+ A popover control is a small window that appears to 'come out' of a part of your user interface, and which remains attached to it until the user dismisses it. It's an easy way to ask for extra information when that 'create' button is clicked, or to show a list of individually selectable downloads when the 'downloads' button is clicked.   
+
+[![A CPPopover control.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/popovers.png)](http://cappuccino.org/learn/documentation/interface_c_p_popover.html)
+CPPopover originating from a button.
+
+### Level Indicator Widget
+
+ A level indicator shows a discrete graduation from 'empty' to 'full', useful for certain gauges like space usage. Level indicators can also be editable and can be placed inline in table cells.   
+
+[![A series of four level indicators showing various colour coded levels.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/CPLevelIndicator.png)](http://cappuccino.org/learn/documentation/interface_c_p_level_indicator.html)
+Level indicators, some in a 'warning' state.
+
+### Predicate Editor
+
+ Predicates are powerful tools for encoding 'search patterns', and combined with the power of Cappuccino's Array Controller class they make it incredibly easy to create user searchable tables or other views. The new predicate editor allows users to create their own saved searches with almost no work for the developer.   
+
+[![A user editable search combining various criteria.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/PredicateEditor.png)](http://cappuccino.org/learn/documentation/interface_c_p_predicate_editor.html)
+
+### Tooltips
+
+ A much requested feature has been tooltips. We didn't want to release something that wasn't as powerful and flexible as everything else in Cappuccino and we don't think we will disappoint. Cappuccino tooltips can be attached to any control, position themselves intelligently and support multiline tips.   
+
+[![A yellow tooltip next to a Click Me button with multiple lines of text.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/Tooltips.png)](http://cappuccino.org/discuss/wp-content/uploads/2011/11/Tooltips.png)
+
+### Stronger Interface Builder Integration
+
+ If you want to easily create and edit your user interfaces using a visual editor, you have the best tool in the market available for use with Cappuccino: Interface Builder. Every aspect of the nib2cib experience has improved, with better support for fonts, smarter realignment of widgets to match Cappuccino sizes and support for more controls than ever before. Best of all, the new XcodeCapp application automatically creates an Xcode project out of your Cappuccino project and lets you place UI components with ease.   
+
+[![XcodeCapp's menu.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/xcc2.png)](http://cappuccino.org/discuss/wp-content/uploads/2011/11/xcc2.png)
+
+### New Installer
+
+ The new bootstrap installer is much simpler to use and installs all the packages you will need by default.   
+
+[![Cappuccino's bootstrap.sh running in a terminal window.](http://cappuccino.org/discuss/wp-content/uploads/2011/11/installer-1.png)](http://cappuccino.org/discuss/wp-content/uploads/2011/11/installer-1.png)
+You know you want to.
+
+### Notable Improvements
+
+ There are too many improvements to list them all here but here are some highlights:   
+
+* **CPNumberFormatter** with CPNumberFormatterDecimalStyle.
+* More powerful **objjc CLI**.
+* **CPButton** continuous mode.
+* Keyboard navigation, improved submenu handling and auto validation in **CPMenu**s.
+* Support for **pattern fills** when drawing using CG.
+* Many new **bindings** features and optimisations, including CPNullPlaceholderBindingOption, CPContinuouslyUpdatesValueBindingOption and better object controllers.
+* **CPUserDefaultsController** which can be used to easily bind controls to user default keys in Interface Builder or elsewhere.
+* **CPColorWithImages** convenience function to quickly create a `CPColor` from single, 3-part or 9-part images.
+* Support for **autosaving** and collapsing views towards the right in **CPSplitViews**.
+
+ For the full list of changes, see the [Cappuccino 0.9.5 change log](https://gist.github.com/1370087).   
+
+### The Team
+
+ We're also happy to announce we've added [Klaas Pieter Annema](http://www.annema.me/),&nbsp;[Aparajita Fishman](https://github.com/aparajita) and [Antoine Mercadal](http://antoinemercadal.fr) to the core team. Their contributions to Cappuccino have been invaluable.
+
+_- The Cappuccino Core Developer Team_
+
+[Download Cappuccino](/download)
+
+
+

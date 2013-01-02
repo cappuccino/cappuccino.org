@@ -1,0 +1,36 @@
+---
+title: CappCon 2011
+author: me1000
+author_email: rclu222@uky.edu
+wordpress_id: 1134
+wordpress_url: http://cappuccino.org/discuss/?p=1134
+date: '2011-03-31'
+categories:
+- Cappuccino
+- Events
+- Conferences
+tags: []
+---
+
+
+Hey everybody,
+
+We're excited to announce the first ever full-blown conference dedicated   
+to Cappuccino: CappCon 2011.
+
+It&rsquo;ll be in San Francisco, June 11-12. That&rsquo;s the weekend after WWDC,   
+so for those of you coming for that, be sure to extend your stay by a   
+few nights.
+
+We will post more details soon, but we want to get that date out there so you don't miss it!
+
+It's going to be a lot of fun.
+
+Be sure to sign up for ticket information when it's posted on the official website here:[ http://cappcon.org](http://cappcon.org)
+
+If you have any quick questions you can ping [@cappuccino](http://twitter.com/cappuccino) on Twitter, or email Paul at paul@baumgart.us. And definitely get in touch if you think your company might be interested in sponsoring the conference.
+
+&nbsp;
+
+
+

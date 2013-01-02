@@ -84,7 +84,7 @@ end
 activate :blog do |blog|
   blog.paginate = true
   blog.prefix = "blog"
-  blog.permalink = "blog/:year/:month/:title.html"
+  blog.permalink = ":year/:month/:title.html"
   blog.layout = "blog_post"
 end
 
