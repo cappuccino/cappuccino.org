@@ -10,6 +10,10 @@
   %ul.recent_posts
     - blog.articles[0...5].each do |current_article|
       %li
-        .row
-          .span3
-            %a{:href => current_article.url}= current_article.title
+        %a{:href => current_article.url}= current_article.title
+  %h4.sidebar_header
+    Tags
+  %ul.tags
+    - blog.tags.each do |tag, articles|
+      %li
+        %a{:href => (tag_path tag)}= tag

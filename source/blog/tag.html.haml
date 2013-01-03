@@ -5,8 +5,9 @@ layout: blog
 ---
 
 %h1.header
-  Blog
-  %hr
+  Articles tagged
+  = '"' + @tag + '"'
+
 - page_articles.each do |current_article|
   .post
     .row

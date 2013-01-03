@@ -982,9 +982,9 @@ body.folder-learn, body.folder-blog
   }
 }
 
-// While invidual blog pages have a white background, due to the body.folder-blog above, the main /blog/index.html has the normal
-// site background.
-body.file-index-html.folder-blog
+// While invidual blog pages have a white background, due to the body.folder-blog above, we want the regular background for
+// index pages.
+body.file-index-html.folder-blog, body.folder-blog-tags
 {
   background: #dddce2 url(../img/content_bg.jpg) repeat left top;
 }

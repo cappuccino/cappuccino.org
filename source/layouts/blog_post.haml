@@ -7,9 +7,16 @@
             = current_article.title
           .post_content
             = yield
-            - if current_article.data.author
-              .author= current_article.data.author
-            - if current_article.date
-              .date= current_article.date.strftime('%b %d, %Y')
+            - if current_article.data.author && current_article.date
+              .author
+                Posted by
+                = current_article.data.author
+              .date
+                on
+                =current_article.date.strftime('%b %d, %Y') + "."
+            - unless current_article.tags.empty?
+              .tags
+                Tagged
+                = current_article.tags.map{|tag| link_to(tag, tag_path(tag))}.join(', ') + "."
 
         = partial :blog_sidebar

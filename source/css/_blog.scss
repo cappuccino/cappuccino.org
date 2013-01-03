@@ -16,14 +16,19 @@
       margin-bottom: 15px;
     }
     .author {
+      display: inline;
       margin-top: 45px;
       font-weight: bold;
       font-size: 13px;
     }
     .date {
-      font-size: 12px;
+      display: inline;
+      font-size: 13px;
       color: #666;
-      font-weight: bold;
+    }
+    .tags {
+      font-size: 13px;
+      color: #666;
     }
   }
   .comments {
@@ -156,7 +161,7 @@
         }
       }
     }
-    .recent_posts {
+    .recent_posts, .tags {
       list-style-type: none;
       margin-top: 30px;
       margin-left: 0px;
@@ -179,6 +184,11 @@
           text-decoration: underline;
         }
       }
+    }
+    .tags li {
+      display: inline;
+      margin-bottom: 5px;
+      margin-right: 10px;
     }
   }
 }

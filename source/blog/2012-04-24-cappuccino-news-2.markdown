@@ -5,10 +5,9 @@ author_email: aparajita@aparajitaworld.com
 wordpress_id: 1284
 wordpress_url: http://cappuccino.org/discuss/?p=1284
 date: '2012-04-24'
-categories:
+tags:
 - Cappuccino
-- Update
-tags: []
+- update
 ---
 
 
@@ -24,7 +23,7 @@ tags: []
 
 &ndash; Added a&nbsp;rhino-narwhal patch that can be applied to add JAVA_OPTS support when running Cappuccino utilities through rhino. &nbsp;(Alexander Ljungberg)
 
-&nbsp;   
+&nbsp;
 
 ### Changes/Fixes
 
@@ -40,7 +39,7 @@ tags: []
 
 &ndash; CPKeyedUnarchiver -decodeIntForKey, -decodeFloatForKey, and -decodeDoubleForKey now return 0 instead of nil, per Cocoa. (Aparajita Fishman)
 
-&nbsp;   
+&nbsp;
 
 ### Issues/Pull Requests
 
