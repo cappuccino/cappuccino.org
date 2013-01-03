@@ -1,0 +1,222 @@
+/* blog post */
+
+.blog_post {
+  .post_pic {
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 1px 1px #d0d0d0;
+    border-radius: 5px;
+  }
+  .post_content {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c0c1c3;
+    box-shadow: 0px 2px 1px 0px white;
+    p {
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+    .author {
+      margin-top: 45px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .date {
+      font-size: 12px;
+      color: #666;
+      font-weight: bold;
+    }
+  }
+  .comments {
+    margin-top: 40px;
+    .comment {
+      margin-bottom: 60px;
+      margin-top: 30px;
+      &.reply_to {
+        margin-top: -10px;
+      }
+      .author_pic {
+        max-width: 55px;
+        float: right;
+      }
+      .name {
+        font-weight: bold;
+      }
+      .reply {
+        color: #6D9748;
+        text-decoration: underline;
+        margin-left: 20px;
+      }
+      .date {
+        font-size: 12px;
+      }
+      .response {
+        margin-top: 10px;
+      }
+    }
+  }
+  .new_comment {
+    border-top: 1px solid #c0c1c3;
+    box-shadow: inset 0px 2px 1px 0px white;
+    padding-top: 30px;
+    form {
+      margin-top: 35px;
+      input[type="text"] {
+        height: 25px;
+        width: 100%;
+      }
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* new comment */
+
+/* blog index */
+
+#blog_wrapper {
+  margin: 50px 0px 100px 0px;
+  h1.header {
+    font-size: 31px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .header hr {
+    border-top: 1px solid #bfc0c4;
+    border-bottom: 2px solid white;
+    width: 82%;
+    float: right;
+    position: relative;
+    top: -36px;
+  }
+  .post {
+    background-color: #fff;
+    padding: 4px 10px 4px 4px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 40px;
+    .main_pic {
+      border: none;
+    }
+    .info {
+      a {
+        color: #87a46e;
+      }
+      h3 {
+        margin-top: 15px;
+      }
+    }
+    .post_info {
+      margin-top: 25px;
+      font-size: 13px;
+      .author {
+        font-weight: bold;
+      }
+    }
+    .btn {
+      font-weight: bold;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  .pagination {
+    text-align: right;
+    a {
+      color: #3F750A;
+    }
+  }
+  .sidebar {
+    .search-query {
+      margin-top: 20px;
+      height: 20px;
+    }
+    .sidebar_header {
+      margin-top: 50px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #bfc0c4;
+      box-shadow: 0px 2px 1px 0px white;
+    }
+    .sidebar_menu {
+      list-style-type: none;
+      margin-top: 30px;
+      margin-left: 0px;
+      li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        a {
+          color: #333;
+          &:hover {
+            color: #87a46e;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .recent_posts {
+      list-style-type: none;
+      margin-top: 30px;
+      margin-left: 0px;
+      li {
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+      .thumb {
+        border: 3px solid #fff;
+        box-shadow: 0px 0px 1px 1px #bdbdbd;
+      }
+      a {
+        &.link {
+          color: #333;
+          display: block;
+          margin-top: 10px;
+        }
+        &:hover {
+          color: #87a46e;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* sidebar */
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Landscape phones and down */
+@media (max-width: 480px) {}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #blog_wrapper {
+    .header hr {
+      width: 70%;
+    }
+    .post .main_pic {
+      display: block;
+      margin: 0 auto;
+    }
+    .sidebar .recent_posts .thumb {
+      max-width: 100px;
+    }
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (max-width: 979px) {}
+
+@media (min-width: 980px) {}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  #blog_wrapper .post .info {
+    width: 420px;
+  }
+}
