@@ -948,23 +948,25 @@ i {
     }
   }
 
-  .blog_post {
+  .post {
     padding-top: 2em;
 
-    h4.title {
-      margin-top: 0;
+    .span8 {
+      // Ahh perfectly alright.
+      width: 460px;
     }
-    .intro {
-      margin: 10px 0px;
-      font-size: 15px;
+
+    .info {
+      h3 {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 0px;
+      }
     }
     .date {
-      font-size: 13px;
-      color: #B7B9BD;
-    }
-    .img-circle {
-      float: left;
-      margin-right: 20px;
+      margin-top: -8px;
+      font-size: 12px;
+      color: #666;
     }
   }
 }

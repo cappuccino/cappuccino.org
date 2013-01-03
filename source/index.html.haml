@@ -190,12 +190,4 @@
       .span6.offset1
         %h3 From the Blog
         - blog.articles[0...3].each do |current_article|
-          .blog_post
-            .row
-              .span6.info
-                %a{:href => current_article.url}
-                  %h4.title= current_article.title
-                %p= current_article.summary
-                .post_info
-                  .date
-                    = current_article.date.strftime('%b %d, %Y')
+          = partial :blog_article_list_format, :locals => { :current_article => current_article }
