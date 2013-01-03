@@ -10,16 +10,15 @@ layout: blog
 - page_articles.each do |current_article|
   .post
     .row
-      .span3
-        %a{:href => current_article.url}
-          %img.main_pic{:src => current_article.data.image || "/img/1154865_61618748.jpeg"}
-      .span4.info
-        %a{:href => current_article.url}
-          %h3= current_article.title
-        %p= current_article.summary
-        .post_info
-          .date
-            = current_article.date.strftime('%b %d, %Y')
-    %a.btn{:href => current_article.url} Read
+      .span8
+        .info
+          %a{:href => current_article.url}
+            %h3= current_article.title
+          .post_info
+            .date
+              = current_article.date.strftime('%b %d, %Y')
+          %p= current_article.summary
+          %p
+            %a{:href => current_article.url} Read more...
 
 = partial :blog_pagination, :locals => { :prev_page => prev_page, :page_number => page_number, :num_pages => num_pages, :next_page => next_page }

@@ -107,19 +107,18 @@
       border: none;
     }
     .info {
+      margin: 15px;
       a {
         color: #87a46e;
       }
       h3 {
-        margin-top: 15px;
+        margin-top: 10px;
       }
     }
     .post_info {
-      margin-top: 25px;
-      font-size: 13px;
-      .author {
-        font-weight: bold;
-      }
+      margin-top: -15px;
+      font-size: 12px;
+      color: #666;
     }
     .btn {
       font-weight: bold;
@@ -226,7 +225,4 @@
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  #blog_wrapper .post .info {
-    width: 420px;
-  }
 }
