@@ -8,17 +8,6 @@ layout: blog
   Blog
   %hr
 - page_articles.each do |current_article|
-  .post
-    .row
-      .span8
-        .info
-          %a{:href => current_article.url}
-            %h3= current_article.title
-          .post_info
-            .date
-              = current_article.date.strftime('%b %d, %Y')
-          %p= current_article.summary
-          %p
-            %a{:href => current_article.url} Read more...
+  = partial :blog_article_list_format, :locals => { :current_article => current_article }
 
 = partial :blog_pagination, :locals => { :prev_page => prev_page, :page_number => page_number, :num_pages => num_pages, :next_page => next_page }

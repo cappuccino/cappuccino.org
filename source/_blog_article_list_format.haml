@@ -1,0 +1,12 @@
+.post
+  .row
+    .span8
+      .info
+        %a{:href => current_article.url}
+          %h3= current_article.title
+        .post_info
+          .date
+            = current_article.date.strftime('%b %d, %Y')
+        %p= current_article.summary
+        %p
+          %a{:href => current_article.url} Read more...
