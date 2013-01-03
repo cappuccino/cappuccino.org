@@ -5,13 +5,11 @@ author_email: francisco@280north.com
 wordpress_id: 660
 wordpress_url: http://cappuccino.org/discuss/?p=660
 date: '2010-04-28'
-categories:
-- Uncategorized
-tags: []
+tags:
+- tools
+- jake
+- rake
 ---
-
-
-[](/includes/tutorial.css)
 
 Now that we've [shipped Cappuccino 0.8](http://cappuccino.org/discuss/2010/04/07/cappuccino-0-8/), I wanted to take some time to describe in more detail what might be one of the most exciting new features our users may not even notice: [Jake](http://github.com/280north/jake). Jake is a new build tool built entirely in JavaScript that runs on top of the CommonJS standard. As its name suggests, it is based on the existing and already popular Rake tool and benefits from the same simplicity.
 
@@ -52,144 +50,90 @@ So with these tools in hand we set out to write [Jake](http://github.com/280nort
 
 Let's quickly take a look at how to create build tasks with Jake:
 
-
-
+	:::javascript
 	var task = require("jake").task;
-
-
 
 	task ("log", function()
 	{
-	print("hey there!");
+	    print("hey there!");
 	});
-
-
-
-
 
 That's all there is to it. You simply call the task function, give it a name, and a closure that contains task's instructions. If you want to set up a dependency, say on two other tasks, you can do so as well:
 
-
-
+	:::javascript
 	task ("log", ["task-one", "task-two"], function()
 	{
-	print("hey there!");
+	    print("hey there!");
 	});
-
-
 
 Now, log will first make sure to execute task-one and task-two before executing. If you've used Rake, this should look really familiar. Here is the same task in Rake for comparison:
 
-
-
+	:::javascript
 	task :log => [:task-one, :task-two] do
 	    echo "hey there!"
 	end
 
-
-
 Jake also includes a host of tools to make dealing with files super easy. This is how you would make sure to generate a new concatenated and compressed file every time you edit one of your original source files:
 
-
-
+	:::javascript
 	var shrinksafe = require("minify/shrinksafe"),
-	 read = require("file").read,
-	 write = require("file").write,
-	 filedir = require("jake").filedir,
-	 FileList = require("jake").FileList;
-
-
+	    read = require("file").read,
+	    write = require("file").write,
+	    filedir = require("jake").filedir,
+	    FileList = require("jake").FileList;
 
 	filedir ("build/compressed.js", new FileList("*.js"), function()
 	{
-	var result = "";
+	    var result = "";
 
+	    (new FileList("*.js")).forEach(function(filename)
+	    {
+	        result += shrinksafe.compress(read(filename));
+	    });
 
-
-
-
-	 (new FileList("*.js")).forEach(function(filename)
-	 {
-	 result += shrinksafe.compress(read(filename));
-	 });
-
-	write("build/compressed.js", result);
+	    write("build/compressed.js", result);
 	});
-
-
-
-
 
 So what we're doing here is creating a task for our "build/compressed.js" file. The filedir task is nice enough to create the intermediate "build" directory for us (if you don't want this behavior, you can use the file task instead). This task will only run any time one of the files in our project with the ".js" extension changes. So, if you don't change any code, this task is skipped. The FileList object takes globs and is iterable, so when this task is called, it simply iterates over each of these files, reads them, compresses them, and writes out the concatenated result. Pretty easy. The best part is that since CommonJS supports a bunch of compressors, its really easy to write a task that uses whichever one generates the smallest file size:
 
-
-
+	:::javascript
 	filedir ("build/compressed.js", new FileList("*.js"), function()
 	{
-	var smallest = null,
-	 compressors = ["minify/shrinksafe", "minify/closure-compiler"];
+	    var smallest = null,
+	        compressors = ["minify/shrinksafe", "minify/closure-compiler"];
 
+	    compressors.forEach(function(compressor)
+	    {
+	        var result = "";
 
+	        (new FileList("*.js")).forEach(function(filename)
+	        {
+	            result += require(compressor).compress(read(filename));
+	        });
 
-	 compressors.forEach(function(compressor)
-	 {
-	var result = "";
-
-
-
-
-
-	 (new FileList("*.js")).forEach(function(filename)
-	 {
-	 result += require(compressor).compress(read(filename));
-	 });
-
-	 if (!smallest || result.length smallest = result;
-	 });
-
-
-
-
+	        if (!smallest || result.length < smallest.length)
+	            smallest = result;
+	    });
 
 	    write("build/compressed.js", smallest);
 	});
-
-
-
-
 
 ### Already in use
 
 This isn't a toy, we are actively using this as our only build system in Cappuccino. That means you can check out some pretty sophisticated examples by taking a look at the [Cappuccino source code](http://github.com/280north/cappuccino/), or by talking to anyone who has shipped a Cappuccino project. Just ask to see their Jakefiles. If you already have a CommonJS platform installed, you can get jake by just using the tusk package manager:
 
-
-
 	tusk install jake
 
-
-
 If not, you can head on over to [narwhaljs.org](http://narwhaljs.org) and download narwhal to get started writing JavaScript on the server and command line. Alternatively, you can download the Cappuccino source code and run our bootstrap script, which not only installs narwhal for you, but also custom tailors your installation to use the fastest JavaScript engine available for your machine that narwhal supports (this means that if you're on a Mac you'll get the super fast JavaScriptCore engine instead of the quite slow default Rhino one):
-
-
 
 	$ git clone git://github.com/280north/cappuccino.git cappuccino
 	$ cd cappuccino
 	$ ./bootstrap.sh
 
-
-
 If you do this you'll also be able to checkout out some of the cool extensions to Jake specifically for Cappuccino projects. We've created the bundle, framework, and app tasks that completely put together your project for you (similar to the gem tasks in Rake). These tasks implement some pretty cool optimizations, like our [automagic image spriting](http://cappuccino.org/discuss/2009/11/11/just-one-file-with-cappuccino-0-8/). If you're having any trouble, feel free to jump in our [IRC room](irc://irc.freenode.net#cappuccino) so we can answer your questions or comments on how to get set up building your projects with jake.
 
 You can of course also [get the source code](http://github.com/280north/jake) as well and submit patches or [file bugs](http://github.com/280north/jake/issues):
 
-
-
 	$ git clone git://github.com/280north/jake.git
 
-
-
-
 Perhaps one of the coolest results of this is that Cappuccino is really now self-hosting: **the entire stack is finally JavaScript** and easily accessible for hacking.
-
-
-

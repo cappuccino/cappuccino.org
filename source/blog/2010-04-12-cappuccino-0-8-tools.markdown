@@ -5,12 +5,10 @@ author_email: tom@280north.com
 wordpress_id: 601
 wordpress_url: http://cappuccino.org/discuss/?p=601
 date: '2010-04-12'
-categories:
-- Cappuccino
-- Tools
-tags: []
+tags:
+- cappuccino
+- tool
 ---
-
 
 Cappuccino comes with a comprehensive set of tools for developing, debugging, optimizing, and deploying your Cappuccino applications. Those who have been following Cappuccino since the 0.7 release will notice some changes in the tools. The most important being that Cappuccino's tools are now written entirely in JavaScript and Objective-J.
 
@@ -23,6 +21,3 @@ We started working with the [Rhino](http://www.mozilla.org/rhino/) engine, since
 Another major change was the refactoring of the ["press"](http://wiki.github.com/280north/cappuccino/press) tool, which attempts to strip unnecessary files from your application bundle. As part of that refactoring we moved the "--flatten" feature, which inlines all code and files into one or more JavaScript files, into a separate tool, unsurprisingly called ["flatten"](http://wiki.github.com/280north/cappuccino/flatten). Flatten now supports splitting your application into multiple files which will be downloaded by the browser in parallel, via the "--split N" option.
 
 For more information on all of these tools, check out the [Tools](http://wiki.github.com/280north/cappuccino/Tools) wiki page.
-
-
-

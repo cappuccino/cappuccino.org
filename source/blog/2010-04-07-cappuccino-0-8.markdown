@@ -5,11 +5,10 @@ author_email: francisco@280north.com
 wordpress_id: 617
 wordpress_url: http://cappuccino.org/discuss/?p=617
 date: '2010-04-07'
-categories:
-- Uncategorized
-tags: []
+tags:
+- update
+- releases
 ---
-
 
 Cappuccino 0.8 is now available on the [downloads page](http://cappuccino.org/download). This release has a ton of new features and fixes, and I'd like to thank everyone in the community that meticulously checked their existing software against the Release Candidates in the last few weeks.
 
@@ -40,6 +39,3 @@ Although this isn't necessarily a feature in Cappuccino itself, a lot of our use
 And there's way more in there as well. We are incredibly proud of this release and think it makes Cappuccino more compelling than ever. We'll be at [JSConf](http://jsconf.us/2010/) showing some of this stuff off too, so if you're attending, stop by and say hi!
 
 - Francisco
-
-
-
