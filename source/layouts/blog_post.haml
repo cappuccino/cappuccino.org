@@ -19,4 +19,20 @@
                 Tagged
                 = current_article.tags.map{|tag| link_to(tag, tag_path(tag))}.join(', ') + "."
 
+          - prev_article = current_article.previous_article
+          - next_article = current_article.next_article
+          %ul.pager
+            - if prev_article
+              %li.previous
+                %a{ :rel => "prev", :href => prev_article.url } &larr; Previous Article
+            - else
+              %li.previous.disabled
+                %span &larr; Previous Article
+            - if next_article
+              %li.next
+                %a{ :rel => "next", :href => next_article.url } Next Article &rarr;
+            - else
+              %li.next.disabled
+                %span Next Article &rarr;
+
         = partial :blog_sidebar
