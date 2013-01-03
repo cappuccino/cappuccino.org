@@ -913,33 +913,6 @@ i {
   }
 }
 
-#download {
-  .starter {
-    margin-top: 2em;
-    margin-bottom: 1em;
-    line-height: 15px;
-    img {
-      margin-top: -2px;
-      margin-right: 10px;
-    }
-  }
-
-  ul {
-    margin: 0;
-  }
-  ul.download-links li {
-    display: inline;
-    margin-right: 1em;
-
-  }
-
-  pre {
-    clear: both;
-  }
-
-}
-
-
 #buzz {
   .buzz-piece {
     padding-top: 2em;
@@ -991,7 +964,6 @@ body.file-index-html.folder-blog, body.folder-blog-tags
   background: #dddce2 url(../img/content_bg.jpg) repeat left top;
 }
 
-
 .learn {
   ul.nav {
     li a {
@@ -1009,6 +981,53 @@ body.file-index-html.folder-blog, body.folder-blog-tags
 
   .learn-nav {
     margin-top: 80px;
+  }
+}
+
+#download {
+  .starter {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 15px;
+    img {
+      margin-top: -2px;
+      margin-right: 10px;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+  ul.download-links li {
+    display: inline;
+    margin-right: 1em;
+  }
+
+  pre {
+    clear: both;
+  }
+}
+
+#archive {
+  h6 {
+    display: inline;
+  }
+
+  table {
+    margin-top: 2em;
+    width: auto;
+    th {
+      vertical-align: middle;
+    }
+  }
+
+  a.btn, a.btn-primary {
+    min-width: 180px;
+    text-align: left;
+    margin-right: 10px;
+    i {
+      margin-top: 2px;
+    }
   }
 }
 

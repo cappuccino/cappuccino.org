@@ -34,7 +34,7 @@
       Cappuccino is an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
 / features
 #features
-  %a{:name=>'features'} &nbsp;
+  %a{:name=>'features'}
   .container
     %h2.section_header
       %hr.left.visible-desktop
@@ -66,78 +66,8 @@
         %p.description
           If you have a Mac you can build your Cappuccino user interface in Xcode's Interface Builder, just like you would in Cocoa. Skip the tweak-coordinated-rebuild-test cycle and just place labels and buttons where you need them. The XcodeCapp utility will do the rest.
         %a.btn.btn-default{:href => "#"} more
-#download
-  %a{:name=>'download'} &nbsp;
-  .container
-    %h2.section_header
-      %hr.left.visible-desktop
-        %span
-          Download
-        %hr.right.visible-desktop
-    .row
-      .offset1.span3
-        %img{:alt => "Box", :src => "img/download-box.png"}
-      .offset1.span6
-        .row
-          .span6
-            %h3 Latest Version: 0.9.5 (November 16, 2011)
-        .row
-          .span6
-            %a.btn.btn-primary.btn-large.starter{:style=>'margin-right: 20px;'}
-              %img{:alt => "Cloud", :src => "img/white-cloud.png"}
-              Starter Package
-        .row
-          .span6
-            %ul.download-links
-              %li
-                %a{:href=>"https://github.com/cappuccino/cappuccino/commits/v0.9.5"}
-                  Source Code
-              %li
-                %a{:href=>"/downloads.html"}
-                  Older Versions
 
-    .row
-      .span12
-        %p
-          Beyond the starter pack, Cappuccino comes with a number of tools to make it easy to create new applications. With or without the starter pack, you can install all of Cappuccino and accompanying tools with the following command:
-        %pre
-          %code
-            curl https://raw.github.com/cappuccino/cappuccino/v0.9.5/bootstrap.sh >/tmp/cb.sh &amp;&amp; sh /tmp/cb.sh
-
-#what-next
-  .container
-    %h2.section_header
-      %hr.left.visible-desktop
-      %span
-        What Next?
-      %hr.right.visible-desktop
-    .row
-      .span12
-        %p
-          Your download includes a README file with a few quick tips on how to get started. We have a more elaborate
-          %a{:href=>"http://cappuccino.org/download/readme.php"} README available online.
-
-        %p
-          You'll also probably want to check out our
-          %a{:href=>"#"}
-            tutorials section.
-          The first one is designed specifically for figuring out what to do the very first time you download Cappuccino.
-
-    .row
-      .span12
-        %h3 Getting the Source
-
-        %p
-          If you'd like the full source, you can check it out from our GitHub repository, or clone it with this command:
-
-          %pre
-            %code
-              git clone git://github.com/cappuccino/cappuccino.git
-
-        %p
-          Learn more about
-          %a{:href=>"#"}
-            contributing.
+= partial :main_download
 
 #buzz
   .container

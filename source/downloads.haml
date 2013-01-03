@@ -1,0 +1,27 @@
+---
+---
+
+= partial :main_download
+
+#archive
+  .container
+    %a{:name=>'archive'}
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span
+          Archive
+        %hr.right.visible-desktop
+
+    Looking for older versions of Cappuccino? You can find most older releases below.
+
+    %table.table
+      - data.downloads.archive.each_pair do |date, files|
+        %tr
+          %th
+            %h6
+              = date.strftime('%b %d, %Y')
+          %td
+            - files.each_with_index do |file, i|
+              %a{:href => file[1], :class => i == 0 ? "btn btn-primary" : "btn"}
+                %i.icon-download{:class => i == 0 ? "icon-white" : ""}
+                = file[0]
