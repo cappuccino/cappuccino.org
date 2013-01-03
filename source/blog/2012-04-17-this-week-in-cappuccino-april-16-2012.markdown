@@ -1,6 +1,6 @@
 ---
 title: Cappuccino News
-author: aparajita
+author: Aparajita Fishman
 author_email: aparajita@aparajitaworld.com
 wordpress_id: 1265
 wordpress_url: http://cappuccino.org/discuss/?p=1265
