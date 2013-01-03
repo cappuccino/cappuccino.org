@@ -1,6 +1,6 @@
 ---
 title: Announcing Atlas
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 301
 wordpress_url: http://cappuccino.org/discuss/?p=301

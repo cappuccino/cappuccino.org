@@ -1,6 +1,6 @@
 ---
 title: Cappuccino Casts
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 291
 wordpress_url: http://cappuccino.org/discuss/?p=291

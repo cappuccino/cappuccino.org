@@ -1,6 +1,6 @@
 ---
 title: Francisco's talk at FOWA London
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 88
 wordpress_url: http://cappuccino.org/discuss/?p=88
@@ -16,7 +16,7 @@ tags:
 ---
 
 
-If you were in London last week at the [Future of Web Apps](http://london2008.futureofwebapps.com/) conference put on by [Carsonified](http://carsonified.com/), you may have had the opportunity to see our very own Francisco Tolmasky talk about Objective-J, Cappuccino, and, well, the future of web apps. 
+If you were in London last week at the [Future of Web Apps](http://london2008.futureofwebapps.com/) conference put on by [Carsonified](http://carsonified.com/), you may have had the opportunity to see our very own Francisco Tolmasky talk about Objective-J, Cappuccino, and, well, the future of web apps.
 
 Thankfully, for those of us who couldn't make it, FOWA has put up a video of the highlights from the talk. Check it out:
 

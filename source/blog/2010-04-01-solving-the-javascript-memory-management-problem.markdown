@@ -1,6 +1,6 @@
 ---
 title: Solving the JavaScript Memory Management Problem
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 606
 wordpress_url: http://cappuccino.org/discuss/?p=606
@@ -23,16 +23,16 @@ A lot of Cocoa developers disparaged garbage collection when it came to Objectiv
 
 To do this right, we've created a global object table. These objects aren't going anywhere on their own! If you don't release an object, it will stick around forever, ensuring you'll always have it when you need it. This global table acts as a lookup table for any object, allowing us to finally implement pointers in JavaScript. Since $ has become the coolest way to do completely non-standard lookups in an almost indecipherable way, we thought we'd jump on the bandwagon. Pass any pointer to $ and you'll get the associated object! How do you get a pointer you ask? $$ of course! For example:
 
-		 var o = [CPobject new]; // +new returns with a retain count of 1!   
+		 var o = [CPobject new]; // +new returns with a retain count of 1!
 		var p = $$(o); // returns a pointer to o
-		
-		
-		
-		o === $(p); // we dereference the pointer and get the right object!
-		
-		
 
-Zombies come standard, too! Just set OBJJ_ZOMBIE_DETECTION to true and objj_msgSend will throw an exception if you ever message an object that's been dealloc'd. 
+
+
+		o === $(p); // we dereference the pointer and get the right object!
+
+
+
+Zombies come standard, too! Just set OBJJ_ZOMBIE_DETECTION to true and objj_msgSend will throw an exception if you ever message an object that's been dealloc'd.
 
 We've even take the time to properly -autorelease all objects returned from class methods in Foundation, but we've made absolutely no effort to properly retain those objects in Cappuccino code that uses them yet. So we need your help. Every line must be scrutinized (but we shouldn't to automate this process, as it would surely be too error prone). Rather than focus on developing new features or fixing bugs in the issue tracker, we hope that all Cappuccino contributors will spend their time writing memory management code so that we can fully realize this web development revolution!
 

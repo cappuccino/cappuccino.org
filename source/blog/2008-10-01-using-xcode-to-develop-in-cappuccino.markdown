@@ -1,6 +1,6 @@
 ---
 title: Using Xcode to develop in Cappuccino
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 33
 wordpress_url: http://cappuccino.org/discuss/?p=33
@@ -14,9 +14,9 @@ tags:
 ---
 
 
-After the creation of Objective-J, one of the first things Francisco did was write a new mode for his favorite text editor, [SubEthaEdit](http://codingmonkeys.de/subethaedit/index.html). It was immediately obvious that we should try to make our favorite development environment as productive as possible. 
+After the creation of Objective-J, one of the first things Francisco did was write a new mode for his favorite text editor, [SubEthaEdit](http://codingmonkeys.de/subethaedit/index.html). It was immediately obvious that we should try to make our favorite development environment as productive as possible.
 
-A lot of people working with Cappuccino are coming from the Cocoa world, which means they're almost universally developing in Xcode. We've had several requests for writing tools to integrate well with Xcode, but we just haven't had the time. Thankfully one of our users, Raphael Bartolome, took it upon himself to build a great new [ Xcode plugin](/files/Cappuccino_Developer_Tools.pkg) specifically for Cappuccino! 
+A lot of people working with Cappuccino are coming from the Cocoa world, which means they're almost universally developing in Xcode. We've had several requests for writing tools to integrate well with Xcode, but we just haven't had the time. Thankfully one of our users, Raphael Bartolome, took it upon himself to build a great new [ Xcode plugin](/files/Cappuccino_Developer_Tools.pkg) specifically for Cappuccino!
 
 If you're an Xcode user, go ahead and [download the plugin now](/files/Cappuccino_Developer_Tools.pkg), and we'll take a look at how it works. When you first launch the installer package, you'll be greeted with a welcome screen. Click continue, and you'll be presented with three options:
 
@@ -24,7 +24,7 @@ If you're an Xcode user, go ahead and [download the plugin now](/files/Cappuccin
 
 You should make sure the first option is checked, so that the build tools will be installed. Be aware that this will overwrite any existing build tools installation, so if you've installed tools off trunk, you may want to uncheck this. The second choice will pull the latest source from GitHub for creating new projects, and the final option installs all the Xcode extras that you'll want on your system.
 
-Once you've finished installation, open Xcode, and go the new project wizard (cmd-shift-n). Choose "Web" under Mac OS X on the left hand side, and you'll see two Cappuccino Project templates. 
+Once you've finished installation, open Xcode, and go the new project wizard (cmd-shift-n). Choose "Web" under Mac OS X on the left hand side, and you'll see two Cappuccino Project templates.
 
 ![xcode setup step 2](/discuss/wp-content/uploads/xcode-step2.png)
 

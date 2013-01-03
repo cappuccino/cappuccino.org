@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.7 Now Available
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 314
 wordpress_url: http://cappuccino.org/discuss/?p=314
@@ -38,7 +38,7 @@ The biggest new feature of Cappuccino is our new new theme: Aristo. Aristo is th
 
 ### Theming
 
-We didn't just build one new look for Cappuccino, though. Instead, we built an entirely new theme engine which will let anyone create a theme for Cappuccino. All the properties of the standard controls are fully themeable in all the different "theme states" (like "pushed", "disabled", "normal", etc.). In the coming months, we'll be sharing new themes with the community, and building a site for users to post their own themes for others to download and use. 
+We didn't just build one new look for Cappuccino, though. Instead, we built an entirely new theme engine which will let anyone create a theme for Cappuccino. All the properties of the standard controls are fully themeable in all the different "theme states" (like "pushed", "disabled", "normal", etc.). In the coming months, we'll be sharing new themes with the community, and building a site for users to post their own themes for others to download and use.
 
 ### Interface Builder
 
@@ -46,7 +46,7 @@ Those of you who come from a Cocoa background are used to using Apple's [Interfa
 
 ![making a cappuccino application using interface builder](http://cappuccino.org/discuss/wp-content/uploads/2009/05/temp-image_1_72.png)
 
-[nib2cib](http://wiki.github.com/280north/cappuccino/nib2cib) is a powerful tool that drastically reduces the amount of code you need to write to build an interface with Cappuccino. The starter package now includes both a nib/xib based application template, and a standard, code based template, so you can choose which is best for you. From the command line you can use the new [capp](http://wiki.github.com/280north/cappuccino/capp) tool to generate a nib/xib project by typing "capp gen -t NibApplication MyApp". 
+[nib2cib](http://wiki.github.com/280north/cappuccino/nib2cib) is a powerful tool that drastically reduces the amount of code you need to write to build an interface with Cappuccino. The starter package now includes both a nib/xib based application template, and a standard, code based template, so you can choose which is best for you. From the command line you can use the new [capp](http://wiki.github.com/280north/cappuccino/capp) tool to generate a nib/xib project by typing "capp gen -t NibApplication MyApp".
 
 ### The Rest
 

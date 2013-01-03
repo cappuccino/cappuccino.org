@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.6 Available Today
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 248
 wordpress_url: http://cappuccino.org/discuss/?p=248
@@ -24,11 +24,11 @@ You may have also heard that [Coda](http://www.panic.com/coda/) and [SubEthaEdit
 
 However, the best part about 0.6 is that we've had the most contributors thus far. We'd like to thank everyone who filed bugs and helped out on the [IRC channel](irc://cappuccino). And of course a special thanks to everyone that submitted patches:
 
-Rich Collins   
-Patrick Crosby   
-Jake MacMullin   
-Sam McDonald   
-Glenn Rempe   
+Rich Collins
+Patrick Crosby
+Jake MacMullin
+Sam McDonald
+Glenn Rempe
 Nick Takayama
 
 So [download it](http://cappuccino.org/download), take it for a [spin](http://cappuccino.org/learn/tutorials), and don't forget to [file bugs](http://cappuccino.lighthouseapp.com/projects/16499-cappuccino/overview)!

@@ -1,6 +1,6 @@
 ---
 title: New Cappuccino Automatic Layout Tutorial
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 144
 wordpress_url: http://cappuccino.org/discuss/?p=144

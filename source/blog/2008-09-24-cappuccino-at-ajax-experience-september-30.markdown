@@ -1,6 +1,6 @@
 ---
 title: Cappuccino at AJAX Experience, September 30
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 23
 wordpress_url: http://cappuccino.org/discuss/?p=23
@@ -16,7 +16,7 @@ tags:
 
 Our very own Francisco Tolmasky is speaking at the upcoming [AJAX Experience](http://ajaxexperience.techtarget.com/) conference on September 30th in Boston.
 
-Francisco will be presenting a brief overview of Cappuccino during a&nbsp;[5 minute lightning talk](http://ajaxexperience.techtarget.com/east/html/javascript.html#FTolmaskyObj) (11:05-11:10 am), as well as a full length presentation called "[The Road to Cappuccino"](http://ajaxexperience.techtarget.com/east/html/javascript.html#FTolmaskyCapp)&nbsp;(1:05-2:05 pm), which will provide a more in depth overview of the technologies, as well as a history and rationale of the development of Cappuccino.   
+Francisco will be presenting a brief overview of Cappuccino during a&nbsp;[5 minute lightning talk](http://ajaxexperience.techtarget.com/east/html/javascript.html#FTolmaskyObj) (11:05-11:10 am), as well as a full length presentation called "[The Road to Cappuccino"](http://ajaxexperience.techtarget.com/east/html/javascript.html#FTolmaskyCapp)&nbsp;(1:05-2:05 pm), which will provide a more in depth overview of the technologies, as well as a history and rationale of the development of Cappuccino.
 
 ### The Road to Cappuccino
 

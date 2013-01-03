@@ -1,6 +1,6 @@
 ---
 title: Randy Luecke Becomes a Committer
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 575
 wordpress_url: http://cappuccino.org/discuss/?p=575

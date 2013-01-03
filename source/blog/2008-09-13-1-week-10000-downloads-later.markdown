@@ -1,6 +1,6 @@
 ---
 title: 1 Week, 10,000 Downloads Later
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 20
 wordpress_url: http://cappuccino.org/discuss/?p=20
@@ -18,7 +18,7 @@ We've also been doing our best to keep up with your requests. We heard you loud 
 
 What's really surprised us is the wide spectrum of people trying out Cappuccino. From seasoned JavaScript developers, to Cocoa programmers that have never tried web development before, to hackers who have done neither and just think this is a really cool idea. We're hoping this will mean great things as far as adoption goes, but more importantly, we think this will create an influx of fresh new ideas in this space.
 
-We also have a new release out today, [0.5.1](http://cappuccino.org/download/). This includes a number of fixes that people have been requesting, as well as including updated Documentation:   
+We also have a new release out today, [0.5.1](http://cappuccino.org/download/). This includes a number of fixes that people have been requesting, as well as including updated Documentation:
 
 * Improved handling of command keys
 * Improved CPView graphics performance

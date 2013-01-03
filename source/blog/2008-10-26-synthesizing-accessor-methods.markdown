@@ -1,6 +1,6 @@
 ---
 title: Synthesizing Accessor Methods
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 114
 wordpress_url: http://cappuccino.org/discuss/?p=114
@@ -20,77 +20,77 @@ Accessor synthesizing adds a new keyword to the Objective-J language, **@accesso
 
 This Person class has two ivars, firstname and lastname. Before **@accessors**, the class looks like this:
 
-	 @implementation Person : CPObject   
-	{   
-	 CPString firstName;   
-	 CPString lastName;   
+	 @implementation Person : CPObject
+	{
+	 CPString firstName;
+	 CPString lastName;
 	}
-	
-	
-	
-	- (void)setFirstName:(CPString)aString   
-	{   
-	 firstName = aString;   
+
+
+
+	- (void)setFirstName:(CPString)aString
+	{
+	 firstName = aString;
 	}
-	
-	
-	
-	
-	
-	- (CPString)firstName   
-	{   
-	 return firstName;   
+
+
+
+
+
+	- (CPString)firstName
+	{
+	 return firstName;
 	}
-	
-	
-	
-	
-	
-	- (void)setLastName:(CPString)aString   
-	{   
-	 lastName = aString;   
+
+
+
+
+
+	- (void)setLastName:(CPString)aString
+	{
+	 lastName = aString;
 	}
-	
-	
-	
-	
-	
-	- (CPString)lastName   
-	{   
-	 return lastName;   
+
+
+
+
+
+	- (CPString)lastName
+	{
+	 return lastName;
 	}
-	
-	
-	
-	
-	
-	@end   
-	
-	
-	
+
+
+
+
+
+	@end
+
+
+
 
 Using the new **@accessors** keyword, we can eliminate four methods:
 
-	 @implementation Person : CPObject   
-	{   
-	 CPString firstName @accessors;   
-	 CPString lastName @accessors;   
-	}   
-	@end   
-	
+	 @implementation Person : CPObject
+	{
+	 CPString firstName @accessors;
+	 CPString lastName @accessors;
+	}
+	@end
+
 
 This second version is much more succinct than the first, and less tedious to program. We think this will be helpful for developers, and will increase productivity and code readability.
 
 It's important to note that this doesn't change the way you use a class. For our Person class, in both cases, the code for getting the first and last names of a person (in the myPerson variable) would look something like this:
 
-	 var fullName = [myPerson firstName] + " " + [myPerson lastName];   
-	
+	 var fullName = [myPerson firstName] + " " + [myPerson lastName];
+
 
 Similarly, setting an ivar looks like this:
 
-	 [myPerson setFirstName:"Winston"];   
-	[myPerson setLastName:"Smith"];   
-	
+	 [myPerson setFirstName:"Winston"];
+	[myPerson setLastName:"Smith"];
+
 
 Like any key-value-coding compliant class, the name of the instance variable becomes the "property" or "key", and that key name is used in the setter and getter methods. If your key is _firstName_, the getter for that key will be _firstName_, and the setter will be _setFirstName:_. The same pattern applies to any other key.
 
@@ -98,46 +98,46 @@ Like any key-value-coding compliant class, the name of the instance variable bec
 
 There are a few configuration options when using the new **@accessors** technique. Perhaps most importantly, is the ability to change the name of the property. For example, if you declared an instance variable like this:
 
-	 CPString _location @accessors;   
-	
+	 CPString _location @accessors;
+
 
 Objective-J would generate two accessor methods called __location_ and __setLocation:_. These are the expected accessor methods for a key called "_location". In order to generate more friendly versions without the leading underscore, you can modify your declaration like this:
 
-	 CPString _location @accessors(property=location);   
-	
+	 CPString _location @accessors(property=location);
+
 
 The addition of the property=location tells Objective-J to use "location" as the new property name, instead of "_location", which will generate _location_ and _setLocation:_ methods without the underscore. In addition, you can also specify the specific name of both the getter and the setter method, like this:
 
-	 BOOL _hidden @accessors(getter=isHidden, setter=setIsHidden);   
-	
+	 BOOL _hidden @accessors(getter=isHidden, setter=setIsHidden);
+
 
 This code specified a boolean instance variable called _hidden; the getter method will be called _isHidden_ and the setter method will be called _setIsHidden:_. One thing to keep in mind when specifying your own getter and setter method names is key-value-coding. Although we don't yet have much documentation on the subject (you can read Apple's documentation [here](http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueCoding/KeyValueCoding.html)), key-value-coding enables several important features in Cappuccino, so it's important to maintain key-value-coding compliance. Normally, the rules are that for a given key, say "foo", the getter is called _foo_, and the setter is called _setFoo:_. There's an additional rule for boolean values, which says that you can use _isFoo_, and _setIsFoo:_, in addition to the usual method names. In our case, thats why our custom getter and setter names are still key-value-coding compliant.
 
 There are two additional configuration options, **readonly**, and **copy**. By default, **@accessors** will generate both a getter and a setter. If you only want to expose a getter method to the world, you can add the **readonly** value in the arguments. The other option, **copy**, has to do with how the setter works. Normally, when you pass an object to a setter, it's assigned directly. The generated setter looks like this:
 
-	 - (void)setFoo:(id)aFoo   
-	{   
-	 foo = aFoo;   
-	}   
-	
+	 - (void)setFoo:(id)aFoo
+	{
+	 foo = aFoo;
+	}
+
 
 When you specify **copy**, the argument is first sent the message copy, and the return value of that message is assigned to the instance variable:
 
-	 - (void)setFoo:(id)aFoo   
-	{   
-	 if (foo !== aFoo)   
-	 foo = [aFoo copy];   
-	}   
-	
+	 - (void)setFoo:(id)aFoo
+	{
+	 if (foo !== aFoo)
+	 foo = [aFoo copy];
+	}
+
 
 This is useful if you want to ensure that an object you're passing isn't modified out from under you. Of course, it only applies to ivars that are both read and write, and cannot be combined with readonly. To summarize, you can use both of these options like this:
 
-	 @implementation FooBar : CPObject   
-	{   
-	 id foo @accessors(readonly);   
-	 id bar @accessors(copy);   
-	}   
-	
+	 @implementation FooBar : CPObject
+	{
+	 id foo @accessors(readonly);
+	 id bar @accessors(copy);
+	}
+
 
 ### History
 

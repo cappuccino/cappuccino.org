@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.7.1 Released
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 367
 wordpress_url: http://cappuccino.org/discuss/?p=367

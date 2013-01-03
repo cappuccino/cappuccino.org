@@ -1,15 +1,13 @@
 ---
 title: Mockingbird 1.0 Released
-author: me1000
+author: Randy Luecke
 author_email: rclu222@uky.edu
 wordpress_id: 936
 wordpress_url: http://cappuccino.org/discuss/?p=936
 date: '2010-11-08'
-categories:
-- Community Highlights
-tags: []
+tags:
+- community highlights
 ---
-
 
 [![](http://cappuccino.org/discuss/wp-content/uploads/2010/11/realtimeshot21.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/11/realtimeshot21.png)
 
@@ -20,6 +18,3 @@ If you're not familiar with Mockingbird, it's an application for building and sh
 If you were a beta tester be sure to check your email for a special discount, and visit the website to [sign up](https://gomockingbird.com/signup/) or if you're a beta tester [upgrade here](https://gomockingbird.com/mockingbird/#upgrade). Be sure to also [read the official announcement](http://blog.gomockingbird.com/10-and-real-time-collaboration).
 
 Mockingbird is an exceptional example of what Cappuccino is capable of, so congratulations again to Saikat and Sheena from the entire Cappuccino community!
-
-
-

@@ -1,6 +1,6 @@
 ---
 title: This Week in Edge Cappuccino
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 288
 wordpress_url: http://cappuccino.org/discuss/?p=288

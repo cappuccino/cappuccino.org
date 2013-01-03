@@ -1,6 +1,6 @@
 ---
 title: ! 'GitHub Issues Cappuccino App: Desktop and Web'
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 803
 wordpress_url: http://cappuccino.org/discuss/?p=803
@@ -21,13 +21,13 @@ The online version is running on Heroku's Node.js beta at [http://githubissues.h
 
 ### Open Source
 
- The GitHub Issues app was put together by some truly excellent members of the Cappuccino community, and we're open sourcing it so that it can serve as an example of how to build and architect a full blown application with Cappuccino and [Atlas](http://280atlas.com).   
+ The GitHub Issues app was put together by some truly excellent members of the Cappuccino community, and we're open sourcing it so that it can serve as an example of how to build and architect a full blown application with Cappuccino and [Atlas](http://280atlas.com).
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png) If you don't have Atlas you can still build the app using the [Jakefile](http://cappuccino.org/discuss/2010/04/28/introducing-jake-a-build-tool-for-javascript/) in the repo, but you will need Atlas to edit the visual interface files. You can find the source code at [http://github.com/280north/issues](http://github.com/280north/issues). So don't just use it, clone it, patch it, and of course, [file bugs](http://githubissues.heroku.com/#280north/issues)!   
+[![](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png) If you don't have Atlas you can still build the app using the [Jakefile](http://cappuccino.org/discuss/2010/04/28/introducing-jake-a-build-tool-for-javascript/) in the repo, but you will need Atlas to edit the visual interface files. You can find the source code at [http://github.com/280north/issues](http://github.com/280north/issues). So don't just use it, clone it, patch it, and of course, [file bugs](http://githubissues.heroku.com/#280north/issues)!
 
 ### Cappuccino, NativeHost, Heroku, Node, Oh My!
 
- This app uses and integrates a tremendous amount of new and exciting technology. If you take a look at the source you should find examples on how to do everything from setting up a server to talk to Cappuccino, to optionally deploying your app to the desktop, to talking to other JavaScript libraries:   
+ This app uses and integrates a tremendous amount of new and exciting technology. If you take a look at the source you should find examples on how to do everything from setting up a server to talk to Cappuccino, to optionally deploying your app to the desktop, to talking to other JavaScript libraries:
 
 * We use our brand new [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop) technology which allows the app to run both on web and desktop.
 * We make extensive use of the new tableview component, added in version 0.8

@@ -1,6 +1,6 @@
 ---
 title: ! 'Cappuccino Tools: "bake"'
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 135
 wordpress_url: http://cappuccino.org/discuss/?p=135
@@ -35,63 +35,63 @@ Aggressive caching of static resources reduces the load time of Cappuccino appli
 
 The configuration for a bake deployment is specified in a "bakefile", which is in the JSON format with a structure like the following:
 
-	 {   
-	 "sources" : [   
-	 {   
-	 "type" : "git",   
-	 "path" : "git://github.com/280north/cappuccino.git",   
-	 "parts" : [   
-	 {   
-	 "src" : "Objective-J",   
-	 "dst" : "Frameworks/Objective-J",   
-	 "build" : "ant -DBuild=BUILD_PATH",   
-	 "copyFrom" : "Release/Objective-J"   
-	 },   
-	 {   
-	 "src" : "Foundation",   
-	 "dst" : "Frameworks/Foundation",   
-	 "build" : "steam build -c Release -b BUILD_PATH",   
-	 "copyFrom" : "Release/Foundation"   
-	 },   
-	 {   
-	 "src" : "AppKit",   
-	 "dst" : "Frameworks/AppKit",   
-	 "build" : "steam build -c Release -b BUILD_PATH",   
-	 "copyFrom" : "Release/AppKit"   
-	 }   
-	 ]   
-	 },   
-	 {   
-	 "type" : "rsync",   
-	 "path" : "/Users/username/projects/NewApplication",   
-	 "parts" : [   
-	 {   
-	 "src" : "",   
-	 "dst" : "Blah"   
-	 }   
-	 ]   
-	 },   
-	 {   
-	 "type" : "svn",   
-	 "path" : "https://svn.youserver.com/Project/trunk",   
-	 "parts" : [   
-	 {   
-	 "src" : "subdirectory",   
-	 "dst" : "Something"   
-	 }   
-	 ]   
-	 }   
-	 ],   
-	 "deployments" : [   
-	 { "host" : "deploy@myserver.com", "path" : "/var/www/mysite/public" }   
-	 ],   
-	 "templateVars" : {   
-	 "APPLICATION_NAME" : "My Application",   
-	 "BACKGROUND_COLOR" : "black",   
-	 "TEXT_COLOR" : "black"   
-	 }   
-	}   
-	
+	 {
+	 "sources" : [
+	 {
+	 "type" : "git",
+	 "path" : "git://github.com/280north/cappuccino.git",
+	 "parts" : [
+	 {
+	 "src" : "Objective-J",
+	 "dst" : "Frameworks/Objective-J",
+	 "build" : "ant -DBuild=BUILD_PATH",
+	 "copyFrom" : "Release/Objective-J"
+	 },
+	 {
+	 "src" : "Foundation",
+	 "dst" : "Frameworks/Foundation",
+	 "build" : "steam build -c Release -b BUILD_PATH",
+	 "copyFrom" : "Release/Foundation"
+	 },
+	 {
+	 "src" : "AppKit",
+	 "dst" : "Frameworks/AppKit",
+	 "build" : "steam build -c Release -b BUILD_PATH",
+	 "copyFrom" : "Release/AppKit"
+	 }
+	 ]
+	 },
+	 {
+	 "type" : "rsync",
+	 "path" : "/Users/username/projects/NewApplication",
+	 "parts" : [
+	 {
+	 "src" : "",
+	 "dst" : "Blah"
+	 }
+	 ]
+	 },
+	 {
+	 "type" : "svn",
+	 "path" : "https://svn.youserver.com/Project/trunk",
+	 "parts" : [
+	 {
+	 "src" : "subdirectory",
+	 "dst" : "Something"
+	 }
+	 ]
+	 }
+	 ],
+	 "deployments" : [
+	 { "host" : "deploy@myserver.com", "path" : "/var/www/mysite/public" }
+	 ],
+	 "templateVars" : {
+	 "APPLICATION_NAME" : "My Application",
+	 "BACKGROUND_COLOR" : "black",
+	 "TEXT_COLOR" : "black"
+	 }
+	}
+
 
 This bakefile contains three "sources": a git repository, a local directory, and a svn repository. The git repository is the main [Cappuccino git repository](http://github.com/280north/cappuccino/), hosted on GitHub. You could replace this with a different branch if you needed a specific version, or even your own if you have one. This source contains three "parts", Objective-J, AppKit, and Foundation. The "src" specifies where in the checkout the part is located, while "dst" specified where in the final built application it should be placed. You can optionally specify a "build" command, which is run from the specified "src" directory. This command should include the placeholder "BUILD_PATH", which will be filled in by "bake" with the temporary directory where the build results are placed (equivalent to $STEAM_BUILD for any "steam" commands). Additionally, if you specify a "build" command you also need to specify a "copyFrom" parameter, which tells build the subdirectory of the build directory it should copy the built part from.
 
@@ -103,15 +103,15 @@ If you use your own template, the only required variable is the "$VERSION" one, 
 
 Finally, once the application has been built and assembled, it is optionally run through ["press"](http://cappuccino.org/discuss/2008/10/21/cappuccino-tools-&ldquo;press&rdquo;/), then gzipped. If the "--deploy" command line parameter was given then the gzipped application is transmitted to the deployment servers, un-gzipped, and copied to the deployment path using a specific sequence of command to ensure the deployment is atomic:
 
-	 tar xzf 1225273279.tar.gz   
-	mkdir -p /path/to/deployment   
-	mv 1225273279/1225273279/ /path/to/deployment/1225273279   
-	mv 1225273279/index.html path/to/deployment/index.html   
-	rm "1225273279.tar.gz   
-	rmdir 1225273279   
-	cd /path/to/deployment   
-	ln -nsf 1225273279 Current   
-	
+	 tar xzf 1225273279.tar.gz
+	mkdir -p /path/to/deployment
+	mv 1225273279/1225273279/ /path/to/deployment/1225273279
+	mv 1225273279/index.html path/to/deployment/index.html
+	rm "1225273279.tar.gz
+	rmdir 1225273279
+	cd /path/to/deployment
+	ln -nsf 1225273279 Current
+
 
 (version "1225273279", deplyoment directory "/path/to/deployment")
 

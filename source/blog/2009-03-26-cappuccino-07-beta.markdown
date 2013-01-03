@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.7 Beta
-author: ross
+author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 306
 wordpress_url: http://cappuccino.org/discuss/?p=306

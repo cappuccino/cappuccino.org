@@ -1,6 +1,6 @@
 ---
 title: Push with Cappuccino and Tornado
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 463
 wordpress_url: http://cappuccino.org/discuss/?p=463

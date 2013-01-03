@@ -1,6 +1,6 @@
 ---
 title: ! 'Community Highlights: Using Cappuccino to build the MemoryMiner Web Viewer'
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 578
 wordpress_url: http://cappuccino.org/discuss/?p=578

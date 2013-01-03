@@ -1,6 +1,6 @@
 ---
 title: Cappuccino Turns One
-author: tolmasky
+author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 384
 wordpress_url: http://cappuccino.org/discuss/?p=384
@@ -15,7 +15,7 @@ tags: []
 
 Cappuccino officialy turned one last Friday. I suppose that technically Cappuccino is quite a bit older, but [a year ago](http://cappuccino.org/discuss/2008/09/04/announcing-cappuccino/) was when we finally released it into the open source community. It's unbelievable to me that in just one year we went from being a completely unkown technology to [one of the most popular JavaScript projects on GitHub](http://github.com/languages/JavaScript). I'm a little embarrassed to admit this, but I can remember that just a few weeks before launching, the guys over at [Heroku](http://heroku.com/) were still convincing us that we needed to switch from svn to git. Good times.
 
-I'd like to take a step back and go over just some of the things that have happened with Cappuccino in the past year:   
+I'd like to take a step back and go over just some of the things that have happened with Cappuccino in the past year:
 
 * We released one of our coolest tools: [nib2cib](http://wiki.github.com/280north/cappuccino/nib2cib). nib2cib actually lets you visually build your Cappuccino apps using Apple's Interface Builder!
 * We added a much requested theming engine. With the help of our friends over at [Sofa](http://www.madebysofa.com/), we also launched [Aristo](http://github.com/280north/aristo/tree/master), a beautiful new open source UI to serve as the default look and feel for Cappuccino apps.

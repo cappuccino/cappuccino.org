@@ -1,6 +1,6 @@
 ---
 title: The Cappuccino and Objective-J Build Tools
-author: tlrobinson
+author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 41
 wordpress_url: http://cappuccino.org/discuss/?p=41
@@ -26,7 +26,7 @@ In reality the Objective-J "compiler" is more like a preprocessor, performing a 
 
 This turned out to work great. Simply [download the starter package](http://cappuccino.org/starter), load index.html in your browser, and start editing away! If you're just getting started with Objective-J and Cappuccino you don't even need to worry about the build tools, they're entirely optional.
 
-When it comes time to deploy your application you may want to optimize it. There's no reason for your customers to wait any longer than necessary, even if the overhead is minimal. That's where the build tools come in. Each tool has a specific purpose, and they all work together to produce an optimized Cappuccino application:   
+When it comes time to deploy your application you may want to optimize it. There's no reason for your customers to wait any longer than necessary, even if the overhead is minimal. That's where the build tools come in. Each tool has a specific purpose, and they all work together to produce an optimized Cappuccino application:
 
 * **objjc** - the Objective-J compiler
 * **steam** - a general tool for managing the build process, creating new Cappuccino applications, etc.
@@ -35,31 +35,31 @@ When it comes time to deploy your application you may want to optimize it. There
 
 ### objjc
 
- At the lowest level is "objjc", the Objective-J compiler. It's equivalent to gcc or javac, except it converts Objective-J code to JavaScript. Because we can run the same JavaScript code in the browser and [Rhino](http://www.mozilla.org/rhino/) the core of objjc is identical to the in-browser compiler.   
+ At the lowest level is "objjc", the Objective-J compiler. It's equivalent to gcc or javac, except it converts Objective-J code to JavaScript. Because we can run the same JavaScript code in the browser and [Rhino](http://www.mozilla.org/rhino/) the core of objjc is identical to the in-browser compiler.
 
 [](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc1.png)
 
 Currently objjc's implementation is closer to a simple preprocessor than a compiler, much like the original Objective-C compiler was implemented as a preprocessor on top of C. The preprocessor simply looks for the few Objective-J syntax additions and replaces it with the raw JavaScript equivalent. A big reason this is possible is that Objective-J is a strict superset of JavaScript, thus all JavaScript code is valid Objective-J code.
 
-Typically you don't call objjc directly, but rather let steam manage the build process.   
+Typically you don't call objjc directly, but rather let steam manage the build process.
 
 ### steam
 
  Next up is steam, which is the main Objective-J and Cappuccino build tool. Currently it serves two purposes: "steam build" (similar to Xcode's "xcodebuild") and "steam create" (similar to Ruby on Rail's "rails" command).
 
-"steam build" runs the compilation process on an entire application or framework and outputs a single ".sj" file, vastly decreasing the number of HTTP requests required to load an application. These ".sj" files are archives of the compiled input ".j" files, along with information detailing each file's required imports. This allows the Objective-J loading system to efficiently and asynchronously load a large application.   
+"steam build" runs the compilation process on an entire application or framework and outputs a single ".sj" file, vastly decreasing the number of HTTP requests required to load an application. These ".sj" files are archives of the compiled input ".j" files, along with information detailing each file's required imports. This allows the Objective-J loading system to efficiently and asynchronously load a large application.
 
 [](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam1.png)
 
-"steam create" copies all the files required for a new project to the directory specified.   
+"steam create" copies all the files required for a new project to the directory specified.
 
 ### press
 
- The "press" tool takes in a full application and attempts to determine which code files are unecessary. It then strips those files and writes the results to another directory. This could be thought of as a "linker" though it works very differently than a traditional linker. On a simple project it will reduce the AppKit and Foundation frameworks size by approximately 30%, and we expect further improvements.   
+ The "press" tool takes in a full application and attempts to determine which code files are unecessary. It then strips those files and writes the results to another directory. This could be thought of as a "linker" though it works very differently than a traditional linker. On a simple project it will reduce the AppKit and Foundation frameworks size by approximately 30%, and we expect further improvements.
 
 [](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press1.png)
 
-Optionally, it can run the [pngcrush](http://pmt.sourceforge.net/pngcrush/) utility on all your png graphics, attempting to reduce their size. Eventually press will also automatically sprite images, further reducing the number of HTTP requests required to load your images.   
+Optionally, it can run the [pngcrush](http://pmt.sourceforge.net/pngcrush/) utility on all your png graphics, attempting to reduce their size. Eventually press will also automatically sprite images, further reducing the number of HTTP requests required to load your images.
 
 ### bake
 
