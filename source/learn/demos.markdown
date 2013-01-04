@@ -44,4 +44,4 @@ This is the same Lights Off that was ported to iPhone, now ported to Cappuccino!
 
 ---
 
-If you've got a demo, or a web app powered by Cappuccino, let us know on this website's [GitHub project](https://github.com/cappuccino/cappuccino-website/cappuccino.org).
+If you've got a demo, or a web app powered by Cappuccino, let us know on this website's [GitHub project](https://github.com/cappuccino/cappuccino.org).

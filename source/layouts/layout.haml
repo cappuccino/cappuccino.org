@@ -33,7 +33,7 @@
               %li
                 %a{:href => "/learn/"} Learn
               %li
-                %a{:href => "http://github.com/cappuccino/cappuccino"} Contribute
+                %a{:href => "/contribute.html"} Contribute
               %li
                 %a{:href => "/blog/"} Blog
 
@@ -47,26 +47,19 @@
             .row
               .span2
                 %h4 Get Started
-                %a
-                  Features
-                %a
-                  Tutorials
-                %a
-                  Download
+                = link_to "Features", "/#features"
+                = link_to "Tutorials", "/learn/"
+                = link_to "Download", "/downloads.html"
+                = link_to "API Docs", "/learn/documentation/"
               .span2
                 %h4 Contribute
                 %a
-                  Bug reports
-                %a
-                  Source code
-                %a
-                  Wiki
+                = link_to "Bug reports", "/contribute.html#bug-reports"
+                = link_to "Source Code", "https://github.com/cappuccino/cappuccino"
+                = link_to "Wiki", "https://github.com/cappuccino/cappuccino/wiki"
               .span2
                 %h4 Get Answers
-                %a
-                  Discuss
-                %a
-                  Blog
+                = link_to "Blog", "/blog/"
                 %a
                   Mailing list
                 %a

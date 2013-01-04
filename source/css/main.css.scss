@@ -996,7 +996,6 @@ body.file-demos-html .learn {
   }
 }
 
-
 #download {
   .starter {
     margin-top: 2em;
@@ -1044,6 +1043,17 @@ body.file-demos-html .learn {
   }
 }
 
+// When jumping to an in page anchor, move it up from its actual position so that the page header doesn't cover the top of the jumped to content.
+h1 a[name],
+h2 a[name],
+h3 a[name],
+h4 a[name],
+h5 a[name],
+h6 a[name] {
+  visibility: hidden;
+  position: relative;
+  top: -125px;
+}
 
 #footer .links {
   a {

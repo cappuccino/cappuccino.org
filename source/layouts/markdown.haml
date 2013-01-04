@@ -1,0 +1,9 @@
+- wrap_layout :layout do
+  .container
+    - if current_page.data.title
+      %h2.section_header
+        %hr.left.visible-desktop
+        %span= current_page.data.title
+        %hr.right.visible-desktop
+
+    = yield
