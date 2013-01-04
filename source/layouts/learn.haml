@@ -13,11 +13,11 @@
       .span3
         %ul.nav.nav-tabs.nav-stacked
           - data.learn.pages.each_with_index do |a_topic, i|
-            - if i == current_page.data.topic_index
+            - if current_page.data.topic_index == i
               - current_topic = a_topic
-            - if i + 1 == current_page.data.topic_index
+            - if current_page.data.topic_index - 1 == i
               - prev_topic = a_topic
-            - if i - 1 == current_page.data.topic_index
+            - if current_page.data.topic_index + 1 == i
               - next_topic = a_topic
 
             %li{:class => i == current_page.data.topic_index ? "active" : nil}
@@ -29,18 +29,27 @@
           = current_topic[0]
         = yield
 
+    .row
+      .offset3.span9
         .learn-nav
-          - if next_topic
-            %a.btn.btn-primary.pull-right{:href=>"/learn/" + next_topic[1]}
-              Continue to "
-              = next_topic[0]
-              "
-              %i.icon-arrow-right.icon-white
-
-          - if prev_topic
-            %a.btn.btn-standard{:href=>"/learn/" + prev_topic[1]}
-              %i.icon-arrow-left
-              Return to "
-              = prev_topic[0]
-              "
-
+          %ul.pager
+            - if prev_topic
+              %li.previous
+                = link_to prev_topic[1] do
+                  &larr; Return to '
+                  = prev_topic[0]
+                  '
+            - else
+              %li.previous.disabled
+                %span
+                  &larr; Previous
+            - if next_topic
+              %li.next
+                = link_to next_topic[1] do
+                  Continue to '
+                  = next_topic[0]
+                  ' &rarr;
+            - else
+              %li.next.disabled
+                %span
+                  Next &rarr;

@@ -3869,7 +3869,8 @@ input[type="submit"].btn.btn-mini {
 .pager .next span {
   float: right;
 }
-.pager .previous a {
+.pager .previous a,
+.pager .previous span {
   float: left;
 }
 .pager .disabled a,
