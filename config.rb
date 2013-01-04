@@ -76,9 +76,10 @@ use Rack::Codehighlighter,
 
 activate :deploy do |deploy|
   deploy.method = :rsync
-  deploy.user = "wireadmin"
-  deploy.host = "slevenbits.com"
-  deploy.path = "/www/cappuccino-project.org/www/"
+  deploy.user = "cappuccino"
+  deploy.host = "cappuccino.slevenbits.com"
+  deploy.path = "/www/cappuccino.org/www/"
+  deploy.clean = true
 end
 
 activate :blog do |blog|
@@ -113,4 +114,11 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  after_build do
+    # The server uses the current Starter to serve /learn/documentation and Frameworks/ of demo apps.
+    `cd build/downloads/ && rm -Rf Starter && unzip CappuccinoStarter-0.9.5.zip`
+    `cd build/learn/ && curl -s -L http://github.com/cappuccino/cappuccino-demos/tarball/master >demos.tgz && tar -xzf demos.tgz && rm -Rf demos && mv cappuccino-cappuccino-demos-* demos`
+    `find build/ -name .git -delete`
+  end
 end
