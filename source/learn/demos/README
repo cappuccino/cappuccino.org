@@ -1,0 +1,1 @@
+Copy current version of git://github.com/cappuccino/cappuccino-demos.git into this folder before deployment, and ensure */Frameworks serves the latest Cappuccino release.

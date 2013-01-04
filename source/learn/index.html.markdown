@@ -1,7 +1,3 @@
----
-topic_index: 0
----
-
 Cappuccino is an open source application framework for developing
 applications that look and feel like the desktop software users are
 familiar with.

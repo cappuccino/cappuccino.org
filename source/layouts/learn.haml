@@ -1,8 +1,7 @@
-- wrap_layout :layout do
-  - prev_topic = nil
-  - next_topic = nil
-  - current_topic = ["Unnamed Topic", "/"]
+- all_topics = data.learn.pages + data.learn.reference
+- current_index = all_topics.find_index {|topic| request.path == topic[1]}
 
+- wrap_layout :layout do
   .container.learn
     %h2.section_header
       %hr.left.visible-desktop
@@ -13,34 +12,30 @@
       .span3
         %ul.nav.nav-tabs.nav-stacked
           - data.learn.pages.each_with_index do |a_topic, i|
-            - if current_page.data.topic_index == i
-              - current_topic = a_topic
-            - if current_page.data.topic_index - 1 == i
-              - prev_topic = a_topic
-            - if current_page.data.topic_index + 1 == i
-              - next_topic = a_topic
-
-            %li{:class => i == current_page.data.topic_index ? "active" : nil}
-              %a{:href => "/learn/" + a_topic[1]}
-                = a_topic[0]
+            %li{:class => i == current_index ? "active" : nil}
+              = link_to a_topic[0], "/" + a_topic[1]
 
         %h5 Resources
         %ul.nav.nav-tabs.nav-stacked
-          %li
-            = link_to "Documentation", "/learn/documentation/"
+          - data.learn.reference.each_with_index do |a_topic, i|
+            %li{:class => i + data.learn.pages.length == current_index ? "active" : nil}
+              = link_to a_topic[0], "/" + a_topic[1]
 
       .span9.text-body
-        %h3
-          = current_topic[0]
+        - if current_index != nil
+          %h3
+            = all_topics[current_index][0]
         = yield
 
+    - next_topic = current_index != nil && current_index < all_topics.length - 1 ? all_topics[current_index + 1] : nil;
+    - prev_topic = current_index != nil && current_index > 0 ? all_topics[current_index - 1] : nil;
     .row
       .offset3.span9
         .learn-nav
           %ul.pager
             - if prev_topic
               %li.previous
-                = link_to prev_topic[1] do
+                = link_to "/" + prev_topic[1] do
                   &larr; Return to '
                   = prev_topic[0]
                   '
@@ -50,7 +45,7 @@
                   &larr; Previous
             - if next_topic
               %li.next
-                = link_to next_topic[1] do
+                = link_to "/" + next_topic[1] do
                   Continue to '
                   = next_topic[0]
                   ' &rarr;

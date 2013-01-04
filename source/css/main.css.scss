@@ -984,6 +984,19 @@ body.file-index-html.folder-blog, body.folder-blog-tags
   }
 }
 
+body.file-demos-html .learn {
+  .text-body {
+    h4 {
+      margin-top: 2em;
+    }
+
+    a.btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+
 #download {
   .starter {
     margin-top: 2em;

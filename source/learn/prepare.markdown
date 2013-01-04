@@ -1,7 +1,3 @@
----
-topic_index: 1
----
-
 In this tutorial we list what you need in order to install Cappuccino.
 
 ## Supported platforms
