@@ -47,7 +47,7 @@ $(function () {
         $("body").addClass("old-ie");
     }
 
-    $('.blog_post .post_content p img').each(function() {
+    $('.blog_post .post_content p img, .container .markdown p img').each(function() {
         $(this).wrap('<figure class="image"></figure>');
         if ($(this).attr("alt"))
             $(this).after('<figcaption>'+$(this).attr("alt")+'</figcaption>');

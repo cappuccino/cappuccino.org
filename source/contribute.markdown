@@ -30,7 +30,7 @@ specific revision on any branch and download either file.
 For help getting set up with the build tools and checking out the source
 code, follow [this guide](http://wiki.github.com/cappuccino/cappuccino/getting-and-building-the-source).
 
-### Reporting Bugs <a name="bug-reports">&nbsp;</a>
+### Reporting Bugs or Missing Features <a name="bug-reports">&nbsp;</a>
 
 We use the [GitHub issue tracker](http://github.com/cappuccino/cappuccino/issues) to report and
 follow bugs in Cappuccino. If you think you've found a problem in
@@ -38,10 +38,61 @@ Cappuccino, you can always ask about it on the mailing list or in the
 IRC chat room, or you can search GitHub. If you've discovered a new bug,
 report it!
 
+These things are likely bugs:
+
+- Code that doesn’t run at all due to JavaScript errors.
+- Code that doesn’t behave according to the documentation (Cappuccino docs or Cocoa docs).
+- Methods or features that behave differently in Cocoa than in Cappuccino.
+
+#### Before You Report It
+
+If you are sure the problem comes from Cappuccino and not from your
+code, we want to know about it. Before writing up a new ticket
+in the issue tracker, please consider these guidelines:
+
+-   **Do** [search the issue
+    tracker](https://github.com/cappuccino/cappuccino/issues) to see if
+    your issue has already been filed. If it has and you have some more
+    details to add, add a comment to the existing issue.
+-   **Don’t** reopen issues that have been tagged “\#wont-fix”. This
+    means that the decision has been made that we can’t or won’t fix
+    this particular issue. If you’re not sure why, please ask on the
+    [Cappuccino users group](http://groups.google.com/group/objectivej).
+-   **Do** search the [Cappuccino users group](http://groups.google.com/group/objectivej) and [Cappuccino developers group](http://groups.google.com/group/objectivej-dev) to
+    see if your issue has already been discussed. If it has not and you
+    are not sure if what you are seeing is a bug, ask the users group.
+-   **Don’t** use the ticket system to ask support questions. Use the
+    [Cappuccino users group](http://groups.google.com/group/objectivej),
+    or the \#cappuccino IRC channel for that.
+-   **Don’t** use the ticket system to make large-scale feature
+    requests. Please discuss them on the [Cappuccino developers group](http://groups.google.com/group/objectivej-dev) first.
+
+#### Reporting Guidelines
+
+Once you are ready to file a bug report or feature request, here are some tips:
+
+-   **Don’t** just say “X doesn’t work” or “When I do X, it doesn’t
+    work.” Please write a clear, concise description of the problem, and
+    a clear set of instructions for replicating the problem. If there
+    are error messages involved, please include them exactly as they
+    appear.
+-   **Do** include your operating system version, Cappuccino version,
+    and browser version.
+-   **Do** include a link to the source of a minimal example app that
+    illustrates the bug.
+-   **Don’t** post to one of the groups to announce that you have filed
+    a bug report. We are notified as soon as they are filed.
+
+When you have everything ready, go ahead and [open a new ticket](https://github.com/cappuccino/cappuccino/issues/new).
+
+### The Issue Lifecycle
+
+Once the ticket is created, there is a [well-defined lifecycle](/contribute/issue-lifecycle.html) it goes through. We track its progress
+through the lifecycle with tags so you know what its status is.
+
 ### Contributing Code
 
-Patches can either be pasted to [gist](http://gist.github.com/), or you
-can simply send us a pull request on GitHub. Patches should conform to
+Bug fixes, new features and other patches you write should be submitted as pull requests. Patches should conform to
 the project's [contribution guidelines](https://github.com/cappuccino/cappuccino/blob/master/CONTRIBUTING.md) as closely as
 possible.
 
