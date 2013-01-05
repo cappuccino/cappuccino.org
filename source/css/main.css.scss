@@ -1068,13 +1068,24 @@ h6 a[name] {
   top: -175px;
 }
 
-#footer .links {
-  a {
-    display: block;
+#footer {
+  .forkme p {
+    margin-top: 20px;
+    text-align: center;
+
+    a, a:visited {
+      color: white;
+    }
   }
-  h4 {
-    font-size: 17px;
-    margin-top: 0;
+
+  .links {
+    a {
+      display: block;
+    }
+    h4 {
+      font-size: 17px;
+      margin-top: 0;
+    }
   }
 }
 

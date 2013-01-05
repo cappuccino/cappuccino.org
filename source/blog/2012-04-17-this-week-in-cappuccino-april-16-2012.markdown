@@ -83,7 +83,7 @@ Please pay special attention to the **Fixes & Changes** section, there may be ch
 
 - We implemented a documented issue life cycle and have started the long overdue process of triaging the hundreds of open tickets. We encourage everyone to take a look here before posting issues:
 
-	[Posting issues](http://www.cappuccino-project.org/community/contribute/bug-reports-feature-requests/)
+	[Posting issues](/contribute.html#bug-reports)
 
 - Support for symlinks in a project has been added to XcodeCapp. (Thanks Richard van Zon)
 
