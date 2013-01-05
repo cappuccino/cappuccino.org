@@ -8,10 +8,19 @@ html {
 body {
   position: relative;
   padding-top: 105px;
-  background: #dddce2 url(../img/content_bg.jpg) repeat left top;
+  background: white url(../img/furley_bg.png) repeat left top;
   -webkit-font-smoothing: antialiased;
   font-family: 'Lato', sans-serif !important;
   color: #333;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+  body {
+    background-image: url(../img/furley_bg@2x.png);
+  }
 }
 
 .scrolltop {
@@ -957,11 +966,11 @@ body.folder-learn, body.folder-blog
   }
 }
 
-// While invidual blog pages have a white background, due to the body.folder-blog above, we want the regular background for
+// While invidual blog pages have a white background, for readability, we want the regular background for
 // index pages.
 body.file-index-html.folder-blog, body.folder-blog-tags
 {
-  background: #dddce2 url(../img/content_bg.jpg) repeat left top;
+  background: white url(../img/furley_bg.png) repeat left top;
 }
 
 .learn {
