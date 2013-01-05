@@ -13,7 +13,7 @@
                     Modern App Development for the Web
                   %p
                     Cappuccino is a framework which makes it easy to create advanced web apps. With just a few lines of code you can have an app built with full undo and redo, truly amazing table views, drag and drop and every modern UI appearance and behaviour you might expect on the desktop.
-                  %a.scroller.btn.btn-success.btn-large{"data-section" => "#download", :href => "/"}
+                  %a.scroller.btn.btn-success.btn-large{:href => "/downloads.html#download"}
                     Download Cappuccino
 
             .item.slide2
@@ -22,7 +22,7 @@
                   %h1 Write an App, not a Document
                   %p
                     When you program in Cappuccino, you don't need to concern yourself with the complexities of document-focused web technologies like HTML, CSS, or even the DOM. Cappuccino is focused on making apps and the unpleasantries of building complex cross browser applications are abstracted away for you.
-                  %a.btn.btn-success.btn-large.scroller{"data-section" => "#features", :href => "/"}
+                  %a.btn.btn-success.btn-large.scroller{:href => "/#features"}
                     Learn More
                 .span4.animated.fadeInDownBig
                   %img{:alt => "slide2", :src => "img/slide2.jpg"}
@@ -32,13 +32,12 @@
   .container
     %h1
       Cappuccino is an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
-/ features
-#features
-  %a{:name=>'features'}
+#features-section
   .container
     %h2.section_header
       %hr.left.visible-desktop
       %span Features
+      %a{:name=>'features'} &nbsp;
       %hr.right.visible-desktop
     .row
       .span4.feature

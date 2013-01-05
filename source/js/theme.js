@@ -16,22 +16,23 @@ $(function () {
     });
 
     // scroll back to top btn
-    $('.scrolltop').click(function(){
+    $('.scrolltop').click(function() {
         $("html, body").animate({ scrollTop: 0 }, 700);
         return false;
     });
 
     // scroll navigation functionality
-    $('.scroller').click(function(){
-    	var section = $($(this).data("section"));
+    $('.scroller').click(function() {
+        var hash = this.hash.substring(1),
+            elementOnPage = $('[name="' + hash + '"]');
 
         // Just follow the regular link if the section is not on the current page.
-        if (!section.length)
-            return true;
+        if (elementOnPage.length) {
 
-    	var top = section.offset().top - 32;
-        $("html, body").animate({ scrollTop: top }, 700);
-        return false;
+            var top = elementOnPage.offset().top - 35;
+            $("html, body").animate({ scrollTop: top }, 700, function () { window.location.hash = hash; });
+            return false;
+        }
     });
 
     // FAQs
