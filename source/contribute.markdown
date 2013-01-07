@@ -8,28 +8,6 @@ future of Cappuccino. Whether you're looking to write code, add new
 documentation, or just report a bug, you'll be helping everyone who uses
 Cappuccino in the future.
 
-### Getting the Code
-
-Cappuccino is hosted on
-[GitHub](http://github.com/cappuccino/cappuccino) using the
-[Git](http://git-scm.com/) version control system. You can get the code
-with the following command:
-
-    git clone git://github.com/cappuccino/cappuccino.git
-
-If you don't have Git installed, don't worry, it's simple. Check out the
-[official download page](http://git-scm.com/download), or view the
-installation guide on the [Git Wiki](http://git.or.cz/gitwiki/Installation).
-
-You can also download the latest source code as a [zip
-file](http://github.com/cappuccino/cappuccino/zipball/master) or
-[tarball](http://github.com/cappuccino/cappuccino/tarball/master). These
-links go to the top of the tree, but using GitHub, you can find any
-specific revision on any branch and download either file.
-
-For help getting set up with the build tools and checking out the source
-code, follow [this guide](http://wiki.github.com/cappuccino/cappuccino/getting-and-building-the-source).
-
 ### Reporting Bugs or Missing Features <a name="bug-reports">&nbsp;</a>
 
 We use the [GitHub issue tracker](http://github.com/cappuccino/cappuccino/issues) to report and
@@ -90,24 +68,40 @@ When you have everything ready, go ahead and [open a new ticket](https://github.
 Once the ticket is created, there is a [well-defined lifecycle](/contribute/issue-lifecycle.html) it goes through. We track its progress
 through the lifecycle with tags so you know what its status is.
 
+### Getting the Code
+
+Cappuccino is hosted on
+[GitHub](http://github.com/cappuccino/cappuccino) using the
+[Git](http://git-scm.com/) version control system. You can get the code
+with the following command:
+
+    git clone git://github.com/cappuccino/cappuccino.git
+
+If you don't have Git installed, don't worry, it's simple. Check out the
+[official download page](http://git-scm.com/download), or view the
+installation guide on the [Git Wiki](http://git.or.cz/gitwiki/Installation).
+
+You can also download the latest source code as a [zip
+file](http://github.com/cappuccino/cappuccino/zipball/master) or
+[tarball](http://github.com/cappuccino/cappuccino/tarball/master). These
+links go to the top of the tree, but using GitHub, you can find any
+specific revision on any branch and download either file.
+
+For help getting set up with the build tools and checking out the source
+code, follow [this guide](http://wiki.github.com/cappuccino/cappuccino/getting-and-building-the-source).
+
+### What to Work On
+
+From time to time we might update the [Projects to Work On](https://github.com/cappuccino/cappuccino/wiki/projects-to-work-on) list. If there's nothing you want to work on there, there might be an open [issue](https://github.com/cappuccino/cappuccino/issues) or two.
+
 ### Contributing Code
 
-Bug fixes, new features and other patches you write should be submitted as pull requests. Patches should conform to
-the project's [contribution guidelines](https://github.com/cappuccino/cappuccino/blob/master/CONTRIBUTING.md) as closely as
-possible.
+Bug fixes, new features and other patches you write should be submitted as pull requests. Patches should conform to the project's [contribution guidelines](https://github.com/cappuccino/cappuccino/blob/master/CONTRIBUTING.md) as closely as possible.
 
 ### Documentation, Wiki & Tutorials
 
 Cappuccino documentation is integrated inline with Cappuccino code. We
-use a custom documentation generating tool to create the docs on this
-site. We'll be making that tool public in the future. If you'd like to
-improve the documentation for a given section of the code, you can
-as described above and make your
-changes. When you're ready, go through the normal commit process to have
-your changes integrated with the project.
+use a documentation generating tool to create the [docs on this site](/learn/documentation/). You can run it yourself by running `jake docs` in the Cappuccino project. If you'd like to improve the documentation for a given section of the code, you can get the code as described above and make your changes. When you're ready, go through the normal commit process to have your changes integrated with the project.
 
 Github has an [integrated wiki](http://github.com/cappuccino/cappuccino/wikis) which this project
-uses for collaboration. We keep a list of projects we think need the
-most attention and are worth working on, along with lots of other useful
-information for developers. This site also has a [tutorial section](/learn/) where we collect and link to tutorials. If
-you've written a tutorial, you can submit a pull request [this site](https://github.com/cappuccino/cappuccino.org) for potential inclusion.
+uses for collaboration. We keep a list of projects we think need the most attention and are worth working on, along with lots of other useful information for developers. This site also has a [tutorial section](/learn/) where we collect and link to tutorials. If you've written a tutorial, you can submit a pull request [this site](https://github.com/cappuccino/cappuccino.org) for potential inclusion.
