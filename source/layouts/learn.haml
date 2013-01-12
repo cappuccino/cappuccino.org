@@ -21,7 +21,7 @@
             %li{:class => i + data.learn.pages.length == current_index ? "active" : nil}
               = link_to a_topic[0], "/" + a_topic[1]
 
-      .span9.text-body
+      .span9.text-body.markdown
         - if current_index != nil
           %h3
             = all_topics[current_index][0]
