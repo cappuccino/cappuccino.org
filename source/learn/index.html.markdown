@@ -71,20 +71,11 @@ browser vendors and standards bodies.
 
 Cappuccino and Objective-J run in any modern web browser, including:
 
--   Internet Explorer 7+
+-   Internet Explorer 8+
 -   Firefox 2+
 -   Safari 3+
 -   Google Chrome
 -   Opera 9+
-
-## Thank You
-
-Obviously, like everyone else in the open source world, we owe a great
-deal of thanks to others, including several existing projects. Among
-them are:
-
--   [GNU Step](http://www.gnustep.org/)
--   [Cocotron](http://www.cocotron.org/)
 
 ## When should I use Cappuccino?
 
@@ -94,8 +85,8 @@ good for making web applications.
 
 Cappuccino **rocks** at:
 
-* Creating a backend for an advanced corporate website.
 * Creating a real time application with a lot of user interaction.
+* Creating a backend for an advanced corporate website.
 * Creating a mockup application.
 * Creating a smooth Twitter client.
 * Creating a nice email client.
@@ -118,7 +109,7 @@ If the answer is “yes”, then you should definitly give Cappuccino a try.
 It will greatly improve your developement time thanks to a powerful
 foundation, great controls and cool toolchain.
 
-## Ok, I want Cappuccino. What is it really?
+## What is Cappuccino really?
 
 Cappuccino is GNUStep or Cocoa for the web. Cocoa is the set of
 libraries and frameworks used to create both Mac OS and iOS
@@ -153,69 +144,14 @@ Cocoa and Cappuccino looks very similar:
         myArray = [CPArray array];
     [myArray addObject:myString];
 
-## Tools of the Trade
+## Thank You
 
-### Code editor
+Obviously, like everyone else in the open source world, we owe a great
+deal of thanks to others, including several existing projects. Among
+them are:
 
-The following table shows the state of Cappuccino support in some major editors, in no particular order.
-
-<table class="table span9">
-<tbody><tr>
-<th>Editor</th>
-<th>Platform</th>
-<th>Syntax coloring</th>
-<th>Linting</th>
-</tr>
-<tr>
-<td>Emacs</td>
-<td>All</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>SubEthaEdit</td>
-<td>Mac OS X</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>SublimeText</td>
-<td>All</td>
-<td>Yes</td>
-<td>Yes (live)</td>
-</tr>
-<tr>
-<td>TextMate</td>
-<td>Mac OS X</td>
-<td>Yes</td>
-<td>Yes (not live)</td>
-</tr>
-<tr>
-<td>vi</td>
-<td>All</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-</tbody></table>
-
-### The Cappuccino toolchain
-
-Everything you need is shipped with Cappuccino. We’ll see soon how to
-install and use them, but here's an overview:
-
-* **Cappuccino framework**: Make your applications.
-* **Jake**: Build your applications.
-* **OJUnit**: Test your applications.
-* **Press/Flatten tools**: Deploy your applications.
-
-### Xcode
-
-Xcode is the Apple’s IDE to build Cocoa application. Thanks to Cappuccino's affinity with Cocoa, you can build your user interfaces in Xcode and convert the output files to Cappuccino ready UI archives. For that you'll require these tools:
-
-* **XcodeCapp**: The corner stone of the toolchain if you use Xcode which enables Cappuccino projects to be viewed in Xcode.
-* **nib2cib**: Command line utility to convert `XIB` (native Cocoa UI file) to `CIB` (native Cappuccino UI file)
-
-Xcode is **not** required to build great Cappuccino apps. It is however a very valuable tool that could save you hundreds of hours of work and drastically reduce the total amount of code for you to write, debug and manage.
+-   [GNU Step](http://www.gnustep.org/)
+-   [Cocotron](http://www.cocotron.org/)
 
 ## More Information
 
