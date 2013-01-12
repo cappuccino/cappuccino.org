@@ -21,7 +21,7 @@ monitor.
 
 Chrome is based on Safari's rendering technology and is generally very similar to Safari in terms of speed and rendering fidellity. The JavaScript engine is however different with different performance characteristics.
 
-![Chrome Developer Tools](/img/chrome-dev-tools.png)
+![Chrome Developer Tools](/img/chrome-dev-tools.jpg)
 
 ### Safari
 

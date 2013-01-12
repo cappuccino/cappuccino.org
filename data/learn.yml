@@ -2,7 +2,7 @@ pages:
     -   - "What is Cappuccino?"
         - "learn/index.html"
     -   - "Your development environment"
-        - "learn/prepare.html"
+        - "learn/environment.html"
     -   - "Installation"
         - "learn/installation.html"
     -   - "Objective-J Syntax"
