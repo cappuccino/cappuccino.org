@@ -1,7 +1,7 @@
 pages:
     -   - "What is Cappuccino?"
         - "learn/index.html"
-    -   - "Prepare your environment"
+    -   - "Your development environment"
         - "learn/prepare.html"
     -   - "Installation"
         - "learn/installation.html"
