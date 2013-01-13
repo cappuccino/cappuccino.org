@@ -7,7 +7,7 @@ pages:
         - "learn/starter.html"
     -   - "Advanced: Install from Source"
         - "learn/build-source.html"
-    -   - "Objective-J Syntax"
+    -   - "Learning Objective-J"
         - "learn/objective-j.html"
     -   - "Your first Project"
         - "learn/first-project.html"
