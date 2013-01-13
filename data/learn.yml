@@ -11,10 +11,6 @@ pages:
         - "learn/objective-j.html"
     -   - "Tutorial: Scrapbook Part 1"
         - "learn/scrapbook-1.html"
-    -   - "Advanced Hello World"
-        - "learn/advanced-hello-world.html"
-    -   - "Xcode Hello World"
-        - "learn/xcode-hello-world.html"
     -   - "Debugging"
         - "learn/debugging.html"
 
