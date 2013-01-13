@@ -11,12 +11,12 @@ pages:
         - "learn/objective-j.html"
     -   - "Your first Project"
         - "learn/first-project.html"
-    -   - "Debugging"
-        - "learn/debugging.html"
     -   - "Advanced Hello World"
         - "learn/advanced-hello-world.html"
     -   - "Xcode Hello World"
         - "learn/xcode-hello-world.html"
+    -   - "Debugging"
+        - "learn/debugging.html"
 
 reference:
     -   - "Demos"
