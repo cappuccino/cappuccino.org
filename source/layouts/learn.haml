@@ -1,5 +1,6 @@
 - all_topics = data.learn.pages + data.learn.reference
 - current_index = all_topics.find_index {|topic| request.path == topic[1]}
+- content_for :title, "Cappuccino - #{all_topics[current_index][0]}"
 
 - wrap_layout :layout do
   .container.learn
