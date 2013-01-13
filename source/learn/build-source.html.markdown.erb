@@ -1,53 +1,24 @@
-### Supported platforms
+<%
+all_topics = data.learn.pages + data.learn.reference
+current_index = all_topics.find_index {|topic| request.path == topic[1]}
+next_topic = current_index != nil && current_index < all_topics.length - 1 ? all_topics[current_index + 1] : nil;
+prev_topic = current_index != nil && current_index > 0 ? all_topics[current_index - 1] : nil;
+%>
 
-Cappuccino is supported on the following platforms:
+This is an optional section. It is not necessary to build Cappuccino from source just to write a basic app - the starter package already contains a ready to go version of Cappuccino. You can read about how to get started with the starter package in '[<%= prev_topic[0] %>](<%= "/" + prev_topic[1] %>)'.
 
-<table class="table span9">
-<tbody><tr>
-<th>Platform</th>
-<th>Supported features</th>
-</tr>
-<tr>
-<td>Mac OS X</td>
-<td>Toolchain, Interface Builder</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Toolchain</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>Toolchain with installation of <a href="http://cygwin.org">Cygwin</a></td>
-</tr>
-</tbody></table>
+You should install Cappuccino from source if you need:
 
-This tutorial will be written based on Mac OS X, with notes on any differences with other platforms included.
+-   To use XcodeCapp.
+-   To get the latest version of Cappuccino.
+-   To learn how things work.
 
-### Get Developers Tools (Mac OS X only)
+If you're happy with the starter package you may skip ahead to [<%= next_topic[0] %>](<%= "/" + next_topic[1] %>).
+
+##### Get Developers Tools (Mac OS X only)
 
 In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for
 free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 4 is the current version, but Xcode 3 is (probably) still usable.
-
-### Install from Starter Pack
-
-To install Cappuccino from the Starter pack, get the latest version from the [Downloads Page](/downloads.html#download). Unzip the pack into a folder of your choice and check out the included sample app.
-
-You can then start to learn by simply modifying the sample app. A good starting point is [the Scrapbook Tutorial](/tutorial-scapbook-1.html), which we will get to soon.
-
----
-
-### Advanced: Install from Source
-
-It is **not** necessary to build Cappuccino from source to get started. You only need the Starter package to get going, as described above.
-
-You may choose to install Cappuccino from source for the following reasons:
-
--   It’s better to learn how things work
--   Master is stable (ie. there are nearly no chance the master doesn’t
-    work. It happens, but seriously, no more than for 5 minutes)
--   Master is by definition up to date
-
-If you're happy with the started package you may skip the following. But if you do want to install from source, read on.
 
 ##### Install Git
 
