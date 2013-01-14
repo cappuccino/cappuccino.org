@@ -24,8 +24,7 @@ first thing we're going to tackle is building a solid UI for scaling and
 cropping images. The plan is to present the user with a few controls in
 a heads up display which will allow them to manipulate selected images,
 and then go away when the user is done editing. You can see a working
-example of this
-[here](/learn/demos/Scrapbook/Part%201/index-debug.html). You should
+example of this [here](/learn/demos/Scrapbook/Part%201/index-debug.html). You should
 take a few minutes to play around with it and get an idea of what we
 will be building. You can also view or download the entire source of the
 application [here](https://github.com/cappuccino/cappuccino-demos/tree/master/Scrapbook/Part%201) if you

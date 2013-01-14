@@ -9,8 +9,10 @@ pages:
         - "learn/build-source.html"
     -   - "Learning Objective-J"
         - "learn/objective-j.html"
-    -   - "Tutorial: Scrapbook Part 1"
+    -   - "Scrapbook #1 - Views and Layers"
         - "learn/scrapbook-1.html"
+    -   - "Scrapbook #2 - Drag and Drop"
+        - "learn/scrapbook-2.html"
     -   - "Debugging"
         - "learn/debugging.html"
 
