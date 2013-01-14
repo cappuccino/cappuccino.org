@@ -25,3 +25,5 @@ reference:
         - "learn/demos.html"
     -   - "API Documentation"
         - "learn/documentation/"
+    -   - "FAQ"
+        - "support/faq.html"

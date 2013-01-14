@@ -1,0 +1,81 @@
+#faq.faq_page
+  .container
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span FAQ
+        %hr.right.visible-desktop
+    .row
+      .span12
+        .faq
+          .number 1
+          .question
+            What is Objective-J?
+          .answer
+            %p
+              Objective-J is a programming language. It's very similar to both JavaScript and Objective-C. In fact, any valid JavaScript is valid Objective-J. The language adds traditional inheritance, dynamic message passing, and a few other nice things to pure JavaScript.
+            =link_to "Learn more.", "/learn/"
+        .faq
+          .number 2
+          .question
+            What is Cappuccino?
+          .answer
+            %p
+              Cappuccino is an application development framework written in Objective-J. It's designed for building rich applications that run in a web browser. Cappuccino implements the GNUstep/OpenStep/Cocoa APIs, and builds on some of the best Desktop programming paradigms in existance.
+            =link_to "Learn more.", "/learn/objective-j.html"
+        .faq
+          .number 3
+          .question
+            Where can I get Cappuccino?
+          .answer
+            :markdown
+              You can [download a copy of the framework here](/downloads.html), or you'll find the source at our [GitHub project page](http://github.com/cappuccino/cappuccino).
+        .faq
+          .number 4
+          .question
+            What license is Cappuccino available under?
+          .answer
+            :markdown
+              Cappuccino is released under the [LGPL]("/learn/lgpl.txt").
+
+              Cappuccino is two things: the set of frameworks, namely AppKit and Foundation, collectively known as Cappuccino; and the open source project hosted at this site containing those frameworks, as well as the Objective-J programming language.
+
+              Cappuccino, the project and its components, is released as free software under the terms of the LGPL version 2.1.
+
+              Under the LGPL, you're free to use this code in your own software, whether that software is open source or not. If you make modifications to either Cappuccino or Objective-J, you're required to release those changes under the LGPL. You are not required to release other parts of your program that merely use Cappuccino or Objective-J.
+
+              Practically, this means that nearly all users of Cappuccino and Objective-J will never need to open source any code they write. The required licensing and copyright information is distributed with the software, so most people won't need to do anything at all to comply with our license.
+
+              If you have questions about licensing issues, please send an e-mail to the mailing list and we will do our best to help.
+
+        .faq
+          .number 5
+          .question
+            Can I mix Cappuccino with proprietary (non open-source) software?
+          .answer
+            %p
+              Absolutely. Under the terms of the LGPL, you can use Cappuccino and Objective-J in any project, whether or not that project is open source. If you'd like to modify the actual Cappuccino frameworks, or the language, for your own use, you'll need to release those changes under the LGPL.
+        .faq
+          .number 6
+          .question
+            How does the LGPL affect things like subclasses and categories?
+          .answer
+            %p
+              Subclassing classes like CPView is an important technique used in Cappuccino. You can absolutely subclass or write a category for any class in Cappuccino without worrying about needing to distribute your code. Only when you modify existing code, or when your code needs to live in /AppKit or /Foundation are you required to release it under the LGPL.
+        .faq
+          .number 7
+          .question
+            Who is responsible for this?
+          .answer
+            :markdown
+              Cappuccino and Objective-J are open source software, meaning a lot of people are responsible for various parts of the projects. There is a group of [Core Developers](https://github.com/organizations/cappuccino/teams/83374) who ultimately decide what gets merged into the official Cappuccino, but generally decisions [are made by the community](/contribute/issue-lifecycle.html#how-we-make-decisions).
+
+              Cappuccino was initially created by a company called 280 North, which was dissolved when it was bought out by Motorola Mobility.
+
+        .faq
+          .number 8
+          .question
+            How is Cappuccino different from other web frameworks?
+          .answer
+            %p
+              Cappuccino is different in a lot of ways, but most importantly in that its designed to build applications, not just web sites.
+            =link_to "Learn more.", "/learn/"
