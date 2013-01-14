@@ -28,8 +28,7 @@ $(function () {
 
         // Just follow the regular link if the section is not on the current page.
         if (elementOnPage.length) {
-
-            var top = elementOnPage.offset().top - 35;
+            var top = elementOnPage.offset().top;
             $("html, body").animate({ scrollTop: top }, 700, function () { window.location.hash = hash; });
             return false;
         }
