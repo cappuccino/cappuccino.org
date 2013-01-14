@@ -35,4 +35,34 @@
               %li.next.disabled
                 %span Next Article &rarr;
 
+          #disqus_thread
+          :javascript
+            /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
+            var disqus_container_id = 'disqus_thread';
+            var disqus_domain = 'disqus.com';
+            var disqus_shortname = 'cappuccino';
+            var disqus_developer = 0; // or 1 based on if you're looking to skip URL authentication
+
+          - if data.page.wordpress_url and data.page.wordpress_id
+            :javascript
+              var disqus_identifier = '#{data.page.wordpress_id} #{data.page.wordpress_url}';
+          - else
+            :javascript
+              var disqus_identifier = '#{File.basename(current_page.source_file || request.path).parameterize}';
+
+          :javascript
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          %noscript
+            Please enable JavaScript to view the
+            %a{ :href => "http://disqus.com/?ref_noscript" }
+              comments powered by Disqus.
+          %a.dsq-brlink{ :href => "http://disqus.com"}
+            comments powered by
+            %span.logo-disqus Disqus
+
         = partial :blog_sidebar
