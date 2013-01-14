@@ -13,6 +13,8 @@ pages:
         - "learn/scrapbook-1.html"
     -   - "Scrapbook #2 - Drag and Drop"
         - "learn/scrapbook-2.html"
+    -   - "Tutorial: Automatic Layout"
+        - "learn/automatic-layout.html"
     -   - "Debugging"
         - "learn/debugging.html"
 
