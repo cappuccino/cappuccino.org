@@ -68,7 +68,7 @@ When you have everything ready, go ahead and [open a new ticket](https://github.
 Once the ticket is created, there is a [well-defined lifecycle](/contribute/issue-lifecycle.html) it goes through. We track its progress
 through the lifecycle with tags so you know what its status is.
 
-### Getting the Code
+### Getting the Code <a name="get-code">&nbsp;</a>
 
 Cappuccino is hosted on
 [GitHub](http://github.com/cappuccino/cappuccino) using the
