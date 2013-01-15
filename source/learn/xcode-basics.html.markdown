@@ -45,7 +45,7 @@ quick.
 ### Xcode
 
 XcodeCapp will have generated a hidden folder located in your root
-project folder, named `.xCodeCappSupport`. You should never need to edit
+project folder, named `.XcodeSupport` and a XcodeProject named `Your-Application-Name.xcodeproj`. You should never need to edit
 anything in it. To launch the Xcode project of your Cappuccino project,
 click on the XcodeCapp icon, and choose `Open Project in Xcode`. Xcode
 will start.
@@ -154,7 +154,7 @@ it, it will be the button that will interact with the code. Let’s see:
         */
         [theWindow setFullPlatformWindow:YES];
     }
- 
+
     @end
 
 No more stuff to do for this.
