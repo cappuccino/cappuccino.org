@@ -20,11 +20,11 @@ My goal for both talks was to show existing Cocoa developers how they can levera
 
 These tutorial applications thus formed the basis of the 4 hour course. We shot the video against a white background so that the "talking-head" video could be mixed-in with the screen capture from my laptop as you see here:
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2011/10/Cappuccino-Tutorial-App.png)](http://cappuccino.org/discuss/wp-content/uploads/2011/10/Cappuccino-Tutorial-App.png)
+[![](/img/cpo-uploads/2011/10/Cappuccino-Tutorial-App.png)](/img/cpo-uploads/2011/10/Cappuccino-Tutorial-App.png)
 
 The net effect is quite like having your own personal trainer. Scotty's role is to make sure that I highlighted the points that may not be obvious to first-time learners.
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2011/10/Looking-At-Cappuccino-Code.png)](http://cappuccino.org/discuss/wp-content/uploads/2011/10/Looking-At-Cappuccino-Code.png)
+[![](/img/cpo-uploads/2011/10/Looking-At-Cappuccino-Code.png)](/img/cpo-uploads/2011/10/Looking-At-Cappuccino-Code.png)
 
 The video is delivered in high-quality, DRM-free H.264 video that you download to your machine. Sync it to your iPad if you wish, then watch it in bed before dreaming of Cappuccino. The resolution lets you clearly read the code while listening to the discussion. Work along with the same source code shown in the video, adapt it to your needs, then build something meaningful to you. Since data persistence in web-apps is a major consideration, I've even included the source code for a simple RESTful Web Service written in Ruby on Rails so you can see how things work end-to-end.
 

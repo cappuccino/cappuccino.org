@@ -40,7 +40,7 @@ To use the freshly built frameworks simply replace the "Frameworks" directory in
  objjc, the Objective-J compiler, is the most important of the build tools, but you'll likely never invoke it directly. objj can take any number of parameters as input filenames and output filenames (preceded by the "-o" flag). For example:
 ``objj Class1.j -o Class1.o Class2.j -o Class2.o``
 
-![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc1.png)
+![](/img/cpo-uploads/2008/10/objjc1.png)
 
 This will invoke the Objective-J compiler (which is identical to the one used by Objective-J in the browser) on each input file, outputting JavaScript plus some metadata to each specified output file. Next we need to combine all of these individual output files into a single ".sj" archive that contains the JavaScript and import dependency metadata for the entire framework. It would be possible to do this by hand, but steam takes care of it for you.
 
@@ -107,7 +107,7 @@ If a .steam filename is not provided it will look for a file with the extension 
 
 steam gathers all ".j" files in your application, compiles them, and combines them into a single ".sj" file ("static Objective-J"), along with a new "Info.plist" which tell Objective-J which files are contained in the ".sj".
 
-![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam1.png)
+![](/img/cpo-uploads/2008/10/steam1.png)
 
 The results are placed in a subdirectory of $STEAM_BUILD named the same as the configuration, i.e. Debug or Release. Alternatively, pass the "-b" flag and a build directory to specify where it should be built.
 

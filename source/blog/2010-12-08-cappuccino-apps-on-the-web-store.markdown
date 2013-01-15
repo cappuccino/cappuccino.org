@@ -14,36 +14,36 @@ Yesterday Google announced their revolutionary web store. We're super excited ab
 We're really proud of these applications built with Cappuccino.
 If we've missed any, please leave us a comment and we'll be sure to add it!
 
-[![PicsEngine](http://cappuccino.org/discuss/wp-content/uploads/2010/12/1001.png)](https://chrome.google.com/webstore/detail/hmodoamaicogedjmnjieephhfleigccf)
+[![PicsEngine](/img/cpo-uploads/2010/12/1001.png)](https://chrome.google.com/webstore/detail/hmodoamaicogedjmnjieephhfleigccf)
 **PicsEngine:** Organize your photo library on the web from anywhere.
 PicsEngine is an easy way to manage your photos online. It offers unlimited space storage and an easy-to-use interface to organize and access your photos wherever you are.
 
 
-[![Mockingbird](http://cappuccino.org/discuss/wp-content/uploads/2010/12/2001.png)](https://chrome.google.com/webstore/detail/mglnbanmebacbohplmcogiompoijbhnm)
+[![Mockingbird](/img/cpo-uploads/2010/12/2001.png)](https://chrome.google.com/webstore/detail/mglnbanmebacbohplmcogiompoijbhnm)
 **Mockingbird:** Collaborative wireframing tool that lets you make and share mockups of your site or application quickly and easily. Indispensable for designers, developers, or anyone else who needs to build a website and wants to plan it first.
 
 
-[![Almost.at](http://cappuccino.org/discuss/wp-content/uploads/2010/12/1.png)](https://chrome.google.com/webstore/detail/hikfjcajdelbliidopckbinaojfckdmd)
+[![Almost.at](/img/cpo-uploads/2010/12/1.png)](https://chrome.google.com/webstore/detail/hikfjcajdelbliidopckbinaojfckdmd)
 **Almost.at:** Follow people at real-world events in real-time with this mashup of posts, images, videos, and links from sites like Twitter, Flickr, and YouTube.
 
 
-[![Issues](http://cappuccino.org/discuss/wp-content/uploads/2010/12/1-2.png)](https://chrome.google.com/webstore/detail/oaianekphgmiibhdffnoimngeolnailp)
+[![Issues](/img/cpo-uploads/2010/12/1-2.png)](https://chrome.google.com/webstore/detail/oaianekphgmiibhdffnoimngeolnailp)
 **Issues:** A front end to GitHub's issues tracker written in Cappuccino focused on providing a true desktop application like experience to manage multiple repositories.
 
 
-[![280Slides](http://cappuccino.org/discuss/wp-content/uploads/2010/12/2.png)](https://chrome.google.com/webstore/detail/jfgfmoonhalhgbpeoffnehkedjhgoeno)
+[![280Slides](/img/cpo-uploads/2010/12/2.png)](https://chrome.google.com/webstore/detail/jfgfmoonhalhgbpeoffnehkedjhgoeno)
 **280Slides:** Presentation tool that makes it easy to create and share beautiful presentations.
 
 
-[![TimeTable](http://cappuccino.org/discuss/wp-content/uploads/2010/12/1-1.png)](https://chrome.google.com/webstore/detail/pccoboeeilnmlpkobpnkmbphfmcmcahe)
+[![TimeTable](/img/cpo-uploads/2010/12/1-1.png)](https://chrome.google.com/webstore/detail/pccoboeeilnmlpkobpnkmbphfmcmcahe)
 **TimeTable:** Time tracking application for freelancers to keep track of projects, work time, expenses, and clients. Complete with in-app calling, directions, and invoice generation, and more.
 
 
-[![ThatMusicApp](http://cappuccino.org/discuss/wp-content/uploads/2010/12/1-3.png)](https://chrome.google.com/webstore/detail/ckcigpkibflpneekkpeoeikiddopklbg)
+[![ThatMusicApp](/img/cpo-uploads/2010/12/1-3.png)](https://chrome.google.com/webstore/detail/ckcigpkibflpneekkpeoeikiddopklbg)
 **ThatMusicApp:** Create libraries from your favorite internet videos. It's completely free so everybody in the world can use it.
 
 
-[![Spanning Backup](http://cappuccino.org/discuss/wp-content/uploads/2010/12/13001.png)](https://chrome.google.com/webstore/detail/gbogokblcdfahcieocignhkkmknkfjpn)
+[![Spanning Backup](/img/cpo-uploads/2010/12/13001.png)](https://chrome.google.com/webstore/detail/gbogokblcdfahcieocignhkkmknkfjpn)
 **Spanning Backup:** Highest-rated Google Apps backup solution, Spanning Backup continually backs up Google Calendar, Contacts, and Docs to the cloud to make sure your most important data is never lost.
 
 

@@ -23,11 +23,11 @@ One of the most exciting features of this release is full Key Value Bindings sup
 
 We were incredibly excited to introduce table views&mdash;one of the most important and versatile components in any widget set&mdash;in our 0.8 release. In 0.9, we've matured the table view to production quality and added its supplemental component, the outline view. CPOutlineView lets you build tables that provide hierarchical data and it inherits from CPTableView, so it already benefits from all the additional work that has gone into the table view.
 
-![CPOutlineView](http://cappuccino.org/discuss/wp-content/uploads/2011/02/Screen-shot-2011-02-23-at-12.00.06-PM1.png)CPOutlineView
+![CPOutlineView](/img/cpo-uploads/2011/02/Screen-shot-2011-02-23-at-12.00.06-PM1.png)CPOutlineView
 
 Table views now support bindings, group rows, inline editing, column reordering and resizing, and a whole slew of other features. Perhaps the most requested feature that is now supported: variable row heights.
 
-![CPTableView Variable Row Heights in CappuTweetie](http://cappuccino.org/discuss/wp-content/uploads/2011/02/variable-row-heights1.png)CPTableView Variable Row Heights in an upcoming Cappuccino demo app
+![CPTableView Variable Row Heights in CappuTweetie](/img/cpo-uploads/2011/02/variable-row-heights1.png)CPTableView Variable Row Heights in an upcoming Cappuccino demo app
 
 One of the most important aspects of our table view is performance; we have been very careful not to sacrifice speed for any of these new features. CPTableView will still scroll like butter, even with hundreds of thousands of rows.
 
@@ -43,7 +43,7 @@ This release also introduces several new features to Cappuccino. You'll find mor
 * **CPTokenField**: A powerful text field subclass with support for autocomplete, CPTokenField allows you to build unique token managers, like the address fields in Mac OS X's Mail.app.
 * **NativeHost**_:_ We announced [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/) a few months ago, but this is the first time we've included it with a release of Cappuccino. NativeHost lets you build your Cappuccino application for desktop platforms and distribute it like any other desktop app. Support for Mac OS X is currently included, with Windows and Linux support coming soon.
 
-![CPAlert](http://cappuccino.org/discuss/wp-content/uploads/2011/02/CPAlert1.png)
+![CPAlert](/img/cpo-uploads/2011/02/CPAlert1.png)
 
 ### The Future
 

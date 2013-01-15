@@ -13,9 +13,9 @@ tags: []
 
 To showcase our new [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop) technology, we're proud to announce the brand new GitHub Issues App, written entirely in Cappuccino and available for both desktop and web:
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2010/05/tryitonline.png)](http://githubissues.heroku.com/)
+[![](/img/cpo-uploads/2010/05/tryitonline.png)](http://githubissues.heroku.com/)
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2010/05/downloadit.png)](http://download.cappuccino.org/Issues-1.0.zip)
+[![](/img/cpo-uploads/2010/05/downloadit.png)](http://download.cappuccino.org/Issues-1.0.zip)
 
 The online version is running on Heroku's Node.js beta at [http://githubissues.heroku.com](http://githubissues.heroku.com). If you're already using GitHub's Issue tracking feature, then this app will work for you right out of the box. Simply type in your repo's identifier (username/reponame), and we'll fetch all the issues for you. You can also log in with your GitHub account to access private repositories.
 
@@ -23,7 +23,7 @@ The online version is running on Heroku's Node.js beta at [http://githubissues.h
 
  The GitHub Issues app was put together by some truly excellent members of the Cappuccino community, and we're open sourcing it so that it can serve as an example of how to build and architect a full blown application with Cappuccino and [Atlas](http://280atlas.com).
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/05/atlas-cat.png) If you don't have Atlas you can still build the app using the [Jakefile](http://cappuccino.org/discuss/2010/04/28/introducing-jake-a-build-tool-for-javascript/) in the repo, but you will need Atlas to edit the visual interface files. You can find the source code at [http://github.com/280north/issues](http://github.com/280north/issues). So don't just use it, clone it, patch it, and of course, [file bugs](http://githubissues.heroku.com/#280north/issues)!
+[![](/img/cpo-uploads/2010/05/atlas-cat.png)](/img/cpo-uploads/2010/05/atlas-cat.png) If you don't have Atlas you can still build the app using the [Jakefile](http://cappuccino.org/discuss/2010/04/28/introducing-jake-a-build-tool-for-javascript/) in the repo, but you will need Atlas to edit the visual interface files. You can find the source code at [http://github.com/280north/issues](http://github.com/280north/issues). So don't just use it, clone it, patch it, and of course, [file bugs](http://githubissues.heroku.com/#280north/issues)!
 
 ### Cappuccino, NativeHost, Heroku, Node, Oh My!
 

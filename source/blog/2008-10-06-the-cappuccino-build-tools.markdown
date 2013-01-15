@@ -37,7 +37,7 @@ When it comes time to deploy your application you may want to optimize it. There
 
  At the lowest level is "objjc", the Objective-J compiler. It's equivalent to gcc or javac, except it converts Objective-J code to JavaScript. Because we can run the same JavaScript code in the browser and [Rhino](http://www.mozilla.org/rhino/) the core of objjc is identical to the in-browser compiler.
 
-[](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/objjc1.png)
+[](/img/cpo-uploads/2008/10/objjc.png)[![](/img/cpo-uploads/2008/10/objjc1.png)](/img/cpo-uploads/2008/10/objjc1.png)
 
 Currently objjc's implementation is closer to a simple preprocessor than a compiler, much like the original Objective-C compiler was implemented as a preprocessor on top of C. The preprocessor simply looks for the few Objective-J syntax additions and replaces it with the raw JavaScript equivalent. A big reason this is possible is that Objective-J is a strict superset of JavaScript, thus all JavaScript code is valid Objective-J code.
 
@@ -49,7 +49,7 @@ Typically you don't call objjc directly, but rather let steam manage the build p
 
 "steam build" runs the compilation process on an entire application or framework and outputs a single ".sj" file, vastly decreasing the number of HTTP requests required to load an application. These ".sj" files are archives of the compiled input ".j" files, along with information detailing each file's required imports. This allows the Objective-J loading system to efficiently and asynchronously load a large application.
 
-[](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/steam1.png)
+[](/img/cpo-uploads/2008/10/steam.png)[![](/img/cpo-uploads/2008/10/steam1.png)](/img/cpo-uploads/2008/10/steam1.png)
 
 "steam create" copies all the files required for a new project to the directory specified.
 
@@ -57,7 +57,7 @@ Typically you don't call objjc directly, but rather let steam manage the build p
 
  The "press" tool takes in a full application and attempts to determine which code files are unecessary. It then strips those files and writes the results to another directory. This could be thought of as a "linker" though it works very differently than a traditional linker. On a simple project it will reduce the AppKit and Foundation frameworks size by approximately 30%, and we expect further improvements.
 
-[](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press.png)[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/press1.png)
+[](/img/cpo-uploads/2008/10/press.png)[![](/img/cpo-uploads/2008/10/press1.png)](/img/cpo-uploads/2008/10/press1.png)
 
 Optionally, it can run the [pngcrush](http://pmt.sourceforge.net/pngcrush/) utility on all your png graphics, attempting to reduce their size. Eventually press will also automatically sprite images, further reducing the number of HTTP requests required to load your images.
 
@@ -65,7 +65,7 @@ Optionally, it can run the [pngcrush](http://pmt.sourceforge.net/pngcrush/) util
 
  Finally, we have "bake", the Cappuccino deployment tool (like ["Capistrano"](http://www.capify.org/) but specialized for Cappuccino applications). Bake orchestrates all the above tools to produce, and optionally deploy, a highly optimized Cappuccino application. First it can pull both Cappuccino and your application code from git, svn, or a local or remote directory via rsync.
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2008/10/bake1.png)](http://cappuccino.org/discuss/wp-content/uploads/2008/10/bake1.png)It then copies pieces of the various "checkouts" to the "products" directory, first running a build process like "steam" or ant, if specified. For example, it can run steam on your application code, and copy the results to the product directory, then do the same for AppKit and Foundation, copying the results to the Frameworks/AppKit and Frameworks/Foundation directories to build the complete application.
+[![](/img/cpo-uploads/2008/10/bake1.png)](/img/cpo-uploads/2008/10/bake1.png)It then copies pieces of the various "checkouts" to the "products" directory, first running a build process like "steam" or ant, if specified. For example, it can run steam on your application code, and copy the results to the product directory, then do the same for AppKit and Foundation, copying the results to the Frameworks/AppKit and Frameworks/Foundation directories to build the complete application.
 
 Once an application is assembled, bake can run "press", optimizing the application's size.
 

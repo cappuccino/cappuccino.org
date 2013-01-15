@@ -15,7 +15,7 @@ As you may know, Cappuccino's source code is managed using the [Git](http://git.
 
 This week Cappuccino is the featured project on GitHub:
 
-[![Cappuccino Featured on GitHub](http://cappuccino.org/discuss/wp-content/uploads/2008/12/picture-4.png)](http://github.com/280north/cappuccino/)
+[![Cappuccino Featured on GitHub](/img/cpo-uploads/2008/12/picture-4.png)](http://github.com/280north/cappuccino/)
 
 We're honored! Thanks GitHub.
 

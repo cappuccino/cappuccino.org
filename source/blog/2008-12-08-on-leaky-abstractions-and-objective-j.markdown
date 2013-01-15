@@ -162,15 +162,15 @@ To suggest that we shouldn't abstract because of Joel Spolsky's Law that all abs
 
 We look at these technologies completely differently. &nbsp;To us, HTML, CSS, Canvas, the DOM, etc all represent the "rendering engine" of the web, in the same way that graphics cards are the rendering engines for your computer. It's too difficult to learn the intricacies of every graphics card on the market, so developers instead use technologies that hide these details like OpenGL. In the same way, Cappuccino defines a common way to "draw" for the web. Internally, it figures out whether its more efficient to make a div, or draw to a canvas, or use VML. This is a fantastic time saver today, because it allows Cappuccino to worry about things like performance and allows you to just get a button on the screen. But its going to be even better as time goes on.&nbsp;This is not only because the underlying code will get better, but because web applications today look like this:
 
-> ![](http://cappuccino.org/discuss/wp-content/uploads/2008/12/webapps1.png)
+> ![](/img/cpo-uploads/2008/12/webapps1.png)
 
  But tomorrow, when enough browsers finally support SVG, they may look like this:
 
-> ![](http://cappuccino.org/discuss/wp-content/uploads/2008/12/webapps2.png)
+> ![](/img/cpo-uploads/2008/12/webapps2.png)
 
  Or, for all we know, like this:
 
-> ![](http://cappuccino.org/discuss/wp-content/uploads/2008/12/webapps4.png)
+> ![](/img/cpo-uploads/2008/12/webapps4.png)
 
  The important thing is that when this happens, and it _will_ eventually happen, people who invested heavily in todays technologies will have to spend a great deal of effort updating, but we will just swap out the guts of Cappuccino and your code will inherit the benefits of SVG or whatever new technology is out there.
 

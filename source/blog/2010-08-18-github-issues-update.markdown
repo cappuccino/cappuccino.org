@@ -40,7 +40,7 @@ You can customize it to do any of the following:
 
 If you are looking at a GitHub repository and click the button in the toolbar you will be redirected to that repository's issues. If you're not viewing a repository and click the button in the toolbar you will be redirected to the Issues application where you can select a repository and issue from there.
 
-[![GitHub Issues Safari Extension](http://cappuccino.org/discuss/wp-content/uploads/2010/08/screen.png)](http://github.com/downloads/Me1000/PrettyIssues/PrettyIssues.safariextz.zip)
+[![GitHub Issues Safari Extension](/img/cpo-uploads/2010/08/screen.png)](http://github.com/downloads/Me1000/PrettyIssues/PrettyIssues.safariextz.zip)
 
 This plugin has been open source and is available on [GitHub](http://github.com/Me1000/PrettyIssues), but if you just want to install it you can download it [here](http://github.com/downloads/Me1000/PrettyIssues/PrettyIssues-1.1.safariextz.zip).
 

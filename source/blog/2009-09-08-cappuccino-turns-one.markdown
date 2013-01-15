@@ -11,7 +11,7 @@ tags: []
 ---
 
 
-![cappuccino-birthday-icon](http://cappuccino.org/discuss/wp-content/uploads/2009/09/cappuccino-birthday-icon.png)
+![cappuccino-birthday-icon](/img/cpo-uploads/2009/09/cappuccino-birthday-icon.png)
 
 Cappuccino officialy turned one last Friday. I suppose that technically Cappuccino is quite a bit older, but [a year ago](http://cappuccino.org/discuss/2008/09/04/announcing-cappuccino/) was when we finally released it into the open source community. It's unbelievable to me that in just one year we went from being a completely unkown technology to [one of the most popular JavaScript projects on GitHub](http://github.com/languages/JavaScript). I'm a little embarrassed to admit this, but I can remember that just a few weeks before launching, the guys over at [Heroku](http://heroku.com/) were still convincing us that we needed to switch from svn to git. Good times.
 

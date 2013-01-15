@@ -18,7 +18,7 @@ The entire 280 crew just got back from an awesome time at [JSConf EU](http://jsc
 
 Image spriting is the act of taking all the images in your app (or framework, or library, or whatever) and combining them down to one single image. This has the advantages of being smaller (since each individual image has overhead associated with the format), as well as allowing you to grab it from your server with one request:
 
-![Traditional Spriting](http://cappuccino.org/discuss/wp-content/uploads/2009/11/Screen-shot-2009-11-11-at-1.55.50-AM.png)
+![Traditional Spriting](/img/cpo-uploads/2009/11/Screen-shot-2009-11-11-at-1.55.50-AM.png)
 
 This is faster in an absolute sense, but even more so psychologically since it allows you to show the contents of your app faster without having all the images "flash in" later. Cappuccino currently uses a similar technique with the source code in your application: concatenating it all together and minifying it, but up until now we've had no automatic, or built-in, support for spriting, you've instead had to do it entirely yourself. And truthfully, no framework has really good support for this.
 
@@ -44,7 +44,7 @@ There are many advantages to this:
 
 Cappuccino is already smart enough to be able to automatically download and use different code depending on what browser is being used (and with **no** server configuration), so we now simply ship data URL versions of this technique to modern browsers, and MHTML versions to older copies of IE:
 
-![Cappuccino Spriting](http://cappuccino.org/discuss/wp-content/uploads/2009/11/Screen-shot-2009-11-11-at-1.57.08-AM.png)
+![Cappuccino Spriting](/img/cpo-uploads/2009/11/Screen-shot-2009-11-11-at-1.57.08-AM.png)
 
 This is a very exciting feature for us. This has been a weak point in Cappuccino and its nice to finally have a solution that not only works, but is drop dead simple to use. Our tests have been proven incredibly promising, giving us the fastest load times we've ever seen with Cappuccino, and absolutely fantastic perceived speed as well. Our tools have all been honed to use this at every level: Apps, frameworks, and themes will automatically sprite your images for you.
 

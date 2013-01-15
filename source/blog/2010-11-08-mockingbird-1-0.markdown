@@ -9,7 +9,7 @@ tags:
 - community highlights
 ---
 
-[![](http://cappuccino.org/discuss/wp-content/uploads/2010/11/realtimeshot21.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/11/realtimeshot21.png)
+[![](/img/cpo-uploads/2010/11/realtimeshot21.png)](/img/cpo-uploads/2010/11/realtimeshot21.png)
 
 Mockingbird 1.0 was released today by the folks at Some Character, LLC. If you've been following the work [Saikat Chakrabarti](http://twitter.com/saikatc) and [Sheena Pakanati](http://twitter.com/sheenapakanati) have been doing on [Mockingbird](http://gomockingbird.com/) you'll know how much effort they've put into the project. The duo has spent the last year refining their already excellent beta to create the best mockup and wireframe tool on the Web.
 

@@ -9,11 +9,11 @@ tags:
 - community highlights
 ---
 
-[![PicsEngine Icon](http://cappuccino.org/discuss/wp-content/uploads/2010/10/icon.png)](http://picsengine.com/)
+[![PicsEngine Icon](/img/cpo-uploads/2010/10/icon.png)](http://picsengine.com/)
 
 Today [Michael Villar](http://twitter.com/michaelvillar) has released Version 4.0 of [PicsEngine](http://picsengine.com), a photo management utility. Version 4.0 has been completely rewritten making use of Cappuccino for the photo administration. This beautiful new application features an entirely custom UI designed by Michael himself.
 
-[![PicsEngine 4 Screenshot](http://cappuccino.org/discuss/wp-content/uploads/2010/10/screen_1_large.png)](http://cappuccino.org/discuss/wp-content/uploads/2010/10/screen_1_large.png)
+[![PicsEngine 4 Screenshot](/img/cpo-uploads/2010/10/screen_1_large.png)](/img/cpo-uploads/2010/10/screen_1_large.png)
 
 PicsEngine features a [community written](http://github.com/davidcann/deepDropUpload) HTML5 drag and drop file upload, photo tagging, albums, smart albums searching, geolocation, &nbsp;and a gallery with mobile versions for the iPhone, iPad, and Android browsers.
 

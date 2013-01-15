@@ -24,7 +24,7 @@ This is maintenance release for 0.7 and includes mainly bug fixes. You can see a
 
 One completely new feature we added is an auto generated showcase app for the theming API we introduced in 0.7. This showcase allows you to better test your themes under a number of different conditions. You can check out the one for Aristo [here](http://cappuccino.org/aristo/showcase).
 
-![Aristo Showcase](http://cappuccino.org/discuss/wp-content/uploads/2009/07/picture-11.png)
+![Aristo Showcase](/img/cpo-uploads/2009/07/picture-11.png)
 
 **Downloading**
 

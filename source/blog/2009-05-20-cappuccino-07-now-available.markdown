@@ -26,13 +26,13 @@ We're pleased to announce the immediate release of [Cappuccino 0.7](/download/),
 
 As of version 0.6, Cappuccino had 9 total contributors. Version 0.7 more than triples that number with 29 total contributors. And thanks to the inspiration and hard work of [Xavier Noria and Jos&eacute; Espinal](http://weblog.rubyonrails.org/2009/5/18/new-code-contributor-index), we've got a slick new website that keeps up to date tallies on all of the [contributors](http://contributors.cappuccino.org/contributors) to the project. Check it out [here](http://contributors.cappuccino.org/contributors). If you find a mistake, be sure to let us know in the comments.
 
-![contributors](http://cappuccino.org/discuss/wp-content/uploads/2009/05/contributors.jpg)
+![contributors](/img/cpo-uploads/2009/05/contributors.jpg)
 
 This release includes over 100 bug fixes, thanks in part to all the new contributors, and to the hard work of users taking the time to file quality bug reports. If you hadn't noticed already, we've moved to github's new [issue tracking](http://github.com/280north/cappuccino/issues) for bug reports, so check out the new system, and vote on issues that are important to you.
 
 ### New Look
 
-[![aristo](http://cappuccino.org/discuss/wp-content/uploads/2009/05/aristo.png)](/images/Aristo.jpg)
+[![aristo](/img/cpo-uploads/2009/05/aristo.png)](/images/Aristo.jpg)
 
 The biggest new feature of Cappuccino is our new new theme: Aristo. Aristo is the new look and feel for Cappuccino applications. Created by the talented designers at [Sofa](http://madebysofa.com), Aristo is designed specifically to look good in the browser, and in any browser, whether it's Firefox, Safari, or even Internet Explorer, Mac and Windows. We've also [open-sourced](http://github.com/280north/aristo/tree/master) the PSD file used to create Aristo. All the controls have been updated to use the new style, and we've added a few new controls as well, like checkboxes, radio buttons, and segmented controls.
 
@@ -44,7 +44,7 @@ We didn't just build one new look for Cappuccino, though. Instead, we built an e
 
 Those of you who come from a Cocoa background are used to using Apple's [Interface Builder](http://developer.apple.com/tools/interfacebuilder.html) tool to layout your Cocoa applications. Thanks to a technology in 0.7 called [nib2cib](http://wiki.github.com/280north/cappuccino/nib2cib), you can use Interface Builder to layout Cappuccino applications too. All of the classes supported in Cappuccino 0.7 that have Cocoa analogues are included. So, you can drag checkboxes, sliders, text fields, buttons, and lots more. You can even instantiate custom top level objects, or custom view subclasses, which will be converted to the right class in Cappuccino by the nib2cib tool. Once you're done laying out the UI of your application with Interace Builder, you can use it's target-action and outlet technology to build up its logic as well.
 
-![making a cappuccino application using interface builder](http://cappuccino.org/discuss/wp-content/uploads/2009/05/temp-image_1_72.png)
+![making a cappuccino application using interface builder](/img/cpo-uploads/2009/05/temp-image_1_72.png)
 
 [nib2cib](http://wiki.github.com/280north/cappuccino/nib2cib) is a powerful tool that drastically reduces the amount of code you need to write to build an interface with Cappuccino. The starter package now includes both a nib/xib based application template, and a standard, code based template, so you can choose which is best for you. From the command line you can use the new [capp](http://wiki.github.com/280north/cappuccino/capp) tool to generate a nib/xib project by typing "capp gen -t NibApplication MyApp".
 
