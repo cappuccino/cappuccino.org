@@ -33,7 +33,7 @@
           .number 4
           .question
             What license is Cappuccino available under?
-            %a{:name => "licensing"} &nbsp
+            %a{:name => "licensing"} &nbsp;
           .answer
             :markdown
               Cappuccino is released under the [LGPL](/learn/lgpl.txt).
@@ -53,8 +53,12 @@
           .question
             Can I mix Cappuccino with proprietary (non open-source) software?
           .answer
-            %p
-              Absolutely. Under the terms of the LGPL, you can use Cappuccino and Objective-J in any project, whether or not that project is open source. If you'd like to modify the actual Cappuccino frameworks, or the language, for your own use, you'll need to release those changes under the LGPL.
+            :markdown
+              Absolutely. Under the terms of the LGPL, you can link to Cappuccino and Objective-J in binary form in any project, whether or not that project is open source. If you'd like to modify the actual Cappuccino frameworks, or the language, for your own use, you'll need to release those changes under the LGPL.
+
+              Note that this is not true if you're copying Cappuccino or Objective-J source code. If you intermingle Cappuccino or Objective-J source code with your own, you need to release your project under the terms of the LGPL or a compatible license.
+
+              If in any doubt, please refer to the [full license text](/learn/lgpl.txt).
         .faq
           .number 6
           .question
