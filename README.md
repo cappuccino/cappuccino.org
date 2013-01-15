@@ -18,6 +18,10 @@ Now you can simply edit the markdown, HAML, CSS, JavaScript and so on which make
 
 When you are done, create a fork of this repository, make a branch of master, commit your changes, and make a pull request.
 
+### How to Add a Blog Post
+
+    bundle exec middleman article "Article Title"
+
 ### How to Deploy
 
     bundle exec middleman build
