@@ -16,7 +16,7 @@ tags:
 ---
 
 
-_Note: please check the [tools page](http://wiki.github.com/280north/cappuccino/tools) on the wiki for the latest information on Cappuccino's tools._
+_Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
 
 In our previous post on the [Cappuccino build tools](http://cappuccino.org/discuss/2008/10/06/the-cappuccino-build-tools/) we summarized the purpose of four of the tools. In this article we'll dive deeper into two of them, objjc and steam.
 

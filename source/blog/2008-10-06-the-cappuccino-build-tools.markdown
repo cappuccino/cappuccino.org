@@ -16,7 +16,7 @@ tags:
 ---
 
 
-_Note: please check the [tools page](http://wiki.github.com/280north/cappuccino/tools) on the wiki for the latest information on Cappuccino's tools._
+_Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
 
 This article is a high level overview of the current Cappuccino and Objective-J build tools. Subsequent posts will cover each tool in more detail.
 
