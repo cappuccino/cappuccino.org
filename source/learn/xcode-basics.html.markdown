@@ -154,7 +154,7 @@ it, it will be the button that will interact with the code. Let’s see:
         */
         [theWindow setFullPlatformWindow:YES];
     }
- 
+
     @end
 
 No more stuff to do for this.
