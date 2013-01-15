@@ -74,15 +74,16 @@
 
         %hr
           .row.copyright
-            .span4
+            .span2
               %h3 Social
               %a.social.tw{:href => "https://twitter.com/cappuccino"}
                 %i.i_twitter
-            .offset1.span2.forkme
+            .span8.copyright2
+              :markdown
+                ![](/img/minisofa.png) Logo by [Sofa](http://madebysofa.com). Hosted by [SlevenBits](http://slevenbits.com). Copyright &copy; 2013 - Cappuccino Project.
+            .pull-right.forkme
               %p
-                = link_to "Fork and edit this site", "https://github.com/cappuccino/cappuccino.org"
-            .pull-right.copy
-              %p Copyright &copy; 2013 - Cappuccino Project
+                = link_to "Fork and edit this site.", "https://github.com/cappuccino/cappuccino.org"
     %script{:src => "http://code.jquery.com/jquery-latest.js"}
     %script{:src => "/js/bootstrap.min.js"}
     %script{:src => "/js/theme.js"}
