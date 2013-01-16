@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Three months ago we were thrilled to announce the introduction of our front end to [GitHub Issues](http://cappuccino.org/discuss/2010/05/13/github-issues-cappuccino-app-desktop-and-web/). Since then we have worked on specific bugs in the applications and added small features here and there.
+Three months ago we were thrilled to announce the introduction of our front end to [GitHub Issues](http://www.cappuccino-project.org/discuss/2010/05/13/github-issues-cappuccino-app-desktop-and-web/). Since then we have worked on specific bugs in the applications and added small features here and there.
 
 Today we are excited to announce the first major revision to our GitHub Issues! Below is a list of all the new features [Nick Small](http://github.com/nciagra/) and [Randy Luecke](http://github.com/me1000) have worked hard to introduce.
 
@@ -28,7 +28,7 @@ Today we are excited to announce the first major revision to our GitHub Issues! 
 
  ...and of course various bug fixes!
 
-You can view the application by visiting&nbsp;[githubissues.heroku.com](http://githubissues.heroku.com/), or you can download the [updated desktop version](http://cl.ly/44R7) (read more about how we make this work with [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/)).
+You can view the application by visiting&nbsp;[githubissues.heroku.com](http://githubissues.heroku.com/), or you can download the [updated desktop version](http://cl.ly/44R7) (read more about how we make this work with [NativeHost](http://www.cappuccino-project.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/)).
 
 In addition to this new version of the application Randy has worked hard on a browser extension to automatically convert GitHub URLs to use our Cappuccino app.
 

@@ -23,7 +23,7 @@ The first step is to create your Rails project using the standard "rails _appnam
 	rails appname
 	cd appname
 
-Then create a new Cappuccino project in a temporary directory, either using the "steam create" command, or by downloading the ["Starter Package"](http://cappuccino.org/download/). Move the contents of the Cappuccino project to the Rails application's "public" directory. Here's an example using "steam create" (which will overwrite the default index.html):
+Then create a new Cappuccino project in a temporary directory, either using the "steam create" command, or by downloading the ["Starter Package"](http://www.cappuccino-project.org/download/). Move the contents of the Cappuccino project to the Rails application's "public" directory. Here's an example using "steam create" (which will overwrite the default index.html):
 
 	steam create temp
 	mv temp/* public/.
@@ -54,7 +54,7 @@ You can also filter or process the array before serializing it. When an ActiveRe
 	end
 
 
-Finally, if for some reason you need to use [JSONP](http://cappuccino.org/discuss/2008/10/08/xmlhttprequest-jsonp-cappuccino/) (be sure you understand why you need it, and the security implications!), Rails makes it very easy to wrap the JSON in callback:
+Finally, if for some reason you need to use [JSONP](http://www.cappuccino-project.org/discuss/2008/10/08/xmlhttprequest-jsonp-cappuccino/) (be sure you understand why you need it, and the security implications!), Rails makes it very easy to wrap the JSON in callback:
 
 	 def hello
 	 render :json => { :hello => "world" }, :callback => params[:jsoncallback]
@@ -65,7 +65,7 @@ This example also demonstrates accessing parameters that were passed in, namely 
 
 ### Getting and Submitting Data From Cappuccino
 
-The typical way to retrieve or submit data from a Cappuccino application is to use [CPURLConnection](http://cappuccino.org/learn/documentation/classes/CPURLConnection.html). This is discussed extensively in [a previous blog post](http://cappuccino.org/discuss/2008/10/08/xmlhttprequest-jsonp-cappuccino/), and all of it applies to using Cappuccino with Rails.
+The typical way to retrieve or submit data from a Cappuccino application is to use [CPURLConnection](http://www.cappuccino-project.org/learn/documentation/classes/CPURLConnection.html). This is discussed extensively in [a previous blog post](http://www.cappuccino-project.org/discuss/2008/10/08/xmlhttprequest-jsonp-cappuccino/), and all of it applies to using Cappuccino with Rails.
 
 ### Scaffolding
 

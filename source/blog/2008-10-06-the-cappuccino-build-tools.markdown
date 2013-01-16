@@ -24,7 +24,7 @@ One of our primary design goals with Cappuccino and Objective-J was to keep the 
 
 In reality the Objective-J "compiler" is more like a preprocessor, performing a relatively simple transformation from Objective-J code to JavaScript code, which is then interpretted by the browser's native JavaScript engine. We don't do full parsing and compiling, nor do we have a separate interpreter on top of JavaScript. The result is that the compiler and resulting code run very fast.
 
-This turned out to work great. Simply [download the starter package](http://cappuccino.org/starter), load index.html in your browser, and start editing away! If you're just getting started with Objective-J and Cappuccino you don't even need to worry about the build tools, they're entirely optional.
+This turned out to work great. Simply [download the starter package](http://www.cappuccino-project.org/starter), load index.html in your browser, and start editing away! If you're just getting started with Objective-J and Cappuccino you don't even need to worry about the build tools, they're entirely optional.
 
 When it comes time to deploy your application you may want to optimize it. There's no reason for your customers to wait any longer than necessary, even if the overhead is minimal. That's where the build tools come in. Each tool has a specific purpose, and they all work together to produce an optimized Cappuccino application:
 

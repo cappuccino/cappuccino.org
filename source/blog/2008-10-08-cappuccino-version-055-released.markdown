@@ -15,13 +15,13 @@ tags:
 ---
 
 
-I'm pleased to announce the release of the second update to Cappuccino since it was made available last month, [version 0.5.5](http://cappuccino.org/download).
+I'm pleased to announce the release of the second update to Cappuccino since it was made available last month, [version 0.5.5](http://www.cappuccino-project.org/download).
 
 Even more exciting is the fact that this release includes our first user contributions. We're glad these individuals were able to help out the project, and we hope more people continue to do so in the future. You can keep up with those contributing to Cappuccino on [Github](http://github.com/280north/cappuccino/graphs/impact).
 
 Version 0.5.5 includes over 60 fixes, and several key new features, including:
 
-* New build tools, including [press](http://cappuccino.org/discuss/2008/10/06/the-cappuccino-build-tools/)
+* New build tools, including [press](http://www.cappuccino-project.org/discuss/2008/10/06/the-cappuccino-build-tools/)
 * Key-Value-Observing
 * CPSplitView, CPWebView, and CPDate
 * Additional Editor Support

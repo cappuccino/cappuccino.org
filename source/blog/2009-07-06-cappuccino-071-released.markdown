@@ -22,13 +22,13 @@ This is maintenance release for 0.7 and includes mainly bug fixes. You can see a
 * Better UTF8 Support
 * Updated included version of Narwhal (http://narwhaljs.org/)
 
-One completely new feature we added is an auto generated showcase app for the theming API we introduced in 0.7. This showcase allows you to better test your themes under a number of different conditions. You can check out the one for Aristo [here](http://cappuccino.org/aristo/showcase).
+One completely new feature we added is an auto generated showcase app for the theming API we introduced in 0.7. This showcase allows you to better test your themes under a number of different conditions. You can check out the one for Aristo [here](http://www.cappuccino-project.org/aristo/showcase).
 
 ![Aristo Showcase](/img/cpo-uploads/2009/07/picture-11.png)
 
 **Downloading**
 
-As always you can download this release from our [downloads](http://cappuccino.org/download) page, or update your [source](http://github.com/280north/cappuccino/tree/master).
+As always you can download this release from our [downloads](http://www.cappuccino-project.org/download) page, or update your [source](http://github.com/280north/cappuccino/tree/master).
 
 Thanks for all the help on this release!
 

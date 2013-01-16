@@ -11,7 +11,7 @@ tags:
 - rake
 ---
 
-Now that we've [shipped Cappuccino 0.8](http://cappuccino.org/discuss/2010/04/07/cappuccino-0-8/), I wanted to take some time to describe in more detail what might be one of the most exciting new features our users may not even notice: [Jake](http://github.com/280north/jake). Jake is a new build tool built entirely in JavaScript that runs on top of the CommonJS standard. As its name suggests, it is based on the existing and already popular Rake tool and benefits from the same simplicity.
+Now that we've [shipped Cappuccino 0.8](http://www.cappuccino-project.org/discuss/2010/04/07/cappuccino-0-8/), I wanted to take some time to describe in more detail what might be one of the most exciting new features our users may not even notice: [Jake](http://github.com/280north/jake). Jake is a new build tool built entirely in JavaScript that runs on top of the CommonJS standard. As its name suggests, it is based on the existing and already popular Rake tool and benefits from the same simplicity.
 
 ### Since when does JavaScript need to be built?
 
@@ -130,7 +130,7 @@ If not, you can head on over to [narwhaljs.org](http://narwhaljs.org) and downlo
 	$ cd cappuccino
 	$ ./bootstrap.sh
 
-If you do this you'll also be able to checkout out some of the cool extensions to Jake specifically for Cappuccino projects. We've created the bundle, framework, and app tasks that completely put together your project for you (similar to the gem tasks in Rake). These tasks implement some pretty cool optimizations, like our [automagic image spriting](http://cappuccino.org/discuss/2009/11/11/just-one-file-with-cappuccino-0-8/). If you're having any trouble, feel free to jump in our [IRC room](irc://irc.freenode.net#cappuccino) so we can answer your questions or comments on how to get set up building your projects with jake.
+If you do this you'll also be able to checkout out some of the cool extensions to Jake specifically for Cappuccino projects. We've created the bundle, framework, and app tasks that completely put together your project for you (similar to the gem tasks in Rake). These tasks implement some pretty cool optimizations, like our [automagic image spriting](http://www.cappuccino-project.org/discuss/2009/11/11/just-one-file-with-cappuccino-0-8/). If you're having any trouble, feel free to jump in our [IRC room](irc://irc.freenode.net#cappuccino) so we can answer your questions or comments on how to get set up building your projects with jake.
 
 You can of course also [get the source code](http://github.com/280north/jake) as well and submit patches or [file bugs](http://github.com/280north/jake/issues):
 

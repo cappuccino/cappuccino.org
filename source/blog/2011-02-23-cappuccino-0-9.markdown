@@ -41,7 +41,7 @@ This release also introduces several new features to Cappuccino. You'll find mor
 * **CPPredicate**: The CPPredicate school of classes gives you a very powerful way to filter through your data. A future release may include robust controls for users to visually edit predicates.
 * **CPStepper**: A control that allows users to incrementally step through values.
 * **CPTokenField**: A powerful text field subclass with support for autocomplete, CPTokenField allows you to build unique token managers, like the address fields in Mac OS X's Mail.app.
-* **NativeHost**_:_ We announced [NativeHost](http://cappuccino.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/) a few months ago, but this is the first time we've included it with a release of Cappuccino. NativeHost lets you build your Cappuccino application for desktop platforms and distribute it like any other desktop app. Support for Mac OS X is currently included, with Windows and Linux support coming soon.
+* **NativeHost**_:_ We announced [NativeHost](http://www.cappuccino-project.org/discuss/2010/05/13/nativehost-run-your-cappuccino-applications-on-the-desktop/) a few months ago, but this is the first time we've included it with a release of Cappuccino. NativeHost lets you build your Cappuccino application for desktop platforms and distribute it like any other desktop app. Support for Mac OS X is currently included, with Windows and Linux support coming soon.
 
 ![CPAlert](/img/cpo-uploads/2011/02/CPAlert1.png)
 
@@ -53,7 +53,7 @@ But what's next? We have a ton of updates in the pipeline, and the master branch
 
 **-Randy**
 
-You can find a full list of changes [here](http://cappuccino.org/files/v0.9.0-changelog.txt).
+You can find a full list of changes [here](http://www.cappuccino-project.org/files/v0.9.0-changelog.txt).
 
 
 

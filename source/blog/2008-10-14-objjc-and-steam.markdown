@@ -18,7 +18,7 @@ tags:
 
 _Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
 
-In our previous post on the [Cappuccino build tools](http://cappuccino.org/discuss/2008/10/06/the-cappuccino-build-tools/) we summarized the purpose of four of the tools. In this article we'll dive deeper into two of them, objjc and steam.
+In our previous post on the [Cappuccino build tools](http://www.cappuccino-project.org/discuss/2008/10/06/the-cappuccino-build-tools/) we summarized the purpose of four of the tools. In this article we'll dive deeper into two of them, objjc and steam.
 
 To review, the purpose of these tools is to prepare your application for deployment by pre-compiling all application Objective-J code into JavaScript, thereby reducing the load time for clients. Additionally, since most developers won't need to modify Cappuccino itself, we always compile Cappuccino's AppKit and Foundation frameworks to further reduce load time.
 

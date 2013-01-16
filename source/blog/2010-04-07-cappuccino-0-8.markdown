@@ -10,23 +10,23 @@ tags:
 - releases
 ---
 
-Cappuccino 0.8 is now available on the [downloads page](http://cappuccino.org/download). This release has a ton of new features and fixes, and I'd like to thank everyone in the community that meticulously checked their existing software against the Release Candidates in the last few weeks.
+Cappuccino 0.8 is now available on the [downloads page](http://www.cappuccino-project.org/download). This release has a ton of new features and fixes, and I'd like to thank everyone in the community that meticulously checked their existing software against the Release Candidates in the last few weeks.
 
 ### 10,000 Foot View
 
-Cappuccino 0.8 includes close to 100,000 lines of changes from our last formal release, 0.7.1 (check out the [Github compare view](http://github.com/280north/cappuccino/compare/0.7.1...v0.8.0) for this release). This ranges from new tests to brand new features to optimizing existing ones. And yet, despite this tremendous amount of change, we have almost no API differences (aside from API additions of course). The very few changes we do have are simply deprecated, not removed. This means that it will be incredibly easy to drop in the new version of Cappuccino and get all the benefits without spending a ridiculous amount of time changing your own code. This is of course the benefit of implementing an existing and proven spec. In fact, most the [public Cappuccino projects](http://cappuccino.org/learn/demos/) are already running this code.
+Cappuccino 0.8 includes close to 100,000 lines of changes from our last formal release, 0.7.1 (check out the [Github compare view](http://github.com/280north/cappuccino/compare/0.7.1...v0.8.0) for this release). This ranges from new tests to brand new features to optimizing existing ones. And yet, despite this tremendous amount of change, we have almost no API differences (aside from API additions of course). The very few changes we do have are simply deprecated, not removed. This means that it will be incredibly easy to drop in the new version of Cappuccino and get all the benefits without spending a ridiculous amount of time changing your own code. This is of course the benefit of implementing an existing and proven spec. In fact, most the [public Cappuccino projects](http://www.cappuccino-project.org/learn/demos/) are already running this code.
 
 Now that that's out of the way, lets get to the good stuff: **what's new?**
 
 ### CPTableView and CPOutlineView
 
-Table views have been one of our most requested features since we launched Cappuccino about a year ago, and I'm happy to say that I think we have one of the best table view implementations out there with 0.8. [Randy](http://cappuccino.org/discuss/2010/03/12/randy-luecke-becomes-a-committer/), our latest committer, has spearheaded this feature for his own [TimeTable](http://timetableapp.com/) project and with help from a number other folks in the community it has become a truly awesome component, supporting immense amounts of rows, column sorting, drag and drop, and much more while still remaining incredibly performant. But don't take my word for it, check it out yourself:
+Table views have been one of our most requested features since we launched Cappuccino about a year ago, and I'm happy to say that I think we have one of the best table view implementations out there with 0.8. [Randy](http://www.cappuccino-project.org/discuss/2010/03/12/randy-luecke-becomes-a-committer/), our latest committer, has spearheaded this feature for his own [TimeTable](http://timetableapp.com/) project and with help from a number other folks in the community it has become a truly awesome component, supporting immense amounts of rows, column sorting, drag and drop, and much more while still remaining incredibly performant. But don't take my word for it, check it out yourself:
 
 [[](http://www.youtube.com/v/o9L-c9O-YcM&hl=en&fs=1)]()
 
 ### Automagic Image Spriting
 
-We alluded to this feature a little while ago when we first announced it at JSConf EU, and now you can finally take it for a spin: **automatic** image spriting. Yes you read correctly, no more having to manually decide which images to sprite, or how to sprite. The brand new Cappuccino build tools are smart enough to sprite all your images together into one file (not several based on orientation), and of course works in all browsers including IE. You can find out more about the thinking behind this feature [here](http://cappuccino.org/discuss/2009/11/11/just-one-file-with-cappuccino-0-8/).
+We alluded to this feature a little while ago when we first announced it at JSConf EU, and now you can finally take it for a spin: **automatic** image spriting. Yes you read correctly, no more having to manually decide which images to sprite, or how to sprite. The brand new Cappuccino build tools are smart enough to sprite all your images together into one file (not several based on orientation), and of course works in all browsers including IE. You can find out more about the thinking behind this feature [here](http://www.cappuccino-project.org/discuss/2009/11/11/just-one-file-with-cappuccino-0-8/).
 
 ### nib2cib Updates
 

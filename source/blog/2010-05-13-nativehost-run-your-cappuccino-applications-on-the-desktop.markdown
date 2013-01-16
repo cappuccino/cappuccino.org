@@ -53,7 +53,7 @@ NativeHost has some additional features, like the ability to start a webserver i
 
 Currently NativeHost supports Mac OS X, but we're working on other platforms.&nbsp;If you're experienced with developing native applications on other platforms and interested in helping out, feel free to get in touch.
 
-If you have any problems using NativeHost, the Cappuccino community will happily help you out. Join us [in the IRC channel](http://cappuccino.org/discuss/list.php),&nbsp;[on the mailing list](http://cappuccino.org/discuss/list.php), or [file a bug](http://github.com/280north/cappuccino/issues).
+If you have any problems using NativeHost, the Cappuccino community will happily help you out. Join us [in the IRC channel](http://www.cappuccino-project.org/discuss/list.php),&nbsp;[on the mailing list](http://www.cappuccino-project.org/discuss/list.php), or [file a bug](http://github.com/280north/cappuccino/issues).
 
 
 

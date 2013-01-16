@@ -20,7 +20,7 @@ tags:
 
 Over at [280 North](http://280north.com), we announced our next product, called Atlas, at the [Future of Web Apps](http://events.carsonified.com/fowa) conference in Miami this week.
 
-Atlas is a visual development tool for creating web applications using the [Cappuccino](http://cappuccino.org) framework. The best way to explain Atlas is to show it:
+Atlas is a visual development tool for creating web applications using the [Cappuccino](http://www.cappuccino-project.org) framework. The best way to explain Atlas is to show it:
 
 [                 [](http://www.viddler.com/simple/1db9bf4d/)]()
 

@@ -18,33 +18,33 @@ Today we are extremely excited to announce Cappuccino 0.9.5, featuring over 90 n
 
 Cappuccino now features new scrollbars which fade away automatically when not in use, giving more space for the content of your scroll views. If the user's browser does not support or use overlay scrollbars, Cappuccino automatically detects it and falls back to old style scrollbars.
 
-[![](/img/cpo-uploads/2011/11/scrollview-overlay1.png)](http://cappuccino.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
+[![](/img/cpo-uploads/2011/11/scrollview-overlay1.png)](http://www.cappuccino-project.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
 
-[![](/img/cpo-uploads/2011/11/scrollview-legacy.png)](http://cappuccino.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
+[![](/img/cpo-uploads/2011/11/scrollview-legacy.png)](http://www.cappuccino-project.org/learn/documentation/interface_c_p_scroll_view.html#aa47001712e1531cf3430d9923cc720cf)
 
 #### Documentation Overhaul
 
 The Cappuccino documentation has not only been extended but also visually refreshed. Many more classes and methods are now in the documentation and it's an easier read.
 
-[![Cappuccino 0.9.5 documentation screenshot.](/img/cpo-uploads/2011/11/doc-small.png)](http://cappuccino.org/learn/documentation/)
+[![Cappuccino 0.9.5 documentation screenshot.](/img/cpo-uploads/2011/11/doc-small.png)](http://www.cappuccino-project.org/learn/documentation/)
 
 #### Popover Widget
 
 A popover control is a small window that appears to 'come out' of a part of your user interface, and which remains attached to it until the user dismisses it. It's an easy way to ask for extra information when that 'create' button is clicked, or to show a list of individually selectable downloads when the 'downloads' button is clicked.
 
-[![A CPPopover control originating from a button.](/img/cpo-uploads/2011/11/popovers.png)](http://cappuccino.org/learn/documentation/interface_c_p_popover.html)
+[![A CPPopover control originating from a button.](/img/cpo-uploads/2011/11/popovers.png)](http://www.cappuccino-project.org/learn/documentation/interface_c_p_popover.html)
 
 #### Level Indicator Widget
 
 A level indicator shows a discrete graduation from 'empty' to 'full', useful for certain gauges like space usage. Level indicators can also be editable and can be placed inline in table cells.
 
-[![A series of four level indicators showing various colour coded levels.](/img/cpo-uploads/2011/11/CPLevelIndicator.png)](http://cappuccino.org/learn/documentation/interface_c_p_level_indicator.html)
+[![A series of four level indicators showing various colour coded levels.](/img/cpo-uploads/2011/11/CPLevelIndicator.png)](http://www.cappuccino-project.org/learn/documentation/interface_c_p_level_indicator.html)
 
 #### Predicate Editor
 
 Predicates are powerful tools for encoding 'search patterns', and combined with the power of Cappuccino's Array Controller class they make it incredibly easy to create user searchable tables or other views. The new predicate editor allows users to create their own saved searches with almost no work for the developer.
 
-[![A user editable search combining various criteria.](/img/cpo-uploads/2011/11/PredicateEditor.png)](http://cappuccino.org/learn/documentation/interface_c_p_predicate_editor.html)
+[![A user editable search combining various criteria.](/img/cpo-uploads/2011/11/PredicateEditor.png)](http://www.cappuccino-project.org/learn/documentation/interface_c_p_predicate_editor.html)
 
 #### Tooltips
 

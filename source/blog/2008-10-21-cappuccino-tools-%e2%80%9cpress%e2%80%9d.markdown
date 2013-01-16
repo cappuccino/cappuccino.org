@@ -16,7 +16,7 @@ tags:
 
 _Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
 
-In the third installment of the build tools series we tackle one of the most advanced build tools: "press". Recall from the [overview](http://cappuccino.org/discuss/2008/10/06/the-cappuccino-build-tools/) that "press" is a tool for stripping code and other optimizations. Additionally, it can convert an entire Objective-J application into a single pure JavaScript file, which we'll see can be useful.
+In the third installment of the build tools series we tackle one of the most advanced build tools: "press". Recall from the [overview](http://www.cappuccino-project.org/discuss/2008/10/06/the-cappuccino-build-tools/) that "press" is a tool for stripping code and other optimizations. Additionally, it can convert an entire Objective-J application into a single pure JavaScript file, which we'll see can be useful.
 
 ### press
 

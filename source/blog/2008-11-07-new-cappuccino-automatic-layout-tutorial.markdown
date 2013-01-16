@@ -14,7 +14,7 @@ tags:
 ---
 
 
-This new tutorial covers&nbsp;Cappuccino's powerful system of automatic resizing and repositioning support for creating dynamic layouts easily and quickly. &nbsp;Proper resizing behavior is an important part of polishing any application, so make sure to [check it out!](http://cappuccino.org/learn/tutorials/automatic-layout)
+This new tutorial covers&nbsp;Cappuccino's powerful system of automatic resizing and repositioning support for creating dynamic layouts easily and quickly. &nbsp;Proper resizing behavior is an important part of polishing any application, so make sure to [check it out!](http://www.cappuccino-project.org/learn/tutorials/automatic-layout)
 
 
 

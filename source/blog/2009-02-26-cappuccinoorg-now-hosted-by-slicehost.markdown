@@ -14,7 +14,7 @@ tags:
 ---
 
 
-As of this morning, [cappuccino.org](http://cappuccino.org) is now running on a slice graciously provided by [Slicehost](http://slicehost.com) to the Cappuccino project.
+As of this morning, [cappuccino.org](http://www.cappuccino-project.org) is now running on a slice graciously provided by [Slicehost](http://slicehost.com) to the Cappuccino project.
 
 We've been using Slicehost for some of our development work at 280 North and have been really pleased with the results.
 

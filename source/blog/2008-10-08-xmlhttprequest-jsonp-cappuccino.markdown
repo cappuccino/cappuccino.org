@@ -28,7 +28,7 @@ When writing a Cappuccino applications, XHRs are the primary way to communicate 
 
 ### CPURLConnection
 
-Like most things in Cappuccino, XMLHTTPRequests are abstracted at a higher level. In this case, the CPURLConnection class manages the communication. If we look at the [API Reference](http://cappuccino.org/learn/documentation/class_c_p_u_r_l_connection.html), we'll find a few different ways to create an instance. The easiest way is the class method **connectionWithRequest:delegate:**, which takes a CPURLRequest object and a delegate. CPURLRequest objects wrap a single request, including the URL, HTTP method, request body, and request headers. Like everywhere in Cappuccino, the delegate provides for the ability to customize the request's behavior. Let's look at the process of creating a CPURLConnection.
+Like most things in Cappuccino, XMLHTTPRequests are abstracted at a higher level. In this case, the CPURLConnection class manages the communication. If we look at the [API Reference](http://www.cappuccino-project.org/learn/documentation/class_c_p_u_r_l_connection.html), we'll find a few different ways to create an instance. The easiest way is the class method **connectionWithRequest:delegate:**, which takes a CPURLRequest object and a delegate. CPURLRequest objects wrap a single request, including the URL, HTTP method, request body, and request headers. Like everywhere in Cappuccino, the delegate provides for the ability to customize the request's behavior. Let's look at the process of creating a CPURLConnection.
 
 	var request = [CPURLRequest requestWithURL:"list.txt"];
 	var connection = [CPURLConnection connectionWithRequest:request delegate:self];
@@ -121,7 +121,7 @@ You'll notice that both methods call **clearConnection:**. This is a convenience
 
 Although it's not shown here, the reason we store a reference to the specific connection is that we use other connections in the same class, so we need a simple way to tell them apart. If you're only using one connection with your delegate, you may not need to use this technique or store a reference to the connection at all.
 
-Finally, there are two additional CPURLConnection delegate methods we chose not to implement, but which you may be interested in for your own application. There's also a class delegate for handling request authentication at the application level. You can read more about these methods in the [API documentation](http://cappuccino.org/learn/documentation/class_c_p_u_r_l_connection.html).
+Finally, there are two additional CPURLConnection delegate methods we chose not to implement, but which you may be interested in for your own application. There's also a class delegate for handling request authentication at the application level. You can read more about these methods in the [API documentation](http://www.cappuccino-project.org/learn/documentation/class_c_p_u_r_l_connection.html).
 
 ### CPJSONPConnection
 
@@ -136,7 +136,7 @@ As the name suggests, JSONP APIs return their data in the JSON format, but inste
 	 "&format=json&jsoncallback=flickResponse&api_key=YOUR_KEY";
 
 
-As you can imagine, generating your own dynamic script tags and managing global callback methods would be a serious hassle, which is why Cappuccino has built in support in the form of [CPJSONPConnection](http://cappuccino.org/learn/documentation/class_c_p_j_s_o_n_p_connection.html). You may have encountered this class in the source of our [Flickr Demo](http://cappuccino.org/learn/demos/FlickrPhotoDemo/). Creating an instance should look familiar:
+As you can imagine, generating your own dynamic script tags and managing global callback methods would be a serious hassle, which is why Cappuccino has built in support in the form of [CPJSONPConnection](http://www.cappuccino-project.org/learn/documentation/class_c_p_j_s_o_n_p_connection.html). You may have encountered this class in the source of our [Flickr Demo](http://www.cappuccino-project.org/learn/demos/FlickrPhotoDemo/). Creating an instance should look familiar:
 
 	 var connection = [CPJSONPConnection sendRequest:aRequest callback:aCallbackParameter delegate:self];
 
@@ -214,7 +214,7 @@ JSONP does have it's own security implications. Because you're essentially allow
 
 There's been some confusion about when to use CPURLConnection versus CPJSONPConnection, due largely in part to the lack of documentation or discussion on the issue. In general, you should only use JSONP with third-party services that you trust, and only when doing so doesn't involve sensitive information. For example, getting public Flickr photos, or performing a Google search using Google's AJAX search API. If you're communicating with your own service, even if you use JSON as the transmission format, you should use CPURLConnection. Their are numerous advantages to this approach, especially the additional security.
 
-I hope this has illustrated both when and how to use CPURLConnection and CPJSONPConnection. As we continue to develop Cappuccino, we'll be improving both of these classes, and introducing new communication methods as well. If you have questions, sound off in the comments, or try the [mailing list or irc channel](http://cappuccino.org/discuss/list.php).
+I hope this has illustrated both when and how to use CPURLConnection and CPJSONPConnection. As we continue to develop Cappuccino, we'll be improving both of these classes, and introducing new communication methods as well. If you have questions, sound off in the comments, or try the [mailing list or irc channel](http://www.cappuccino-project.org/discuss/list.php).
 
 
 
