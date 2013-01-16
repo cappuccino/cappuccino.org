@@ -25,9 +25,7 @@ This tutorial will be written based on Mac OS X, with notes on any differences w
 
 ### Downloading & Running the Sample Application
 
-If you haven't already, download the [Cappuccino Starter
-package](/downloads.html). This zip file includes a sample application
-(`NewApplication`), licensing info, a script you can run later to download
+If you haven't already, download the [Cappuccino Starter package](/downloads.html). This zip file includes a sample application (`NewApplication`), licensing info, a script you can run later to download
 all the Cappuccino tools, and a README.
 
 ![open new application](/img/new-application.png)
@@ -207,7 +205,5 @@ complete changes, you can download this copy of
 
 This concludes our quick introduction to the Cappuccino Starter package,
 and to modifying your first application. Now that you've got your feet
-wet, you can move on to a more advanced tutorial on [building a full
-application](http://cappuccino.org/learn/tutorials/scrapbook-tutorial-1/)
-in Cappuccino.
+wet, you can move on to a more advanced tutorial.
 
