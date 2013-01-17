@@ -53,7 +53,7 @@ to modify them to work on your application.
 
 You can see in the image above that we have syntax highlighting in
 TextMate. You can get this by installing the appropriate mode, found on
-our [getting set up tutorial](/environment.html).
+our [getting set up tutorial](/learn/environment.html).
 
 ### Making a Simple Change
 

@@ -1,4 +1,4 @@
-Programming for the browser is significantly different from other programming environments like a desktop OS, or even server side code. Cappuccino is largely aimed at minimizing these differences, but to be most productive you'll need to be familiar with the right set of tools. This tutorial is aimed at identifying the most useful tools for developing Cappuccino applications. If you're already ready to start programming your first Cappuccino application, [skip ahead](/tutorial-scapbook-1.html).
+Programming for the browser is significantly different from other programming environments like a desktop OS, or even server side code. Cappuccino is largely aimed at minimizing these differences, but to be most productive you'll need to be familiar with the right set of tools. This tutorial is aimed at identifying the most useful tools for developing Cappuccino applications. If you're already ready to start programming your first Cappuccino application, [skip ahead](/tutorial-scrapbook-1.html).
 
 ### Browsers
 
