@@ -100,7 +100,7 @@ Additionally, "bake" will calculate the size of all code which needs to be loade
 
 If you use your own template, the only required variable is the "$VERSION" one, but you can specify as many custom variables as you wish.
 
-Finally, once the application has been built and assembled, it is optionally run through ["press"](http://www.cappuccino-project.org/discuss/2008/10/21/cappuccino-tools-&ldquo;press&rdquo;/), then gzipped. If the "--deploy" command line parameter was given then the gzipped application is transmitted to the deployment servers, un-gzipped, and copied to the deployment path using a specific sequence of command to ensure the deployment is atomic:
+Finally, once the application has been built and assembled, it is optionally run through ["press"](http://www.cappuccino-project.org/blog/2008/10/cappuccino-tools-press.html), then gzipped. If the "--deploy" command line parameter was given then the gzipped application is transmitted to the deployment servers, un-gzipped, and copied to the deployment path using a specific sequence of command to ensure the deployment is atomic:
 
 	:::sh
 	tar xzf 1225273279.tar.gz
