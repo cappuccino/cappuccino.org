@@ -1,0 +1,32 @@
+---
+title: Cappuccino 0.9.6
+date: 2013-01-19 01:28 +00:00
+author: Alexander Ljungberg
+tags:
+- cappuccino
+- update
+- objective-j
+- releases
+---
+
+Cappuccino 0.9.6 is the latest version of Cappuccino and it features literally hundreds of new features and bug fixes. Even given how many improvements and new features our preview releases, RC1 and RC2, packed, we have even more in this final release version of 0.9.6.
+
+Cappuccino 0.9.6 will be the last build of Cappuccino featuring only Aristo 1 and using the Objective-J 1.0 compiler. It will serve as a stable and reliable release for those not interested in living on the bleeding edge in master, which at the moment is in fact unusually bloody.
+
+Here is just a tiny sampling of highlights from Cappuccino 0.9.6:
+
+* CPComboBox.
+* Resize windows from any edge.
+* Automatic column sort support for bindings and array controller based table views, without having to manually set up sort descriptors.
+* CPTokenField autocomplete improvements.
+* CG clipping with a bezier path and a number of other drawing improvements.
+* Doc modal sheets and generally improved sheet support.
+* Support for many more CPButton types and options.
+
+There are so many more new things and features in Cappuccino that we couldn't even begin to fit them all in a blog post. Instead, please refer to the Cappuccino [release notes](/cappuccino-release-notes.html).
+
+_- The Cappuccino Core Developer Team_
+
+[Download Cappuccino](/downloads.html)
+
+[Full Release Notes](/cappuccino-release-notes.html)
