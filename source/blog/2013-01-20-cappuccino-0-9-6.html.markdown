@@ -13,7 +13,7 @@ Cappuccino 0.9.6 is a stable build of Cappuccino for those of you not yet ready 
 
 ##### Should I get Cappuccino 0.9.6?
 
-Is any of the following true?
+Are any of the following true?
 
 * I need a stable build.
 * I am currently using Cappuccino 0.9.5, 0.9.6-RC1 or 0.9.6-RC2.
