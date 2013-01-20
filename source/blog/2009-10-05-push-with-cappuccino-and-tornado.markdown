@@ -5,7 +5,7 @@ author_email: francisco@280north.com
 wordpress_id: 463
 wordpress_url: http://cappuccino.org/discuss/?p=463
 date: '2009-10-05'
-tags;
+tags:
 - cappuccino
 - tools
 ---
