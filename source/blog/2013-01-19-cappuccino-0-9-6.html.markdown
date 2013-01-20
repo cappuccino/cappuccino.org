@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.9.6
-date: 2013-01-19 01:28 +00:00
+date: 2013-01-20 01:28 +00:00
 author: Alexander Ljungberg
 tags:
 - cappuccino
@@ -9,9 +9,34 @@ tags:
 - releases
 ---
 
-Cappuccino 0.9.6 is the latest version of Cappuccino and it features literally hundreds of new features and bug fixes. Even given how many improvements and new features our preview releases, RC1 and RC2, packed, we have even more in this final release version of 0.9.6.
+Cappuccino 0.9.6 is a stable build of Cappuccino for those of you not yet ready to update to Objective-J 2.0.
 
-Cappuccino 0.9.6 will be the last build of Cappuccino featuring only Aristo 1 and using the Objective-J 1.0 compiler. It will serve as a stable and reliable release for those not interested in living on the bleeding edge in master, which at the moment is in fact unusually bloody.
+##### Should I get Cappuccino 0.9.6?
+
+Is any of the following true?
+
+* I need a stable build.
+* I am currently using Cappuccino 0.9.5, 0.9.6-RC1 or 0.9.6-RC2.
+* I need a starter pack.
+
+Then the answer is **YES**, you should [get Cappuccino 0.9.6](#getit).
+
+---
+
+Is any of the following true?
+
+* I need Aristo 2.
+* I want to try Objective-J 2.0.
+
+Then the answer is **NO**, you should instead [build from source](/learn/build-source.html).
+
+---
+
+### Cappuccino 0.9.6 <a name="getit">&nbsp;</a>
+
+Cappuccino 0.9.6 is the latest stable build of Cappuccino and it features literally hundreds of new features and bug fixes. This release builds on the many improvements and new features of our preview releases, RC1 and RC2.
+
+Cappuccino 0.9.6 is built **without** Aristo 2 and Objective-J 2. It will be the last build of Cappuccino featuring **only Aristo 1 and using the Objective-J 1.0 compiler**. It is meant to serve as a stable and reliable release.
 
 Here is just a tiny sampling of highlights from Cappuccino 0.9.6:
 

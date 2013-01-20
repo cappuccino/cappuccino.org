@@ -5,7 +5,7 @@ layout: markdown
 
 ## What's New in Cappuccino 0.9.6
 
-*Release date: 2013-01-18*
+*Release date: 2013-01-20*
 
 Everything that was new in RC1 and RC2 and the following:
 
