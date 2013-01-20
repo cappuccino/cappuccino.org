@@ -17,8 +17,7 @@ If you're happy with the starter package you may skip ahead to [<%= next_topic[0
 
 ##### Get Developers Tools (Mac OS X only)
 
-In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for
-free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 4 is the current version, but Xcode 3 is (probably) still usable.
+In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 4 is the current version, but Xcode 3 is (probably) still usable.
 
 ##### Install Git
 
@@ -30,12 +29,12 @@ Git is included with Xcode 4. You can check you have it by entering the followin
     # git --version
     git version 1.7.4.4
 
-On other platforms you can grab the latest version of Git at the following URL:
+On other platforms you can grab the latest version of Git from the following URL:
 [http://git-scm.com/download](http://git-scm.com/download).
 
 ##### Java
 
-For the most part you don't need Java to use Cappuccino. In particular you don't need to know Java, and your users do not require it. But certain tools in the Cappuccino toolset depend on Java being installed.
+For the most part you don't need Java to use Cappuccino. In particular you don't need to know Java, and the users of your Cappuccino application won't need it. But certain tools in the Cappuccino toolset depend on Java being installed.
 
 On Mac OS X Java is installed automatically when you need it. On other platforms, please install Oracle’s JDK.
 
@@ -43,39 +42,33 @@ On Mac OS X Java is installed automatically when you need it. On other platforms
 
 ##### Choose your folder
 
-You must choose a place where to put the source code. It can be
-anywhere. We will assume you want to put the sources in
-`~/Documents/Sources/`.
+You must choose a place where to put the source code. It can be anywhere. We will assume you want to put the sources in `~/Documents/Sources/`.
 
 ##### Clone the repository
 
-Now, you will clone the Cappuccino source code repository. Open a
-Terminal and type:
+Clone the Cappuccino source code repository. Open a Terminal window and type:
 
     :::bash
     cd ~/Documents/Sources/
     git clone https://github.com/cappuccino/cappuccino.git Cappuccino
 
-After a little while, you will see a new folder named “Cappuccino”
-containing all the source code.
+After a brief download you will see a new folder named “Cappuccino” containing all the source code.
 
 ##### Run bootstrap.sh
 
 Before being able to build Cappuccino, you need to install all the
-underlaying components, like as mentionned before, Narwhal. But you are
-lucky, Cappuccino repository contains a script that does everything for
-you. In your Terminal, type:
+underlying components such as Narwhal. The Cappuccino repository contains a script that does everything for
+you. In your Terminal window, type:
 
     :::bash
     cd Cappuccino
     ./bootstrap.sh
 
-If you already have an installation of Cappuccino, the script will ask
+If you already have an installation of Cappuccino the script will ask
 you several additional question about removing the old installation. You
 should say “yes”.
 
-The script will now start and will ask you several questions. Answer
-like the folowing:
+The script will now start and will ask you several questions. Answer as follows:
 
 
                       / __/ _ `/ _ \/ _ \/ // / __/ __/ / _ \/ _ \
@@ -86,10 +79,10 @@ like the folowing:
      
     ================================================================================
      
-                                     Version 0.9.5
+                                     Version 0.9.6
      
      
-                                 http://cappuccino.org
+                             http://cappuccino-project.org
                         http://github.com/cappuccino/cappuccino
                            irc://irc.freenode.org#cappuccino
      
@@ -150,26 +143,21 @@ or
 
     source ~/.bashrc
 
-To be absolutely sure everything is ok, look if you have the `jake`
+To be absolutely sure everything is ok, test if you have the `jake`
 command in your PATH:
 
     jake --help
     Usage: jake [OPTIONS] targets...
     [...]
 
-If you got this, you are done!
+If you have this, you are done!
 
 If you get “command not found”, well, something bad happened. You can try
-to re-run bootstrap, make sure there are no errors. Bootstrap gets its
-needed packages from GitHub.com, which can be sometimes the cause of the
-problem. If you can’t succeed, then you can send an email to the
-[mailing list](http://groups.google.com/group/objectivej), or join us on
-our IRC channel at
-[irc://irc.freenode.net/\#cappuccino](irc://irc.freenode.net/#cappuccino)
-and ask for help. We will be happy to help you.
+to re-run bootstrap and make sure there are no errors. Bootstrap gets its
+packages from GitHub.com and sometimes these downloads fail. If you can’t succeed, then you can send an email to the [mailing list](http://groups.google.com/group/objectivej), or join us on
+our IRC channel at [irc://irc.freenode.net/\#cappuccino](irc://irc.freenode.net/#cappuccino) and ask for help. We will be happy to help you.
 
-Now, the needed environment for Cappuccino is ready! We just need to
-build Cappuccino itself, and you will be able to start playing.
+Now, the Cappuccino environment is ready! We just need to build Cappuccino itself, and you will be able to start playing.
 
 ##### Build Cappuccino
 
@@ -177,39 +165,26 @@ No question here. From the Cappuccino repository, just run:
 
     jake install
 
-To be sure everything goes fine, look if you have `capp` command in your
+To be sure everything runs fine, verify that you have the `capp` command in your
 PATH:
 
     capp --help
     capp [--version] COMMAND [OPTIONS] [ARGS]
     [...]
 
-Again, if you have a command not found error, please use the [mailing
-list](http://groups.google.com/group/objectivej), or join us on our IRC
-channel at
-[irc://irc.freenode.net/\#cappuccino](irc://irc.freenode.net/#cappuccino)
-and ask for help
+Again, if you get a "command not found" error, please use the [mailing list](http://groups.google.com/group/objectivej), or join us on our IRC channel at [irc://irc.freenode.net/\#cappuccino](irc://irc.freenode.net/#cappuccino) and ask for help.
 
 ##### Wait! Don’t forget the documentation!
 
-This is optional in a sense it’s not required to build Cappuccino
-applications, but you really want to build the documentation. You will
-need [Doxygen](http://www.doxygen.org/). Download the latest version
-from this website, Drag the Doxygen application in your Applications
-folder, then run, from the Cappuccino folder:
+This is optional in a sense. It’s not required to build Cappuccino applications, but chances are you're going to want the documentation. You will need [Doxygen](http://www.doxygen.org/). Download the latest version, drag the Doxygen application into your Applications folder. Then, from the Cappuccino folder, run:
 
     jake docs
 
-This should also work with the HomeBrew version of Doxygen. But at the
-moment, the provided formula seems to have problems, so you will prefer
-the GUI Application. If you have no idea of what we are talking about,
-no worries.
+This should also work with the HomeBrew version of Doxygen. But at the moment, the provided formula seems to have problems, so you may prefer the GUI Application. If you have no idea what we are talking about, no worries. You can view the documentation [right here](/learn/documentation).
 
-If you want the documentation to generate the images representing the
-class graphs, you need to install `graphviz` that provides `dot`. You
-can do it with [HomeBrew](http://mxcl.github.com/homebrew/). Note this
-is optional
+If you want the documentation to generate the images representing the class graphs, you need to install `graphviz`, a utility which provides `dot`. On the Mac you can use [HomeBrew](http://mxcl.github.com/homebrew/). Note this
+is optional.
 
-Then you can open the documentation using the following command:
+Once built, you can open the documentation using the following command:
 
     open $CAPP_BUILD/Documentation/html/index.html
