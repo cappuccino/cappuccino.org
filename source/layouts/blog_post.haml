@@ -37,11 +37,11 @@
 
           #disqus_thread
           :javascript
-            /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
-            var disqus_container_id = 'disqus_thread';
-            var disqus_domain = 'disqus.com';
-            var disqus_shortname = 'cappuccino';
-            var disqus_developer = 0;
+            var disqus_container_id = 'disqus_thread',
+                disqus_domain = 'disqus.com',
+                disqus_shortname = 'cappuccino',
+                disqus_url = 'http://www.cappuccino-project.org/#{request.path}',
+                disqus_developer = 0;
 
           - if data.page.wordpress_url and data.page.wordpress_id
             :javascript
