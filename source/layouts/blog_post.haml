@@ -7,6 +7,8 @@
             = current_article.title
           .post_content
             = yield
+            %a.pull-right.action#rss_link{:href => "/blog/feed.xml"}
+              = image_tag 'feed-icon-28x28.png', :alt => "RSS"
             - if current_article.data.author && current_article.date
               .author
                 Posted by

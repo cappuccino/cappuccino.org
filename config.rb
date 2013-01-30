@@ -90,6 +90,11 @@ activate :blog do |blog|
   blog.layout = "blog_post"
 end
 
+page "/blog/feed.xml", :layout => false
+
+
+require "builder"
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

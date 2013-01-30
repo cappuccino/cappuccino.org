@@ -8,3 +8,4 @@ gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter
 gem "pygments.rb"
 
 gem "middleman-blog"
+gem "builder"

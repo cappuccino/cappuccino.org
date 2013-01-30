@@ -1020,6 +1020,17 @@ body.folder-learn, body.folder-blog
     border-bottom: 1px solid #C0C1C3;
     box-shadow: none;
   }
+
+  #rss_link {
+    padding-top: 3px;
+    color: #444;
+    vertical-align: middle;
+
+    img {
+      padding-right: 4px;
+      vertical-align: middle;
+    }
+  }
 }
 
 // While invidual blog pages have a white background, for readability, we want the regular background for
