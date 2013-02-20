@@ -23,7 +23,7 @@ Then the answer is **YES**, you should [get Cappuccino 0.9.6](#getit).
 
 ---
 
-Is any of the following true?
+Are any of the following true?
 
 * I need Aristo 2.
 * I want to try Objective-J 2.0.
