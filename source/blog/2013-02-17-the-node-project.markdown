@@ -1,3 +1,4 @@
+---
 title: The Node.js Project
 date: 2013-02-17 07:27 +00:00
 author: Aparajita Fishman
@@ -6,11 +7,9 @@ tags:
 - projects
 ---
 
-### The Need for Node
-
 Cappuccino was released to the Open Source community on September 4, 2008. After four years and over 6,800 commits, Cappuccino continues to grow and improve. But to make Cappuccino ready for the next four years and expand our user base, we need to update the build system.
 
-The original build system used ant, which was then followed by **rake**, which ran on ruby. In 2010 the build system was ported to JavaScript and **jake** (a port of rake), which ran on top of narwhal (a CommonJS runtime) and the package manager **tusk**. This is the system we are still using today.
+The original build system used **ant**, which was then followed by **rake**, which ran on Ruby. In 2010 the build system was ported to JavaScript and **jake** (a port of rake), which ran on top of narwhal (a CommonJS runtime) and the package manager **tusk**. This is the system we are still using today.
 
 A **lot** has happened since 2010 in the JavaScript world. [**Node.js**](http://nodejs.org) is now the king of CommonJS and runs on Mac OS X, Linux, and Windows. [**npm**](http://npmjs.org), the node package manager, is a world class tool that boasts over 23,000 packages available. On the other hand, narwhal and tusk do not run on Windows and are no longer being maintained.
 
