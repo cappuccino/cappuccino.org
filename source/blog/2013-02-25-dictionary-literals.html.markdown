@@ -43,7 +43,7 @@ The new syntax is much easier to read, and the relationship between each key and
 Regular JavaScript dictionaries will continue to work as normal.
 
     :::objj
-    // Objective-C Dictionary Literal
+    // Objective-J Dictionary Literal
     var a = @{ @"count": 2 };
 
     // JavaScript Object
