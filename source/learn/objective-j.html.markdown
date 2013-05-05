@@ -353,6 +353,7 @@ you need to write for getting and setting instance variables. Take the following
     {
         return lastName;
     }
+
     @end
 
 With accessors, this can be shortened significantly:
@@ -360,9 +361,10 @@ With accessors, this can be shortened significantly:
     :::objj
     @implementation Person : CPObject
     {
-     CPString firstName    @accessors;
-     CPString lastName     @accessors;
+        CPString firstName    @accessors;
+        CPString lastName     @accessors;
     }
+
     @end
 
 Under the hood, variables declared with the `@accessors` keyword are automatically
@@ -372,14 +374,15 @@ some additional processing before returning the variable:
     :::objj
     @implementation Person : CPObject
     {
-     CPString firstName    @accessors;
-     CPString lastName     @accessors;
+        CPString firstName    @accessors;
+        CPString lastName     @accessors;
     }
 
     - (CPString)firstName
     {
         return [_firstName capitalizedString];  // a silly example.
     }
+
     @end
 
 Additionally, you may configure your accessors to provide more friendly names
@@ -389,12 +392,13 @@ hides the underlying variable name and gives you a way of configuring the getter
     :::objj
     @implementation Person : CPObject
     {
-     CPString _firstName    @accessors(property=firstName);
-     CPString _lastName     @accessors(property=lastName);
+        CPString _firstName    @accessors(property=firstName);
+        CPString _lastName     @accessors(property=lastName);
     }
+
     @end
 
-This code would generate the methods `firstName`, `setFirstName`, `lastName` and `setLastName`. 
+This code would generate the methods `firstName`, `setFirstName`, `lastName` and `setLastName`.
 
 You can also completely change the generated method names (often useful for Boolean accessors) by using the `getter` and `setter` arguments:
 
@@ -403,6 +407,7 @@ You can also completely change the generated method names (often useful for Bool
     {
         BOOL _cool    @accessors(getter=isCool, setter=setIsCool);
     }
+
     @end
 
 For more information about `@accessors` you should read the [annoucement blog post.](http://www.cappuccino-project.org/blog/2008/10/synthesizing-accessor-methods.html)
