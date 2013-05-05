@@ -466,7 +466,8 @@ If you have programmed Objective-C, C or C++ you might think of an `@ref` refere
     int a;
     int *aPtr = &a;
     *aPtr = 5;
-    printf("%d", *aPtr); // prints 5
+    printf("%d\n", *aPtr);  // Prints 5.
+    printf("%d\n", a);      // Also prints 5.
 
 Whereas in Objective-J you would use the `@ref` and `@deref` methods:
 
@@ -475,7 +476,8 @@ Whereas in Objective-J you would use the `@ref` and `@deref` methods:
         aRef = @ref(a);
 
     @deref(aRef) = 5;
-    console.log(@deref(aRef)); // logs 5
+    console.log(@deref(aRef));  // Logs 5.
+    console.log(a);             // Also logs 5.
 
 Once you have a reference you can pass it around, save it, and dereference it as needed. It's not an actual pointer though so pointer arithmetic is not possible. This is especially useful if you wish to have two return values. From `CPNumberFormatter.j`:
 
