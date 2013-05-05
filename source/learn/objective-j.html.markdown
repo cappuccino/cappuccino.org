@@ -322,6 +322,188 @@ The following is an example of the main scoping rules in Objective-J:
 
     @end
 
+### Accessors
+
+Accessor synthesizing is a way of reducing the amount of boilerplate code
+you need to write for getting and setting instance variables. Take the following code block for example:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+        CPString firstName;
+        CPString lastName;
+    }
+
+    - (void)setFirstName:(CPString)aString
+    {
+        firstName = aString;
+    }
+
+    - (CPString)firstName
+    {
+        return firstName;
+    }
+
+    - (void)setLastName:(CPString)aString
+    {
+        lastName = aString;
+    }
+
+    - (CPString)lastName
+    {
+        return lastName;
+    }
+    @end
+
+With accessors, this can be shortened significantly:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString firstName    @accessors;
+     CPString lastName     @accessors;
+    }
+    @end
+
+Under the hood, variables declared with the `@accessors` keyword are automatically
+assigned getter and setter methods. These methods may be overwritten if you need to do
+some additional processing before returning the variable:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString firstName    @accessors;
+     CPString lastName     @accessors;
+    }
+
+    - (CPString)firstName
+    {
+        return [_firstName capitalizedString];  // a silly example.
+    }
+    @end
+
+Additionally, you may configure your accessors to provide more friendly names
+for your getters and setters than the underlying variable. The `property` argument
+hides the underlying variable name and gives you a way of configuring the getter and setter method names:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString _firstName    @accessors(property=firstName);
+     CPString _lastName     @accessors(property=lastName);
+    }
+    @end
+
+This code would generate the methods `firstName`, `setFirstName`, `lastName` and `setLastName`. 
+
+You can also completely change the generated method names (often useful for Boolean accessors) by using the `getter` and `setter` arguments:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+        BOOL _cool    @accessors(getter=isCool, setter=setIsCool);
+    }
+    @end
+
+For more information about `@accessors` you should read the [annoucement blog post.](http://www.cappuccino-project.org/blog/2008/10/synthesizing-accessor-methods.html)
+
+## Objective-J 2.0
+
+These language features are only available if you are running Cappuccino > 0.9.6.
+
+### Dictionary Literals
+
+The syntax is `@{ key: value, key2: value2, ... }`, which is equivalent to the [same feature in Objective-C](http://clang.llvm.org/docs/ObjectiveCLiterals.html). Here's an example:
+
+##### Before
+
+    :::objj
+    return [CPDictionary dictionaryWithObjects:[[CPNull null], [CPNull null], 1.0, 3.0, CGSizeMakeZero(), 6.0, [CPNull null], CGSizeMakeZero()]
+                                       forKeys:[   @"background-color",
+                                                   @"border-color",
+                                                   @"border-width",
+                                                   @"corner-radius",
+                                                   @"inner-shadow-offset",
+                                                   @"inner-shadow-size",
+                                                   @"inner-shadow-color",
+                                                   @"content-margin"]];
+
+##### After
+
+    :::objj
+    return @{
+            @"background-color": [CPNull null],
+            @"border-color": [CPNull null],
+            @"border-width": 1.0,
+            @"corner-radius": 3.0,
+            @"inner-shadow-offset": CGSizeMakeZero(),
+            @"inner-shadow-size": 6.0,
+            @"inner-shadow-color": [CPNull null],
+            @"content-margin": CGSizeMakeZero(),
+        };
+
+The format should be familiar from languages such as Python and, of course, JavaScript itself.
+
+Regular JavaScript dictionaries will continue to work as normal.
+
+    :::objj
+    // Objective-J Dictionary Literal
+    var a = @{ @"count": 2 };
+
+    // JavaScript Object
+    var a = { @"count": 2 };
+
+### Reference and Dereference
+
+If you have programmed Objective-C, C or C++ you might think of an `@ref` reference as a JavaScript analog to a pointer. In C you might write:
+
+    :::c
+    int a;
+    int *aPtr = &a;
+    *aPtr = 5;
+    printf("%d", *aPtr); // prints 5
+
+Whereas in Objective-J you would use the `@ref` and `@deref` methods:
+
+    :::objj
+    var a,
+        aRef = @ref(a);
+
+    @deref(aRef) = 5;
+    console.log(@deref(aRef)); // logs 5
+
+Once you have a reference you can pass it around, save it, and dereference it as needed. It's not an actual pointer though so pointer arithmetic is not possible. This is especially useful if you wish to have two return values. From `CPNumberFormatter.j`:
+
+    :::objj
+    -(BOOL)getObjectValue:(id)anObjectRef forString:(CPString)aString errorDescription:(CPStringRef)anErrorRef
+
+This method returns a BOOL to indicate whether the object value was a valid value. However, with this method you can also pass in a string for the `errorDescription` parameter which, in the case of an error, will be populated with a description of why the value was not valid:
+
+    :::objj
+    var myError = @"",
+        isValid = [numberFormatter getObjectValue:someObject forString:someString errorDescription:@ref(myError)];
+
+    if (!isValid)
+        console.log("The value " + someString + " is not a valid! Error: " + @deref(myError));
+
+
+### Forward Class Declaration and Global Variables
+
+One thing you may run into with Objective-J 2 is a circular dependency: class A imports class B, and somewhere in the import chain class A is imported. When that happens, the compiler will complain that it doesn't recognize class A, because in fact the `@implementation` has not yet been parsed.
+
+To solve a circular dependency, you have to use `@class SomeClass` to declare the class in one of the files.
+
+For example CPObject.j uses CPString and CPException, but these cannot be imported since they need CPObject (a circular dependency). To avoid this circular dependency, you would "forward declare" these classes in CPObject:
+
+    :::objj
+    @class CPString
+    @class CPException
+
+The `@global` declaration is needed to tell the compiler about a variable that is not yet declared. For example CPObject.j uses the global variable CPInvalidArgumentException which is actually declared in CPException.j but cannot be used for the same reason as above. To use it, declare it at the top of your file:
+
+    :::objj
+    @global CPInvalidArgumentException
+
 ### Wrapping Up
 
 This concludes our basic overview of Objective-J. The language is a
