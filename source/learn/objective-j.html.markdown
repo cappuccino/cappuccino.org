@@ -380,7 +380,7 @@ some additional processing before returning the variable:
 
     - (CPString)firstName
     {
-        return [_firstName capitalizedString];  // a silly example.
+        return [firstName capitalizedString];  // a silly example.
     }
 
     @end
