@@ -322,6 +322,90 @@ The following is an example of the main scoping rules in Objective-J:
 
     @end
 
+### Accessors
+
+Accessor synthesizing is a way of reducing the amount of boilerplate code
+you need to write for getting and setting instance variables. Take the following code block for example:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+        CPString firstName;
+        CPString lastName;
+    }
+
+    - (void)setFirstName:(CPString)aString
+    {
+        firstName = aString;
+    }
+
+    - (CPString)firstName
+    {
+        return firstName;
+    }
+
+    - (void)setLastName:(CPString)aString
+    {
+        lastName = aString;
+    }
+
+    - (CPString)lastName
+    {
+        return lastName;
+    }
+    @end
+
+With accessors, this can be shortened significantly:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString firstName    @accessors;
+     CPString lastName     @accessors;
+    }
+    @end
+
+Under the hood, variables declared with the `@accessors` keyword are automatically
+assigned getter and setter methods. These methods may be overwritten if you need to do
+some additional processing before returning the variable:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString firstName    @accessors;
+     CPString lastName     @accessors;
+    }
+
+    - (CPString)firstName
+    {
+        return [_firstName capitalizedString];  // a silly example.
+    }
+    @end
+
+Additionally, you may configure your accessors to provide more friendly names
+for your getters and setters than the underlying variable. The `property` argument
+hides the underlying variable name and gives you a way of configuring the getter and setter method names:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+     CPString _firstName    @accessors(property=firstName);
+     CPString _lastName     @accessors(property=lastName);
+    }
+    @end
+
+This code would generate the methods `firstName`, `setFirstName`, `lastName` and `setLastName`. 
+
+You can also completely change the generated method names (often useful for Boolean accessors) by using the `getter` and `setter` arguments:
+
+    :::objj
+    @implementation Person : CPObject
+    {
+        BOOL _cool    @accessors(getter=isCool, setter=setIsCool);
+    }
+    @end
+
+For more information about `@accessors` you should read the [annoucement blog post.](http://www.cappuccino-project.org/blog/2008/10/synthesizing-accessor-methods.html)
 ### Wrapping Up
 
 This concludes our basic overview of Objective-J. The language is a
