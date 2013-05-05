@@ -401,7 +401,7 @@ You can also completely change the generated method names (often useful for Bool
     :::objj
     @implementation Person : CPObject
     {
-        BOOL _cool    @accessors(getter=isCool, setter=setIsCool);
+        BOOL _cool    @accessors(getter=isCool, setter=setCool:);
     }
     @end
 
