@@ -4,15 +4,20 @@ This is the new GitHub forkable and pull-request ready, static HTML & JS modern 
 
 ### How to Contribute to this Site
 
-1. Install [Middleman](middlemanapp.com).
+1. Install bundler.
 
-        gem install middleman
+        gem install bundler
 
-2. Run it in server mode:
+2. Install the gems used by the site.
 
-        bundle exec middleman server
+        cd /path/to/site
+        bundle install
 
-3. Open [http://127.0.0.1:4567/](http://127.0.0.1:4567/) to view site.
+3. Run it in server mode:
+
+        bundle exec middleman
+
+4. Open [http://localhost:4567/](http://localhost:4567/) to view site.
 
 Now you can simply edit the markdown, HAML, CSS, JavaScript and so on which makes up the site. Middleman will automatically compile it.
 
