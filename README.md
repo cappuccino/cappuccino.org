@@ -4,9 +4,9 @@ This is the new GitHub forkable and pull-request ready, static HTML & JS modern 
 
 ### How to Contribute to this Site
 
-1. Install [Middleman](middlemanapp.com).
+1. Install [Middleman](middlemanapp.com) and other dependencies:
 
-        gem install middleman
+        bundle install
 
 2. Run it in server mode:
 
