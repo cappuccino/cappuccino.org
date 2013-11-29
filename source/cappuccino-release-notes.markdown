@@ -3,6 +3,368 @@ title: Cappuccino Release Notes
 layout: markdown
 ---
 
+## What's New in Cappuccino 0.9.7
+
+*Release date: 2013-11-28*
+
+Cappuccino 0.9.7 introduces Aristo 2, Objective-J 2.0 and over 500 other changes and improvements.
+
+Highlights in this release:
+
+ * Objective-J 2.0: dictionary literals, array literals, pass by reference and protocols.
+ * Compiler rewritten from ground up to generate faster than ever Cappuccino application code.
+ * Aristo 2 - a new, lighter Cappuccino theme made by Sofa.
+ * Native browser copy and paste support.
+ * Scalable `CPView` ('zoom in' or out within a view and all its subviews).
+ * Multiple-value bindings support.
+ * Lion style "view based" `CPTableView`. While Cappuccino already supported view based table views, this new API matches Cocoa's and allows more convenient table customisation in Interface Builder and easier use of bindings (such as when binding a custom table cell view to a key of the row data).
+ * XcodeCapp 3 featuring a much smoother experience with project history, speed and robustness improvements and throughout better UI.
+ * `CPDatePicker`.
+ * `CPLocale`.
+ * `- CPObject performSelector:withObject:afterDelay:`.
+ * `CPError`.
+ * `CPByteCountFormatter`.
+
+
+Foundation and Core
+-------------------
+* (176440e) New: `- CPURLConnection sendSynchronousRequest:` return nil if `CPHTTPRequest` failed.
+* (76e9725) New: error on adding `CPNotFound` to an index set.
+* (75d73d3) New: format object descriptions like object literals.
+* (55ec70c) New: `CPError` class.
+* (04026c0) New: faster `- CPArray objectsAtIndexes:` when the array is a native array (up to 6X).
+* (0268f98) New: faster `- CPMutableArray removeObjectIdenticalTo:` when the array is a native array (up to 10X).
+* (5200f94) New: dictionary literals in Objective-J 2.0.
+* (472848d) New: array literals in Objective-J 2.0.
+* (f4b08a9) New: `- CPObject performSelector:withObject:afterDelay:` and related methods.
+* (34faf36) New: @ref and @deref in Objective-J 2.0.
+* (c550cd7) New: optimise `- CPArray enumerateObjectsWithOptions:usingBlock:`.
+* (ecc1e77) New: added macro/identifier concatenation with the '##' operator.
+* (a373081) New: `CFBundle.identifier`, `CFBundle.bundleWithIdentifier`, `- CPBundle -bundleWithIdentifier`.
+* (fe26e6c) New: `+ CPException raise:format:`.
+* (1f280b3) New: `- CPNumberFormatter localizedStringFromNumber:numberStyle:`.
+* (bf94dd3) New: KVC `setValue:forKey:` now automatically unwraps `CPValue`.
+* (d3a44cb) New: `objj_getClassList()`.
+* (4221acf) New: more fine-grained `OBJJ_PROGRESS_CALLBACK` calls, allowing smoother progress bars.
+* (42ad40d) New: sort the keys in `- CPDictionary description`.  This makes it easier to find an item in a large dictionary.
+* (d38125d) New: Objective-J protocols supports.
+* (d3ab2a0) New: "//example.com/x" style URL support in `CPURL` and `CFURL`.
+
+*Bug Fixes:*
+
+* (13fbfb6) Fix to enable the startup loader to continue if dynamically loaded.
+* (23401d3) Fixed: error in function `CPDescriptionOfObject` when a JSON object property has a null value.
+* (24d6e58) Fixed: `CPPredicate TRUEPREDICATE` didn't work.
+* (1f0ab2a) Fixed: bad formatting of negative numbers by `CPNumberFormatter`.
+* (2371438) Fixed: KVC array `removeObjectsInArray:`.
+* (b34e24d) Fixed: `mutableArrayValueForKey: … removeObjectsInArray` should remove all instances of the found objects.
+* (e17253d) Fixed: `CPDecimalCompare` problems when comparing to zero.
+* (181c4ad) Fixed: support IBOutlet as a synonym to @outlet.
+* (63ae584) Fixed: `CPDecimalRound` should return a result in all cases.
+* (fc403d6) Fixed: `CPString compare:` method against nil and `CPNull`.
+* (f52f118) Fixed: array sort using descriptors involving nil and `CPNull`.
+* (c437024) Fixed: subclasses of `CPMutableArray` had broken `removeObject:`.
+* (6d1c4a9) Fixed: `- CPMutableArray removeObjectIdenticalTo:` did not remove all instances, was documented incorrectly.
+* (ae2ed8b) Fixed: `CPAttributedString` problems with empty strings and out of range indexes.
+* (6ee3a39) `- CPDictionary setObject:forKey:` will log deprecated warning when passing nil object or key.
+* (5312524) Fixed: define navigator.userAgent as another ugly Rhino fix.
+* (7bef84e) Fixed: allow `CPDecimal` to handle decimal numbers with leading zeros.
+* (7d51a34) Fixed: `- CPUndoManager isUndoRegistrationEnabled`.
+* (39b49d4) Fixed: `CPNumberFormatter` formatted @"" wrong.
+* (bd6d2e7) Fixed: `CPString stringByTrimmingCharactersInSet`.
+* (05fa505) Fixed: `CPArray` did not allow binding to @count.
+* (cc2503a) Fixed: `CFBundle.prototype.bundleURL()` did not return an absolute URL.
+* (d64ea28) Fixed: `- CPBundle bundleWithIdentifier` did not create `CPBundle` when necessary.
+* (ffdee8c) Fixed: `[CPExpression isEqual:nil]` and `[CPPredicate isEqual:nil]`.
+* (fe79628) Fixed: `CGRectFromString` made bad `CGSizeFromString` call.
+* (2290574) Fixed: crash on `CPArray/CPDictionary description` if a value was the window object.
+* (e59389b) Fixed: crash in `CPArray/CPDictionary description` containing self referential JS object.
+* (0f53ced) Fixed: comparing a `CPNumber` vs nil or `CPNull` didn't throw an exception.
+* (3419f6f) `CPTimer` number of seconds interval set to 0.1 if equal to 0.0, like in Cocoa.
+* (f75955b) Fixed: `CPNumberFormatter` minimum and maximum wrong encoding when set to nil.
+* (df2be92) Fixed: `CPNumber numberWithBool:` not returning a number.
+
+AppKit
+------
+* (bafd62d) New: `- CPCollectionView draggingViewForItemsAtIndexes:withEvent:offset:`.
+* (27cda34) New: improve performance of row and column drag and drop for `CPTableView`.
+* (67f7649) New: `CPTableView` with Lion's view-based API.
+* (4369f4b) New: set `CPThemeStateEditable` in `CPTextField setEditable:`.
+* (f4904b8) New: `- CPCib initWithContentsOfURL:` return nil if the returned data is nil.
+* (7bf5f6f) New: added `scrollRectToVisible` when `CPTokenField` becomes first responder.
+* (8b5c0fb) New: CPCollectionView - allow the prototype view to be loaded from a cib.
+* (6561e4f) New: Aristo 2 theme.
+* (4757648) New: CPAlert can be moved now.
+* (edc6244) New: make `CPBox` themable.
+* (b82225e) New: make `CPLevelIndicator` themable.
+* (347de2c) New: make `CPSplitView` themable.
+* (2da0142) New: make find/search/cancel buttons themable.
+* (ce33737) New: make `CPBrowser` themable.
+* (844ed59) New: `CPCursor` will now look in the theme to get system cursors.
+* (cebf8d3) New: make standard template images plus, minus and action themable.
+* (f30e846) New: added theme value to set the position of the buttons relative to the type of window.
+* (3b72626) New: added inactive state to window title bar (for windows which are neither key nor main).
+* (348d689) New: close popovers attached to controls in windows which close.
+* (25633f0) New: child window support.
+* (b3bf190) New: reduce the menu sticky interval to 0.4s which improves UX and is more like Cocoa behavior.
+* (8cbfc79) New: makes popover's background and stroke color (both minimal and HUD style) themable.
+* (18d77ca) New: `CPTokenField` menu per token support (`tokenField:menuForRepresentedObject:`).
+* (4680f0f) New: `CPGradient initWithStartingColor:endingColor:`.
+* (d1ebf8d) New: make `CPShadow` mutable (e.g. `setShadowColor:`).
+* (08ad614) New: `- CPGradient drawInBezierPath:angle:`.
+* (e376f97) New: `- CPShadow set`.
+* (8b17b52) New: `value` and `isIndeterminate` binding support for `CPProgressIndicator`.
+* (4791973) New: don't limit max number of rows for collection views if max number of rows is set to 0.
+* (055d43e) New: custom system cursors to use sprited PNG's for non IE browsers.
+* (1c6d2f7) New: don't change the platform window's title unless the Cappuccino window is full platform.
+* (e03622b) New: `+ CPBezierPath bezierPathWithRoundedRect:xRadius:yRadius:`.
+* (02b7198) New: action bindings for `CPMenuItem`.
+* (cd54687) New: when a column header is pressed and is the _editingColumn, make the table view first responder.
+* (92c2ed9) New: table view `selectAll:` and `deselectAll:`.
+* (3591ba0) New: CPImageView bindings improvements.
+* (a9952a2) New: CPRadioGroup bindings - `selectedValue`, `selectedTag`, `selectedIndex`, `enabled` and `hidden`.
+* (77d2ebb) New: `shouldReorderColumn` delegate method for `CPTableView`.
+* (262bd5b) New: use dedicated class, `_CPStateMarker`, instead of `CPString` for selection markers.
+* (72c277d) New: `CPSegmentedControl` segment selection bindings support.
+* (7fab8d9) New: don't allow views from another window to be next/previouskeyViews.
+* (ab692bb) New: `CGContextSetLineDash`.
+* (ffbd981) New: `- CPBezierPath setLineDash:` and `getLineDash:`.
+* (5868a4c) New: `- CPDocumentController documentForWindow` and `hasEditedDocuments`.
+* (1649ea6) New: `CPDatePicker`.
+* (1649ea6) New: `CPLocale`.
+* (6ef5b46) New: `CPTokenField` sends focus and blur notifications.
+* (100f1b0) New: about panel is now constructed in code, rather than in a CIB.
+* (95d4bef) New: `- CPColor hueComponent`, `saturationComponent` and `brightnessComponent`.
+* (7b59ec9) New: allow sheets to have toolbars.
+* (44a8726) New: type check - `CPPasteBoard setString:forType:` to catch strange bugs earlier.
+* (ad33411) New: `CGContextDrawRadialGradient` support.
+* (25f54c8) New: `CGPathContainsPoint`.
+* (a9a0b1c) New: JavaScript clipboard API support for pasting.
+* (93c2762) New: improve `CPPopover` theamability.
+* (b258b1a) New: appkit_tag_dom_elements now tags with UIDs too. Tagging with UIDs can make it much easier to debug encoding/decoding related bugs where it's not clear that the right view ended up in the right spot.
+* (5a7c2e5) New: added themable attribute for grid line thickness in table view.
+* (7f08997) New: added themable attribute for divider thickness in table header view.
+* (2183c6d) New: added methods to globally turn off window constraining when resizing the platform window.
+* (fc93190) New: notify when the platform window resizes.
+* (377618d) New: non-editable but selectable text fields can become the first responder.
+* (03acecd) New: selectable text field Select All (Cmd-A, Ctrl-A) support.
+* (638d8de) New: triple-click selectable text field to select all.
+* (648dc6e) New: Edit > Delete menu item support for text fields.
+* (5958220) New: `- CPTextField deleteForward:`.
+* (08eff6e) New: grey out Edit menu non applicable items for text fields.
+* (8503081) New: `shouldExpand/Collapse` delegate for `CPOutlineView`.
+* (ef5f26f) New: added support for scaling in `CPView` (`scaleUnitSquareToSize` and `setScaleSize`).
+* (cf19aef) New: added method `selectionIndexesForProposedSelection` in `CPOutlineView`.
+* (ebc1025) New: fill in `userInfo` for `CPTextDidEndEditingNotification`.
+* (1cec1b0) New: `CPTableView` drop view themable.
+* (6a7e0ff) Reworked PatternColor to be a lot smarter, support much more concise expression of images.
+* (abaa1e8) New: support for multiple-value bindings.
+* (a011596) New: `CGContext`: render any arbitrary drawing to a pattern context and use that as a fill or stroke pattern.
+* (2b23374) New: `CPAlert` custom didEnd selector or block.
+
+*Bug Fixes:*
+
+* (57c8d22) Fixed: `CPCollectionView` dragging: bug where the dragging view was created from content instead of selection.
+* (5384a9e) Fixed: `CPTableView` auto-save columns.
+* (9ef9bf9) Fixed: `CPFlashView` minor bugs.
+* (0582033) Fixed: `CPArrayController` selection binding failure in retrieving initial selection values.
+* (ada73a1) Fixed: left/right cursors in `CPBrowser`.
+* (1d1f2d7) Fixed: `scrollRectToVisible` in `CPView`.
+* (0892ca1) Fixed: popovers could overlap the menu bar.
+* (21b5ead) Fixed: drag and drop error with `CPCollectionView` when the collection view is a drop destination but not a source.
+* (f403699) Fixed: bug with content-inset in text field.
+* (f8e7250) Fixed: bug with closable button in `CPWindow`.
+* (7e502ff) Fixed: sizing bug with `CPStepper`.
+* (9f85d2b) Fixed: scroll-wheel in FF 3+.
+* (765b106) Fixed: mouse location in key events and copy event.
+* (c5fbeff) Fixed: position of buttons in an alert.
+* (fdbef47) Fixed: popover positioning errors, especially when closing the window from which the popover came.
+* (57b2d73) Fixed: undefined location of key events.
+* (bfb85cc) Fixed: minor visual errors with `CPMenu`.
+* (49c52a0) Fixed: disappearing token delete button.
+* (0f64616) Fixed: crash in token field autocomplete.
+* (3d9b69a) Fixed: broken corners on primary `CPBox` in Chrome.
+* (6b0565e) Fixed: `CPBox` with `CPBezelBorder` had unexpected inner shadow.
+* (4991913) Fixed: blurry popovers in Chrome.
+* (baa69ff) Fixed: "cannot read property '_tokenScrollView' of null."
+* (535b8e5) Fixed: orphan token field autocomplete menus.
+* (933a1be) Fixed: `- CPWindow setRepresentedFilename:` set as a string, not a `CPURL`.
+* (ab49c63) Fixed: `CPArrayController add:` adding wrong object, `insert:` not inserting in right position when there's a selection.
+* (1f19e02) Fixed: `CPWebView` scroll-wheel.
+* (5427e9a) Fixed: column drag and drop in the table view.
+* (4ec3b5e) Fixed: add missing `isClockwise` property to `CGPath`.
+* (7ab84ca) Fixed: bugs in `CGContextCanvas` and `CGPath`.
+* (09b5eef) Fixed: [CPBox setContentView:nil] crash.  This is allowed in Cocoa so should not crash Cappuccino either.
+* (a19ec35) Fixed: broken tab view decoded from xib in certain situation.
+* (7c677de) Fixed: bugs in `CPColorWithImages` and `CPImageInBundle`.
+* (a011596) Fixed: `CGContext` fixes/enhancements.
+* (e40138c) Fixed: `CPToolbar` calls incorrect notification method.
+* (ce7e512) Fixed: `CPView removeFromSuperview` performance.
+* (84f42bd) Fixed: decoding a `CPClipView` could result in duplicate subviews.
+* (a736bb4) Fixed: empty content view allowed when resizing a window.
+* (471641c) Fixed: subviews in cib did not receive `view(Will/Did)MoveToSuperview:`.
+* (2cb3450) Fixed: `CGPathEqualToPath` did not compare all subpath types.
+* (a6fafcd) Fixed: inadvertent grid lines in token field menu.
+* (ee20038) Fixed: `CPWebScriptObject callWebScriptMethod:withArguments:`.
+* (b7ff643) Fixed: when clicking and dragging inside a menu, `mouseEntered` and `mouseExited` was mixed up for custom views.
+* (62ced17) Fixed: if a menu item had no item, no target, and no action binding, it could still be left enabled after validation.
+* (4605130) Fixed: `resizeWithOldSuperviewSize` not working like in Cocoa.
+* (11c6b66) Fixed: wrong placeholder string in `CPTextField` when using bindings.
+* (152fd66) Fixed: reordering table view column with a restriction on a targeted column.
+* (2bf2442) Fixed: using keyboard navigation in empty `CPCollectionView` threw exception.
+* (ff15f11) Fixed: transient popover windows would close on mouse interaction with certain controls.
+* (6327d8c) Fixed: transient popovers broke modal windows.
+* (59b766e) Fixed: token field autocomplete menu not receiving mouse events in presence of modal window.
+* (5f086b1) Fixed: a platform window could be resized by clicking just under the menu bar and dragging downwards, even that platform windows are supposed to be the size of the browser window by definition.
+* (2dca00c) Fixed: sheets could be resized from the top.
+* (f208ff5) Fixed: attached sheet shadow had extra width, was too dark.
+* (17f9304) Fixed: sheet animation was resizing the sheet to zero, causing problems.
+* (3af2314) Fixed: sheets resizing incorrectly.
+* (6c80d1f) Fixed: `resizeWithOldSuperviewSize` did not maintain size ratio.
+* (4450455) Fixed: frame/bounds change notification sent needlessly.
+* (bbfaac5) Fixed: windows were allowed to extend beyond the usable screen content.
+* (481f7c6) Fixed: browser would scroll text fields into view when they focused.
+* (50ca0d4) Fixed: menubar title was set to document title.
+* (677124d) Fixed: another tab view decoding error.
+* (8d54c01) Fixed: menus not closing on left click.
+* (843e501) Fixed: modal sheet would appear briefly before animation.
+* (92fb9ea) Fixed: if a sheet's parent window frame was changed, the sheet did not reposition.
+* (2dd7ba6) Fixed: sheet top shadow would not adjust when parent window was resized.
+* (25d5441) Fixed: sheet opening animation was not cleaned up when sheet immediately closed.
+* (3301754) Fixed: a sheet's parent window did not become main.
+* (7df34cc) Fixed: windows with sheets were filtering mouse move events.
+* (1e98c66) Fixed: under some circumstances, blur function could be called with no `CPTextFieldInputOwner` set.
+* (facd97c) Fixed: if `orderOut:` was not called for a popover, it would not detach from its parent.
+* (dc96b38) Fixed: popovers were not constrained to the usable content frame.
+* (03b6634) Fixed: couldn't set the first responder of a sheet.
+* (35dd35d) Fixed: array controller failed to recognize row 0 as the insert location.
+* (6dc9aa8) Fixed: eliminated duplicate `CPThemeStateSelectedTableDataView`.
+* (7225e7e) Fixed: deprecate `-tableView:dataViewForTableColumn:row:` and `-outlineView:dataViewForTableColumn:item:`
+* (33858cf) Fixed: incorrect table column highlighting and row selection after column sort.
+* (720b61f) Fixed: close pull down menu on second click on its button.
+* (fd20a80) Fixed: table view selection color did not change when losing focus.
+* (b36f8d7) Fixed: unfocused selection highlight in table upside down.
+* (efdf0a6) Fixed: when editing a table cell, the row lost focus.
+* (afc2c17) Fixed: highlighted table cells with `CPTableViewSelectionHighlightStyleNone` had white text.
+* (3178f0b) Fixed: `CPDocumentController` missing method `currentDocument`.
+* (3ef5cfe) Fixed: infinite loop when a first responder has a nil superview.
+* (6d0caac) Fixed: `setAnimates:` on a popover would only be applied after closing/reopening the popover.
+* (aa0602d) Fixed: fix a memory leak in `_CPImageAndTextView.j`.
+* (c6a59d7) Fixed: `CPMenuBar` theming.
+* (59d1da7) Fixed: setting `CPNullPlaceholderBindingOption` in binding was setting the actual value of a text field instead of just its placeholder.
+* (71cc825) Fixed: `CPMenu` ghosts after many right clicks.
+* (cc9ff15) Fixed: if a menu was dismissed with and item highlighted, and then the item was used in another menu (e.g., re-added to a context menu for a table row) it would appear highlighted, even though the menu highlight index was not set.
+* (6e2dcd5) Fixed: delegate method fires twice when using keyboard to select rows in table view.
+* (40579b5) Fixed: parameter range of `CPColor colorWithHue:saturation:brightness:` were in degrees and percent rather than factors.
+* (4e1a141) Fixed: `- CPColor hsbComponents` range.
+* (d00846a) Fixed: `CPColor colorWithHue:saturation:brightness:` parameters not clamped.
+* (70b5105) Fixed: `CPColor colorWithHue:saturation:brightness:` returning undefined.
+* (056a00e) Fixed: `CPComboBox` popupList should close if mouse is clicked outside of the control.
+* (81a61c1) Fixed: trying to open a `CPPopover` in a secondary platform window opened in the main window.
+* (6bd9a08) Fixed: `CPAlert` always shows on main platform window.
+* (a38d6c1) Fixed: tooltips always showing in primary platform window.
+* (3e268a8) Fixed: outline view disclosure button not always becoming selected when its row was.
+* (2e93e4a) Fixed: sheets not appearing underneath toolbar if one was present.
+* (eacc527) Fixed: tooltips not always showing.
+* (9ffa184) Fixed: IE8/9 drawing errors for negative size views.
+* (6701117) Fixed: `[pasteboard declareTypes:...owner:nil]` would emit a warning.
+* (5e0793c) Fixed: fixed small init bug in `CPBezierPath`.
+* (de4e28b) Fixed: fixed bug with linear gradient when drawing it without `CPGradient`.
+* (b5df5f7) Fixed: `CGPath` wrong when creating an arc.
+* (8d7e2f9) Fixed: `CPCollectionView` range bounds exception if shift key was held for first selection.
+* (3b48aaf) Fixed: table view `removeTableColumn:` did not remove column from tableColumns array.
+* (8bf2118) Fixed: selection possible in a tableView without any columns.
+* (2cbc4d9) Fixed: `CPWindows` contentView "Autoresizes Subviews" set in Cib not honoured.
+* (22dcacd) Fixed: remove non-standard `CPDocument` API "firstEligibleExistingWindowController".
+* (198857e) Fixed: copying from a `CPTextField` would not actually put the string value in the Cappuccino pasteboard.
+* (f318759) Fixed: menu items becoming permanently disabled, breaking e.g. Select All.
+* (6ef776e) Fixed: `- CPView nextValidKeyView` infinite loop.
+* (e7ecd92) Fixed: custom `CPWindow` subclasses breaking flatten.
+* (d61d4eb) Fixed: `-CPImage initWithContentsOfFile:nil` created broken image.
+* (54d13c8) Fixed: `CPImageView`'s _DOMImageElement was not created during initWithCoder.
+* (64f962e) Fixed: `viewDidHide` and `viewDidUnhide` were not called when a view was being added to/removed from hidden ancestor.
+* (7788435) Fixed: `CPTextField` would not become/resign key responder when first responder and unhidden/hidden.
+* (650bc77) Fixed: number formatter was called twice for every `setObjectValue`.
+* (27165db) Fixed: menu items would not obey enabled bindings for auto-enabling menus.
+* (5b62773) Fixed: off-by-one in row calculation caused drawing problems with variable-height rows in `CPTableView`.
+* (d8281a6) Simplified the overlay scroller test.
+* (b49a872) Fixed: IE could scroll entire app to the left.
+* (e61b678) Fixed: crash when the autocomplete menu of a token field is visible while one of the superviews is removed.
+* (3c2a2f3) Fixed: resizing a window did not attempt to maintain a minimum margin on screen.
+* (6bec406) Fixed: window width was not constrained when platform window was resized.
+* (d751fea) Fixed: constraining window's to the screen did not respect a window's minSize.
+* (8d47b3f) Fixed: `CGContextAddArc` would fail if the path was empty.
+* (4b4ac5d) Fixed: certain actions could edit a non-editable text field.
+* (a90180a) Fixed: `- CPTextField copy:` only worked for editable text fields.
+* (0e7b592) Fixed: certain editing actions were allowed for disabled text fields.
+* (2065c7f) Fixed: `CPTextField deleteBackward:` left 1 character.
+* (ec4b348) Fixed: a disabled `CPMenuItem` could still have a selected background.
+* (58d5d7d) Fixed: selectable text deselected when a menu was clicked.
+* (376b3a4) Fixed: copy and paste by Cappuccino Edit menu not working.
+* (9d43a55) Fixed: `- CPTextField deleteBackward:` required a selection.
+* (0b5a98d) Fixed: `lineBreakMode` set to `CPLineBreakByTruncating*` was trimming consecutive white spaces.
+* (016c267) Fixed: order of deletegate messages from `CPTableView`.
+* (2df13b7) Fixed: `CPComboBox` not reacting correctly when its menu scroll bar was clicked.
+* (0afc903) Fixed: delegate method `shouldSelectItem` in `CPOutlineView`.
+* (c22f489) Fixed: `shouldSelectTableColumn` not called by `CPTableView` and `CPOutlineView`.
+* (d1406e1) Fixed: editing text fields could clobber the changes made in one window with those made in another.
+* (ff06737) Fixed: fix first responder assignment when pressing a table view header column.
+* (e058d2e) Fixed: double clicking something to open/close a sheet.
+* (aeb42ea) New: `CPByteCountFormatter`, a complete implementation of `NSByteCountFormatter`.
+
+nib2cib
+-------
+* (5a99011) New: support for `CPView` identifier property.
+* (c2cad3c) New: NSNib support. NSNib are represented as data inside nib files.
+* (2bd5696) New: info message when converting `NSTableCellView` nib to plist.
+* (744f3d7) New: allow `CPCheckBox` and `CPRadio` to have themed height and adjusts it correctly.
+* (7ff8bda) New: CPDictionaryController initial commit.
+* (4188b27) New: move special per class nib2cib processing to the classes themselves in `awakeFromNib`.  Having class specific code in the class makes more sense, and this will make it easier to add more class specific transformations.
+* (d9117bd) New: enable use of image resources from frameworks, not just main bundle resources folder.
+* (0bbaec0) New: `CPDateFormatter` and `CPTimeZone` support.
+* (9cb2c75) New: --no-colors option for nib2cib.
+* (0b7e92a) New: better logging of image bundle info in nib2cib.
+* (a63bb15) New: nib2cib gives a more helpful message when unsupported classes are encountered.
+* (72169e5) New: nib2cib support for runtime attributes of point, size, rect and range types.
+
+*Bug Fixes:*
+
+* (a5e62ed) Fixed: `NSMenu autoEnablesItems` was not supported.
+* (fa70827) Fixed: normal, small and mini label placement.
+* (da47161) Fixed: nib2cib error on case sensitive filesystems.
+* (3239337) Fixed: `CPScroller` orientation import.
+* (1cb8844) Fixed: custom NSBoxes placed in Xcode became smaller in Cappuccino.
+* (f805b6b) Fixed: `CPTabView` decoding causing tab selection errors.
+* (5fac631) Fixed: minimum/maximum support for `CPNumberFormatter`.
+* (8055808) Fixed: table view cells with custom font/color did not change properly when selected.
+* (2f71b8d) Fixed: handling of custom styled table text cells.
+* (d654562) Fixed: import of `CPComboBox` enabled state.
+* (7154252) Fixed: import of `CPTextField` enabled state.
+* (9d69ec7) Fixed: size of table view corner view.
+* (083310c) Fixed: nib2cib did not allow xibs or images to be in subdirectories of Resources.
+
+Misc
+----
+* (606205b) New: XcodeCapp 3, retina ready, notification center support, new icons, speed improvements throughout and many new features.
+* (628a4db) New: improved error reporting from XcodeCapp.
+* (5a558a9) New: eliminated the "SomethingElse" framework that no one actually removes.
+* (238b6c8) New: modernize index[-debug].html, IE 9+ now run in edge mode.
+* (9e7346f) New: new index.html with loading progress by default.
+
+*Bug Fixes:*
+
+* (229e43f) Fixed: fix build path when $CAPP_BUILD not defined.
+* (450081e) Fixed: 'cannot run program "ulimit"' error.
+* (9c0c87d) Remove some of the more nonsensical main menu items in the NibApplication template.
+* (e10ce7a) Improve bootstrap.sh compatibility with ZSH.
+* (054421c) Fixed: crash with Rhino in fontinfo due to missing import.
+
+
+Other Changes
+-------------
+
+The changes above summarise a few hundred of the most important changes in Cappuccino 0.9.7. You can review the other 1000 or so changes in the [0.9.6...0.9.7 compare view](https://github.com/cappuccino/cappuccino/compare/0.9.6...0.9.7).
+
 ## What's New in Cappuccino 0.9.6
 
 *Release date: 2013-01-20*
