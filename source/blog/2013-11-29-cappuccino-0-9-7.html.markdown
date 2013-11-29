@@ -1,0 +1,40 @@
+---
+title: Cappuccino 0.9.7
+date: 2013-11-29 17:40 +00:00
+author: Alexander Ljungberg
+tags:
+- cappuccino
+- update
+- objective-j
+- releases
+---
+
+After nearly a year's worth of work we are truly excited to introduce Cappuccino 0.9.7, a major update to the Cappuccino framework featuring a massive number of new features.
+
+Since Cappuccino is such a wide framework, ranging from a low foundations such as our Objective-J compiler, all the way up to the full featured, fully themable UI kit AppKit, it's incredibly hard to summarise all the changes. But here's our best stab at it:
+
+ * Objective-J 2.0: dictionary literals, array literals, pass by reference and protocols.
+ * Compiler rewritten from ground up to generate faster than ever Cappuccino application code.
+ * Aristo 2 - a new, lighter Cappuccino theme made by Sofa.
+ * XcodeCapp 3 featuring a much smoother experience with project history, speed and robustness improvements and throughout better UI.
+ * Scalable `CPView` ('zoom in' or out within a view and all its subviews).
+ * Native browser copy and paste support.
+ * Multiple-value bindings support.
+ * Lion style "view based" `CPTableView`. While Cappuccino already supported view based table views, this new API matches Cocoa's and allows more convenient table customisation in Interface Builder and easier use of bindings (such as when binding a custom table cell view to a key of the row data).
+ * `CPDatePicker`.
+ * `CPLocale`.
+ * `- CPObject performSelector:withObject:afterDelay:`.
+ * `CPError`.
+ * `CPByteCountFormatter`.
+
+Please refer to the Cappuccino [release notes](/cappuccino-release-notes.html) for all the details.
+
+It is our intention to make this the penultimate or final release before we switch from Narhwal to Node.js, work which has already been progressing for three months. This release should be a solid foundation for that transition.
+
+Thanks to all the [Cappuccino contributors](https://github.com/cappuccino/cappuccino/graphs/contributors). The core developers you know already of course, but I'd also like to call out Martin Carlberg who wrote most of the new compiler, Sofa who designed Aristo 2, Alexandre Wilhelm who implemented Aristo 2, and to everyone who has reported bugs and made suggestions in the past year. I'd like to make a special mention of Andrew Hankinson who has been tirelessly reviewing and triaging our issues. Thanks!
+
+_- Alexander and the Cappuccino Core Developer Team_
+
+[Download Cappuccino 0.9.7](/downloads.html)
+
+[Full Release Notes](/cappuccino-release-notes.html)
