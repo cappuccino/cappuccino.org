@@ -86,7 +86,7 @@ view so you can start getting used to this for when you'll need it for
 more complex tasks. Let's create a new "PhotoView" class right below the
 definition of our PhotoPanel class:
 
-    :::objj     
+    :::objj
     @implementation PhotoView : CPView
     {
         CPImageView _imageView;
@@ -131,7 +131,7 @@ background color to display this selection. Now that we have a
 satisfactory view class to show our images in, we can go back to our
 PhotoPanel's init method and create a collection view:
 
-    :::objj    
+    :::objj
     - (id)init
     {
         self = [self initWithContentRect:CGRectMake(0.0, 0.0, 300.0, 400.0)
@@ -317,7 +317,7 @@ of our collection view:
 
 We are now almost set to see this run, all that remains is a bit of
 housekeeping in the PhotoPanel class declaration:
- 
+
     :::objj
     @implementation PhotoPanel : CPPanel
     {
@@ -422,7 +422,6 @@ view, we can get away with doing this without worry. Now we have to
 actually return the data that will be sent to our drag destination once
 the drag session is successfully completed:
 
- 
     :::objj
     - (CPData)collectionView:(CPCollectionView)aCollectionView
        dataForItemsAtIndexes:(CPIndexSet)indices
