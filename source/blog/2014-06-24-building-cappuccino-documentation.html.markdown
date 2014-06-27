@@ -30,7 +30,7 @@ This command will apply some source formatting and then run Doxygen to generate 
 
 DocSets are a documentation bundle, and can be used in several documentation viewers including Dash and XCode. Doxygen can be configured to build a docset.
 
->> Note: Some of these build notes come from Bogdan Popescu, maker of the Dash documentation viewer.
+*Note: Some of these build notes come from Bogdan Popescu, maker of the Dash documentation viewer.*
 
 ### Configure Doxygen
 
