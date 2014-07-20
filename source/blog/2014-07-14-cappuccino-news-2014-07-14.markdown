@@ -21,13 +21,13 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 - Some new major features have been added to `Cucapp`:
     * `Cucapp` provides several environment variables to configure your tests.
     * `Cucapp` supports file names such as `CPTextField+IP.j`.
-    * Internal categories were added to help you manage specific actions.
+    * Internal categories were added to add new features (in Cappuccino) needed for your tests.
     * `cucappIdentifier`, added by one of the above categories, allows you to easily access a `CPResponder` in your tests.
-    * A set of new APIs were added. Yyou can now simulate mouse/keyboard events in your tests.
+    * A set of new APIs were added. You can now simulate mouse/keyboard events in your tests.
 
 - The `CPPopover` works with the behavior `CPPopoverBehaviorSemitransient`.
 
-- `CPURLConnection` now accepts `withCredentials`. This option has the same behavior as the option `withCredentials` for an `XMLHttpRequest`.
+- `CPURLConnection` has now the methods `- (BOOL)withCredentials` and `- (void)setWithCredentials`. This option has the same behavior as the option `withCredentials` for an `XMLHttpRequest`.
 
 - The methods `+(void)setUp` and `+(void)tearDown` are now called when launching a test with `OJUnit`.
 
