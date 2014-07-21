@@ -8,11 +8,11 @@ tags:
 - showcase
 ---
 
-> This is the first in a series of articles where the community can showcase what they are doing with Cappuccino
+> This is the first in a series of articles where the community can showcase what they are doing with Cappuccino.
 
 In this blog post I will briefly explain what we are doing here at Nuage Networks, why we chose Cappuccino, why we love it, and what we’ve done with it.
 
-[Nuage Networks](http://www.nuagenetworks.net) is an Alcatel-Lucent venture, a start-up operating as part of a global company. Our Virtualized Services Platform (VSP) is a  [Software Defined Network](http://en.wikipedia.org/wiki/Software-defined_networking) solution. Of late, SDN is quite an exciting (and also over-hyped) technology in the world of networking because it brings the power and simplicity of server virtualization to datacenter networks. Our VSP is a policy driven networking configuration tool that exposes everything it can do over ReST APIs and a user interface that uses this API.
+[Nuage Networks](http://www.nuagenetworks.net) is an Alcatel-Lucent venture, a start-up operating as part of a global company. Our Virtualized Services Platform (VSP) is a [Software Defined Network](http://en.wikipedia.org/wiki/Software-defined_networking) solution. Of late, SDN is quite an exciting (and also over-hyped) technology in the world of networking because it brings the power and simplicity of server virtualization to datacenter networks. Our VSP is a policy driven networking configuration tool that exposes everything it can do over ReST APIs and a user interface that uses this API.
 
 Of course, our UI — named VSP Architect — is built with Cappuccino.
 
