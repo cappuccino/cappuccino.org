@@ -47,9 +47,11 @@ The file `Cucumber.j` and `Cappuccino+Cucumber.j` (injected in the tested applic
 - `Cappuccino+Cucumber.j` contains a category of the class `CPApplication`. The category adds the method `- (CPString)xmlDescription`. This method creates a XML dump which contains a reference of each `CPResponder` currently displayed. In the XML, each `CPResponder` is associated to a `XPath`. This unique xpath, which is a string (automatically generated from a CPResponder's title, identifier etc.), will be used in your `test/features` to target a specific `CPResponder`.
 - The file `Cucumber.j` contains the class `Cucumber` which constantly listens the URI `/cucumber` on itself.
 - The class `Cucumber` has a set of methods for simulating `CPEvent`.
-- When launching a test, Cucapp will send requests `POST` on `/cucumber` with some data. This data contains information that the Cappuccino application will interprete. Basically, this data will be the name of a method (and their params) to call.
+- When launching a test, Cucapp will send requests `POST` on `/cucumber` with some data. This data contains information that the Cappuccino application will interprete. Basically, this data will be the name of a method (and their params) to call. This is also used to retrieve the XML dump of the Cappuccino application.
 
-##### How does it work ?
+[![](/img/cpo-uploads/2014/07/cucapp.png)](/img/cpo-uploads/2014/07/cucapp.png)
+
+##### Cucapp in action
 
 Let's take an example of the simulation of a left click on a button.
 
@@ -63,6 +65,10 @@ And then, we create our ruby step :
 
     :::ruby
     Given /^the user make a left shift click on the add button$/ do
+      # Make sure the button with the title add is currently displayed
+      app.gui.wait_for            "//CPButton[title='add']"
+
+      # Simulate a left click with the shift key presssed
       app.gui.simulate_left_click "//CPButton[title='add']", [$CPShiftKeyMask]
     end
 
@@ -123,7 +129,6 @@ Cucapp provides a set of methods to simulate user events, here is the list:
     def simulate_right_click xpath, flags
     def simulate_right_click_on_point x, y, flags
     def simulate_scroll_wheel xpath, deltaX, deltaY, flags
-
 
 ### Demo
 
