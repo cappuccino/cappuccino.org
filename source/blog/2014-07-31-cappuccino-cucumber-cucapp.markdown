@@ -22,7 +22,7 @@ For the functional tests, we decided that [Cucumber](http://cukes.info) would be
 
 Cucapp is an interface between Cucumber and Cappuccino. The Cappuccino application is served by a [Thin](http://code.macournoyer.com/thin/) server and a small piece of code is injected into the Cappuccino application. This piece of code connects the Cucumber scripts and the Cappuccino application via Ajax requests.
 
-Once Cucumber was able to talk to our Cappuccino application, we wanted to simulate what a user could do with the application. Our first thought was "Wow, a user can do whatever he wants, there are unlimited possibilities". But in reality, they can only do a small amount of things :
+Once Cucumber was able to talk to our Cappuccino application, we wanted to simulate what a user could do with the application. Our first thought was "Wow, a user can do whatever she wants, there are unlimited possibilities". But in reality, she can only do a small amount of things :
 
 * He can hit some keys on his keyboard
 * He can do basic actions with his mouse (left click, right click, moving etc etc...)
@@ -67,7 +67,6 @@ And then, we create our ruby step :
     Given /^the user make a left shift click on the add button$/ do
       # Make sure the button with the title add is currently displayed
       app.gui.wait_for            "//CPButton[title='add']"
-
       # Simulate a left click with the shift key presssed
       app.gui.simulate_left_click "//CPButton[title='add']", [$CPShiftKeyMask]
     end
