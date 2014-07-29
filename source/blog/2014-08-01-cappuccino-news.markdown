@@ -16,6 +16,8 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 #### New features
 
+- `CPComboBoxDataSource` protocol has been added.
+
 - `Cucapp` allows you to specify URL parameters between each test (accessible via the global variable `$url_params`).
 
 #### Changes/Fixes
