@@ -2,7 +2,7 @@
 title: Cucumber + Cappuccino = Cucapp
 author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
-date: '2014-07-31'
+date: '2014-07-29'
 tags:
 - Cucumber
 - Cucapp
