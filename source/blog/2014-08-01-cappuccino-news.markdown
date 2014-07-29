@@ -16,20 +16,22 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 #### New features
 
-- `Cucapp` allows you to specify URL parameters between each tests (accessible via the global variable `$url_params`).
+- `Cucapp` allows you to specify URL parameters between each test (accessible via the global variable `$url_params`).
 
 #### Changes/Fixes
 
-- An `objectController` can now handle several objects bind to itself.
+- An `objectController` can now handle several objects bound to itself.
 
 - Delegate methods in a `CPTokenField` rework.
 
-- `CPDateFormatter` return by default english format unless other symbols have been explicitly provided or set.
+- `CPDateFormatter` now returns by default english format unless other symbols have been explicitly provided or set.
 
 - Scrolling in Firefox is now way faster.
 
-- `CPMenu` updated its view when a binded `CPMenuItem` is notified.
+- `CPMenu` updates its view when a binded `CPMenuItem` is notified.
+
+- `CPDatePicker` has now the format Year/Month/Day in a `CPPredicateEditor` by default.
 
 - The edition of a selected text in a `CPTextField` through `Cucapp` works now.
 
-- The XML dump created for `Cucapp` does not includ hidden view or unvisible window anymore.
+- The XML dump created for `Cucapp` does not include hidden views or unvisible windows anymore.
