@@ -36,7 +36,9 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 - `CPDatePicker` has now the format Year/Month/Day in a `CPPredicateEditor` by default.
 
-- Delete methods erased entire field in a `CPTextField` when a `CPFormatter` failed.
+- Delete methods erased entire field in a `CPTextField` when an assigned `CPFormatter` failed.
+
+- `CPPopover` works on a platform window.
 
 - The edition of a selected text in a `CPTextField` through `Cucapp` works now.
 
