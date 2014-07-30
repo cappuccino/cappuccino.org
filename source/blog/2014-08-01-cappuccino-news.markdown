@@ -14,6 +14,8 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 - [Cappuccino in action](http://www.cappuccino-project.org/blog/2014/07/cappuccino-in-action-nuage-networks.html) by Antoine Mercadal has been added to the blog.
 
+- [Cucumber + Cappuccino = Cucapp](http://www.cappuccino-project.org/blog/2014/07/cappuccino-cucumber-cucapp.html) by Alexandre Wilhelm has been added to the blog.
+
 #### New features
 
 - `CPComboBoxDataSource` protocol has been added.
@@ -33,6 +35,8 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 - `CPMenu` updates its view when a binded `CPMenuItem` is notified.
 
 - `CPDatePicker` has now the format Year/Month/Day in a `CPPredicateEditor` by default.
+
+- Delete methods erased entire field in a `CPTextField` when a `CPFormatter` failed.
 
 - The edition of a selected text in a `CPTextField` through `Cucapp` works now.
 
