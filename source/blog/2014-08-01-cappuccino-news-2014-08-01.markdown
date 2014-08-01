@@ -2,7 +2,7 @@
 title: Cappuccino News 2014 August 1st
 author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
-date: '2014-08-11'
+date: '2014-08-01'
 tags:
 - Cappuccino
 - update
