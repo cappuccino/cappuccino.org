@@ -20,26 +20,26 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 - `CPComboBoxDataSource` protocol has been added.
 
-- `Cucapp` allows you to specify URL parameters between each test (accessible via the global variable `$url_params`).
+- `Cucapp` allows you to specify URL parameters for each test (accessible via the global variable `$url_params`).
 
 #### Changes/Fixes
 
 - An `objectController` can now handle several objects bound to itself.
 
-- Delegate methods in a `CPTokenField` rework.
+- Delegate methods in `CPTokenField` rework.
 
-- `CPDateFormatter` now returns by default english format unless other symbols have been explicitly provided or set.
+- `CPDateFormatter` now returns by English date formatting unless other symbols have been explicitly provided or set.
 
-- Scrolling in Firefox is now way faster.
+- Scrolling in Firefox when using a traditional scroll wheel is now way faster.
 
-- `CPMenu` updates its view when a binded `CPMenuItem` is notified.
+- `CPMenu` updates its view when a bound `CPMenuItem` is notified.
 
-- `CPDatePicker` has now the format Year/Month/Day in a `CPPredicateEditor` by default.
+- `CPDatePicker` now has the format Year/Month/Day in a `CPPredicateEditor` by default.
 
-- Delete methods erased entire field in a `CPTextField` when an assigned `CPFormatter` failed.
+- In `CPTextField`, deleting a character cleared the entire field if the new text was not valid according to the assigned `CPFormatter`.
 
 - `CPPopover` works on a platform window.
 
-- The edition of a selected text in a `CPTextField` through `Cucapp` works now.
+- A `CPTextField` can be edited through `Cucapp`.
 
-- The XML dump created for `Cucapp` does not include hidden views or unvisible windows anymore.
+- The XML dump created for `Cucapp` does not include hidden views or closed windows anymore.
