@@ -14,17 +14,17 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 ##### Cappuccino
 
-- The blurred `CPPopover` animation on Google Chrome has been fixed.
+- The blurred `CPPopover` animation in Google Chrome has been fixed.
 
-- The transient or semi-transient `CPPopover` close on a right click now.
+- The transient or semi-transient `CPPopover` now closes on a right click.
 
-- The checking of the usability of a `CPTextField` in a `CPPlatformWindow` takes in account the content-inset value of the `CPTextField`.
+- The checking of the usability of a `CPTextField` in a `CPPlatformWindow` takes into account the content-inset value of the `CPTextField`.
 
-- The method delegate `- (void)popoverDidShow:(CPPopover)aPopover` is called with a none animated `CPPopover`.
+- The method delegate `- (void)popoverDidShow:(CPPopover)aPopover` is called for a `CPPopover` even without animation.
 
-- A memory leaks has been fixed in the `CPOutlineView`. When reloading a `CPOutlineView` with new datas, the class kept a reference of the previous datas.
+- A memory leaks has been fixed in the `CPOutlineView`. When reloading a `CPOutlineView` with new data, the class previosuly kept a reference of old data.
 
-- The following methods of the `CPOutlineView` don't take care about collapsed or outdated items anymore:
+- The following methods of the `CPOutlineView` now only work for displayed items:
     - `- (BOOL)isExpandable:(id)anItem`
     - `- (BOOL)isItemExpanded:(id)anItem`
     - `- (CPInteger)rowForItem:(id)anItem`
@@ -35,4 +35,4 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 ##### Cucapp
 
-- The method `def simulate_mouse_moved_on_point x, y, flags` has been added. You can now simulate the event `CPMouseMoved` in your tests.
+- The method `def simulate_mouse_moved_on_point x, y, flags` has been added. You can now simulate the `CPMouseMoved` event in your tests.
