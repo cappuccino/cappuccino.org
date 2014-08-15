@@ -1,0 +1,38 @@
+---
+title: Cappuccino News 2014 August 15th
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2014-08-15'
+tags:
+- Cappuccino
+- update
+---
+
+Here's a quick update on what's new with Cappuccino for the last two weeks.
+
+#### Changes/Fixes
+
+##### Cappuccino
+
+- The blurred `CPPopover` animation on Google Chrome has been fixed.
+
+- The transient or semi-transient `CPPopover` close on a right click now.
+
+- The checking of the usability of a `CPTextField` in a `CPPlatformWindow` takes in account the content-inset value of the `CPTextField`.
+
+- The method delegate `- (void)popoverDidShow:(CPPopover)aPopover` is called with a none animated `CPPopover`.
+
+- A memory leaks has been fixed in the `CPOutlineView`. When reloading a `CPOutlineView` with new datas, the class kept a reference of the previous datas.
+
+- The following methods of the `CPOutlineView` don't take care about collapsed or outdated items anymore:
+    - `- (BOOL)isExpandable:(id)anItem`
+    - `- (BOOL)isItemExpanded:(id)anItem`
+    - `- (CPInteger)rowForItem:(id)anItem`
+    - `- (CPInteger)levelForItem:(id)anItem`
+    - `- (id)itemAtRow:(CPInteger)aRow`
+    - `- (CPInteger)levelForItem:(id)anItem`
+    - `- (CPInteger)levelForRow:(CPInteger)aRow`
+
+##### Cucapp
+
+- The method `def simulate_mouse_moved_on_point x, y, flags` has been added. You can now simulate the event `CPMouseMoved` in your tests.
