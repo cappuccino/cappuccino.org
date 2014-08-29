@@ -1,0 +1,31 @@
+---
+title: Cappuccino News 2014 September 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2014-09-01'
+tags:
+- Cappuccino
+- update
+---
+
+Here's a quick update on what's new with Cappuccino for the last two weeks.
+
+#### Changes/Fixes
+
+##### Cappuccino
+
+- The `bootstrap.sh` filters out the string `OpenRDK Runtime Environment` for the Java version now.
+
+- The `CPToolTip` class has been improved. Content alignment and truncated issue have been fixed.
+
+- Buttons of a `CPButtonBar` are now removed from the CPButtonBar when they are not displayed anymore.
+
+- The `CPOutlineView` doesn't crash anymore when reloading its data and changing the position of an item.
+
+##### Cucapp
+
+- Cucapp automatically simulates several CPMouseMoved events between two simulated events aked by the tester.
+
+- The category `Cucumber+Extensions.j` doesn't raise an exception in Firefox anymore.
+
+- A category on `CPMenuItem` has been added to easyly add a `cucappIdentifier` to a CPMenuItem.
