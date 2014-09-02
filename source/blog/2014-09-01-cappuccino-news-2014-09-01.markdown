@@ -14,25 +14,25 @@ tags:
 
 ##### News
 
-- The method `setControlSize:` is now fully operational for `CPRegularControlSize`, `CPSmallControlSize` and `CPMiniControlSize`). It supports every possible controls in Cappuccino.
+- The method `setControlSize:` with options `CPRegularControlSize`, `CPSmallControlSize` and `CPMiniControlSize` is now availble for every standard Cappuccino control.
 
 [![](/img/cpo-uploads/2014/09/1st-CappuccinoNews-setControlSize.png)](/img/cpo-uploads/2014/09/1st-CappuccinoNews-setControlSize.png)
 
-- The theme attribute `nib2cib-adjustment-frame` has been added to `CPControl`. It allows you to simply adjust the frame of a control when making `nib2cib`.
+- The theme attribute `nib2cib-adjustment-frame` has been added to `CPControl`. This allows you to specify the small adjustments and tweaks to the size and position of a control as it's converted through `nib2cib` to an app using your theme. The Cappuccino themes, Aristo and Aristo 2, implement this.
 
-- The method `PatternColor()` has been improved. The function lets the user to set the size of the slices of a the pattern color. This is very usefull to make retina views.
+- The method `PatternColor()` has been improved. The function lets the user to set the size of the slices of a pattern color. This enables Retina (hi-dpi) resolution controls.
 
 ##### Changes/Fixes
 
-- The 'CPPredicateEditor' and 'CPRuleEditor' have been redesigned. They now use public controls as `CPTextField` or `CPPopUpButton` instead of private components.
+- The 'CPPredicateEditor' and 'CPRuleEditor' have been redesigned. They now use regular `CPTextField` and `CPPopUpButton` controls instead of private equivalents.
 
 [![](/img/cpo-uploads/2014/09/1st-CappuccinoNews-CPPredicate-CPRuleEditor-redesigned.png)](/img/cpo-uploads/2014/09/1st-CappuccinoNews-CPPredicate-CPRuleEditor-redesigned.png)
 
-- The `bootstrap.sh` filters out the string `OpenRDK Runtime Environment` for the Java version now.
+- The `bootstrap.sh` filters out the string `OpenRDK Runtime Environment` when detecting Java version.
 
-- The `CPToolTip` class has been improved. Content alignment and truncated issue have been fixed.
+- The `CPToolTip` class has been improved. Content alignment and a truncation issue have been fixed.
 
-- Buttons of a `CPButtonBar` are now removed from the CPButtonBar when they are not displayed anymore.
+- Buttons of a `CPButtonBar` are now removed from a `CPButtonBar` when they are not displayed anymore.
 
 - The `CPOutlineView` doesn't crash when reloading its data and changing the position of an item anymore.
 
@@ -47,5 +47,3 @@ tags:
 ##### Changes/Fixes
 
 - The category `Cucumber+Extensions.j` doesn't raise an exception in Firefox anymore.
-
-
