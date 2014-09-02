@@ -44,10 +44,18 @@ place to look.
 
 SlevenBits provides [commercial Cappuccino support and bug fixes](http://www.slevenbits.com).
 
-### IRC
 
-Quick immediate help is usually available in the Cappuccino IRC room.
-Details:
+### Community
+
+Quick immediate help is usually available in the Cappuccino IRC room or in Gitter.
+
+#### Gitter
+
+Join the chat in the [Cappuccino Gitter](https://gitter.im/cappuccino/cappuccino).
+
+#### IRC
+
+IRC details:
 
     Server: irc.freenode.net
     Room:   #cappuccino
