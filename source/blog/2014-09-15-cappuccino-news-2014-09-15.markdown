@@ -1,0 +1,53 @@
+---
+title: Cappuccino News 2014 September 15th
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2014-09-15'
+tags:
+- Cappuccino
+- update
+---
+
+> Every two weeks, we show you how Cappuccino is growing.
+
+### Cappuccino
+
+##### New
+
+- You can now declare variables and accessors in a category. ([mrcarlberg](https://github.com/mrcarlberg))
+
+##### Changes/Fixes
+
+- The `CPDatePicker` (textual and graphical) now works in a view-based `CPTableView`. ([Dogild](https://github.com/Dogild))
+
+- The method `setFloat:forKey:` of the `CPUserDefaults` checks if the given value responds to the method `floatValue`. ([ratijas](https://github.com/ratijas))
+
+- `CPRadio` in a `CPRadioGroup` are not truncated anymore. ([t00f](https://github.com/t00f))
+
+- The inactive button of a `CPWindow` doesn't look like an active button in Aristo1 anymore. ([daboe01](https://github.com/daboe01))
+
+- The font-color of a `CPDatePicker` has by default the same font-color as a `CPTextField`. ([Dogild](https://github.com/Dogild))
+
+- The deprecated delegate method `collectionViewDidChangeSelection:` has been removed. ([daboe01](https://github.com/daboe01))
+
+- The CSS style `background-size` is updated when changing the frameSize of the `CPView`. The resizing of `CPScroller` works again. ([Dogild](https://github.com/Dogild))
+
+- The method `sizeOfString:withFont:forWidth:` adds a pixel in width in order to fix any rounding errors. ([primalmotion](https://github.com/primalmotion))
+
+- Hitting the backspace key on a non-editable/enable `CPTextField` doesn't trigger the browser's back button. ([Dogild](https://github.com/Dogild))
+
+- The method `setHidden:` of a `CPButtonBar` refreshes automatically the layout of the CPButtonBar. ([primalmotion](https://github.com/primalmotion))
+
+### Cucapp
+
+##### Changes/Fixes
+
+- The readme is up to date and includes the last new features. ([Dogild](https://github.com/Dogild))
+
+### Cappuccino.org
+
+##### News
+
+- The API link in now presents in the navigation bar. ([Dogild](https://github.com/Dogild))
+
+- The Gitter and Gittip links have been added in the bottom bar. ([Dogild](https://github.com/Dogild))
