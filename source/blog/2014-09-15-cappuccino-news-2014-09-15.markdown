@@ -18,13 +18,13 @@ tags:
 
 ##### Changes/Fixes
 
-- The `CPDatePicker` (textual and graphical) now works in a view-based `CPTableView`. ([Dogild](https://github.com/Dogild))
+- `CPDatePicker` (textual and graphical) now works in a view-based `CPTableView`. ([Dogild](https://github.com/Dogild))
 
-- The method `setFloat:forKey:` of the `CPUserDefaults` checks if the given value responds to the method `floatValue`. ([ratijas](https://github.com/ratijas))
+- The method `setFloat:forKey:` of `CPUserDefaults` checks if the given value responds to the method `floatValue`. ([ratijas](https://github.com/ratijas))
 
-- `CPRadio` in a `CPRadioGroup` are not truncated anymore. ([t00f](https://github.com/t00f))
+- `CPRadio`s in a `CPRadioGroup` are not truncated anymore. ([t00f](https://github.com/t00f))
 
-- The inactive button of a `CPWindow` doesn't look like an active button in Aristo1 anymore. ([daboe01](https://github.com/daboe01))
+- An inactive button of a `CPWindow` doesn't look like an active button in Aristo 1 anymore. ([daboe01](https://github.com/daboe01))
 
 - The font-color of a `CPDatePicker` has by default the same font-color as a `CPTextField`. ([Dogild](https://github.com/Dogild))
 
@@ -36,13 +36,13 @@ tags:
 
 - Hitting the backspace key on a non-editable/enable `CPTextField` doesn't trigger the browser's back button. ([Dogild](https://github.com/Dogild))
 
-- The method `setHidden:` of a `CPButtonBar` refreshes automatically the layout of the CPButtonBar. ([primalmotion](https://github.com/primalmotion))
+- The method `setHidden:` of a `CPButtonBar` automatically refreshes the layout of the `CPButtonBar`. ([primalmotion](https://github.com/primalmotion))
 
 ### Cucapp
 
 ##### Changes/Fixes
 
-- The readme is up to date and includes the last new features. ([Dogild](https://github.com/Dogild))
+- The README is up to date and includes the latest new features. ([Dogild](https://github.com/Dogild))
 
 ### Cappuccino.org
 
@@ -50,4 +50,4 @@ tags:
 
 - The API link in now presents in the navigation bar. ([Dogild](https://github.com/Dogild))
 
-- The Gitter and Gittip links have been added in the bottom bar. ([Dogild](https://github.com/Dogild))
+- The Gitter and Gittip links have been added to the bottom bar. ([Dogild](https://github.com/Dogild))
