@@ -82,6 +82,8 @@ And this is it, simple as that! You've just simulated a left click on the button
 
 Once you tell Cucumber to simulate an event, Cucapp does the rest for you. It sends a request on `/cucumber` to simulate a left click on a button. The data of the request consists of the name of the method (`simulateLeftClick:`) to use for the simulation and additional options (the shift key is pressed).
 
+Also, between two simulated events, Cucapp will automatically generate several `CPMouseMoved` between the two simulated event locations.
+
 This is the Objective-J method called in our Cappuccino application (this method is injected automatically by Cucapp, it comes from the file `lib/Cucumber.j`):
 
     :::objj
@@ -111,6 +113,8 @@ Two categories are used in Cucapp to help you to add new things and to tweak Cuc
 
 - `Cucumber+Extensions.j` will be loaded (optionally) by Cucapp when launching Cucumber. It allows you to add new Cappuccino methods needed for your own tests (for instance a method to check the color of a `CPView`). This file has to be located in `features/support/Cucumber+Extensions.j`.
 
+- If your application implements the category `CPResponder+CuCapp.j`, you can call the function `find_cucappID(cucappIdentifier)` in the javascript console. The function will print every elements which are associated to the given cucappIdentifier.
+
 ##### Simulate user events
 
 Cucapp provides a set of methods to simulate user events:
@@ -128,7 +132,10 @@ Cucapp provides a set of methods to simulate user events:
     def simulate_right_click XPath, flags
     def simulate_right_click_on_point x, y, flags
     def simulate_scroll_wheel XPath, deltaX, deltaY, flags
+    def simulate_mouse_moved_on_point x, y, flags
 
 ### Demo
 
 A full demo of what Cucapp can do is available [here](https://github.com/Dogild/Cucapp-demo).
+
+Follow me on [@WilhelmAlex](https://twitter.com/WilhelmAlex) or [github](https://github.com/Dogild)
