@@ -82,7 +82,7 @@ And this is it, simple as that! You've just simulated a left click on the button
 
 Once you tell Cucumber to simulate an event, Cucapp does the rest for you. It sends a request on `/cucumber` to simulate a left click on a button. The data of the request consists of the name of the method (`simulateLeftClick:`) to use for the simulation and additional options (the shift key is pressed).
 
-Also, between two simulated events, Cucapp will automatically generate several `CPMouseMoved` between the two simulated event locations.
+Also, between two simulated events, Cucapp will automatically generate several `CPMouseMoved` events simulating movement between the two event locations.
 
 This is the Objective-J method called in our Cappuccino application (this method is injected automatically by Cucapp, it comes from the file `lib/Cucumber.j`):
 
@@ -113,7 +113,7 @@ Two categories are used in Cucapp to help you to add new things and to tweak Cuc
 
 - `Cucumber+Extensions.j` will be loaded (optionally) by Cucapp when launching Cucumber. It allows you to add new Cappuccino methods needed for your own tests (for instance a method to check the color of a `CPView`). This file has to be located in `features/support/Cucumber+Extensions.j`.
 
-- If your application implements the category `CPResponder+CuCapp.j`, you can call the function `find_cucappID(cucappIdentifier)` in the javascript console. The function will print every elements which are associated to the given cucappIdentifier.
+- If your application implements the category `CPResponder+CuCapp.j`, you can call the function `find_cucappID(cucappIdentifier)` in the JavaScript console. The function will print every element which is associated with the given `cucappIdentifier`.
 
 ##### Simulate user events
 
@@ -138,4 +138,6 @@ Cucapp provides a set of methods to simulate user events:
 
 A full demo of what Cucapp can do is available [here](https://github.com/Dogild/Cucapp-demo).
 
-Follow me on [@WilhelmAlex](https://twitter.com/WilhelmAlex) or [github](https://github.com/Dogild)
+> Updated on the 22nd of September, 2014 with additional information.
+
+Follow me on [@WilhelmAlex](https://twitter.com/WilhelmAlex) or [github](https://github.com/Dogild).
