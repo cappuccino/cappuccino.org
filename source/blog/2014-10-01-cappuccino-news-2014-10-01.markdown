@@ -38,6 +38,8 @@ tags:
 
 - The `CPDatePicker` has now the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the CPDatePicker, we firstly select the row as in cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2204))
 
+- Fixed an issue regarding the lost of the focus when moving a focused view to another view in the same window.  ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2222))
+
 ### Cucapp
 
 ##### New
