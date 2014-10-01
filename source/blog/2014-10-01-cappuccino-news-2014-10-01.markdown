@@ -14,35 +14,49 @@ tags:
 
 ##### New
 
-- The method `bind:toObject:withKeyPath:options:` now checks if another exclusive binding exists. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
+- The method `-(void)bind:(CPString)aBinding toObject:(id)anObject withKeyPath:(CPString)aKeyPath options:(CPDictionary)options` now checks if another exclusive binding exists. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
 
-- Added the private method `+(void)_reversSetValueFromExclusiveBinderForObject:` in `CPBinder` to send the value back to the bound object when you don't know the original binding name. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
+- Added the private method `+(void)_reverseSetValueFromExclusiveBinderForObject:(id)anObject` in `CPBinder` to send the value back to the bound object when you don't know the original binding name. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
 
 ##### Changes/Fixes
 
 - Display-issue in Google Chrome has been fixed by not having a negative z-index. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2194))
 
-- The method `-(void)unbindAllForObject:` of the class `CPBinder` works again. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2202))
+- The method `-(void)activateIgnoringOtherApps:(BOOL)shouldIgnoreOtherApps` actives the Cappuccino application again. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2172))
+
+- The method `-(void)unbindAllForObject:(id)anObject` of the class `CPBinder` works again. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2202))
 
 - Memory leaks in `CPImageView` due to the `CPImageDidLoadNotification` has been resolved. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2218))
 
-- Added option `CPDiacriticInsensitiveSearch` in `CPString` for the method `-(CPRange)rangeOfString:options:range:`. Added support for strip variants of 'E' 'I' 'O' 'U'. ([sbalay](https://github.com/sbalay) - [PR](https://github.com/cappuccino/cappuccino/pull/2203))
+- Added option `CPDiacriticInsensitiveSearch` in `CPString` for the method `-(CPRange)rangeOfString:(CPString)aString options:(int)aMask range:(CPrange)aRange`. Added support for strip variants of 'E' 'I' 'O' 'U'. ([sbalay](https://github.com/sbalay) - [PR](https://github.com/cappuccino/cappuccino/pull/2203))
 
 - Memory leaks have been fixed for the class `CPPopUpButton`, `CPRadio` and `CPSegmentedControl` when using bindings. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
 
-- The methods `-(void)viewDidMoveToSuperview:`, `-(void)viewDidMoveToWindow:`, `-(void)viewWillMoveToSuperview` and `-(void)viewWillMoveToWindow` are now called as in Cocoa. They are even called when removing the view from its superview. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2176))
+- The `Objective-J` VIM highlighting has been updated and is similar to the official `Objective-C` VIM highlighting and the official `JavaScript` VIM highlighting. ([kevin-xu](https://github.com/kevin-xu) - [PR](https://github.com/cappuccino/cappuccino/pull/2214))
+
+- The command `jake` works in the Cappuccino directory for non-MacOS system. ([kevin-xu](https://github.com/kevin-xu) - [PR](https://github.com/cappuccino/cappuccino/pull/2219))
+
+- The compiler now shows an error when the error is in the first line of the file. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2221))
+
+- `Objective-J` now gives an understandable error when the compiler can not find a protocol in a class declaration. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2213))
+
+- The methods `-(void)viewDidMoveToSuperview`, `-(void)viewDidMoveToWindow`, `-(void)viewWillMoveToSuperview:(CPView)aView` and `-(void)viewWillMoveToWindow:(CPWindow)aWindow` are now called as in Cocoa. They are even called when removing the view from its superview. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2176))
 
 - Memory leaks due to notification observers have been fixed for the class `CPColorWell`, `CPClipView`, `CPDatePicker`, `CPTableView` and `CPTextField`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2176))
 
-- The `CPDatePicker` doesn't send an action to its target when using the method `-(void)setObjectValue:` or `-(void)setDateValue:` anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2210))
+- The `CPDatePicker` doesn't send an action to its target when using the method `-(void)setObjectValue:(id)anObjectValue` or `-(void)setDateValue:(CPDate)aDateValue` anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2210))
 
 - The `CPDatePicker` now has the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the `CPDatePicker`, we first select the row as in Cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2204))
+
+- When encoding and decoding a `CPTableView`, several `_CPTableDrawView` were added to the view. Now we assure to only have one `_CPTableDrawView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2223))
+
+- Fixed an issue regarding the lost of the focus when moving a focused view to another view in the same window.  ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2222))
 
 ### Cucapp
 
 ##### New
 
-- The category `CPResponder+CuCapp.j` now contains the method `find_cucappID`. This function, accessible from the JavaScript console, prints every component equal to the given parameter of `find_cucappID`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/11))
+- The category `CPResponder+CuCapp.j` now contains the method `find_cucappID(aCucappIdentifier)`. This function, accessible from the JavaScript console, prints every component equal to the given parameter of `find_cucappID`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/11))
 
 ##### Changes/Fixes
 
