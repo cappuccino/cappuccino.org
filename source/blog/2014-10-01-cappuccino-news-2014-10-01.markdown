@@ -14,19 +14,19 @@ tags:
 
 ##### New
 
-- The method `-(void)bind:(CPString)aBinding toObject:(id)anObject withKeyPath:(CPString)aKeyPath options:(CPDictionary)options` now checks if another exclusive binding is already binded. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
+- The method `-(void)bind:(CPString)aBinding toObject:(id)anObject withKeyPath:(CPString)aKeyPath options:(CPDictionary)options` now checks if another exclusive binding exists. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
 
-- Added the private method `+(void)_reverseSetValueFromExclusiveBinderForObject:(id)anObject` in `CPBinder` to send the value back to the binded object when you don't know the original binding name. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
+- Added the private method `+(void)_reverseSetValueFromExclusiveBinderForObject:(id)anObject` in `CPBinder` to send the value back to the bound object when you don't know the original binding name. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2207))
 
 ##### Changes/Fixes
 
-- Displayed issue in Google Chrome has been fixed by not having a negative z-index. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2194))
+- Display-issue in Google Chrome has been fixed by not having a negative z-index. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2194))
 
 - The method `-(void)activateIgnoringOtherApps:(BOOL)shouldIgnoreOtherApps` actives the Cappuccino application again. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2172))
 
 - The method `-(void)unbindAllForObject:(id)anObject` of the class `CPBinder` works again. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2202))
 
-- Memory leaks in `CPImageView` due to the notification `CPImageDidLoadNotification` has been resolved. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2218))
+- Memory leaks in `CPImageView` due to the `CPImageDidLoadNotification` has been resolved. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2218))
 
 - Added option `CPDiacriticInsensitiveSearch` in `CPString` for the method `-(CPRange)rangeOfString:(CPString)aString options:(int)aMask range:(CPrange)aRange`. Added support for strip variants of 'E' 'I' 'O' 'U'. ([sbalay](https://github.com/sbalay) - [PR](https://github.com/cappuccino/cappuccino/pull/2203))
 
@@ -46,7 +46,7 @@ tags:
 
 - The `CPDatePicker` doesn't send an action to its target when using the method `-(void)setObjectValue:(id)anObjectValue` or `-(void)setDateValue:(CPDate)aDateValue` anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2210))
 
-- The `CPDatePicker` has now the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the CPDatePicker, we firstly select the row as in cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2204))
+- The `CPDatePicker` now has the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the `CPDatePicker`, we first select the row as in Cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2204))
 
 - When encoding and decoding a `CPTableView`, several `_CPTableDrawView` were added to the view. Now we assure to only have one `_CPTableDrawView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2223))
 
@@ -56,10 +56,10 @@ tags:
 
 ##### New
 
-- The category `CPResponder+CuCapp.j` now contains the method `find_cucappID(aCucappIdentifier)`. This function, accessible from tje javascript console, prints every components equal to the given parameter of find_cucappID. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/11))
+- The category `CPResponder+CuCapp.j` now contains the method `find_cucappID(aCucappIdentifier)`. This function, accessible from the JavaScript console, prints every component equal to the given parameter of `find_cucappID`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/11))
 
 ##### Changes/Fixes
 
-- When simulating a keyboard event, we set the good key code to the `CPEvent`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/13))
+- Correctly set key code of the `CPEvent` when simulating a keyboard event. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/13))
 
 - Simulated events on component now use only rounded location point. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/12))
