@@ -22,7 +22,7 @@ tags:
 
 - Display-issue in Google Chrome has been fixed by not having a negative z-index. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2194))
 
-- The method `-(void)activateIgnoringOtherApps:` actives the Cappuccino application again. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2172))
+- The method `-(void)activateIgnoringOtherApps:` activates the Cappuccino application again. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2172))
 
 - The method `-(void)unbindAllForObject:` of the class `CPBinder` works again. ([RoosterDragon](https://github.com/RoosterDragon) - [PR](https://github.com/cappuccino/cappuccino/pull/2202))
 
@@ -36,7 +36,7 @@ tags:
 
 - The command `jake` works in the Cappuccino directory for non-MacOS system. ([kevin-xu](https://github.com/kevin-xu) - [PR](https://github.com/cappuccino/cappuccino/pull/2219))
 
-- The compiler now shows an error when the error is in the first line of the file. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2221))
+- The compiler now shows an error when the error is on the first line of the file. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2221))
 
 - `Objective-J` now gives an understandable error when the compiler can not find a protocol in a class declaration. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2213))
 
@@ -48,9 +48,9 @@ tags:
 
 - The `CPDatePicker` now has the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the `CPDatePicker`, we first select the row as in Cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2204))
 
-- When encoding and decoding a `CPTableView`, several `_CPTableDrawView` were added to the view. Now we assure to only have one `_CPTableDrawView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2223))
+- When encoding and decoding a `CPTableView`, several `_CPTableDrawView` were added to the view. Now only one `_CPTableDrawView` is added. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2223))
 
-- Fixed an issue regarding the lost of the focus when moving a focused view to another view in the same window.  ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2222))
+- Fixed an issue where the first responder would stop being the first responder when moved between two views in the same window.  ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2222))
 
 ### Cucapp
 
@@ -62,4 +62,4 @@ tags:
 
 - Correctly set key code of the `CPEvent` when simulating a keyboard event. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/13))
 
-- Simulated events on component now use only rounded location point. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/12))
+- Simulated events now use integral location points. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/12))
