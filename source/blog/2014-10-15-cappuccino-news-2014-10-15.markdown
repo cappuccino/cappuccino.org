@@ -17,4 +17,4 @@ tags:
 
 - The method `- (BOOL)popoverShouldClose:` is now called called in transient and semi-transient mode. ([primalmotion])
 
-- Popover windows are now trapping the next mouse automatically if the popover is still visible after a `- performClose:`  ([primalmotion])
+- Popover windows now trap the next mouse event automatically if the popover is still visible after a `- performClose:`. ([primalmotion])
