@@ -137,13 +137,13 @@ Cucapp provides a set of methods to simulate user events in your cucumber tests:
 
 ##### CLI
 
-If your application implements the category `CPResponder+CuCapp.j`, you can use Cucapp in a CLI mode. To use it, you need to follow the following steps :
+If your application implements the category `CPResponder+CuCapp.j`, you can use Cucapp in CLI mode. To use it, you need to follow the following steps:
 
-- Open your application in a browser and open the javascript console of this browser.
+- Open your application in a browser and open the JavaScript console.
 
-- Then call the function `function load_cucapp_CLI(path)`. The path argument represents the path of the file `Cucumber.j`. Once you see a message that Cucapp is well loaded, you can start to use it.
+- Call the function `load_cucapp_CLI(path)`. The path argument represents the path of the file `Cucumber.j`. Once you see a message that Cucapp is loaded, you can start to use it.
 
-Now you can use the following functions in the console :
+Now you can use the following functions in the console:
 
     :::objj
     function simulate_keyboard_event(character, flags)
@@ -161,18 +161,18 @@ Now you can use the following functions in the console :
     function simulate_scroll_wheel_on_view(aKey, aValue, deltaX, deltaY, flags)
     function find_cucappID(cucappIdentifier)
 
-For instance, if you want to simulate a left click on a button which has a title set to login, you need to do :
+For instance, if you want to simulate a left click on a button which has a title set to login, you would enter this:
 
     :::objj
     load_cucapp_CLI()
-    simulate_left_click_on_view(“cucappIdentifier, “button-login", [])
+    simulate_left_click_on_view("cucappIdentifier", "button-login", [])
 
 ### Demo
 
 A full demo of what Cucapp can do is available [here](https://github.com/Dogild/Cucapp-demo).
 
-> Updated on the 22nd of September, 2014 with additional informations.
+> Updated on the 22nd of September, 2014 with additional information.
 
-> Updated on the 19th of October, 2014 with additional informations.
+> Updated on the 19th of October, 2014 with additional information.
 
 Follow me on [@WilhelmAlex](https://twitter.com/WilhelmAlex) or [github](https://github.com/Dogild).
