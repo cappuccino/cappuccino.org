@@ -17,6 +17,8 @@ tags:
 
 - The `CPSegmentedControl` supports the mini and small control size. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2226))
 
+- Possibility to select a part of a textual `CPDatePicker` when dragging. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2236))
+
 ##### Changes/Fixes
 
 - `Key Value Observing` generated new and old values in the change dictionary regardless of the options provided when adding the observer. Now it respects the options passed in the method `addObserver:forKeyPath:options:context:`. Optimization has been added, the speed improvement is 10% to 200%. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2224))
@@ -24,6 +26,8 @@ tags:
 - Hidding button bar  in a `CPButtonBar` was broken due to the new `KVO` options, it works again. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/8eb52f9a888c2183b7ee022eb52cea24ce8bb8c8))
 
 - The size of the `CPSecuredtextField` is now well calculated in `nib2cib`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2234))
+
+- The total height of a `CPCollectionView` was too low and the `CPCollectionView` truncated the last views. Now every views are well displayed. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2150))
 
 - When a `CPTableView` has its selection style set to `CPTableViewSelectionHighlightStyleNone`, we don't need two clicks to select a control in a row anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2231))
 
