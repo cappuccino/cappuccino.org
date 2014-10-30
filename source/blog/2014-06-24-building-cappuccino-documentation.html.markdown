@@ -55,7 +55,7 @@ Once you have configured doxygen, you can build the documentation using `jake`, 
 
 ### Build the Docset
 
-In the `Build/Documentation` directory there should now be a Makefile. This will be used to build the docset.
+In the `Build/Documentation/html` directory there should now be a Makefile. This will be used to build the docset.
 
 #### Optional: Disable Text Indexes
 
