@@ -17,15 +17,7 @@ Also a note on terminology: Cappuccino has CIBs (Cappuccino Interface Builder), 
 
 ## Getting Started
 
-The first step is to generate a new Nib-based application using `capp gen`.
-
-`$> capp gen -l -t NibApplication MultiNibApp`
-
-The next step is to start XcodeCapp and have it listen to your application. 
-
-[![](/img/cpo-uploads/2014/10/multinib-figure1.png)](/img/cpo-uploads/2014/10/multinib-figure1.png)
-
-XcodeCapp will load up Xcode and display your project template. Open the "Resources" folder and select the `MainMenu.xib` file. Your interface will open in Xcode Interface Builder.
+The first step is to start XcodeCapp and use it to create your application. Choose "Create Project..." and save your project. I called mine "MultiNibApp". XcodeCapp will create a new NIB Application and then load up Xcode and display your project files. Click the disclosure arrow on the "Resources" folder and select the `MainMenu.xib` file. Your interface will become visible in the Xcode Interface Builder.
 
 [![](/img/cpo-uploads/2014/10/multinib-figure2.png)](/img/cpo-uploads/2014/10/multinib-figure2.png)
 
