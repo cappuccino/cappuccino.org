@@ -58,17 +58,17 @@ Next, open up your `AppController.j` file and add an import line for your new fi
     :::objj
     @import "ExternalWindowController.j"
 
-Now we need to add the corresponding object in Interface Builder. Open up your MainMenu.xib file. Find the "NSObject" component in the component library and drag it to your project. Select the new object, then choose the "Identity Inspector" in the right-hand column. If everything is wired up OK, you should simply start typing "External" into the "Custom Class" box, and it will auto-complete it for you. (If it doesn't autocomplete, it's a good indicator that something's gone wrong. Check to make sure XcodeCapp is still running, that you've imported your class into your AppController, and that there are no syntax errors in your custom class.)
+Now we need to add the corresponding object in Interface Builder. Open up your `MainMenu.xib` file. Find the "NSObject" component in the component library and drag it to your project. Select the new object, then choose the "Identity Inspector" in the right-hand column. If everything is wired up OK, you should be able to simply start typing "External" into the "Custom Class" box and it will auto-complete it for you. (If it doesn't autocomplete, it's a good indicator that something's gone wrong. Check to make sure XcodeCapp is still running, that you've imported your class into your AppController, and that there are no syntax errors in your custom class.)
 
 [![](/img/cpo-uploads/2014/10/multinib-figure4.png)](/img/cpo-uploads/2014/10/multinib-figure4.png)
 
-Now the crucial step. Choose your "ExternalNib.xib" file in your project. Select the "File's Owner" object, and do the same thing: Change the "Custom Class" property to "ExternalWindowController".
+Now the crucial step. Choose your `ExternalNib.xib` file in your project. Select the "File's Owner" object, and do the same thing: Change the "Custom Class" property to `ExternalWindowController`.
 
 Doing this changes the "Connections" options for our "File's Owner" object. With the "File's Owner" object still selected, choose the "Connections" inspector pane and drag a connection line from the `window` item to the `Window` object.
 
 [![](/img/cpo-uploads/2014/10/multinib-figure5.png)](/img/cpo-uploads/2014/10/multinib-figure5.png)
 
-So, let's take a step back and look at what's happened. We created an `ExternalWindowController` object that extends `CPWindowController`. One of the properties of a CPWindowController is, unsurprisingly, a reference to the window that it will be controlling. We've just set that property using Interface Builder.
+So, let's take a step back and look at what's happened. We created an `ExternalWindowController` object that extends `CPWindowController`. One of the properties of a `CPWindowController` is, unsurprisingly, a reference to the window that it will be controlling. We've just set that property using Interface Builder.
 
 ## Cross-NIB Communication
 
@@ -82,7 +82,7 @@ Then select the button we added to our Window in this view. Open the Connections
 
 [![](/img/cpo-uploads/2014/10/multinib-figure6.png)](/img/cpo-uploads/2014/10/multinib-figure6.png)
 
-Now it's time to test it out. Open your index.html file (I find it best to run the `$> python -m SimpleHTTPServer` within the project directory, which will start a simple webserver on port 8000). Load your project, and click on the "Show External Window" button. Behold! The window appears!
+Now it's time to test it out. Open your `index.html` file (I find it best to run `$> python -m SimpleHTTPServer` within the project directory, which will start a simple webserver on port 8000). Load your project, and click on the "Show External Window" button. Behold! The window appears!
 
 [![](/img/cpo-uploads/2014/10/multinib-figure7.png)](/img/cpo-uploads/2014/10/multinib-figure7.png)
 
