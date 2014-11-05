@@ -17,31 +17,29 @@ tags:
 
 - The `CPSegmentedControl` supports the mini and small control size. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2226))
 
-- Possibility to select a part of a textual `CPDatePicker` when dragging. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2236))
+- Possibility to select part of a textual `CPDatePicker` when dragging. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2236))
 
 ##### Changes/Fixes
 
-- `Key Value Observing` generated new and old values in the change dictionary regardless of the options provided when adding the observer. Now it respects the options passed in the method `addObserver:forKeyPath:options:context:`. Optimization has been added, the speed improvement is 10% to 200%. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2224))
+- `Key Value Observing` generated new and old values in the change dictionary regardless of the options provided when adding the observer. Now it respects the options passed in the method `addObserver:forKeyPath:options:context:`. Optimization has been added, the speed improvement is 10% to 200%. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2224)) and ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/8eb52f9a888c2183b7ee022eb52cea24ce8bb8c8))
 
-- Hidding button bar  in a `CPButtonBar` was broken due to the new `KVO` options, it works again. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/8eb52f9a888c2183b7ee022eb52cea24ce8bb8c8))
+- The size of `CPSecuredtextField` is now calculated correctly by `nib2cib`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2234))
 
-- The size of the `CPSecuredtextField` is now well calculated in `nib2cib`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2234))
+- Fixed: the total height of a `CPCollectionView` was too short and the `CPCollectionView` truncated the last view(s). ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2150))
 
-- The total height of a `CPCollectionView` was too low and the `CPCollectionView` truncated the last views. Now every views are well displayed. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2150))
+- When a `CPTableView` has its selection style set to `CPTableViewSelectionHighlightStyleNone`, don't require two clicks to select a control in a row anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2231))
 
-- When a `CPTableView` has its selection style set to `CPTableViewSelectionHighlightStyleNone`, we don't need two clicks to select a control in a row anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2231))
+- The `CPTableView` won't enable the bezeled state of a non-selectable `CPTextField` when clicking on it. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2230))
 
-- The `CPTableView` won't set to yes the bezeled state of a non-selectable `CPTextField` when clicking on it. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2230))
+- A selectable text mouse cursor style is shown when the mouse hovers above an enabled and editable or selectable `CPTextField`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2233))
 
-- The cursor has the selectable style when the mouse is hover a `CPTextField` and this CPTextField is enabled and editable or selectable. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2233))
+- The size of `CPSegmentedControl` is now calculated correctly by `nib2cib`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2226))
 
-- The frame of the `CPSegmentedControl` is now well calculated in `nib2cib`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2226))
-
-- The `CPWindow` doesn't keep a reference of the last first responder when closing it anymore. This occured an issue when reopening the `CPWindow` and having the same first responder. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2229))
+- Fixed: when closing and reopening a `CPWindow` the first responder would not reset. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2229))
 
 
 ### Cucapp
 
 ##### New
 
-- Cucapp now contains a CLI mode. The CLI allows you to simulate user events from the Javascript console, this is very usefull when debugging your Cucumber tests. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/16))
+- Cucapp now contains a CLI mode. The CLI allows you to simulate user events from the JavaScript console, useful when debugging your Cucumber tests. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/16))
