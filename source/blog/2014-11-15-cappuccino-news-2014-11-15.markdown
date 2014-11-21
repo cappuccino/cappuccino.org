@@ -14,26 +14,26 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 ### Community
 
-- [Multi-Nib Applications with Interface Builder](http://www.cappuccino-project.org/blog/2014/10/multi-nib-applications-with-interface-builder.html) by  Andrew Hankinson has been added to the blog.
+- [Multi-Nib Applications with Interface Builder](http://www.cappuccino-project.org/blog/2014/10/multi-nib-applications-with-interface-builder.html) by  Andrew Hankinson has been added to this blog, so take a look if you missed it.
 
 ### Cappuccino
 
 ##### New features
 
-- `xCodeCapp` 3.2. This new version comes with the following features :
-    - Each time `xCodeCapp` processes a file, it now launches the command `objj` on the file. This will mainly raise warning issues.
-    - The menu `Check Compilation Issues` has been added.
-    - The error/warning panel can be configured to stay on the top of your desktop
+- Introducing `xCodeCapp` 3.2:
+    - Each time `xCodeCapp` processes a file, it now also processes it through `objj` to issue more warnings.
+    - The menu item `Check Compilation Issues` has been added.
+    - The error/warning panel can be configured to stay on top.
     - ([Dogild](https://github.com/Dogild) and [primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2248) and [PR](https://github.com/cappuccino/cappuccino/pull/2253))
 
 [![](/img/cpo-uploads/2014/11/xCodeCapp-3.2.png)](/img/cpo-uploads/2014/11/xCodeCapp-3.2.png)
 
-- When building your application, you can now disable the `CommonJS` build phase by setting the system environement variable `IGNORE_ENV_COMMONJS`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2242))
+- When building your application you can now disable the `CommonJS` build phase by setting the system environement variable `IGNORE_ENV_COMMONJS`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2242))
 
 - `.gitignore` now ignores the `.tm_properties`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/57d435b6db378a1681f861b4f269838e4a5d5d5e))
 
-- New options have been added to the command `objj` :
-    - `-h` or `--help` to get the help of the command
+- New options have been added to the command line tool `objj`:
+    - `-h` or `--help` to get help
     - `-I`or `--objj-include-paths` to specify the frameworks to be used
     - `-m` or `--multifiles` to launch the command on multiple files
     - ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2248))
@@ -44,39 +44,40 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 - `NativeHost` is no longer built by default. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2244))
 
-- The `CPButtonBar` didn't remove old buttons gotm their superview, now it does. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/9a307269ca6d8f7a3c680b5e0fe5d31584857875))
+- The `CPButtonBar` didn't remove old buttons from their superview, now it does. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/9a307269ca6d8f7a3c680b5e0fe5d31584857875))
 
-- The `popUpList` of the `CPComboBox` is now added as a `childWindow` of the window of the `CPComboBox`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/459374db1cf426d82ba22919382645d201bd9c0f))
+- The `popUpList` of a `CPComboBox` is now a `childWindow` of the control's window. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/459374db1cf426d82ba22919382645d201bd9c0f))
 
-- Some `APIs` were broken in the `CPComboBox`. You can now set the `font`, `alignment`, `intercellSpacing` and `itemHeight` of the `CPComboBox` without the listDelegate. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/f486c02b5e99c2929e957e6e8548399a375e6f7e))
+- Fixed some `CPComboBox` APIs. You can now set the `font`, `alignment`, `intercellSpacing` and `itemHeight` of the `CPComboBox` without `listDelegate`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/f486c02b5e99c2929e957e6e8548399a375e6f7e))
 
-- The `content-inset` of a `CPComboBox` has been changed for a better alignment. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2251))
+- The `content-inset` of a `CPComboBox` has been changed for better alignment. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2251))
 
-- The text cursor of a `CPTextField` didn't take the `content-inset` into account to show up. Now it does like in Cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2250))
+- The text cursor of a `CPTextField` didn't take the `content-inset` into account. Now it does, like in Cocoa. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2250))
 
-- When moving from a `CPPlatformWindow` to another `CPPlatformWindow`, the new targeted window didn't get the first new `CPEvent`, the previous `CPPlatformWindow` took it. Now it works perfectly. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2256))
+- When switching between two `CPPlatformWindow`s, the new targeted window didn't get the first `CPEvent` which instead went to the previous window. This has been fixed. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2256))
 
-- You can now open a `CPPanel` in another `CPPlatformWindow` instead of the main one. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2256))
+- You can now open a `CPPanel` in a `CPPlatformWindow` other than the main one. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2256))
 
 ### Cucapp
 
 ##### New features
 
-- `Cucapp` now provides an API to record a set of events and then replay it. This could be very usefull when debugging your application as you won't need to reproduce your actions again and again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/20))
+- `Cucapp` now provides an API to record a set of events and then replay it. This could be very useful when debugging your application as you won't need to reproduce your actions over and over. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/20))
 
 ##### Changes/Fixes
 
-- When using the ruby function `simulate_keyboard_events(string, flags)`, we now make sure to transform the given string in a string object. ([minimilk](https://github.com/minimilk) - [PR](https://github.com/cappuccino/cucapp/pull/21))
+- When using the Ruby function `simulate_keyboard_events(string, flags)`, we now make sure to transform the given string into a string object. ([minimilk](https://github.com/minimilk) - [PR](https://github.com/cappuccino/cucapp/pull/21))
 
-- `Cucapp` now works with the last version of `Thin`, an issue occured when playing tests with a large application. ([little-dude](https://github.com/little-dude) - [PR](https://github.com/cappuccino/cucapp/pull/22))
+- `Cucapp` now works with the last version of `Thin` to resolve an issue when executing tests with a large application. ([little-dude](https://github.com/little-dude) - [PR](https://github.com/cappuccino/cucapp/pull/22))
 
-- The `CPMouseMoved` events generated by `Cucapp` between two simulated events are now simulated in different stacks, this is closer to a user interaction. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/15))
+- The `CPMouseMoved` events generated by `Cucapp` between two simulated events are now simulated in different call stacks. This is more similar to real user interaction. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/15))
 
 - The method `find_cucappIdentifier` has been replaced by the method `find_control(aKey, aValue)`. This method prints every controls relative to the given key and value. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/19))
 
 ### Work in progress
 
 As you may know, [Apajarita](https://github.com/aparajita) is currently working on the integration of `Cappuccino` and `Node`.
+
 Just to make you dream, this is a sneak peak of the next `objj-compiler`:
 
 [![](/img/cpo-uploads/2014/11/sneak-peek-objj-compiler.png)](/img/cpo-uploads/2014/11/sneak-peek-objj-compiler.png)
