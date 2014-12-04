@@ -6,7 +6,7 @@ layout: blog
 
 %h1.header
   Articles tagged
-  = '"' + @tag + '"'
+  = "\"#{@tag}\""
 
 - page_articles.each do |current_article|
   = partial :blog_article_list_format, :locals => { :current_article => current_article }
