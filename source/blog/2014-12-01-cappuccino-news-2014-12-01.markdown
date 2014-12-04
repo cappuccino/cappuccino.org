@@ -5,7 +5,7 @@ author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-12-01'
 tags:
 - Cappuccino
-- Objective-j
+- Objective-J
 - update
 ---
 
@@ -15,9 +15,9 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 
 ##### New features
 
-- The key word `@typedef` has been added to `Objective-j`. This key word allows you to define new types for your application. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2254))
+- The keyword `@typedef` has been added to Objective-J. This keyword allows you to define new types for your application. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2254))
 
-Example :
+Example:
 
     :::objj
     @import <Foundation/Foundation.j>
@@ -30,15 +30,15 @@ Example :
     }
     @end
 
-Objective-j will not raise a warning for the type `NUSuppaType` anymore.
+The Objective-J compiler will not raise a warning for the type `NUSuppaType` anymore.
 
-- The `CPTextField` can be used in multiline mode now. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2257))
+- New multi-line support for `CPTextField`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/pull/2257))
 
 [![](/img/cpo-uploads/2014/12/CPTextField-multiline.png)](/img/cpo-uploads/2014/12/CPTextField-multiline.png)
 
-- The method `addObserverName:object:queue:usingBlock:` has been added to the class `CPNotificationCenter`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2261))
+- The method `addObserverName:object:queue:usingBlock:` has been added to `CPNotificationCenter`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2261))
 
-Example :
+Example:
 
     :::objj
     var center = [CPNotificationCenter defaultCenter],
@@ -52,14 +52,14 @@ Example :
 
 ##### Changes/Fixes
 
-- The URL of the current release version of Cappuccino was wrong in the documentation ([zittix](https://github.com/zittix) - [PR](https://github.com/cappuccino/cappuccino/pull/2266))
+- Fixed: the URL of the current release version of Cappuccino was wrong in the documentation. ([zittix](https://github.com/zittix) - [PR](https://github.com/cappuccino/cappuccino/pull/2266))
 
 - You can now set a specific height for a `CPTextField` even if a control size is set. ([t00f](https://github.com/t00f) - [PR](https://github.com/cappuccino/cappuccino/pull/2258))
 
-- Fixed a binding issue when a `CPArrayController` was bound to a `CPTextField` when you have selected multiple rows. The data of the controller was updated even though no actions were perfomed. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2164))
+- Fixed: when a `CPTextField` was used to edit multiple rows through an `CPArrayController` (and the multiple selection placeholder would show), tabbing through the field would clear the bound value in the rows even though no edit was made. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2164))
 
-- In the `JakeFile` template, the configuration build environment parameter could have multiple values, now this variable is well set by detecting the build environment. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2255))
+- Fixed: in the `Jakefile` template, the configuration build environment parameter could have multiple values. Now this variable is correctly set by detecting the build environment. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2255))
 
-- It's now possible to chain sheet windows in a `CPWindow`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2238))
+- It's now possible to chain sheet dialogs in a `CPWindow`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2238))
 
-- When opening a `CPMenu` with items and then opening a `CPMenu` without any items Cappuccino doesn't crash anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2260))
+- Fixed: opening a `CPMenu` with items and then opening a `CPMenu` without any items would cause a crash. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2260))
