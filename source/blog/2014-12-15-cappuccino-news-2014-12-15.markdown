@@ -1,0 +1,33 @@
+---
+title: Cappuccino News 2014 December 15th
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2014-12-15'
+tags:
+- Cappuccino
+- Objective-J
+- update
+---
+
+Here's a quick update on what's new with Cappuccino for the last two weeks.
+
+### Cappuccino
+
+##### News
+
+- The text editor `VIM` now supports the keyword `@typedef`. ([kevin-xu](https://github.com/kevin-xu) - [PR](https://github.com/cappuccino/cappuccino/pull/2274))
+
+- The `CPDatePicker` has now a focus ring when editing it. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2265))
+
+##### Changes/Fixes
+
+- The size of the controls in a `CPPredicateEditor` or in a `CPRuleEditor` are well defined again. ([t00f](https://github.com/t00f) - [PR](https://github.com/cappuccino/cappuccino/pull/2277))
+
+- The `CPDatePicker` doesn't anymore hold the character `CPCarriageReturnCharacter`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2279))
+
+- Fixed a crash when dragging the first filter of a `CPRuleEditor` above the first line of the `CPRuleEditor`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2280))
+
+- The buttons of a `CPButtonBar` are not anymore removed and readded to the view each time we layout the `CPButtonBar`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2275))
+
+- The position of a `CPPopover` changes when modifying the position of its sender again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2276))
+
