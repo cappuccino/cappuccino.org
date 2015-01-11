@@ -1,0 +1,39 @@
+---
+title: Cappuccino News 2015 January 15th
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2015-01-15'
+tags:
+- Cappuccino
+- Objective-J
+- update
+---
+
+Here's a quick update on what's new with Cappuccino for the last month.
+
+### Cappuccino
+
+##### News
+
+- `CFError` has been added to the framework. `CPError` is now toll-free bridged with `CFError`, mirroring the implementation in `Cocoa`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
+
+- `CPURLErrors` and `CFNetworkErrors` has been added to the framework. They respect the same error codes used in `Cocoa`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
+
+##### Changes/Fixes
+
+- The method `encodeValueOfObjCType` has been renamed to `encodeValueOfObjJType` of the `CPCoder`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
+
+- The `z-index` of the main `div` of the Cappuccino is now set to 0 instead of -1000. This caused a blank screen in some browsers. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2267))
+
+- The position of a `CPPopover` is now well updated when the receiver's frame changes. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2288))
+
+- A `CPOperation` marked as cancelled would never start again. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
+
+- The keyword `@ref` does now generate `self.x` for the `ivar x`. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2269))
+
+- Fixed a bunch of memory leaks of the class `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField`, `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
+
+- Fixed a bunch of issues of the `CPComboBox`. A null `intercellSpacing` won't raise a crash anymore. The delegate method `comboBoxWillDismiss:` works again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
+
+- Constructors of a `CPDate` now raises warnings when the passed arguments are not a `float` or an `int`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2227))
+
