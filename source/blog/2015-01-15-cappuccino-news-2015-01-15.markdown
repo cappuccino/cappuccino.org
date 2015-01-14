@@ -31,11 +31,11 @@ Here's a quick update on what's new with Cappuccino for the last month.
 
 - The position of a `CPPopover` is now well updated when the receiver's frame changes. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2288))
 
-- A `CPOperation` marked as cancelled would never start again. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
+- It's now possible to start again a `CPOperation` marked as cancelled. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
 
 - The keyword `@ref` does now generate `self.x` for the `ivar x`. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2269))
 
-- Fixed a bunch of memory leaks of the class `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField`, `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
+- Fixed a bunch of memory leaks of the classes `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField`, `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
 
 - Fixed a bunch of issues of the `CPComboBox`. A null `intercellSpacing` won't raise a crash anymore. The delegate method `comboBoxWillDismiss:` works again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
 
