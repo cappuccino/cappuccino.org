@@ -5,6 +5,8 @@ author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-01-15'
 tags:
 - Cappuccino
+- Cucapp
+- Cucumber
 - Objective-J
 - update
 ---
@@ -29,6 +31,8 @@ Here's a quick update on what's new with Cappuccino for the last month.
 
 - The configuration files of `doxygen` has been redesigned. The command `jake docset` has been added. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2252))
 
+- Refactoring of the classes `CPURLRequest` and `CPURLConnection`. The property `withCredentials` has been moved from `CPURLConnection` to `CPURLRequest`. The accessors `originalRequest` and `currentRequest` has been added to `CPURLConnection`. Added the possibility to make a deep copy of the object `CPURLRequest`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2272))
+
 - The position of a `CPPopover` is now well updated when the receiver's frame changes. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2288))
 
 - It's now possible to start again a `CPOperation` marked as cancelled. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
@@ -47,3 +51,9 @@ Here's a quick update on what's new with Cappuccino for the last month.
 
 - The size of a `CPCheckBox` is now well calculated when using the constructor `checkBoxWithTitle:` again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2289))
 
+
+### Cucapp
+
+##### News
+
+- `Cucapp` now prints in the console what it is about to simulate when using `Cucumber`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/23))
