@@ -19,41 +19,41 @@ Here's a quick update on what's new with Cappuccino for the last month.
 
 - `CFError` has been added to the framework. `CPError` is now toll-free bridged with `CFError`, mirroring the implementation in `Cocoa`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
 
-- `CPURLErrors` and `CFNetworkErrors` has been added to the framework. They respect the same error codes used in `Cocoa`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
+- `CPURLErrors` and `CFNetworkErrors` have been added to the framework. They respect the same error codes used in `Cocoa`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
 
-- `xCodeCapp` has now an option to define if xCodeCapp becomes active or not when opening the errors & warnings panel. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2292))
+- `xCodeCapp` now has an option to define if xCodeCapp becomes active or not when opening the errors & warnings panel. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2292))
 
 ##### Changes/Fixes
 
-- The method `encodeValueOfObjCType` has been renamed to `encodeValueOfObjJType` of the `CPCoder`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
+- The method `encodeValueOfObjCType` has been renamed to `encodeValueOfObjJType` in `CPCoder`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2243))
 
-- The `z-index` of the main `div` of the Cappuccino is now set to 0 instead of -1000. This caused a blank screen in some browsers. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2267))
+- Fixed a blank screen in some browser. The `z-index` of the main `div` of the Cappuccino is now set to 0 instead of -1000. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2267))
 
 - The configuration files of `doxygen` has been redesigned. The command `jake docset` has been added. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2252))
 
-- Refactoring of the classes `CPURLRequest` and `CPURLConnection`. The property `withCredentials` has been moved from `CPURLConnection` to `CPURLRequest`. The accessors `originalRequest` and `currentRequest` has been added to `CPURLConnection`. Added the possibility to make a deep copy of the object `CPURLRequest`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2272))
+- Refactoring of the classes `CPURLRequest` and `CPURLConnection`. The property `withCredentials` has been moved from `CPURLConnection` to `CPURLRequest`. The accessors `originalRequest` and `currentRequest` have been added to `CPURLConnection`. Added the possibility to make a deep copy of the `CPURLRequest`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2272))
 
-- The position of a `CPPopover` is now well updated when the receiver's frame changes. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2288))
+- The position of a `CPPopover` is now correctly updated when the receiver's frame changes. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2288))
 
-- It's now possible to start again a `CPOperation` marked as cancelled. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
+- It's now possible to restart a `CPOperation` marked as cancelled. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/2287))
 
-- The keyword `@ref` does now generate `self.x` for the `ivar x`. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2269))
+- The keyword `@ref` now generates `self.x` for the `ivar x`. ([mrcarlberg](https://github.com/mrcarlberg) - [PR](https://github.com/cappuccino/cappuccino/pull/2269))
 
-- Fixed a bunch of memory leaks of the classes `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField`, `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
+- Fixed a bunch of memory leaks in the classes `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField` and `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
 
-- Fixed a bunch of issues of the `CPComboBox`. A null `intercellSpacing` won't raise a crash anymore. The delegate method `comboBoxWillDismiss:` works again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
+- Fixed a bunch of issues in `CPComboBox`. A null `intercellSpacing` won't raise a crash anymore. The delegate method `comboBoxWillDismiss:` works again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2264))
 
-- Constructors of a `CPDate` now raises warnings when the passed arguments are not a `float` or an `int`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2227))
+- Constructors of a `CPDate` now raise warnings when the arguments are not `floats` or `ints`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2227))
 
-- Fixed some warnings when compiling `Cappuccino` with `rhino`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2291))
+- Fixed some warnings when compiling Cappuccino with `rhino`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2291))
 
 - The add and remove button of a `CPPredicateEditor` are not blurred anymore. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2290))
 
-- The size of a `CPCheckBox` is now well calculated when using the constructor `checkBoxWithTitle:` again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2289))
+- The size of a `CPCheckBox` is now correctly calculated when using the constructor `checkBoxWithTitle:` again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2289))
 
 
 ### Cucapp
 
 ##### News
 
-- `Cucapp` now prints in the console what it is about to simulate when using `Cucumber`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/23))
+- `Cucapp` now prints what it is about to simulate when using `Cucumber`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/23))
