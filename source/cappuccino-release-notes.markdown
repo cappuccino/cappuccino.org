@@ -15,11 +15,13 @@ Highlights in this release:
     * Added support for multiline `CPTextField`.
     * Added the implementation of `CFError`, `CPURLErrors` and `CFError`.
     * Added `CPControl -setControlSize:`.
+    * Redesigned of 'CPPredicateEditor' and 'CPRuleEditor'.
     * Added all `@protocols` in `Foundation` and in the `AppKit`.
     * Added support of `capp_lint` and `objj` to XcodeCapp, which has been bumped to version 3.2.
     * Added Cucapp as part of the Cappuccino Project (https://github.com/cappuccino/cucapp)
     * Fixed the theming system to support more than 32 theme states.
     * Fixed a huge number of memory leaks in `Foundation` and in `AppKit`.
+    * Optimization of the runtime function `objj_msgSend`.
 
 
 Foundation and Core
