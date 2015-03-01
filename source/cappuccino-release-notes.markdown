@@ -296,6 +296,11 @@ OJTest
 
 * (1f6cc19) Fixed: coverage options for `OJTest`.
 
+Other Changes
+-------------
+
+The changes above summarise a few hundred of the most important changes in Cappuccino 0.9.8. You can review the other 700 or so changes in the [0.9.7...0.9.8 compare view](https://github.com/cappuccino/cappuccino/compare/0.9.7...0.9.8).
+
 ## What's New in Cappuccino 0.9.7
 
 *Release date: 2013-11-28*

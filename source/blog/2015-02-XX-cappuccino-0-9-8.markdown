@@ -28,4 +28,10 @@ Of course, thank you to all the people who gave them a lot of work, you're the b
 
 Last but not least, we are very thrilled to announce that [Cacaodev](https://github.com/cacaodev), [Dogild](https://github.com/dogild) and [Mrcarlberg](https://github.com/mrcarlberg) are now part of the Core Devs Team. I would like to personally thank them for all the hard work and great contributions they gave to the project over the years, and you should do the same! Thanks guys!
 
-Now let's get back to work and cook you up a great
+Now let's get back to work and cook you up a great.
+
+_- Antoine and the Cappuccino Core Developer Team_
+
+[Download Cappuccino 0.9.8](/downloads.html)
+
+[Full Release Notes](/cappuccino-release-notes.html)
