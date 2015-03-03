@@ -18,33 +18,33 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ##### News
 
-- The graphical `CPDatePicker` now disables dates outside the `minDate` and `maxDate`. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2297))
+- The graphical `CPDatePicker` now disallows dates outside of the specified `minDate` and `maxDate`. ([daboe01](https://github.com/daboe01) - [PR](https://github.com/cappuccino/cappuccino/pull/2297))
 
-- `Cappuccino` now draws by default in high DPI in a `canvas2D`. You can disable this feature globally using the method `CPView +setAllowsHighDPIDrawing:`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2215))
+- By default, Cappuccino now draws in high DPI when using `canvas2D`. You can disable this feature globally using the method `CPView +setAllowsHighDPIDrawing:`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2215))
 
-- The method `CPView -setNeedsLayout:` and `CPView -needsLayout` has been added. You can now easily control to lay out or not a view. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2316))
+- `CPView -setNeedsLayout:` and `CPView -needsLayout` have been added. This makes it possible to choose not to lay out a view when needed, whereas previously once a layout had been scheduled it would always occur. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2316))
 
-- `Cappuccino` now supports the `KVC` operators `unionOfObjects`, `distinctUnionOfObjects`, `unionOfArrays`, `distinctUnionOfArrays` and `distinctUnionOfSets`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2313))
+- Cappuccino now supports the KVC operators `unionOfObjects`, `distinctUnionOfObjects`, `unionOfArrays`, `distinctUnionOfArrays` and `distinctUnionOfSets`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2313))
 
 - The method `CPTableView -viewAtColumn:row:makeIfNecessary` has been added. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2315))
 
 ##### Changes/Fixes
 
-- The method `CPObjectController -setValue:forKey:` does not use the `theKeyPath` parameter as `keyPath` and `value` anymore. ([krodelin](https://github.com/krodelin) - [PR](https://github.com/cappuccino/cappuccino/pull/2301))
+- Fixed: `CPObjectController -setValue:forKey:` incorrectly used the key as the value. ([krodelin](https://github.com/krodelin) - [PR](https://github.com/cappuccino/cappuccino/pull/2301))
 
 - Changed the name of the method `CPDomDisplayServerSetStyleBackgroundSize` to `CPDOMDisplayServerSetStyleBackgroundSize`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2296))
 
 - Removed unreachable code in `CPDOMDisplayServer.h`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2300))
 
-- The `CPStepper` class initializer methods return an object of type `id` instead of `CPStepper`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2294))
+- The `CPStepper` class initializer methods returns an object of type `id` instead of `CPStepper`. ([ahankinson](https://github.com/ahankinson) - [PR](https://github.com/cappuccino/cappuccino/pull/2294))
 
-- The `CPTableView` class has been refactored and optimized. The methods `CPTableView -preparedViewAtColumn:row` and `CPTableView -enumerateAvailableViewsUsingblock:` have been added. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/1892) [PR](https://github.com/cappuccino/cappuccino/pull/2303) [PR](https://github.com/cappuccino/cappuccino/pull/2307) [PR](https://github.com/cappuccino/cappuccino/pull/2306) [PR](https://github.com/cappuccino/cappuccino/pull/2312) [PR](https://github.com/cappuccino/cappuccino/pull/2318))
+- The `CPTableView` class has been refactored and optimized. The methods `CPTableView -preparedViewAtColumn:row:` and `CPTableView -enumerateAvailableViewsUsingblock:` have been added. ([cacaodev](https://github.com/cacaodev) - [PR](https://github.com/cappuccino/cappuccino/pull/1892) [PR](https://github.com/cappuccino/cappuccino/pull/2303) [PR](https://github.com/cappuccino/cappuccino/pull/2307) [PR](https://github.com/cappuccino/cappuccino/pull/2306) [PR](https://github.com/cappuccino/cappuccino/pull/2312) [PR](https://github.com/cappuccino/cappuccino/pull/2318))
 
 - The theme showcase works again. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2295))
 
 - Duplicated unit tests have been removed or renamed. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2305))
 
-- `CPDatePicker` will now raise CPInvalidArgumentException if given an invalid date. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2308))
+- `CPDatePicker` will now raise `CPInvalidArgumentException` if given an invalid date. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2308))
 
 - The divider color of a `CPSegmentedControl` now has the expected color. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2309))
 
@@ -57,16 +57,16 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ##### News
 
-- `Cucapp` imported `<AppKit/AppKit.j>`, this could raise exceptions when testing a compiled application. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/25))
+- Fixed: Cucapp imported `<AppKit/AppKit.j>`. This could raise exceptions when testing a compiled application. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/25))
 
-- The `Cucapp's CLI` now logs informations when clicking on a `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/24) [PR](https://github.com/cappuccino/cucapp/pull/26))
+- The Cucapp's CLI now logs informations when clicking on a `CPView`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/24) [PR](https://github.com/cappuccino/cucapp/pull/26))
 
 
 ### OJTest
 
 ##### New
 
-- `OJTest` raises a warning when a test method has already been declared in a same test class. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/OJTest/pull/29))
+- New: OJTest raises a warning when a test method has already been declared in the same test class. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/OJTest/pull/29))
 
 ##### Change/Fix
 
