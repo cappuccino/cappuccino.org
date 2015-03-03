@@ -1,6 +1,6 @@
 ---
 title: Building Cappuccino Documentation
-date: 2014-06-24 09:27 -04:00
+date: '2014-06-24'
 author: Andrew Hankinson
 tags:
  - documentation

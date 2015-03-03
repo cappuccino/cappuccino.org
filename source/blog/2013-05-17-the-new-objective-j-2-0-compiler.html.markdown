@@ -1,6 +1,6 @@
 ---
 title: The New Objective-J 2.0 Compiler
-date: 2013-05-17 18:04 -04:00
+date: '2013-05-17'
 author: Martin Carlberg
 tags:
 - cappuccino

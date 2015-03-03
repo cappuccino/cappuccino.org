@@ -1,6 +1,6 @@
 ---
 title: Dictionary Literals
-date: 2013-02-25 19:56 +00:00
+date: '2013-02-25'
 author: Alexander Ljungberg
 tags:
 - update

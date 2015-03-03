@@ -1,6 +1,6 @@
 ---
 title: Cappuccino 0.9.7
-date: 2013-11-29 17:40 +00:00
+date: '2013-11-29'
 author: Alexander Ljungberg
 tags:
 - cappuccino

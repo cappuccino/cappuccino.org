@@ -1,6 +1,6 @@
 ---
 title: The Node Project - Take 2
-date: 2013-05-15 15:03 -04:00
+date: '2013-05-15'
 author: Aparajita Fishman
 tags:
 - cappuccino

@@ -1,6 +1,6 @@
 ---
 title: Pass by Reference
-date: 2013-03-10 17:51 +00:00
+date: '2013-03-10'
 author: Alexander Ljungberg
 tags:
 - update

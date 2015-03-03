@@ -1,6 +1,6 @@
 ---
 title: Cappuccino in action
-date: 2014-07-18 17:33 +09:00
+date: '2014-07-18'
 author: Antoine Mercadal
 tags:
 - nuagenetworks

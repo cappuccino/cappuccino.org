@@ -1,6 +1,6 @@
 ---
 title: Introducing Cappuccino-Project.org 2013
-date: 2013-01-15 18:35 +00:00
+date: '2013-01-15'
 author: Alexander Ljungberg
 tags:
 - update

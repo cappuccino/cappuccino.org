@@ -1,6 +1,6 @@
 ---
 title: Cup - The File Upload Framework
-date: 2013-05-25 15:37 UTC
+date: '2013-05-25'
 author: Aparajita Fishman
 tags:
 - cappuccino
