@@ -57,6 +57,9 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+# Prevent HAML from indenting everything, even <pre> content.
+set :haml, { ugly: true }
+
 require "redcarpet"
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true,
