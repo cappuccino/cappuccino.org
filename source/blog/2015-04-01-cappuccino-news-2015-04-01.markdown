@@ -31,7 +31,7 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 - Fixed: the `CPSearchField` is not properly aligned when coming from a xib. ([t00f](https://github.com/t00f) - [b16b838](https://github.com/cappuccino/cappuccino/commit/b16b8388efbd2aad3e346f42622385c97578284a))
 
-- Fixed: `CPSegmentedControl -widthForSegment:` and `CPSegmentedControl -frameForSegment:` does not return the correct value when using `CPSegmentedControl -sizeToFit`. Performances of the `CPSegmentedControl` have been improved. The `selectedSegment` variable is now correctly updated. ([cacaodev](https://github.com/cacaodev) - [7c09517](https://github.com/cappuccino/cappuccino/commit/7c095175ab107b67139fddeeab836dd6996ae783))
+- Fixed: `CPSegmentedControl -widthForSegment:` and `CPSegmentedControl -frameForSegment:` does not return the correct value when using `CPSegmentedControl -sizeToFit`. Performances of the `CPSegmentedControl` have been improved. The `selectedSegment` variable is now correctly updated. ([cacaodev](https://github.com/cacaodev) - [7c09517](https://github.com/cappuccino/cappuccino/commit/7c095175ab107b67139fddeeab836dd6996ae783) [2b853df](https://github.com/cappuccino/cappuccino/commit/2b853df75b84298ac0f544264fcbb359534ed3b9))
 
 - Fixed: memory leaks with tooltTips in `CPView`. This was due to handlers not being released. ([primalmotion](https://github.com/primalmotion) - [027a317](https://github.com/cappuccino/cappuccino/commit/027a317291848217efb4539479f5b803e9bae110))
 
@@ -58,3 +58,9 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 - Fixed: the command `simulateScrollWheel:` does not return a result. ([Dogild](https://github.com/Dogild) - [e07bc84](https://github.com/cappuccino/cucapp/commit/e07bc846a21b8d52971ed90d0b70db45c325ced0))
 
+
+### OJTest
+
+##### Change/Fixe
+
+- Fixed: counting on a selector with `OBJMoq` does not work when observing several times a selector with different arguments. ([Dogild](https://github.com/Dogild) - [09de5a2](https://github.com/cappuccino/OJTest/commit/09de5a27af4791466ba744062ef5ae2d8e2eccad))
