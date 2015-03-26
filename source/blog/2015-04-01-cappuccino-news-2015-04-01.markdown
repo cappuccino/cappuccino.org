@@ -21,7 +21,7 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 - New: added the method `CPPlatformWindow -initWithWindow`. This feature allows you to manipulate the `CPPlatformWindow` from the given `CPWindow`. It becomes very easy to play with a `CPPlatformWindow` ([Dogild](https://github.com/Dogild) - [14349cb](https://github.com/cappuccino/cappuccino/commit/14349cb58350af6e4b03893479048edf52590193))
 
-- New: the theme attributes `image-search-left-margin` and `image-cancel-right-margin` have been added to the `CPSearchField`. ([Dogild](https://github.com/Dogild) - [b1e89e7](https://github.com/cappuccino/cappuccino/commit/b1e89e7904a08d925558bec35e2c65b7bb36f8c6))
+- New: the theme attributes `image-search-inset` and `image-cancel-inset` have been added to the `CPSearchField`. ([Dogild](https://github.com/Dogild) - [4d7cb06](https://github.com/cappuccino/cappuccino/commit/4d7cb064815c9091a6c06cd19df01044906e47b5))
 
 - New: the protocol `CPScrollViewDelegate` has been added in `CPScrollView.j`. ([Dogild](https://github.com/Dogild) - [51bdfa4](https://github.com/cappuccino/cappuccino/commit/51bdfa44b115fe3fe60935469050d11cac97e819))
 
