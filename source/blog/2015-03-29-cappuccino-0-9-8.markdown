@@ -2,7 +2,7 @@
 title: Cappuccino 0.9.8
 author: Antoine Mercadal
 author_email: antoine.mercadal@gmail.com
-date: '2015-02-28'
+date: '2015-03-29'
 tags:
 - Cappuccino
 - Release
