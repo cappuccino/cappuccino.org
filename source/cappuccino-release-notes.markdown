@@ -5,79 +5,82 @@ layout: markdown
 
 ## What's New in Cappuccino 0.9.8
 
-*Release date : 2015-02-28*
+*Release date : 2015-03-29*
 
-Cappuccino 0.9.8 introduces Multiline CPTextField, Cucapp, XcodeCapp 3.2 and over 300 other changes and improvements.
+Cappuccino 0.9.8 introduces multiline support for CPTextField, Cucapp, XcodeCapp 3.2 and over 300 other changes and improvements.
 
 Highlights in this release:
 
-    * Added the key word `@typdef`
-    * Added support for multiline `CPTextField`.
-    * Added the implementations of `CFError`, `CPURLErrors` and `CFError`.
-    * Added `CPControl -setControlSize:`.
-    * Redesigned of 'CPPredicateEditor' and 'CPRuleEditor'.
-    * Added all `@protocols` in `Foundation` and in the `AppKit`.
-    * Added support of `capp_lint` and `objj` to XcodeCapp, which has been bumped to version 3.2.
-    * Added Cucapp as part of the Cappuccino Project (https://github.com/cappuccino/cucapp)
-    * Fixed the theming system to support more than 32 theme states.
-    * Fixed a huge number of memory leaks in `Foundation` and in `AppKit`.
-    * Optimization of the runtime function `objj_msgSend`.
+* New: `@typdef` support.
+* New: multi-line support for `CPTextField`.
+* New: `CFError`, `CPURLErrors` and `CFError`.
+* New: `CPControl -setControlSize:`.
+* Redesigned 'CPPredicateEditor' and 'CPRuleEditor'.
+* New: all `@protocols` in Foundation and AppKit.
+* New: support for `capp_lint` and `objj` to XcodeCapp (now version 3.2).
+* Added Cucapp as part of the Cappuccino Project (https://github.com/cappuccino/cucapp)
+* New: support for more than 32 theme states in the theming system.
+* Fixed: many memory leaks in Foundation and AppKit.
+* Optimization of the runtime function `objj_msgSend`.
 
 
 Foundation and Core
 -------------------
 
 * (a1ea371) New: `CPCoding` for `CPAttributedString`.
-* (7c6ef51) New: added `CPDate +dateByAddingTimeInterval:`.
-* (e7ae969) New: added method `addObserverName:object:queue:usingBlock:` to `CPNotificationCenter`.
+* (7c6ef51) New: `CPDate +dateByAddingTimeInterval:`.
+* (e7ae969) New: `CPNotificationCenter -addObserverName:object:queue:usingBlock:`.
+* (fa5fd1e) New: `CPDiacriticInsensitiveSearch` support in `CPString` for the method `-(CPRange)rangeOfString:options:range:`. Added support for strip variants of 'E' 'I' 'O' 'U'.
 
 *Bug Fixes:*
 
 * (1dc84f9) Fixed: issue with `CPDateFormatter -_dateWithTimeZone:` when timeZone is null.
-* (acd5442) Fixed: relativeDateFormating didn't work in January and was inaccurate for some time intervals around when daylight saving time changed.
-* (d176dd0) Fixed: `CPNumber +numberWithBool:` breaks `CPComparisonPredicate`.
-* (a31ad2c) Fixed: CPAttributedString isEqual: despite attribute differences.
-* (9119e08) Fixed: `CPDateFormatter` now works for non-"en" locales.
+* (acd5442) Fixed: `CPDateFormatter`'s `relativeDateFormating` didn't work in January and was inaccurate for some time intervals around daylight saving time changes.
+* (d176dd0) Fixed: `CPNumber +numberWithBool:` broke `CPComparisonPredicate`.
+* (a31ad2c) Fixed: `CPAttributedString -isEqual:` true despite attribute differences.
+* (9119e08) Fixed: `CPDateFormatter` didn't work for non-"en" locales.
 * (06240d1) Fixed: `CPUserDefault -setFloat:forKey:` used `@selector(aValue)` instead of `@selector(floatValue)`.
-* (fa5fd1e) Fixed: added option `CPDiacriticInsensitiveSearch` in `CPString` for the method `-(CPRange)rangeOfString:options:range:`. Added support for strip variants of 'E' 'I' 'O' 'U'.
-* (d3490f6) Fixed: the method `encodeValueOfObjCType` has been renamed to `encodeValueOfObjJType` in `CPCoder`.
-* (eb883bc) Fixed: refactoring of the classes `CPURLRequest` and `CPURLConnection`. The property `withCredentials` has been moved from `CPURLConnection` to `CPURLRequest`. The accessors `originalRequest` and `currentRequest` have been added to `CPURLConnection`. Added the possibility to make a deep copy of the `CPURLRequest`.
-* (b1382e8) Fixed: it's now possible to restart a `CPOperation` marked as cancelled.
-* (fa7b71c) Fixed: constructors of a `CPDate` now raise warnings when the arguments are not `floats` or `ints`.
+* (d3490f6) The method `encodeValueOfObjCType` has been renamed to `encodeValueOfObjJType` in `CPCoder`.
+* (eb883bc) Refactoring of the classes `CPURLRequest` and `CPURLConnection`:
+     * The property `withCredentials` has been moved from `CPURLConnection` to `CPURLRequest`.
+     * The accessors `originalRequest` and `currentRequest` have been added to `CPURLConnection`.
+     * Added the possibility to make a deep copy of the `CPURLRequest`.
+* (b1382e8) Fixed: a `CPOperation` marked as cancelled could not be restarted.
+* (fa7b71c) Fixed: constructors of `CPDate` did not raise warnings when the arguments were not `floats` or `ints`.
 
 AppKit
 ------
 
-* (7b86465) New: added protocols `CPTableViewDelegate` and `CPTableViewDataSource`.
-* (09eca10) New: added protocol `CPAlertDelegate`.
-* (4d266f4) New: added protocol `CPCollectionViewDelegate`.
-* (5b2bfce) New: added protocol `CPApplicationDelegate`.
-* (db113da) New: added protocols `CPOutlineViewDelegate` and `CPOutlineViewDataSource`.
-* (7d14676) New: added protocol `CPTabViewDelegate`.
-* (5dd4266) New: added protocol `CPToolbarDelegate`.
-* (cc9d896) New: added protocol `CPPopoverDelegate`.
-* (f8ae610) New: added protocol `CPSplitViewDelegate`.
-* (7ccdc50) New: added protocol `CPAnimationDelegate`.
-* (d5af980) New: added protocol `CPSoundDelegate`.
-* (0a85b4b) New: added protocol `CPImageDelegate`.
-* (1825887) New: added protocol `CPMenuDelegate`.
-* (59b80ab) New: added protocol `CPComboDelegate`.
-* (9b39724) New: added protocol `CPRuleEditorDelegate`.
-* (1171c9a) New: added protocol `CPTokenFieldDelegate`.
-* (9d2fba3) New: added protocol `CPWindowDelegate`.
-* (26118ee) New: added protocols `CPControlTextEditingDelegate` and `CPTextFieldDelegate`.
-* (2513cf0) New: added protocol `CPBrowserDelegate`.
-* (25bb51f) New: added protocol `CPComboBoxDataSource`.
-* (6cae917) New: added bidirectional `CPLevelIndicator` behavior.
-* (7d304fb) New: changed `CPTheme` to use sets instead of bitmasks.
-* (970b176) New: graphical `CPDatePicker` now reacts to clicks on the arrows with key mask cmd/ctrl/alt.
-* (c1fb54e) New: added delegate method `CPTableView -tableView:willRemoveView:forTableColumn:row`.
-* (904454d) New: added delegate method `CPOutlineView -outlineView:willRemoveView:forTableColumn:item:`.
+* (7b86465) New: protocols `CPTableViewDelegate` and `CPTableViewDataSource`.
+* (09eca10) New: protocol `CPAlertDelegate`.
+* (4d266f4) New: protocol `CPCollectionViewDelegate`.
+* (5b2bfce) New: protocol `CPApplicationDelegate`.
+* (db113da) New: protocols `CPOutlineViewDelegate` and `CPOutlineViewDataSource`.
+* (7d14676) New: protocol `CPTabViewDelegate`.
+* (5dd4266) New: protocol `CPToolbarDelegate`.
+* (cc9d896) New: protocol `CPPopoverDelegate`.
+* (f8ae610) New: protocol `CPSplitViewDelegate`.
+* (7ccdc50) New: protocol `CPAnimationDelegate`.
+* (d5af980) New: protocol `CPSoundDelegate`.
+* (0a85b4b) New: protocol `CPImageDelegate`.
+* (1825887) New: protocol `CPMenuDelegate`.
+* (59b80ab) New: protocol `CPComboDelegate`.
+* (9b39724) New: protocol `CPRuleEditorDelegate`.
+* (1171c9a) New: protocol `CPTokenFieldDelegate`.
+* (9d2fba3) New: protocol `CPWindowDelegate`.
+* (26118ee) New: protocols `CPControlTextEditingDelegate` and `CPTextFieldDelegate`.
+* (2513cf0) New: protocol `CPBrowserDelegate`.
+* (25bb51f) New: protocol `CPComboBoxDataSource`.
+* (6cae917) New: bidirectional `CPLevelIndicator` behavior.
+* (7d304fb) New: support for unlimited number of `CPTheme` state definitions.
+* (970b176) New: graphical `CPDatePicker` now reacts correctly to clicks on the arrow buttons with Cmd / ctrl / alt depressed.
+* (c1fb54e) New: delegate method `CPTableView -tableView:willRemoveView:forTableColumn:row`.
+* (904454d) New: delegate method `CPOutlineView -outlineView:willRemoveView:forTableColumn:item:`.
 * (1b351ad) New: `CPColor +checkerBoardColor` for debug use.
 * (050fcf2) New: `CPThemeStateFirstResponder` for `CPView`.
 * (025a43e) New: `CPThemeStateKeyWindow` for `CPView`.
-* (a544854) New: added feature to select a set of dates with a shift click in a `CPDatePicker`.
-* (0f2ec90) New: support for documentVisibleRect in `CPClipView` and `CPScrollView`.
+* (a544854) New: feature to select a set of dates with a shift click in a `CPDatePicker`.
+* (0f2ec90) New: support for `documentVisibleRect` in `CPClipView` and `CPScrollView`.
 * (7470f4f) New: `CPEvent` `scrollingDeltaX`, `scrollingDeltaY` and `hasPreciseScrollingDeltas`.
 * (07c0de7) New: support line-by-line scrolling with old scroll wheel devices in Firefox.
 * (12c427a) New: added the method `CPControl -setControlSize:`.
@@ -85,40 +88,40 @@ AppKit
 * (a3796fe) New: the method `-(void)bind:toObject:withKeyPath:options:` now checks if another exclusive binding exists.
 * (a3796fe) New: added the private method `+(void)_reverseSetValueFromExclusiveBinderForObject:` in `CPBinder` to send the value back to the bound object when you don't know the original binding name.
 * (9c6cca7) New: multi-line support for `CPTextField`.
-* (e1d92bd) New: `CPDatePicker` now has a focus ring in focus for editing.
+* (e1d92bd) New: `CPDatePicker` now has a focus ring when editing.
+* (fa3f18c) Optimizaton: `CPWindow -setContentView:` now checks that the new view is not the same as the existing content view.
+
 
 *Bug Fixes:*
 
-* (8b975f5) Fixed: `CPDatePicker` textual issues.
-* (21aac76) Fixed: `CPDateFormatter -getObjectValue:forString:errorDescription:` with nil errorDescription crash.
+* (8b975f5, 8147f64) Fixed: `CPDatePicker` textual issues.
+* (21aac76) Fixed: crash in `CPDateFormatter -getObjectValue:forString:errorDescription:` with nil errorDescription.
 * (2fc501f) Fixed: `CPDateFormatter -stringFromDate:` did not return a default date.
 * (ebccbf2) Fixed: issues with timeZone and the `CPDatePicker`.
 * (93b48ba) Fixed: support for dates (`CPDatePicker`) in `CPPredicateEditor`.
 * (1814f6b) Fixed: crash when clicking on an empty `CPTableView` with variable row height.
-* (8147f64) Fixed: textual `CPDatePicker` issues with string number shown.
-* (821f8fe) Fixed: error when binding several objects to the same objectController.selection.keyPath and objectController selection changes.
-* (d7b5382) Fixed: `CPTabView` will now update its tab's labels when the layoutSubview.
-* (974942a) Fixed: OS X scrolling issues with two fingers.
-* (86f0724) Fixed: `CPRoundRectBezelStyle` gives a `CPNull` ThemeState.
-* (5b4e7df) Fixed: show placeholder string while editing empty `CPTextField`.
+* (821f8fe) Fixed: error when several objects were bound to the same `objectController.selection.keyPath` and the objectController selection changed.
+* (d7b5382) Fixed: `CPTabView` did not update its tab's labels when laid out.
+* (974942a) Fixed: OS X two finger scrolling issue.
+* (86f0724) Fixed: `CPRoundRectBezelStyle` gave a `CPNull` ThemeState.
+* (5b4e7df) Fixed: placeholder string shown while editing empty `CPTextField`.
 * (be3c4ab) Fixed: `CPPopover` not closing in some browsers.
-* (15e16d8) Fixed: editing textFields on different windows can clobber each others contents.
-* (fa3f18c) Fixed: have `CPWindow -setContentView:` check that the new view is not the same as the existing content view.
+* (15e16d8) Fixed: editing text fields on different windows could clobber each other's contents.
 * (8bdaeab) Fixed: selection behavior when implementing `CPTableView -selectionIndexesForProposedSelection:`
 * (1557c56) Fixed: crash due to wrong delegate bitmask in `CPOutlineView`.
-* (af83065) Fixed: warning due to use of aDOMEvent.returnValue.
-* (3e187df) Fixed: CPPopover transitionend not correctly called in random cases.
-* (07f7ad0) Fixed: crash when hit CMD+Z on a control in a `CPPopover`.
-* (de4bc67) Fixed: new way to add a `CPToolTip` to a `CPWindow`.
-* (af37616) Fixed: `CPToolTip` still shown when closing window asynchronous.
-* (4dadf0c) Fixed: `CPPopover` doesn't change his frame when with `setContentSize:`.
-* (3c0f6d3) Fixed: `CPMenu` enabled state is not visually updated upon change of a bound value
-* (951e811) Fixed: `CPPopover -popverWillShow:` was called to early.
-* (584955c) Fixed: `CPPopover -updateFrameWithSize:` was always assuming the popover was open.
-* (59a9727) Fixed: crash due to `CPTooltip` trying to be attached to a `CPWindow` that is gone.
+* (af83065) Fixed: warning due to use of `aDOMEvent.returnValue`.
+* (3e187df) Fixed: `CPPopover transitionend` not correctly called in random cases.
+* (07f7ad0) Fixed: crash on Cmd + Z keypress within a control in a `CPPopover`.
+* (de4bc67) Fixed: `CPToolTip` added to `CPWindow` wrong.
+* (af37616) Fixed: `CPToolTip` still shown when closing a window asynchronously.
+* (4dadf0c) Fixed: `CPPopover` did not update its frame after `setContentSize:`.
+* (3c0f6d3) Fixed: `CPMenu` enabled state was not visually updated upon change of a bound value.
+* (951e811) Fixed: `CPPopover -popverWillShow:` was called too early.
+* (584955c) Fixed: `CPPopover -updateFrameWithSize:` always assumed the popover was open.
+* (59a9727) Fixed: crash due to `CPTooltip` remaining attached to a closed `CPWindow`.
 * (26d6450) Fixed: variable scope in `CPSegmentedControl`.
-* (7fc014f) Fixed: contentInset theme value read 2 times in `CPToolBar`.
-* (d46b9b5) Fixed: textual CPDatePicker stepper incorrectly enabled after decode.
+* (7fc014f) Fixed: `contentInset` theme value read two times in `CPToolBar`.
+* (d46b9b5) Fixed: textual `CPDatePicker` stepper incorrectly enabled after decode.
 * (61f6ef4) Fixed: crash in `CALayer` when running non-DOM platform.
 * (ba27a4c) Fixed: new first responder and key window theme states not always applied.
 * (a4702d4) Fixed: illegible white on grey text in `CPTableView`.
@@ -126,118 +129,117 @@ AppKit
 * (741ac31) Fixed: issue when making the first paste with a right click.
 * (089d564) Fixed: `CPDatePicker` firstResponder issue.
 * (ac53b30) Fixed: `CPComboBox` doesn't work in modal.
-* (1e12973) Fixed: font cell of a `CPTableView` comes black when editing another cell.
-* (a129f2c) Fixed: `CPTextField` doesn't update its style when editing.
+* (1e12973) Fixed: wrong text colour in a `CPTableView` cell when editing another cell.
+* (a129f2c) Fixed: `CPTextField` didn't update its style while editing.
 * (3364e6c) Fixed: unsigned delegate methods of `CPTokenField` erased by `CPTextField`.
-* (cd6ffba) Fixed: `CPPanel` and `CPPopover` doesn't close when hitting escape.
-* (972c142) Fixed: `CPDatePicker` value is wrong when making a click on the stepper.
-* (148f317) Fixed: when closing a `CPPanel` with escape, the delegates are not called.
-* (3b9a012) Fixed: `CPTextField -setTextColor:` does not change the color of the placeholder.
-* (43ed8be) Fixed: method delegate `popoverWillShow:` called when the popover is open.
-* (7bd27eb) Fixed: crash of press tool due to theme attribute not set.
-* (34072f3) Fixed: `stringValue` is used instead of `intValue` in `CPDatePicker`.
-* (f8457bd) Fixed: `CPPopover _closeOnBlur` doesn't need accessors.
-* (c274f27) Fixed: escape on a `CPanel` or a `CPPopover` breaks the key chain event.
-* (88954b9) Fixed: `CPCollectionView` height is too low.
-* (7de3022) Fixed: animation of a `CPPopover` doesn't work as in cocoa.
-* (c642d76) Fixed: `CPPopover` doesn't handle semi-transient behavior.
-* (3652931) Fixed: `CPTextField -setTextFieldBackgroundColor:` has not effect.
-* (4a3f51e) Fixed: `CPDatePicker` does not use days, months, year when used within a `CPPredicateEditor`.
+* (cd6ffba) Fixed: `CPPanel` and `CPPopover` didn't close when hitting escape.
+* (972c142) Fixed: `CPDatePicker` value became wrong after a stepper was clicked.
+* (148f317) Fixed: when closing a `CPPanel` with escape, the delegates were not called.
+* (3b9a012) Fixed: `CPTextField -setTextColor:` did not change the color of the placeholder.
+* (43ed8be) Fixed: delegate method `popoverWillShow:` called when the popover was already open.
+* (7bd27eb) Fixed: crash of press tool when missing theme attribute(s).
+* (34072f3) Fixed: `stringValue` was used instead of `intValue` in `CPDatePicker`.
+* (f8457bd) Fixed: `CPPopover _closeOnBlur` had accessors.
+* (c274f27) Fixed: escape on a `CPanel` or a `CPPopover` broke the key chain event.
+* (88954b9) Fixed: `CPCollectionView` height was too low.
+* (7de3022) Fixed: animation of a `CPPopover` didn't work as in Cocoa.
+* (c642d76) Fixed: `CPPopover` didn't handle semi-transient behavior.
+* (3652931) Fixed: `CPTextField -setTextFieldBackgroundColor:` had not effect.
+* (4a3f51e) Fixed: `CPDatePicker` did not use days, months, year when used within a `CPPredicateEditor`.
 * (293114f) Fixed: delete methods erased entire field in `CPTextField`.
 * (01b631a) Fixed: `CPPopover` not showing in correct platform window.
 * (d686a0d) Fixed: `CPTextField` bindings delete data in case of multiple selection after tabbing out with no editing.
 * (7890085) Fixed: `CPPopover` animation issues.
 * (26e29df) Fixed: `CPRuleEditor/CPPredicateEditor` alignments.
 * (3e4c038) Fixed: memory leaks in `CPOutlineView` and corrupted itemInfos dictionary.
-* (55861a8) Fixed: transient popovers were not close with right click.
-* (b3f7f44) Fixed: set user event flag based on presence of DOMEvent in `CPTextField`.
+* (55861a8) Fixed: transient popovers were not closed by a right click.
+* (b3f7f44) New: set user event flag based on presence of DOMEvent in `CPTextField`.
 * (a04f104) Fixed: checking if a `CPTextField` is usable in a `CPPlatformWindow`.
-* (48b3eb2) Fixed: delegate method `popoverDidShow:` not called with a none animate `CPPopover`.
-* (b1981bb) Fixed: `activateIgnoringOtherApps:shouldIgnoreOtherApps missed call to `_didBecomeActive` in `CPApplication`.
-* (4cebfbc) Fixed: removed outdated `collectionViewDidChangeSelection:` delegate method.
-* (b2f1477) Fixed: wrong condition in `CPApplication` in the `_didBecomeActive`.
-* (9ed30f5) Fixed: methods `viewDidMoveToSuperview`, `viewDidMoveToWindow` , `viewWillMoveToSuperview`  and `viewWillMoveToWindow` not called as in Cocoa.
+* (48b3eb2) Fixed: delegate method `popoverDidShow:` not called with a none animated `CPPopover`.
+* (b1981bb) Fixed: `activateIgnoringOtherApps:shouldIgnoreOtherApps` did not call `_didBecomeActive` in `CPApplication`.
+* (4cebfbc) Removed outdated `collectionViewDidChangeSelection:` delegate method.
+* (b2f1477) Fixed: wrong condition in `CPApplication` in `_didBecomeActive`.
+* (9ed30f5) Fixed: methods `viewDidMoveToSuperview`, `viewDidMoveToWindow`, `viewWillMoveToSuperview` and `viewWillMoveToWindow` not called as in Cocoa.
 * (abdf115) Fixed: memory leaks with `CPNotification`.
-* (92a5fa1) Fixed: crash of the `CPOutlineView` when reloading and asssigning an item to an other parent.
+* (92a5fa1) Fixed: crash of the `CPOutlineView` when reloading and asssigning an item to another parent.
 * (f1cfa14) Fixed: buttons in `CPButtonBar` were never removed from the `CPButtonBar`
-* (3f4ba87) Fixed: `CPTooltip` content alignement was mistakely set to be justified.
+* (3f4ba87) Fixed: `CPTooltip` content alignement was mistakenly set to be justified.
 * (b922144) Fixed: some tooltips were truncated.
-* (fe6a576) Fixed: `Aristo1` close button of inactive windows looks like as in active windows.
+* (fe6a576) Fixed: Aristo 1 close button of inactive windows looked like the same in active windows.
 * (f007ecf) Fixed: wrong text-color for `CPDatePicker`.
-* (ae5b3c4) Fixed: `CPDatePicker` doesn't work in a `CPTableView`.
-* (ab4f0f8) Fixed: display-issue in Google Chrome has been fixed by not having a negative z-index.
-* (48276f9) Fixed: `CPPlatformString +sizeWithFont:inWidth` adjust +1 to the computed size.
-* (8d036ab) Fixed: backspace on a none editable/enable `CPTextField` trigger the browser's page back button.
-* (b9b396a) Fixed: using `CPButton -setHidden:` in buttonbar was not working.
-* (1e39281) Fixed: the method `-(void)unbindAllForObject:` of the class `CPBinder` works again.
-* (7db488c) Fixed: memory leaks in `CPImageView` due to the `CPImageDidLoadNotification` has been resolved.
-* (a3796fe) Fixed :mMemory leaks have been fixed for the class `CPPopUpButton`, `CPRadio` and `CPSegmentedControl` when using bindings.
-* (83ec89f) Fixed: the `CPDatePicker` doesn't send an action to its target when using the method `-(void)setObjectValue:` or `-(void)setDateValue:` anymore.
-* (c1e89bd) Fixed: the `CPDatePicker` now has the same behavior as a `CPTextField` in a `CPTableView`. When clicking on the `CPDatePicker`, we first select the row as in Cocoa.
-* (b617d60) Fixed: when encoding and decoding a `CPTableView`, several `_CPTableDrawView` were added to the view. Now only one `_CPTableDrawView` is added.
-* (921fcbd) Fixed: issue when the first responder would stop being the first responder when moved between two views in the same window.
-* (5979baa) Fixed: the method `- (BOOL)popoverShouldClose:` is now called called in transient and semi-transient mode.
-* (608480c) Fixed: `CPPopover` windows now trap the next mouse event automatically if the popover is still visible after a `- performClose:`.
-* (09e3c5e) Fixed: possibility to select part of a textual `CPDatePicker` when dragging.
-* (f295667) Fixed: `Key Value Observing` generated new and old values in the change dictionary regardless of the options provided when adding the observer. Now it respects the options passed in the method `addObserver:forKeyPath:options:context:`. Optimization has been added, the speed improvement is 10% to 200%.
-* (8e346f1) Fixed: when a `CPTableView` has its selection style set to `CPTableViewSelectionHighlightStyleNone`, don't require two clicks to select a control in a row anymore.
-* (328172c) Fixed: the `CPTableView` won't enable the bezeled state of a non-selectable `CPTextField` when clicking on it.
-* (a75e5d9) Fixed: a selectable text mouse cursor style is shown when the mouse hovers above an enabled and editable or selectable `CPTextField`
+* (ae5b3c4) Fixed: `CPDatePicker` didn't work in a `CPTableView`.
+* (ab4f0f8) Fixed: display-issue in Google Chrome caused by a negative z-index.
+* (48276f9) Fixed: `CPPlatformString +sizeWithFont:inWidth` sometimes calculated a width 1 px too narrow.
+* (8d036ab) Fixed: backspace in a non-editable or disabled `CPTextField` triggered the browser's page back button.
+* (b9b396a) Fixed: `CPButton -setHidden:` in a button bar was not working.
+* (1e39281) Fixed: the method `-(void)unbindAllForObject:` of the class `CPBinder` did not work.
+* (7db488c) Fixed: memory leaks in `CPImageView` due to the `CPImageDidLoadNotification`.
+* (a3796fe) Fixed: memory leaks for the classes `CPPopUpButton`, `CPRadio` and `CPSegmentedControl` when using bindings.
+* (83ec89f) Fixed: `CPDatePicker` incorrectly sent an action to its target when using the method `-(void)setObjectValue:` or `-(void)setDateValue:`.
+* (c1e89bd) Fixed: `CPDatePicker` did not behave a a `CPTextField` in a `CPTableView` with regards to row selection.
+* (b617d60) Fixed: when encoding and decoding a `CPTableView`, several `_CPTableDrawView`s were added to the view.
+* (921fcbd) Fixed: the first responder would sometimes stop being the first responder when moved between two views in the same window.
+* (5979baa) Fixed: `CPPopover`'s `-popoverShouldClose:` delegate method was not called in transient or semi-transient mode.
+* (608480c) `CPPopover` windows now trap the next mouse event automatically if the popover is still visible after a `performClose:`.
+* (09e3c5e) Fixed: ability to select part of a textual `CPDatePicker` when dragging.
+* (f295667) Fixed: `Key Value Observing` generated new and old values in the change dictionary regardless of the options provided when adding the observer. Now it respects the options passed in the method `addObserver:forKeyPath:options:context:`. This can result in speed improvements of up to 200%.
+* (8e346f1) Fixed: when a `CPTableView` had its selection style set to `CPTableViewSelectionHighlightStyleNone`, two clicks were required to select a control in a row.
+* (328172c) Fixed: `CPTableView` enabled the bezeled state of a non-selectable `CPTextField` when right clicked.
+* (a75e5d9) Fixed: a selectable text mouse cursor style was not shown when the mouse hovered above an enabled and editable or selectable `CPTextField`.
 * (2e3c658) Fixed: when closing and reopening a `CPWindow` the first responder would not reset.
-* (459374d) Fixed: the `popUpList` of a `CPComboBox` is now a `childWindow` of the control's window.
+* (459374d) Fixed: the menu of `CPComboBox` would not move in tandem with its control's window.
 * (f486c02) Fixed: some `CPComboBox` APIs. You can now set the `font`, `alignment`, `intercellSpacing` and `itemHeight` of the `CPComboBox` without `listDelegate`.
-* (2dff805) Fixed: the `content-inset` of a `CPComboBox` has been changed for better alignment.
-* (5cad5b0) Fixed: the text cursor of a `CPTextField` didn't take the `content-inset` into account. Now it does, like in Cocoa.
+* (2dff805) The `content-inset` of a `CPComboBox` has been changed for better alignment.
+* (5cad5b0) Fixed: the text cursor of a `CPTextField` didn't take the `content-inset` into account.
 * (d8718cc) Fixed: when switching between two `CPPlatformWindow`s, the new targeted window didn't get the first `CPEvent` which instead went to the previous window.
-* (d8718cc) Fixed: you can now open a `CPPanel` in a `CPPlatformWindow` other than the main one.
-* (afe326c) Fixed: you can now set a specific height for a `CPTextField` even if a control size is set.
-* (5a99e18) Fixed: it's now possible to chain sheet dialogs in a `CPWindow`.
+* (d8718cc) Fixed: a `CPPanel` could not be opened in a `CPPlatformWindow` other than the main one.
+* (afe326c) New: you can now set a specific height for a `CPTextField` even if a control size is set.
+* (5a99e18) Fixed: chaining sheet dialogs in a `CPWindow` wouldn't work.
 * (d5b4d66) Fixed: opening a `CPMenu` with items and then opening a `CPMenu` without any items would cause a crash.
-* (05d602c) Fixed: the `CPDatePicker` no longer holds the character `CPCarriageReturnCharacter`.
+* (05d602c) `CPDatePicker` no longer holds the character `CPCarriageReturnCharacter`.
 * (c4fbef2) Fixed: crash when dragging the first filter of a `CPRuleEditor` above the first line of the rule editor.
-* (f17898d) Fixed: `CPPopover` would no longer move together with the control it was attached to.
-* (3aa8eb9) Fixed : blank screen in some browser. The `z-index` of the main `div` of the Cappuccino is now set to 0 instead of -1000.
-* (0fb7399) Fixed: the position of a `CPPopover` is now correctly updated when the receiver's frame changes.
-* (82dc126) Fixed: bunch of memory leaks in the classes `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField` and `CPView`.
-* (82dc126) Fixed: bunch of issues in `CPComboBox`. A null `intercellSpacing` won't raise a crash anymore. The delegate method `comboBoxWillDismiss:` works again.
-* (f4c2a0a) Fixed: the add and remove button of a `CPPredicateEditor` are not blurred anymore.
-* (0265fc3) Fixed: the size of a `CPCheckBox` is now correctly calculated when using the constructor `checkBoxWithTitle:` again.
-* (02f301d) Fixed: `CPStepper` class method returns `id` instead of `CPStepper` type.
+* (f17898d, 0fb7399) Fixed: `CPPopover` would no longer move together with the control it was attached to.
+* (3aa8eb9) Fixed: blank screen in some browser. The `z-index` of the main `div` of the Cappuccino is now set to 0 instead of -1000.
+* (82dc126) Fixed: memory leaks in the classes `CPTableView`, `CPScrollView`, `CPClipeView`, `CPComboBox`, `CPTextField` and `CPView`.
+* (82dc126) Fixed: a null `intercellSpacing` would crash `CPComboBox`. The delegate method `comboBoxWillDismiss:` did not work.
+* (f4c2a0a) Fixed: the add and remove button of a `CPPredicateEditor` were blurred.
+* (0265fc3) Fixed: the size of a `CPCheckBox` was incorrectly calculated when using the constructor `checkBoxWithTitle:`.
+* (02f301d) Fixed: `CPStepper` class method returned `id` instead of `CPStepper` type.
 * (f2528b5) Fixed: inconsistent naming of `CPDOMDisplayServerSetStyleBackgroundSize`
-* (a2c0b47) Fixed: `CPDatePicker` does not grey out dates outside of minDate and maxDate.
+* (a2c0b47) Fixed: `CPDatePicker` did not gray out dates outside of minDate and maxDate.
 
 Objective-J
 -----------
 
 * (5ab346e) New: the keyword `@typedef` has been added to Objective-J. This keyword allows you to define new types for your application.
-* (d3490f6) New: `CFError` has been added to the framework. `CPError` is now toll-freely bridged with `CFError`. This mirrors the implementation in `Cocoa`.
-* (d3490f6) New: `CPURLErrors` and `CFNetworkErrors` have been added to the framework. They respect the same error codes used in `Cocoa`.
+* (d3490f6) New: `CFError` has been added to the framework. `CPError` is now toll-free bridged with `CFError`. This mirrors the implementation in Cocoa.
+* (d3490f6) New: `CPURLErrors` and `CFNetworkErrors` have been added to the framework. They respect the same error codes as in Cocoa.
+* (2411edd) New: faster `objj_msgSend`.
+* (3331778) New: `CFHTTPRequest` now accepts the withCredentials property.
+* (ffcef90) New: `CPURLRequest` now accepts withCredentials.
 
 *Bug Fixes:*
 
-* (ee668df) Fixed: ivars with accessors in a Category failed with duplicate ivar error.
+* (ee668df) Fixed: ivars with accessors in a Category caused a duplicate ivar error.
 * (8c43f4f) Fixed: potential error while skipping whitespace in XML plists.
-* (1dbd41a) Fixed: error in Internet Explorer if Info.plist was served with wrong content type.
-* (2411edd) Fixed: faster `objj_msgSend`
-* (3331778) Fixed: `CFHTTPRequest` now accepts the withCredentials property.
-* (ffcef90) Fixed: `CPURLConnection` now accepts withCredentials.
-* (d629a13) Fixed: issue with InvalidStateError when using `CPURLConnection` in IE11
-* (2f7681f) Fixed: the compiler now shows an error when the error is on the first line of the file.
-* (13fe318) Fixed: `Objective-J` now gives an understandable error when the compiler can not find a protocol in a class declaration.
-* (6f90e76) Fixed: the keyword `@ref` now generates `self.x` for the `ivar x`.
+* (1dbd41a) Fixed: error in Internet Explorer if Info.plist was served with the wrong content type.
+* (d629a13) Fixed: issue with InvalidStateError when using `CPURLConnection` in IE11.
+* (2f7681f) Fixed: the compiler did not show erorrs on the first line of a file.
+* (13fe318) Fixed: `Objective-J` now gives an understandable error when the compiler cannot find a protocol in a class declaration.
+* (6f90e76) Fixed: the keyword `@ref` did not work correctly if the variable was an ivar.
 
 XcodeCapp
 ---------
 
-* (973940f) New: integration of `capp_lint` in `XcodeCapp`.
-* (f14add2) New: added option in `XcodeCapp` for displaying error in notification.
-* (4806c52) New: updating `Cappuccino` from `XcodeCapp`.
-* (b028e62) New: `XcodeCapp` 3.2 and support of objj in `XcodeCapp`.
-* (148960e) New: `XcodeCapp` now has an option to define if XcodeCapp becomes active or not when opening the errors & warnings panel.
+* (973940f) New: integration of `capp_lint` in XcodeCapp.
+* (f14add2) New: added option in XcodeCapp for displaying errors in notifications.
+* (4806c52) New: update Cappuccino from XcodeCapp.
+* (b028e62) New: support of objj in XcodeCapp.
+* (148960e) New: XcodeCapp now has an option to select if it becomes active or not when opening the errors & warnings panel.
 
 *Bug Fixes:*
 
-* (8f5aa0e) Fixed: `XcodeCapp` documentation is outdated.
+* (8f5aa0e) Fixed: XcodeCapp documentation was outdated.
 
 Nib2cib
 -------
@@ -246,53 +248,51 @@ Nib2cib
 
 *Bug Fixes:*
 
-* (4a31467) Fixed: `CPSegementedControl` with `nib2cib` crashes
-* (e7a0e9a) Fixed: `nib2cib` "The built in image NSRadioButton is not supported error".
+* (4a31467) Fixed: `CPSegementedControl` causes an error in `nib2cib`.
+* (e7a0e9a) Fixed: "the built in image NSRadioButton is not supported" error.
 * (b28e0d1) Fixed: `nib2cib` of `CPDatePicker` would not convert enabled state.
 * (c28da78) Fixed: `nib2cib` of segmented control would not convert enabled state.
 
 Misc
 ----
 
-* (fadffee) New: make bootstrap.sh use Github with SSL.
+* (fadffee) New: `bootstrap.sh` now uses SSL.
 * (febce68) New: don't run Travis setup quietly to make it easier to track setup errors.
 * (2e015c9) New: `Doxygen` theme refresh.
-* (6334458) New: unit tests have been added.
+* (6334458) New: `CFPropertyList` unit tests have been added.
 * (79c2576) New: manual `AppKit` tests have been added.
 * (9e918cc) New: ability to perform offline bootstraping.
 * (cd19fc7) New: `capp_lint` is installed with `jake install`.
 * (02f36a1) New: theme kitchen sink manual test to exercise many themable controls in many states at once.
-* (b028e62) New: options -m -I -h added to `objj` to compile several files.
+* (b028e62) New: options `-m`, `-I`, `-h` added to `objj` to compile several files.
 * (64a15db) New: when building your application you can now disable the `CommonJS` build phase by setting the system environement variable `IGNORE_ENV_COMMONJS`.
-* (57d435b) New: `.gitignore` now ignores the `.tm_properties`?
-* (ef4cd6a) New: --theme option for capp tool.
+* (ef4cd6a) New: `--theme` option for capp tool.
+* (06d0357) The Objective-J VIM highlighting has been updated and is similar to the official `Objective-C` VIM highlighting and the official `JavaScript` VIM highlighting.
+* (fdc5ed9) New: the configuration files of `doxygen` have been redesigned. The command `jake docset` has been added.
 
 *Bug Fixes:*
 
-* (fa66c26) Fixed: broken Documentation.
+* (fa66c26) Fixed: broken documentation.
 * (23ff035) Fixed: wrong link to install `homebrew`.
 * (d51f179) Fixed: error when running some XML tests with rhino.
-* (c21d0c6) Fixed: dependency to tusk in `jakefile`.
-* (372372a) Fixed: `capp_lint` doesn't handle protocol.
-* (8d7c47a) Fixed: remove explicit use of Mac OS X 10.5 SDK, replace with latest OS X in `fontinfo`.
-* (7958775) Fixed: bootstrap doesn't handle specific OpenJDK Runtime Environment version.
-* (75a4d8a) Fixed: bootstrap.sh cannot filter the OpenRDK version key out correctly.
-* (06d0357) Fixed: the `Objective-J` VIM highlighting has been updated and is similar to the official `Objective-C` VIM highlighting and the official `JavaScript` VIM highlighting.
-* (a822ec7) Fixed: the command `jake` works in the Cappuccino directory for non-MacOS system.
-* (e155cca) Fixed: old CI scripts have been removed from the Tools directory.
-* (c484e4a) Fixed: `NativeHost` is no longer built by default.
+* (c21d0c6) Fixed: dependency on tusk in `jakefile`.
+* (372372a) Fixed: `capp_lint` didn't handle protocol.
+* (8d7c47a) Remove explicit use of Mac OS X 10.5 SDK, replace with latest OS X in `fontinfo`.
+* (7958775, 75a4d8a) Fixed: `bootstrap.sh` didn't handle specific OpenJDK Runtime Environment version. `bootstrap.sh` could not filter the OpenJDK version key out correctly.
+* (a822ec7) Fixed: `jake` did not work in the Cappuccino directory for non-Mac OS X systems.
+* (e155cca) Old CI scripts have been removed from the Tools directory.
+* (c484e4a) NativeHost is no longer built by default.
 * (c3fc6a0) Fixed: the URL of the current release version of Cappuccino was wrong in the documentation.
 * (e40612a) Fixed: in the `Jakefile` template, the configuration build environment parameter could have multiple values. Now this variable is correctly set by detecting the build environment.
-* (fdc5ed9) Fixed: the configuration files of `doxygen` has been redesigned. The command `jake docset` has been added.
 * (de3eb86) Fixed: some warnings when compiling Cappuccino with `rhino`.
-* (ee688d9) Fixed: showcase of themes are broken
+* (ee688d9) Fixed: showcase of themes was broken.
 
 OJTest
 ------
-* (1ab1ac2) New: Possibility to launch a set of tests from a test file.
-* (9bb55a2) New: Added the methods `+setUp` and `+tearDown`.
-* (410d9ce) New: Added the number of tests launched by `OJTest`.
-* (080b5b7) New: Warnings raised when tests are declared several times.
+* (1ab1ac2) New: ability to launch a set of tests from a test file.
+* (9bb55a2) New: `+setUp` and `+tearDown` methods.
+* (410d9ce) New: print the number of tests launched by `OJTest`.
+* (080b5b7) New: warnings raised when tests are declared several times.
 
 *Bug Fixes:*
 
@@ -302,6 +302,7 @@ Other Changes
 -------------
 
 The changes above summarise a few hundred of the most important changes in Cappuccino 0.9.8. You can review the other 700 or so changes in the [0.9.7...0.9.8 compare view](https://github.com/cappuccino/cappuccino/compare/0.9.7...0.9.8).
+
 
 ## What's New in Cappuccino 0.9.7
 
