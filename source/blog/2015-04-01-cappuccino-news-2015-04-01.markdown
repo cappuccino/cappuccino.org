@@ -8,10 +8,15 @@ tags:
 - Cucapp
 - Cucumber
 - Objective-J
+- OJTest
 - update
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
+
+### Community
+
+- [Capuccino 0.9.8](http://www.cappuccino-project.org/blog/2015/03/cappuccino-0-9-8.html) has been released this month. There are 745 changes between 0.9.7 and 0.9.8 so there’s something new for everyone here, not the least being an over all speed improvement.
 
 ### Cappuccino
 
@@ -60,6 +65,10 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 
 ### OJTest
+
+##### New
+
+- New: the method `verifyThatAllExpectationsHaveBeenMetInOrder:` has been added to `OJMoq`. This method allows you to check if the registered methods are called in the registered order. ([Dogild](https://github.com/Dogild) - [964fc8b](https://github.com/cappuccino/OJTest/commit/964fc8b19b68db79c27c878c69b9c68ce6a727e3))
 
 ##### Change/Fixe
 
