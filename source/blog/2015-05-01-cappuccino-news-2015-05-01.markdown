@@ -1,0 +1,59 @@
+---
+title: Cappuccino News 2015 May 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2015-05-01'
+tags:
+- Cappuccino
+- Cucapp
+- update
+---
+
+Here's a quick update on what's new with Cappuccino in the last month.
+
+### Cappuccino
+
+##### News
+
+- New: added the delegate method `windowWillResize:toSize:` in `CPWindow`. ([Dogild](https://github.com/Dogild) - [7b4365b](https://github.com/cappuccino/cappuccino/commit/7b4365bd8acb3bad6ca7dfc89ea34c3d3c287003))
+
+- New: added the delegate methods `windowDidMiniaturize:`, `windowWillMiniaturize:` and `windowDidDeminiaturize:` in `CPWindow`. ([Dogild](https://github.com/Dogild) - [737ef58](https://github.com/cappuccino/cappuccino/commit/737ef583eeab267c065e9226e3122a50c5689727))
+
+- New: cappuccino now sends an event `CPAppKitDefined` when the application is launched.  ([Dogild](https://github.com/Dogild) - [0dad10d](https://github.com/cappuccino/cappuccino/commit/0dad10d6ab9b0c4ee83b40b01c57f773432c7eb6))
+
+
+##### Changes/Fixes
+
+- Fixed: the method `CPView -scrollRectToVisible:` did not behave as in cocoa. ([mrcarlberg](https://github.com/mrcarlberg) - [44c686f](https://github.com/cappuccino/cappuccino/commit/44c686f49437985da404f886f2a54c78d576bb24))
+
+- Fixed: the height of a `CPSegmentedControl` was wrong when making `nib2cib`. ([cacaodev](https://github.com/cacaodev) - [914a3d7](https://github.com/cappuccino/cappuccino/commit/914a3d71c228080a7307d3d8682bec4d888dc56a))
+
+- Fixed: the `keyWindow` and `mainWindow` of the application are now updated when switching from a platform window to another one. ([Dogild](https://github.com/Dogild) - [10792c0](https://github.com/cappuccino/cappuccino/commit/10792c0bc6adbee9b91d65690be32294d652edb2), [01ba6dd](https://github.com/cappuccino/cappuccino/commit/01ba6ddecd9d33e5ad84c6ecc7be59cd7d56097f), [fd06844](https://github.com/cappuccino/cappuccino/commit/fd068443aaf120ae0be4b9489ba74b0e409e617a))
+
+- Fixed: the overflow of a `CPPlatformWindow` was not clipped, it was possible to perform a scroll in a platform window. ([Dogild](https://github.com/Dogild) - [9798b9f](https://github.com/cappuccino/cappuccino/commit/9798b9fd5032ff4b537c11fb507bdce39ae88f45))
+
+- Fixed: a `CPPopover` closed itself even if the click was made in another platform window. ([Dogild](https://github.com/Dogild) - [769b379](https://github.com/cappuccino/cappuccino/commit/769b379a8b4d251f82aaab46808914ffce970058))
+
+- Fixed: the method `CPEvent -_initOtherEventWithType:location:modifierFlags:timestamp:windowNumber:context:` did not save the value windowNumber given in parameter. ([Dogild](https://github.com/Dogild) - [6efe563](https://github.com/cappuccino/cappuccino/commit/6efe563a69c4d6e63a8f041e6110fe00ed79f81f))
+
+- Fixed: notifications `willBecomeActive:` and `didBecomeActive:` were called even if the application was already active. These notifications are now raised when the application just finished to launch. ([Dogild](https://github.com/Dogild) - [0dad10d](https://github.com/cappuccino/cappuccino/commit/0dad10d6ab9b0c4ee83b40b01c57f773432c7eb6))
+
+- Fixed: notifications `willBecomeActive:`, `didBecomeActive:`, `willResignActive:`, `didResignActive:` were not raised when losing the focus of the application or when getting the focus of the application again. ([Dogild](https://github.com/Dogild) - [5c2e093](https://github.com/cappuccino/cappuccino/commit/5c2e0935c6f0b83a674c8548106152b6cf97a93a))
+
+- Fixed: the `nextValidKeyView` calculated by cappuccino in a `CPScrollView` did not behave as in cocoa. It does now take in account the possibility of scrolling. ([Dogild](https://github.com/Dogild) - [da15cc4](https://github.com/cappuccino/cappuccino/commit/da15cc4de789341823e45dcd324086d16553afaf))
+
+- Fixed: a `CPTextField` could not become first responder when it was not visible. ([Dogild](https://github.com/Dogild) - [da15cc4](https://github.com/cappuccino/cappuccino/commit/da15cc4de789341823e45dcd324086d16553afaf))
+
+- Fixed: `CPTextField` could be blur when resigning from a `CPWindow` which was not the key window. ([Dogild](https://github.com/Dogild) - [136138d](https://github.com/cappuccino/cappuccino/commit/136138daabef85b2fc71655df75f3087999e8a30))
+
+### Cucapp
+
+##### News
+
+- New: added the method `-simulateScrollWheelOnPoint:`. ([Dogild](https://github.com/Dogild) - [af4fbc7](https://github.com/cappuccino/cucapp/commit/af4fbc758fee781cbc76b75ed25afb3f53d796db))
+
+- New: `Cucapp` now generated an error message for every `objj` exceptions catched. ([Dogild](https://github.com/Dogild) - [b432bd2](https://github.com/cappuccino/cucapp/commit/b432bd200b4d5f35734dc91b68f20d379acf3f8a))
+
+##### Change/Fixe
+
+- Fixed: methods `textFor:` and `objectValue` did not return the string value of a `CPPopUpButton`. ([Dogild](https://github.com/Dogild) - [01b7ddc](https://github.com/cappuccino/cucapp/commit/01b7ddcc2d6059ad9cdde1eee80c9d54dc341e3e))
