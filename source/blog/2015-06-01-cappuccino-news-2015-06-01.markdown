@@ -16,22 +16,22 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ##### News
 
-- New: added the indeterminate spinning `CPProgressBarIndicator`. ([primalmotion](https://github.com/primalmotion), [Dogild](https://github.com/dogild)  - [57b6888](https://github.com/cappuccino/cappuccino/commit/57b68880db6665d9b6da8f7c1835bedd210c72af), [899bbc2](https://github.com/cappuccino/cappuccino/commit/899bbc2dbc5802f44937b388442ebfdab927ed7e), [0d17757](https://github.com/cappuccino/cappuccino/commit/0d1775772972d831acd94f520b5db98b720f6cee))
+- New: indeterminate spinning `CPProgressBarIndicator`. ([primalmotion](https://github.com/primalmotion), [Dogild](https://github.com/dogild)  - [57b6888](https://github.com/cappuccino/cappuccino/commit/57b68880db6665d9b6da8f7c1835bedd210c72af), [899bbc2](https://github.com/cappuccino/cappuccino/commit/899bbc2dbc5802f44937b388442ebfdab927ed7e), [0d17757](https://github.com/cappuccino/cappuccino/commit/0d1775772972d831acd94f520b5db98b720f6cee))
 
-- New: added the tool `objj2objcskeleton`. This tool converts an objective-j file to a basic objective-c file. The objective-c file will contain the interface representing the objective-j file. ([Dogild](https://github.com/dogild) - [06c5976](https://github.com/cappuccino/cappuccino/pull/2353))
+- New: added the tool `objj2objcskeleton`. This tool converts an Objective-J files to a basic Objective-C file containing an interface representing the original file. ([Dogild](https://github.com/dogild) - [06c5976](https://github.com/cappuccino/cappuccino/pull/2353))
 
-- New: added the option `-x` or `--xml` to `objj`. This option allows you to specify the output format of the command `objj` in `xml`. ([Dogild](https://github.com/dogild) - [a0277ab](https://github.com/cappuccino/cappuccino/pull/2360))
+- New: added the option `-x` (alternatively `--xml`) to `objj`. This option allows you to specify the output format of `objj` to be XML. ([Dogild](https://github.com/dogild) - [a0277ab](https://github.com/cappuccino/cappuccino/pull/2360))
 
-- New: added the property `baseWritingDirection` in `CPControl`. This allows you to write from left to right or right to left. ([Dogild](https://github.com/dogild) - [bdbf1fb](https://github.com/cappuccino/cappuccino/pull/2348))
+- New: added the property `baseWritingDirection` to `CPControl`. This allows you to write from left to right or right to left. ([Dogild](https://github.com/dogild) - [bdbf1fb](https://github.com/cappuccino/cappuccino/pull/2348))
 
 ##### Changes/Fixes
 
-- Fixed: the textual `CPDatePicker` did not respect the english format. ([herbatnik](https://github.com/herbatnik) - [65a379c](https://github.com/cappuccino/cappuccino/pull/2359))
+- Fixed: the textual `CPDatePicker` did not respect the English format. ([herbatnik](https://github.com/herbatnik) - [65a379c](https://github.com/cappuccino/cappuccino/pull/2359))
 
-- Fixed: when compiling cappuccino or an application, the opened file descriptors of the `jake` process were not closed. With large application, the maximum number of open file descriptors of the system was easily reach and made failed the compilation. We now assure to close these file descriptors. ([primalmotion](https://github.com/primalmotion) - [5bba109](https://github.com/cappuccino/cappuccino/pull/2346))
+- Fixed: "too many open files" error when compiling an app or Cappuccino itself using `jake`. Jake now properly closes files when done with them. ([primalmotion](https://github.com/primalmotion) - [5bba109](https://github.com/cappuccino/cappuccino/pull/2346))
 
 - Fixed: memory leaks in `CPSplitView` when using a delegate. ([Dogild](https://github.com/dogild) - [f822268](https://github.com/cappuccino/cappuccino/commit/f822268ae1c6928250234a38f226a05b2207f8ef))
 
-- Fixed: the method `CPScrollView -documentVisibleRect` did not return the expected result when the document view was scaled. ([Dogild](https://github.com/dogild) - [a7b6010](https://github.com/cappuccino/cappuccino/pull/2358))
+- Fixed: `CPScrollView -documentVisibleRect` did not return the expected result when the document view was scaled. ([Dogild](https://github.com/dogild) - [a7b6010](https://github.com/cappuccino/cappuccino/pull/2358))
 
-- Fixed: private variables were shown in the cappuccino's documentation. ([Dogild](https://github.com/dogild) - [a439688](https://github.com/cappuccino/cappuccino/commit/a439688b3cc4e73d68d6e68475775e7670655f3a))
+- Fixed: private variables were shown in Cappuccino's documentation. ([Dogild](https://github.com/dogild) - [a439688](https://github.com/cappuccino/cappuccino/commit/a439688b3cc4e73d68d6e68475775e7670655f3a))
