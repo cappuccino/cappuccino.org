@@ -33,3 +33,5 @@ Here's a quick update on what's new with Cappuccino in the last month.
 - Fixed: `xml` format of the command `objj` has now the key `sourcePath` instead of `path`. ([Dogild](https://github.com/dogild) - [d358f0](https://github.com/cappuccino/cappuccino/commit/d358f0d27bb26850a400158ac761775697b8f231))
 
 - Fixed: `CPButton -sizeToFit` is broken when calling the method with a new title or a new image. ([Dogild](https://github.com/dogild) - [9694c7](https://github.com/cappuccino/cappuccino/commit/9694c796e39c3d63e7d230628c28cc7f28cf9ae3))
+
+- Fixed: `CPDatePicker` handles the key event in the methods sent by `CPResponder -interpreteKeyEvents:` and not in `performKeyEquivalent:` anymore. ([Dogild](https://github.com/dogild) - [1f983d](https://github.com/cappuccino/cappuccino/commit/1f983db47ca0361b64cdf8605456900d6f8cb20c))
