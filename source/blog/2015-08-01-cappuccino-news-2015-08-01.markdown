@@ -1,0 +1,31 @@
+---
+title: Cappuccino News 2015 August 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2015-08-01'
+tags:
+- Cappuccino
+- capp_env
+- objj
+- update
+---
+
+Here's a quick update on what's new with Cappuccino in the last month.
+
+### Cappuccino
+
+##### News
+
+- New: added the protocol `CPURLConnectionDelegate`. ([Dogild](https://github.com/dogild) - [806be9](https://github.com/cappuccino/cappuccino/commit/806be9551c68c722e66b54c13b7b323dd2d3da84))
+
+- New: added the `Gitter` link in the readme. ([Dogild](https://github.com/dogild) - [6b4a1b](https://github.com/cappuccino/cappuccino/commit/6b4a1b6758e40893dd40c279ecfe226fa7297c0d))
+
+- New: added the method `CPPlatform +closeAllPlatformWindows`. This method is called when reloading or closing the `cappuccino` application. The method closes every platform window opened in the application. ([Dogild](https://github.com/dogild) - [3f9f92](https://github.com/cappuccino/cappuccino/commit/3f9f926c8eecf7efd8e142180affb973e1192cb5))
+
+- New: added the delegate methods `applicationShouldTerminate` and `applicationShouldTerminateMessage` in the protocol `CPApplicationDelegateProtocol`. ([Dogild](https://github.com/dogild) - [058a73](https://github.com/cappuccino/cappuccino/commit/058a73f8a074c67c8c7e5067619b704556f8f817))
+
+##### Changes/Fixes
+
+- Fixed: selection on a label is performed when doing a right click. We now take in account if the label is selectable or not. ([primalmotion](https://github.com/primalmotion) - [d6b0fc](https://github.com/cappuccino/cappuccino/commit/d6b0fccbda3f85fc338fd2183fe34e2215392c6b) - [d1e31d](https://github.com/cappuccino/cappuccino/commit/d1e31da2e5aa1195c5530a07265ca1f040579c0e))
+
+- Fixed: `AppKit` unit-tests are not standalone. ([Dogild](https://github.com/dogild) - [6fe9da](https://github.com/cappuccino/cappuccino/commit/6fe9dae3d62af995f2481bfebdd706aeb0b21365) - [923d32](https://github.com/cappuccino/cappuccino/commit/923d32ee6dbc8119a6d264937a8c3acd5e4c8fbf))
