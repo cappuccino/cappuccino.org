@@ -1,0 +1,47 @@
+---
+title: Cappuccino News 2015 September 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2015-09-01'
+tags:
+- Cappuccino
+- objj
+- update
+- xcodecapp
+- capp_env
+---
+
+Here's a quick update on what's new with Cappuccino in the last month.
+
+### Cappuccino
+
+##### News
+
+- New: `XcodeCapp 4.0`. In a nutshell it:
+    - Allows to manage multiple projects simultaneously
+    - Allows to follow operations and cancel thel
+    - Has a per project Error and Warning reporting
+    - Supports `capp_env` as you can define additional paths and `objj` include path per project
+    - Much more things
+    ([primalmotion](https://github.com/primalmotion) [Dogild](https://github.com/Dogild) - [47611b7](https://github.com/cappuccino/cappuccino/commit/47611b7615525137ad5d5c678570a8f20b7b4d22) [d317744](https://github.com/cappuccino/cappuccino/commit/d317744f053ea734378b158f01ab139aa6894c2c) [340d827](https://github.com/cappuccino/cappuccino/commit/340d827377e383e2a0dcebc9e62b6e87ceb83887))
+
+[![](/img/cpo-uploads/2015/09/XcodeCapp-settings.png)](/img/cpo-uploads/2015/09/XcodeCapp-settings.png)
+[![](/img/cpo-uploads/2015/09/XcodeCapp-operations.png)](/img/cpo-uploads/2015/09/XcodeCapp-operations.png)
+
+- New: added `CPVisualEffectView` and `CPAppearance`. ([primalmotion](https://github.com/primalmotion) - [ab61aef](https://github.com/cappuccino/cappuccino/commit/ab61aef985dfcbefb2e32e8db4ab637fa7f2d4f1))
+
+[![](/img/cpo-uploads/2015/09/CPVisualEffectView-CPAppearance.png)](/img/cpo-uploads/2015/09/CPVisualEffectView-CPAppearance.png)
+
+- New: added timeout and cache feature in `CPURLRequest`. ([Dogild](https://github.com/dogild) - [58afc92](https://github.com/cappuccino/cappuccino/commit/58afc92a26a610fc61ada7129afe932ba7459c57))
+
+- New: default system menu is now disable for every right click. Exception for a right click on `CPTextField`.([Dogild](https://github.com/dogild) - [2f79b07](https://github.com/cappuccino/cappuccino/commit/2f79b079fda0110bdafb84ef8b91e08de10a3c65))
+
+##### Changes/Fixes
+
+- Fixed: preserve type of boolean values when parsing a `CPPredicate` format. ([tancred](https://github.com/tancred) - [5cd25e2](https://github.com/cappuccino/cappuccino/commit/5cd25e24e4440225b43175d47132325c649860b5))
+
+- Fixed: crash when a cell based `CPTableView` contains a dataView that contains an editable `CPTextField`. ([primalmotion](https://github.com/primalmotion) - [6420a51](https://github.com/cappuccino/cappuccino/commit/6420a51dd0986303b4c8a0f8247e6cd15be5553b))
+
+- Fixed: `Cappuccino` installation does not fail if `XcodeCapp` build fails. ([primalmotion](https://github.com/primalmotion) - [3d79799](https://github.com/cappuccino/cappuccino/commit/3d79799450f7c4522bdfff48c1ab2ac8f1703ab7))
+
+- Fixed: `CPPopover` were blinking on `Chrome` and `Opera`. ([Dogild](https://github.com/dogild) - [655bc39](https://github.com/cappuccino/cappuccino/commit/655bc39d8576f133d96bab746a3189426d592d6c))
