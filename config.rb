@@ -79,9 +79,9 @@ use Rack::Codehighlighter,
 
 activate :deploy do |deploy|
   deploy.method = :rsync
-  deploy.user = "cappuccino"
-  deploy.host = "cappuccino.slevenbits.com"
-  deploy.path = "/www/cappuccino.org/www/"
+  deploy.user = "deployer"
+  deploy.host = "se2.hosting.wireload.net"
+  deploy.path = "/www/www.cappuccino-project.org"
   deploy.clean = true
 end
 
