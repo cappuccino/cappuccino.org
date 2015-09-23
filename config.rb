@@ -123,10 +123,10 @@ configure :build do
   # set :http_path, "/Content/images/"
 
   after_build do
-    # The server uses the current Starter to serve /learn/documentation and Frameworks/ of demo apps.
     `cd build/downloads/ && rm -Rf Starter && unzip CappuccinoStarter-0.9.8.zip`
     `cd build/learn/ && curl -s -L http://github.com/cappuccino/cappuccino-demos/tarball/master >demos.tgz && tar -xzf demos.tgz && rm -Rf demos && mv cappuccino-cappuccino-demos-* demos`
     `cd build/aristo/showcase && rm -Rf Aristo2Showcase README __MACOSX Frameworks Resources && unzip ../../downloads/Aristo2Showcase.zip && mv Aristo2Showcase/* .`
+    `cd build/downloads/Starter/Documentation && cp -r . ../../../../build/learn/documentation`
     `find build/ -name .git -delete`
   end
 end
