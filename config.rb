@@ -78,10 +78,9 @@ use Rack::Codehighlighter,
   :markdown => true
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.user = "deployer"
-  deploy.host = "se2.hosting.wireload.net"
-  deploy.path = "/www/www.cappuccino-project.org"
+  deploy.method = :git
+  deploy.remote = 'https://github.com/cappuccino/cappuccino.github.io.git'
+  deploy.branch = 'master'
   deploy.clean = true
 end
 
