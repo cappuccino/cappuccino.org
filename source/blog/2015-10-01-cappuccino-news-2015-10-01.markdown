@@ -17,33 +17,27 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ##### Changes/Fixes
 
-- Fixed: optimization with transformation matrix and canvas when using the `Cappuccino` application on an none retina monitor. ([cacaodev](https://github.com/cacaodev) - [c9e83e0](https://github.com/cappuccino/cappuccino/commit/c9e83e051763c09e9a3ba5e591b463d5c102b491))
+- Fixed: slow drawing on non-retina resolutions due to needless identity transform. ([cacaodev](https://github.com/cacaodev) - [c9e83e0](https://github.com/cappuccino/cappuccino/commit/c9e83e051763c09e9a3ba5e591b463d5c102b491))
 
-- Fixed: the init method `CPArray initWithObjects:count:` did not work on native `CPJavascriptArray` when the argument count was different than the length of the provided array. ([mrcarlberg](https://github.com/mrcarlberg) - [8599ad4](https://github.com/cappuccino/cappuccino/commit/8599ad4a3c38c1030ca9b878e73a25d9e449fa2e))
+- Fixed: the init method `CPArray initWithObjects:count:` did not work on a native `CPJavascriptArray` when the argument count was different than the length of the provided array. ([mrcarlberg](https://github.com/mrcarlberg) - [8599ad4](https://github.com/cappuccino/cappuccino/commit/8599ad4a3c38c1030ca9b878e73a25d9e449fa2e))
 
-- Fixed: `CPTabView` did not accept the first mouse event when the `CPTabView` was in a unfocused window. ([Dogild](https://github.com/dogild) - [3fcc37e](https://github.com/cappuccino/cappuccino/commit/3fcc37e0869685771bf6c819b9e974a1899ef106))
+- Fixed: `CPTabView` did not accept the first mouse event when the `CPTabView` was in an unfocused window. ([Dogild](https://github.com/dogild) - [3fcc37e](https://github.com/cappuccino/cappuccino/commit/3fcc37e0869685771bf6c819b9e974a1899ef106))
 
 - Fixed: crash with the `CPRuleEditor` when dragging the first row. ([Dogild](https://github.com/dogild) - [7a0b2c9](https://github.com/cappuccino/cappuccino/commit/7a0b2c958b2d94d9e3c83f4cfa6c38cace75d68f))
 
 - Fixed: `CPToolTip` did not work in an external `CPWindow`. ([Dogild](https://github.com/dogild) - [4ac6395](https://github.com/cappuccino/cappuccino/commit/4ac63950adeba3196c649a46706bac3cbc47bdc2))
 
-- Fixed: view based `CPTableView` was broken due to the `CPAppearance` feature. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
+- Fixed: view based `CPTableView` broken after the `CPAppearance` feature was added. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
 
-- Fixed: create a `DOMCanvas` for the view when `CPView -drawRect:` or `CPView -viewWillDraw` are override. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
+- New: speed up app loading by creating the `DOMCanvas` only if `CPView -drawRect:` or `CPView -viewWillDraw` are overriden, and do it lazily (on the first `viewWillLayout`). ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
 
-- Fixed: the method `CPView layoutSubviews` is now called even if the method has not been override by its subclass. We have added the methods `CPView viewWillLayout` and `CPView viewDidLayout`. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
+- New: (private API) `CPView viewWillLayout` and `CPView viewDidLayout`. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
 
-- Fixed: refactoring of the classes `CPAppearance` and `CPVisualEffectView`. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
+- Refactoring: `CPAppearance` and `CPVisualEffectView`. ([Dogild](https://github.com/dogild) - [448c2a2](https://github.com/cappuccino/cappuccino/commit/448c2a27d4566fd19e0504bb5d884ee7b37a6407))
 
 
 ### Cucapp
 
 ##### Changes/Fixes
 
-- Fixed: close every `CPWindow` of the application when the test is over. ([Dogild](https://github.com/dogild) - [e93d795](https://github.com/cappuccino/cucapp/commit/e93d79552e7ef4ff01d73749e925ade99aa02399))
-
-### Cappuccino.org
-
-##### News
-
-- New: the website is now deserved by `GithubPages`. The new url of the website is `github.cappuccino.io` ([Dogild](https://github.com/dogild) - [44](https://github.com/cappuccino/cappuccino.org/pull/44))
+- Fixed: `CPWindow`s of the application not all closed when the test was over. ([Dogild](https://github.com/dogild) - [e93d795](https://github.com/cappuccino/cucapp/commit/e93d79552e7ef4ff01d73749e925ade99aa02399))
