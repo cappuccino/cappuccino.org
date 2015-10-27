@@ -1,0 +1,23 @@
+---
+title: CappCon 2016
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2015-10-27'
+categories:
+- Cappuccino
+- Events
+- Conferences
+tags: []
+---
+
+Hey everybody,
+
+The Cappuccino Core Team, Nuage Networks and Oops are planning to organize a conferance about Cappuccino and how they are using it.
+
+It will be the perfect time to discuss Cappuccino itself, its future 0.9.9 release, see some new features, demos, concrete examples and a few surprises.
+
+Please let us know if you would be interested to join this event by taking this [survey](https://www.google.com/url?q=https%3A%2F%2Fwww.surveymonkey.com%2Fr%2FZ9P7L55&sa=D&sntz=1&usg=AFQjCNEu1mNy0xq0iIBdsSpeftYkWTKEqw).
+
+Location and time to be decided !
+
+If you have any quick questions you can ping [@cappuccino](http://twitter.com/cappuccino) on Twitter, ask questions on [gitter](https://gitter.im/cappuccino/cappuccino) or on the [forum](https://groups.google.com/forum/?fromgroups#!forum/objectivej).
