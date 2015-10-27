@@ -12,7 +12,7 @@ tags: []
 
 Hey everybody,
 
-The Cappuccino Core Team, Nuage Networks and Oops are planning to organize a conferance about Cappuccino and how they are using it.
+The Cappuccino Core Team are planning to organize a conferance about Cappuccino and how they are using it.
 
 It will be the perfect time to discuss Cappuccino itself, its future 0.9.9 release, see some new features, demos, concrete examples and a few surprises.
 
