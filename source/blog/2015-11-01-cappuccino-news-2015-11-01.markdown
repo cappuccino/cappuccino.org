@@ -16,9 +16,15 @@ tags:
 
 Here's a quick update on what's new with Cappuccino in the last month.
 
+### Community
+
+The Cappuccino Core Team are planning to organize a conference about Cappuccino and how people are using it. Please let us know if you would like to join this event by taking this [survey](https://www.google.com/url?q=https%3A%2F%2Fwww.surveymonkey.com%2Fr%2FZ9P7L55&sa=D&sntz=1&usg=AFQjCNEu1mNy0xq0iIBdsSpeftYkWTKEqw).
+
+More informations [here](http://www.cappuccino-project.org/blog/2015/10/cappcon-2016.html).
+
 ### Cappuccino
 
-##### New
+##### News
 
 - New: added the method `CPURLConnection +sendAsynchronousRequest:queue:completionHandler:`. ([cacaodev](https://github.com/cacaodev) - [8809c16](https://github.com/cappuccino/cappuccino/commit/8809c1634f683efe1142833deaa8f5565fa6fcba))
 
@@ -27,6 +33,8 @@ Here's a quick update on what's new with Cappuccino in the last month.
 - New: added the posisibility to localize a `Cappuccino` application. This feature provides a way to localize `strings` and `cib`. The language of the application is either pick from the brower or from the `Info.plist`. ([Dogild](https://github.com/dogild) - [686f931](https://github.com/cappuccino/cappuccino/commit/686f931fb48fd2a2950519d5d957ed756528b0b2))
 
 - New: possibility to create a theme for every objects of the `AppKit`. ([Dogild](https://github.com/dogild) - [1fe1e6f](https://github.com/cappuccino/cappuccino/commit/1fe1e6f265b9c3175622458721d3afbab89aead6))
+
+- New: added the method `CPRunLoop -performBlock:argument:order:modes:`. ([Dogild](https://github.com/dogild)-[d5f38fe](https://github.com/cappuccino/cappuccino/commit/d5f38fe2f2cb2b55a4e6c1b6c3f4c28805f47957))
 
 ##### Changes/Fixes
 
@@ -46,16 +54,21 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 - Fixed: the param queue of the method `CPNotificationCenter -addObserverForName:object:queue:usingBlock:` was ignored. It now creates a new operation and add it to the given queue if needed. ([Dogild](https://github.com/dogild) - [3e29732](https://github.com/cappuccino/cappuccino/commit/3e29732e462e02dacfd66851e6dd67886ed69889))
 
+- Fixed: added unittests for the method `CPString -stringByReplacingCharactersInRange:`. ([Dogild](https://github.com/dogild) - [b04e576](https://github.com/cappuccino/cappuccino/commit/b04e5760fb30464dc457ecc0a7dc26c6ca6d8f2e))
+
+- Fixed: copy and pasty did not work properly in new `CPPlatformWindow`. ([Dogild](https://github.com/dogild) - [d4b1680](https://github.com/cappuccino/cappuccino/commit/d4b168072745dfcd94ff38d1646ee164d9b1de69))
+
+- Fixed: timing key responder issue when a `CPTextField` became the first key responder. ([Dogild](https://github.com/dogild)-[d5f38fe](https://github.com/cappuccino/cappuccino/commit/d5f38fe2f2cb2b55a4e6c1b6c3f4c28805f47957)
 
 ### Cucapp
 
-##### New
+##### News
 
 - New: added the command `jake install` for `cucapp`. The command will install `cucapp` in `narwhal` and every gems needed (`Cucumber`, `Thin`, `Nokogiri`, `Launchy` and `JSON`). ([Dogild](https://github.com/dogild) - [e0f276e](https://github.com/cappuccino/cucapp/commit/e0f276e45def1d59a99b224d6aff31c4cce741e))
 
 - New: added the command `cucapp`. This command allows you to create a testing architecture in your `Cappuccino` application. The architecture provides a new command `jake cucumber-test`, create a soft link where `cucapp` is installed and create every needed files to create cucumber tests. ([Dogild](https://github.com/dogild) - [e0f276e](https://github.com/cappuccino/cucapp/commit/e0f276e45def1d59a99b224d6aff31c4cce741e))
 
-##### Changes/Fixes
+##### Change/Fixe
 
 - Fixed: the `CPRunLoop` was not called between every events simulated. ([Dogild](https://github.com/dogild) - [fa281e8](https://github.com/cappuccino/cucapp/commit/fa281e86357653cd6e2aa797952ff1ea94801b6c))
 
