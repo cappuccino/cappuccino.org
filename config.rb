@@ -32,6 +32,10 @@ with_layout :learn do
   page "/learn/*"
 end
 
+with_layout :event do
+  page "/events/*"
+end
+
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"

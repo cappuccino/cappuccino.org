@@ -8,6 +8,8 @@
     %link{:href => "/css/main.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "/blog/feed.xml", :rel => "alternate", :title => "Cappuccino Blog Feed", :type => "application/atom+xml"}
+    %script{:src => "https://maps.googleapis.com/maps/api/js"}
+    %script{:type => "text/javascript", :src => "/js/event.js"}
 
   - containing_path = request.path
   - classes = "file-" + File.basename(containing_path).parameterize
@@ -27,24 +29,18 @@
           %a.brand{:href => "/"}
             %img{:alt => "logo", :src => "/img/cappuccino-website-logo.png"}/
           .nav-collapse.collapse
-            %ul.nav.pull-right
-              %li
-                %a{:href => "/events/cappCon2016"} CappCon2016
-              %li
-                %a.scroller{:href => "/#features"} Features
-              %li
-                %a.scroller{:href => "/downloads.html#download"} Download
-              %li
-                %a{:href => "/learn/"} Learn
-              %li
-                %a{:href => "/contribute.html"} Contribute
-              %li
-                %a{:href => "/blog/"} Blog
-              %li
-                %a{:href => "/learn/documentation/"} API
+            %span.event_date.nav.pull-right= current_page.data.event_date
 
+    .container
+      - if current_page.data.title
+        %h2.section_header
+          %hr.left.visible-desktop
+          %span= current_page.data.title
+          %hr.right.visible-desktop
 
-    = yield
+      .row
+        .offset2.span8.markdown
+          = yield
 
     #footer
       .container
@@ -53,34 +49,20 @@
             %h3 Links
             .row
               .span2
-                %h4 Get Started
-                = link_to "Features", "/#features"
-                = link_to "Tutorials", "/learn/"
-                = link_to "Download", "/downloads.html"
-                = link_to "API Docs", "/learn/documentation/"
+                %h4 Speakers
+                - current_page.data.speakers.each do |speaker|
+                  = link_to speaker.name, speaker.url
               .span2
-                %h4 Contribute
+                %h4 Links
                 %a
-                = link_to "Bug reports", "/contribute.html#bug-reports"
-                = link_to "Source code", "https://github.com/cappuccino/cappuccino"
-                = link_to "Wiki", "https://github.com/cappuccino/cappuccino/wiki"
-                = link_to "Donate", "https://www.gittip.com/for/cappuccino/"
+                = link_to "Cappuccino", "http://www.nuagenetworks.net"
+                - current_page.data.companies.each do |company|
+                  = link_to company.name, company.url
               .span2
-                %h4 Get Answers
-                = link_to "Support", "/support/"
-                = link_to "Mailing list", "http://groups.google.com/group/objectivej"
+                %h4 Community
+                = link_to "Blog", "http://www.cappuccino-project.org/blog/"
                 = link_to "Cappuccino Gitter", "https://gitter.im/cappuccino/cappuccino"
-                = link_to "#cappuccino IRC", "http://webchat.freenode.net/?channels=cappuccino"
-                = link_to "Blog", "/blog/"
-                = link_to "FAQ", "/support/faq.html"
-          .span6.stats
-            %h3 Project Stats
-            .row
-              .span2
-                %h4 Build
-                = link_to "https://travis-ci.org/cappuccino/cappuccino" do
-                  %img{:src => "https://travis-ci.org/cappuccino/cappuccino.png?branch=master"}
-
+                = link_to "Forum", "https://groups.google.com/forum/?fromgroups#!forum/objectivej"
         %hr
           .row.copyright
             .span2
