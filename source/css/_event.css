@@ -32,10 +32,9 @@
 
     li {
         display: inline-block;
-
-        figure {
-          margin: 30;
-        }
+        width: 100px;
+        height: 100px;
+        margin-right:25px;
 
         figcaption {
             color: #fff;
@@ -54,6 +53,12 @@
 
         &:hover {
           figcaption { opacity: 1; }
+        }
+
+        figure
+        {
+            width: 100px;
+            height: 100px;
         }
 
         img {
