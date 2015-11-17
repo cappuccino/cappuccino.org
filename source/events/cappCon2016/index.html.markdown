@@ -30,7 +30,9 @@ companies:
 
 We're excited to announce the second ever full-blown conference dedicated to Cappuccino: CappCon 2016.
 
-It'll be in Liège (Belgium) on the 31st of March. The event will be hosted by the [University Of Liege](https://www.ulg.ac.be).
+It'll be in Liège (Belgium) on the 31st of March 2016. The event will be hosted by the [University Of Liege](https://www.ulg.ac.be).
+
+Differents topics are going to be treated as Cappuccino 0.9.9, how companies use Cappuccino, testing a Cappuccino Application and dealing with a large Cappuccino Application.
 
 Tickets are free and you can register yourself on this [meetup](http://meetup.com/cappuccino).
 
@@ -75,7 +77,7 @@ It's going to be a lot of fun.
 
 ### Schedule
 
-<table class="table span9">
+<table class="table span9 schedule">
     <tbody>
         <tr>
             <th>Subjects</th>
@@ -83,37 +85,37 @@ It's going to be a lot of fun.
             <th>Time</th>
         </tr>
         <tr>
-            <td>Welcome and Cappuccino 0.9.9</td>
+            <td>Welcome and Cappuccino 0.9.9<p class="p_schedule_description">Alexander will talk about Cappuccino 0.9.9 and what is new in this release.<br/> XcodeCapp 4.0, Localization, CPUserNotification and optimizations will be maintly treated.</p></td>
             <td><a href="https://twitter.com/slevenbits" target="_blank">Alexandre Ljunberg</a></td>
             <td>9:00 - 10:00</td>
         </tr>
         <tr>
-            <td>Cappuccino and Nuage Networks</td>
+            <td>Cappuccino and Nuage Networks<p class="p_schedule_description">Antoine will show what Nuage Networks is doing with Cappuccino<br/>OpenSource libraries are going to be released during this talk.</p></td>
             <td><a href="https://twitter.com/primalmotion" target="_blank">Antoine Mercadal</a></td>
             <td>10:15 - 11:00</td>
         </tr>
         <tr>
-            <td>Cappuccino and Oops</td>
+            <td>Cappuccino and Oops<p class="p_schedule_description">Martin will show how Oops uses Cappuccino</p></td>
             <td><a href="https://twitter.com/mrcarlberg" target="_blank">Martin Carlberg</a></td>
             <td>11:15 - 12:00</td>
         </tr>
         <tr>
-            <td>How to test a Cappuccino Application</td>
+            <td>How to test a Cappuccino Application ?<p class="p_schedule_description">What is Cucapp and OJTest ? How to use them ?<br/> What are the differences of these frameworks ?</p></td>
             <td><a href="https://twitter.com/wilhelmalex" target="_blank">Alexandre Wilhelm</a></td>
             <td>14:00 - 14:45</td>
         </tr>
         <tr>
-            <td>How to deal with a big Cappuccino Application</td>
+            <td>How to deal with a big Cappuccino Application ?<p class="p_schedule_description">Dealing with a large application is not easy ! Christophe will present good practice for that<br/>How to deal with external libraries ? How to deal with xibs ?</p></td>
             <td><a href="https://twitter.com/t00f67" target="_blank">Christophe Serafin</a></td>
             <td>15:00 - 15:45</td>
         </tr>
         <tr>
-            <td>Panel Discussion</td>
+            <td>Panel Discussion<p class="p_schedule_description">Panel discussion/questions to the member of the Core Team of Cappuccino</p></td>
             <td><a href="https://github.com/orgs/cappuccino/people" target="_blank">Core Team Member of Cappuccino</a></td>
             <td>16:00 - 17:00</td>
         </tr>
         <tr>
-            <td>Goodbye</td>
+            <td>Goodbye<p class="p_schedule_description">What next for the community of Cappuccino ?</p></td>
             <td><a href="https://twitter.com/slevenbits" target="_blank">Alexander Ljunberg</a></td>
             <td>17:00 - 17:15</td>
         </tr>
@@ -123,6 +125,10 @@ It's going to be a lot of fun.
 ### Tickets
 
 Tickets are free ! You can register yourself on this [meetup](http://meetup.com/cappuccino).
+
+### Food and Drinks
+
+Food will be provided for lunch and dinner by our sponsors. More informations coming soon about this !
 
 ### Location
 
@@ -136,12 +142,22 @@ The event will be hosted by the [University Of Liege](https://www.ulg.ac.be). Th
 <ul class="sponsors">
     <li>
         <figure>
-            <a href="http://www.nuagenetworks.net/" target="_blank"><img src="/img/cappCon2016/nuage-networks-logo.png" alt="Nuage Networks" width="185px" height="90px"></a>
+            <a href="https://www.ulg.ac.be" target="_blank"><img src="/img/cappCon2016/university-of-liege-logo.png" alt="University of Liege"></a>
         </figure>
     </li>
     <li>
         <figure>
-            <a href="http://www.rwelephant.com" target="_blank"><img src="/img/cappCon2016/rw-elephant-logo.png" alt="RW Elephant " width="144px" height="90px"></a>
+            <a href="http://www.nuagenetworks.net/" target="_blank"><img src="/img/cappCon2016/nuage-networks-logo.png" alt="Nuage Networks"></a>
+        </figure>
+    </li>
+    <li>
+        <figure>
+            <a href="http://www.oops.se" target="_blank"><img src="/img/cappCon2016/oops-logo.png" alt="Oops"></a>
+        </figure>
+    </li>
+    <li>
+        <figure>
+            <a href="http://www.rwelephant.com" target="_blank"><img src="/img/cappCon2016/rw-elephant-logo.png" alt="RW Elephant "></a>
         </figure>
     </li>
 </ul>
@@ -150,4 +166,4 @@ The event will be hosted by the [University Of Liege](https://www.ulg.ac.be). Th
 
 If you have any questions you can ping [@cappuccino](http://twitter.com/cappuccino) on Twitter, ask questions on [gitter](https://gitter.im/cappuccino/cappuccino) or on the [forum](https://groups.google.com/forum/?fromgroups#!forum/objectivej).
 
-If your business is looking to associate with great software practices and want to connect to a cross section of developers, testers - get in touch! Email us at [cappcon2016](cappcon2016@googlegroups.com).
+If your business is looking to associate with great software practices and want to connect to a cross section of developers, testers - get in touch! [Email](mailto:cappcon2016@googlegroups.com) us.

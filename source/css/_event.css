@@ -3,21 +3,29 @@
   height: 300px;
 }
 
+.schedule
+{
+    margin-left:0px;
+}
+
 .sponsors {
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
     display: block;
 
     li {
         display: inline-block;
+        width: 120px;
+        height:120px;
+        margin:25px;
+    }
 
-        figure {
-          margin: 30;
-        }
+    figure
+    {
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -34,7 +42,7 @@
         display: inline-block;
         width: 100px;
         height: 100px;
-        margin-right:25px;
+        margin:25px;
 
         figcaption {
             color: #fff;
@@ -74,4 +82,10 @@
     font-size: 35px;
     padding-top: 10px;
     color: #fff;
+}
+
+.p_schedule_description
+{
+    font-size: 13px;
+    color: #555;
 }
