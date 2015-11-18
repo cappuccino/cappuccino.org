@@ -28,15 +28,15 @@ companies:
 
 ### About Event
 
-We're excited to announce the second ever full-blown conference dedicated to Cappuccino: CappCon 2016.
+We're very excited to announce the second conference entirely dedicated to Cappuccino: CappCon 2016!
 
-It'll be in Liège (Belgium) on the 31st of March 2016. The event will be hosted by the [University Of Liege](https://www.ulg.ac.be).
+The event will be hosted by the [University Of Liege](https://www.ulg.ac.be), in Belgium on the 31st March 2016.
 
-Differents topics are going to be treated as Cappuccino 0.9.9, how companies use Cappuccino, testing a Cappuccino Application and dealing with a large Cappuccino Application.
+It will cover a lot of different topics like the release of Cappuccino 0.9.9, what companies are building using it, how to deal with large application and how to test them and so on.
 
-Tickets are free and you can register yourself on this [meetup](http://meetup.com/cappuccino).
+Admission is completely free! You just need to register [here](http://meetup.com/cappuccino).
 
-Foods and drinks are provided by our sponsors ! Lunch, dinner and party will be organized !
+Food and drink will be provided by our sponsors! Lunch, dinner and party will be organized !
 
 It's going to be a lot of fun.
 
@@ -45,31 +45,31 @@ It's going to be a lot of fun.
 <ul class="speakers">
     <li>
         <figure>
-            <a href="https://twitter.com/slevenbits" target="_blank"><img src="/img/cappCon2016/Alexander-Ljunberg.png" alt="Alexander Ljungberg" width="90px" height="90px"></a>
+            <a href="https://twitter.com/slevenbits" target="_blank"><img src="/img/cappCon2016/Alexander-Ljunberg.png" alt="Alexander Ljungberg"></a>
             <figcaption>Alexander Ljungberg - Director of Product Development at TrueShip</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <a href="https://twitter.com/wilhelmalex" target="_blank"><img src="/img/cappCon2016/Alexandre-Wilhelm.png" alt="Alexandre Wilhelm" width="90px" height="90px"></a>
+            <a href="https://twitter.com/wilhelmalex" target="_blank"><img src="/img/cappCon2016/Alexandre-Wilhelm.png" alt="Alexandre Wilhelm"></a>
             <figcaption>Alexandre Wilhelm - Software Engineer at Nuage Networks</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <a href="https://twitter.com/primalmotion" target="_blank"><img src="/img/cappCon2016/Antoine-Mercadal.png" alt="Antoine Mercadal" width="90px" height="90px"></a>
+            <a href="https://twitter.com/primalmotion" target="_blank"><img src="/img/cappCon2016/Antoine-Mercadal.png" alt="Antoine Mercadal"></a>
             <figcaption>Antoine Mercadal - Software Engineer at Nuage Networks</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <a href="https://twitter.com/t00f67" target="_blank"><img src="/img/cappCon2016/Christophe-Serafin.png" alt="Christophe Serafin" width="90px" height="90px"></a>
+            <a href="https://twitter.com/t00f67" target="_blank"><img src="/img/cappCon2016/Christophe-Serafin.png" alt="Christophe Serafin"></a>
             <figcaption>Christophe Serafin - Software Engineer at Nuage Networks</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <a href="https://twitter.com/mrcarlberg" target="_blank"><img src="/img/cappCon2016/Martin-Carlberg.png" alt="Martin Carlberg" width="90px" height="90px"></a>
+            <a href="https://twitter.com/mrcarlberg" target="_blank"><img src="/img/cappCon2016/Martin-Carlberg.png" alt="Martin Carlberg"></a>
             <figcaption>Martin Carlberg - Founder & Senior Software Architect at Oops AB</figcaption>
         </figure>
     </li>
@@ -90,7 +90,7 @@ It's going to be a lot of fun.
             <td>9:00 - 10:00</td>
         </tr>
         <tr>
-            <td>Cappuccino and Nuage Networks<p class="p_schedule_description">Antoine will show what Nuage Networks is doing with Cappuccino<br/>OpenSource libraries are going to be released during this talk.</p></td>
+            <td>Cappuccino and Nuage Networks<p class="p_schedule_description">Antoine will show what Nuage Networks is doing with Cappuccino</p></td>
             <td><a href="https://twitter.com/primalmotion" target="_blank">Antoine Mercadal</a></td>
             <td>10:15 - 11:00</td>
         </tr>
@@ -100,12 +100,12 @@ It's going to be a lot of fun.
             <td>11:15 - 12:00</td>
         </tr>
         <tr>
-            <td>How to test a Cappuccino Application ?<p class="p_schedule_description">What is Cucapp and OJTest ? How to use them ?<br/> What are the differences of these frameworks ?</p></td>
+            <td>How to test a Cappuccino Application ?<p class="p_schedule_description">What is Cucapp and OJTest? How to use them?<br/> What are the differences of these frameworks ?</p></td>
             <td><a href="https://twitter.com/wilhelmalex" target="_blank">Alexandre Wilhelm</a></td>
             <td>14:00 - 14:45</td>
         </tr>
         <tr>
-            <td>How to deal with a big Cappuccino Application ?<p class="p_schedule_description">Dealing with a large application is not easy ! Christophe will present good practice for that<br/>How to deal with external libraries ? How to deal with xibs ?</p></td>
+            <td>How to deal with a big Cappuccino Application ?<p class="p_schedule_description">Dealing with a large application is not easy! Christophe will talk about good practices<br/>How to deal with external libraries? How to deal with xibs ?</p></td>
             <td><a href="https://twitter.com/t00f67" target="_blank">Christophe Serafin</a></td>
             <td>15:00 - 15:45</td>
         </tr>
@@ -115,16 +115,16 @@ It's going to be a lot of fun.
             <td>16:00 - 17:00</td>
         </tr>
         <tr>
-            <td>Goodbye<p class="p_schedule_description">What next for the community of Cappuccino ?</p></td>
+            <td>Closing talk<p class="p_schedule_description">What is next for the community of Cappuccino ?</p></td>
             <td><a href="https://twitter.com/slevenbits" target="_blank">Alexander Ljunberg</a></td>
             <td>17:00 - 17:15</td>
         </tr>
     </tbody>
 </table>
 
-### Tickets
+### Admission
 
-Tickets are free ! You can register yourself on this [meetup](http://meetup.com/cappuccino).
+Tickets are free ! You can register yourself on this [meetup](http://meetup.com/cappuccino). The conference is integrally paid by our sponsors!
 
 ### Food and Drinks
 
