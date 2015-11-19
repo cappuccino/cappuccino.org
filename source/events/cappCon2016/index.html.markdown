@@ -132,10 +132,28 @@ Food will be provided for lunch and dinner by our sponsors. More informations co
 
 ### Location
 
-The event will be hosted by the [University Of Liege](https://www.ulg.ac.be). The university is located at : *Place du 20 Août 7, 4000 Liège, Belgique*
+The event will be hosted by the [University of Liege](https://www.ulg.ac.be) and held at the [Montefiore Institute](http://www.montefiore.ulg.ac.be) (Computing Sciences) :<br>*Quartier Polytech 1, All&eacute;e de la d&eacute;couverte 10, 4000 Li&egrave;ge (building B28, carpark P32)*
 
 <div id="map"></div>
-<script>google.maps.event.addDomListener(window, 'load', initialize(50.585133, 5.559563));</script>
+<script>google.maps.event.addDomListener(window, 'load', initialize(50.5859669,5.5601193));</script>
+
+### Getting there
+
+The event will be held on the "[Sart Tilman](http://www.ulg.ac.be/cms/a_16385/en/sart-tilman)" Campus (10 km South of city center). This is the main campus of the University of Liege.<br>&nbsp;<br>
+Liège is easily reachable by road from Germany, The Netherlands, France, Luxembourg, ...<br>&nbsp;<br>
+By train : reach [Liege main station : "Liège Guillemins"](https://www.b-europe.com/Travel/Practical/Station%20information/Liege%20Guillemins). From there, you can take a cab or the regular bus line #48 towards Sart Tilman (exit at the "Quartier Polytech" stop).<br>&nbsp;<br>
+By plane : reach one of the three following airports, depending on available airlines :<br>&nbsp;<br>
+- [Brussels International Airport](http://www.brusselsairport.be). From there, you can : take a train to Liege (see here above) or rent a car.<br>
+- [Liège Airport](http://www.liegeairport.com) (from some European cities). From there, you can : rent a car or take a cab.<br>
+- [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can : take a train to Liege (see here above) or rent a car.
+
+### Staying there
+
+For the event, we've negotiated special conditions with the [Ibis Boncelles Hotel](http://www.ibis.com/fr/hotel-3533-ibis-liege-seraing/index.shtml), near the University main campus.<br>&nbsp;<br>
+One night and the breakfast : 72.55 EUR (instead of 93.55 EUR, please mention that you reserve for CappCon2016 event).<br>&nbsp;<br>
+Other hotels are available in the city center :<br>
+- [Crowne Plaza Liege](http://www.crowneplazaliege.be) : beautiful 5-stars hotel in the heart of the city<br>
+- to be continued<br>
 
 ### Sponsors
 
