@@ -34,7 +34,7 @@ The event will be hosted by the [University Of Liege](https://www.ulg.ac.be), in
 
 It will cover a lot of different topics like the release of Cappuccino 0.9.9, what companies are building using it, how to deal with large application and how to test them and so on.
 
-Admission is completely free! You just need to register [here](http://meetup.com/cappuccino).
+Admission is completely free! You just need to register [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
 
 Food and drink will be provided by our sponsors! Lunch, dinner and party will be organized !
 
