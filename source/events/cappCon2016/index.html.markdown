@@ -86,7 +86,7 @@ It's going to be a lot of fun.
         </tr>
         <tr>
             <td>Welcome and Cappuccino 0.9.9<p class="p_schedule_description">Alexander will talk about Cappuccino 0.9.9 and what is new in this release.<br/> XcodeCapp 4.0, Localization, CPUserNotification and optimizations will be maintly treated.</p></td>
-            <td><a href="https://twitter.com/slevenbits" target="_blank">Alexandre Ljunberg</a></td>
+            <td><a href="https://twitter.com/slevenbits" target="_blank">Alexander Ljunberg</a></td>
             <td>9:00 - 10:00</td>
         </tr>
         <tr>
