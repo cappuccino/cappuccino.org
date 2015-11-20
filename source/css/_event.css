@@ -1,0 +1,91 @@
+#map {
+  width: 800px;
+  height: 300px;
+}
+
+.schedule
+{
+    margin-left:0px;
+}
+
+.sponsors {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+
+    li {
+        display: inline-block;
+        width: 120px;
+        height:120px;
+        margin:25px;
+    }
+
+    figure
+    {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.speakers {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: block;
+
+    li {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin:25px;
+
+        figcaption {
+            color: #fff;
+            font-size: 14px;
+            margin: 0;
+            padding: 3px;
+            opacity: 0;
+            width: 200px;
+            position: absolute;
+            margin-top: 25px;
+            margin-left: -50px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 3px;
+            display: block;
+        }
+
+        &:hover {
+          figcaption { opacity: 1; }
+        }
+
+        figure
+        {
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.event_date
+{
+    font-size: 35px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.p_schedule_description
+{
+    font-size: 13px;
+    color: #555;
+}
