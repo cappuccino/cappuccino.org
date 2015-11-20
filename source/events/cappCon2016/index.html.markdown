@@ -6,15 +6,15 @@ date: '2016-05-15'
 event_date: March 31st 2016
 speakers:
   - name: Alexander Ljunberg
-    url: https://www.twitter/slevenbits
+    url: https://www.twitter.com/slevenbits
   - name: Alexandre Wilhelm
-    url: https://www.twitter/WilhelmAlex
+    url: https://www.twitter.com/WilhelmAlex
   - name: Antoine Mercadal
-    url: https://www.twitter/primalmotion
+    url: https://www.twitter.com/primalmotion
   - name: Christophe Serafin
-    url: https://www.twitter/@t00f67
+    url: https://www.twitter.com/@t00f67
   - name: Martin Carlberg
-    url: https://www.twitter/mrcarlberg
+    url: https://www.twitter.com/mrcarlberg
 companies:
   - name: Nuage Networks
     url: http://www.nuagenetworks.net
