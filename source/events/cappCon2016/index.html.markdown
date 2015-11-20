@@ -146,16 +146,27 @@ Liège is easily reachable by road from Germany, The Netherlands, France, Luxemb
 By train, you should reach [Liege main station : "Liège Guillemins"](https://www.b-europe.com/Travel/Practical/Station%20information/Liege%20Guillemins). From there, you can take a cab or the regular bus line #48 towards Sart Tilman (exit at the "Quartier Polytech" stop).
 
 By plane, you should reach one of the three following airports, depending on available airlines :<br/>
-- [Brussels International Airport](http://www.brusselsairport.be). From there, you can take a train to Liege or rent a car.<br/>
+- [Brussels International Airport](http://www.brusselsairport.be). From there, you can take a train to Liege or rent a car (Brussels-Liege : +/- 100 km).<br/>
 - [Liège Airport](http://www.liegeairport.com) (from some European cities). From there, you can rent a car or take a cab.<br/>
-- [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can take a train to Liege or rent a car.
+- [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can take a train to Liege or rent a car (Charleroi-Liege : +/- 80 km).
 
 ### Staying there
 
 For the event, we've negotiated special conditions with the [Ibis Boncelles Hotel](http://www.ibis.com/fr/hotel-3533-ibis-liege-seraing/index.shtml), near the main campus of the University. If you do a reservation, don't forget to mention that you are about to reserve fo the CappCon 2016 event!
 
-Other hotels are available in the city center :<br/>
+Other hotels are available in the city center :
+
 - [Crowne Plaza Liege](http://www.crowneplazaliege.be) : beautiful 5-stars hotel in the heart of the city.
+- [Ramada Plaza Liege](http://www.ramadaplaza-liege.com) : beautiful 4-stars hotel along the river "La Meuse", near the historic center.
+- [Hotel Neuvice](http://www.hotelneuvice.be/fr) : marvelous 3-stars hotel in the heart of the historic center.
+- [Hotel Hors Château](http://www.hors-chateau.be/EN/hotel/index.html) : beautiful 3-stars hotel in the historic center.
+- [Ibis Li&egrave;ge Centre Op&eacute;ra Hotel](http://www.accorhotels.com/gb/hotel-0864-ibis-liege-centre-opera/index.shtml) : simple but well placed hotel in the city center.
+
+### Visiting there
+
+Li&egrave;ge offers many and various points of interest : the historic city center, museums, churches, night life (in the "[Carr&eacute;](http://www.lecarre.com/lecarre)" district), food, beverages (mainly [belgian beers](http://liegebeerloverscity.be) and local alcohol "le Peket"), ...
+
+Li&egrave;ge is, without any doubt, the Belgian city offering an undeniable "joie de vivre", a rich artistic and architectural heritage, a link between history and modernity.
 
 ### Sponsors
 
