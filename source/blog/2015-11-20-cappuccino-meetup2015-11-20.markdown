@@ -14,12 +14,12 @@ Hi guys,
 
 We are excited to announce that we have launched our Worldwide Cappuccino Meetup [page](http://www.meetup.com/World-Cappuccino-Meetup/).
 
-Meetups are going to be organized regularly throughout the year. We advise you to join this group, you will be informed about any future event we will organize!
+Meetups are going to be organized regularly throughout the year. We advise you to join this group to stay up to date about future events we will organize!
 
-The first Meetup will be the CappCon2016 in Liège (Belgium). You can register yourself [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
+The first Meetup will be the CappCon2016 in Liège (Belgium). You can register for free  [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
 
-[Nuage Networks](http://www.nuagenetworks.net) will organize meetups every 3-4 months in Mountain View, Califorina. These meetups will cover different themes such as testing, demos, libraries, good practices, etc... The first meetup will be held in mid-April (date to be decided) and Antoine Mercaldal will cover the theme of `Nuage Networks and Cappuccino`.
+[Nuage Networks](http://www.nuagenetworks.net) will organize meetups every 3-4 months in Mountain View, Califorina. These meetups will cover different themes such as testing, demos, libraries, good practices and more. The first meetup will be held in mid-April (date to be decided). The theme of this meetup, presented by Antoine Mercadal, will be 'Nuage Networks and Cappuccino'.
 
 If you would like to organize a meetup on your own somewhere else, let us know on [gitter](https://gitter.im/cappuccino/cappuccino).
 
-Thanks and see you soon !
+Thanks and see you soon!
