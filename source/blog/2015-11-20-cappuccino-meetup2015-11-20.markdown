@@ -1,5 +1,5 @@
 ---
-title: Cappuccino News 2015 November 20th
+title: Worldwide Cappuccino Meetup
 author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-11-20'
