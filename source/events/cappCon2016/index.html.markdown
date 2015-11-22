@@ -18,8 +18,8 @@ speakers:
 companies:
   - name: Nuage Networks
     url: http://www.nuagenetworks.net
-  - name: RWElephant
-    url: http://www.rwelephant.org
+  - name: RW Elephant
+    url: http://www.rwelephant.com
   - name: Oops
     url: http://www.oops.se
   - name: University of Liège
