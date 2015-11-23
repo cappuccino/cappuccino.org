@@ -147,9 +147,9 @@ By train, you should reach [Liège main station : "Liège Guillemins"](https://w
 
 By plane, you should reach one of the three following airports, depending on available airlines:<br/>
 - [Brussels International Airport](http://www.brusselsairport.be). From there, you can take a [train](http://www.belgianrail.be) to Liège or rent a car (Brussels-Liège: +/- 100 km).<br/>
+- [Frankfurt International Airport](http://www.frankfurt-airport.de). From there, you can take a [train](http://www.bahn.de) to Liège or rent a car (Brussels-Frankfurt: +/-300 km).<br/>
 - [Liège Airport](http://www.liegeairport.com) (from some European cities). From there, you can rent a car or take a cab.<br/>
 - [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can take a [train](http://www.belgianrail.be) to Liège or rent a car (Charleroi-Liège: +/- 80 km).
-- [Frankfurt International Airport](http://www.frankfurt-airport.de). From there, you can take a [train](http://www.bahn.de) to Liège or rent a car (Brussels-Frankfurt: +/-300 km).
 
 ### Staying there
 
