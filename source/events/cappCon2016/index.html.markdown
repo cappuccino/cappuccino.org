@@ -146,9 +146,10 @@ Liège is easily reachable by road from Germany, The Netherlands, France, Luxemb
 By train, you should reach [Liège main station : "Liège Guillemins"](https://www.b-europe.com/Travel/Practical/Station%20information/Liège%20Guillemins). From there, you can take a cab or the regular bus line #48 towards Sart Tilman (exit at the "Quartier Polytech" stop).
 
 By plane, you should reach one of the three following airports, depending on available airlines:<br/>
-- [Brussels International Airport](http://www.brusselsairport.be). From there, you can take a train to Liège or rent a car (Brussels-Liège: +/- 100 km).<br/>
+- [Brussels International Airport](http://www.brusselsairport.be). From there, you can take a [train](http://www.belgianrail.be) to Liège or rent a car (Brussels-Liège: +/- 100 km).<br/>
 - [Liège Airport](http://www.liegeairport.com) (from some European cities). From there, you can rent a car or take a cab.<br/>
-- [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can take a train to Liège or rent a car (Charleroi-Liège: +/- 80 km).
+- [Brussels South Airport](http://www.charleroi-airport.com) (via Ryanair). From there, you can take a [train](http://www.belgianrail.be) to Liège or rent a car (Charleroi-Liège: +/- 80 km).
+- [Frankfurt International Airport](http://www.frankfurt-airport.de). From there, you can take a [train](http://www.bahn.de) to Liège or rent a car (Brussels-Frankfurt: +/-300 km).
 
 ### Staying there
 
