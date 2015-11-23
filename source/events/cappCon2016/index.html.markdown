@@ -12,9 +12,11 @@ speakers:
   - name: Antoine Mercadal
     url: https://www.twitter.com/primalmotion
   - name: Christophe Serafin
-    url: https://www.twitter.com/@t00f67
+    url: https://www.twitter.com/t00f67
   - name: Martin Carlberg
     url: https://www.twitter.com/mrcarlberg
+  - name: Tim Howell
+    url: https://www.twitter.com/rwelephant
 companies:
   - name: Nuage Networks
     url: http://www.nuagenetworks.net
@@ -73,6 +75,12 @@ It's going to be a lot of fun.
             <figcaption>Martin Carlberg - Founder & Senior Software Architect at Oops AB</figcaption>
         </figure>
     </li>
+    <li>
+        <figure>
+            <a href="https://twitter.com/rwelephant" target="_blank"><img src="/img/cappCon2016/Tim-Howell.png" alt="Tim Howell"></a>
+            <figcaption>Tim Howell - Founder of RW Elephant</figcaption>
+        </figure>
+    </li>
 </ul>
 
 ### Schedule
@@ -100,24 +108,29 @@ It's going to be a lot of fun.
             <td>11:15 - 12:00</td>
         </tr>
         <tr>
+            <td>Cappuccino and RW Elephant<p class="p_schedule_description">Tim will show how RW Elephant uses Cappuccino.</p></td>
+            <td><a href="https://twitter.com/rwelephant" target="_blank">Tim Howell</a></td>
+            <td>14:00 - 14:45</td>
+        </tr>
+        <tr>
             <td>How to test a Cappuccino Application?<p class="p_schedule_description">What is Cucapp and OJTest? How to use them?<br/> What are the differences between these frameworks?</p></td>
             <td><a href="https://twitter.com/wilhelmalex" target="_blank">Alexandre Wilhelm</a></td>
-            <td>14:00 - 14:45</td>
+            <td>15:00 - 15:45</td>
         </tr>
         <tr>
             <td>How to deal with a big Cappuccino Application?<p class="p_schedule_description">Dealing with a large application is not easy! Christophe will talk about good practices.<br/>How do we deal with external libraries? How to deal with xibs?</p></td>
             <td><a href="https://twitter.com/t00f67" target="_blank">Christophe Serafin</a></td>
-            <td>15:00 - 15:45</td>
+            <td>16:00 - 16:45</td>
         </tr>
         <tr>
             <td>Panel Discussion<p class="p_schedule_description">Panel discussion/questions to the member of the Core Team of Cappuccino.</p></td>
             <td><a href="https://github.com/orgs/cappuccino/people" target="_blank">Core Team Members of Cappuccino</a></td>
-            <td>16:00 - 17:00</td>
+            <td>17:00 - 18:00</td>
         </tr>
         <tr>
             <td>Closing talk<p class="p_schedule_description">What is next for the community of Cappuccino?</p></td>
             <td><a href="https://twitter.com/slevenbits" target="_blank">Alexander Ljunberg</a></td>
-            <td>17:00 - 17:15</td>
+            <td>18:00 - 18:15</td>
         </tr>
     </tbody>
 </table>
