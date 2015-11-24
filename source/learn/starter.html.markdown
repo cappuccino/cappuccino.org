@@ -40,7 +40,8 @@ should end up with something that looks like this (in Safari):
 
 ![New Application running in Safari](/img/new-app-running-safari.png)
 
-<span class="label label-info">Info</span>  This will only work in some browsers. Normally you'll need to start a web server too. We'll update this section with more information soon.
+<span class="label label-info">Info</span>  This will only work in some browsers. Normally you'll need to start a web server too.
+To run a web server, an option would be to run the command `python -m SimpleHTTPServer` where your project is located.
 
 ### The Code
 

@@ -176,5 +176,5 @@ and the other tools you have available when you encounter trouble.
 ### Additional Info
 
 If you have suggestions for improvements to this guide, or if you have
-questions that haven't been answered here, please let us know in the
-[mailing list or IRC channel](/discuss/list.php).
+questions that haven't been answered here, please let us know on
+[gitter](https://gitter.im/cappuccino/cappuccino).

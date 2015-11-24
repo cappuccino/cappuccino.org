@@ -1,6 +1,6 @@
 In this tutorial, we will create a simple "Hellow World" app using Xcode to edit the user interface. You will see that even for a small project there are big time saving benefits in graphical UI editing.
 
-This tutorial assumes you have a Mac with Xcode 4 installed and that you have installed the Cappuccino toolchain using [bootstrap.sh](index.html) or by [installing from source](build-source.html).
+This tutorial assumes you have a Mac with Xcode 7 installed and that you have installed the Cappuccino toolchain using [bootstrap.sh](index.html) or by [installing from source](build-source.html). It also assumes that you have installed the current master version of Cappuccino.
 
 ### Create the project
 
@@ -26,29 +26,29 @@ from Xcode to Cappuccino. It is basically a bridge between
 these two worlds. It works completely transparently. XcodeCapp is
 shipped with Cappuccino. In the default installation, you'll find it here:
 
-    /usr/local/narwhal/packages/cappuccino/support/XcodeCapp.app
+    /Applications/XcodeCapp.app/
 
-For convenience, you can move it or copy it to your `/Applications` folder.
+Once launched, you will see a small coffee machine icon in your Mac OS X menu bar that should be grayed out. The main window of the application shold be displayed as well, click on the only button of the application !
 
-Once launched, you will see a small coffee machine icon in your Mac OS X
-menu bar that should be grayed out. Click on this icon, and select "Listen to Project...".
-
-[![](xcode/menu1.png)](xcode/menu1.png)
+[![](xcode/state1.png)](xcode/state1.png)
 
 A standard folder chooser dialog will appear. Choose the folder of the
 Cappuccino project you just created. The icon will become darker, and
-you may notice some Growl notifications indicating XcodeCapp is
+you may notice some user notifications indicating XcodeCapp is
 currently loading the project. The initial time to load a project
 depends on the size of the project. For a new template it should be very
 quick.
+
+Once loaded, this is the state you should see for your application :
+
+[![](xcode/state2.png)](xcode/state2.png)
 
 ### Xcode
 
 XcodeCapp will have generated a hidden folder located in your root
 project folder, named `.XcodeSupport` and an XcodeProject named `Your-Application-Name.xcodeproj`. You should never need to edit
 anything in it. To launch the Xcode project of your Cappuccino project,
-click on the XcodeCapp icon, and choose `Open Project in Xcode`. Xcode
-will start.
+click on the XcodeCapp icon (the hammer).
 
 ![](xcode/xcode1.png)
 
@@ -98,10 +98,19 @@ like this:
 ### Conversion
 
 When your UI is ready, we need to convert the Xib file into a Cib file.
-XcodeCapp will do it automatically for us. Every time you save a change to the Xib file, XcodeCapp will convert it automatically. So when you save the file in Xcode, you will see a notification telling you the conversion
-has been a success:
+XcodeCapp will do it automatically for us. Every time you save a change to the Xib file, XcodeCapp will convert it automatically.
+
+You will be noticed by an user notification if something went bad during the conversation.
 
 ![](xcode/xcode7.png)
+
+XcodeCapp will give you more informations about the current errors. When having erros or warning the icon will turn to orange.
+
+![](xcode/xcode9.png)
+
+In the operations tab you can see what XcodeCapp is currently processing. At any moment you can cancel an operation.
+
+![](xcode/xcode15.png)
 
 ### Run the application
 
@@ -134,7 +143,7 @@ it, it will be the button that will interact with the code. Let’s see:
     @implementation AppController : CPObject
     {
         /* this "outlet" is connected automatically by the Cib */
-        CPWindow    theWindow;
+        @outlet CPWindow    theWindow;
 
         /* We create the outlets of the textfields here */
         @outlet CPTextField myTextField;
@@ -167,7 +176,7 @@ action like we've seen in previous tutorials:
     :::objj
     @implementation AppController : CPObject
     {
-        CPWindow    theWindow;
+        @outlet CPWindow    theWindow;
 
         @outlet CPTextField myTextField;
         @outlet CPTextField myLabel;
@@ -184,17 +193,6 @@ action like we've seen in previous tutorials:
        [myLabel setStringValue:[myTextField stringValue]];
     }
     @end
-
-### Conversion
-
-In order to make Xcode able to read the outlets/actions, we need
-to convert the Objective-J source file into a standard Objective-C header file.
-Again XcodeCapp will do the work for you! When you save the
-`AppController.j` file, you may see a notification telling you the
-conversion has been a success (or an error in of case syntax problems).
-We now just have to bind the code with the UI.
-
-![](xcode/xcode9.png)
 
 ### Defining outlets and actions from Xcode
 

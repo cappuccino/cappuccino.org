@@ -17,7 +17,7 @@ If you're happy with the starter package you may skip ahead to [<%= next_topic[0
 
 ##### Get Developers Tools (Mac OS X only)
 
-In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 4 is the current version, but Xcode 3 is (probably) still usable.
+In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 7 is the current version.
 
 ##### Install Git
 
@@ -79,7 +79,7 @@ The script will now start and will ask you several questions. Answer as follows:
      
     ================================================================================
      
-                                     Version 0.9.6
+                                     Version 0.9.8
      
      
                              http://cappuccino-project.org
@@ -113,7 +113,7 @@ Then it will ask if you want to append bin folder to your \$PATH. Answer
 
     You must add Cappuccino's "bin" directory to your PATH environment variable.
     Do this automatically now?
-        "export PATH="/usr/local/narwhal/bin:$PATH"" will be appended to "/root/.bashrc".
+        "export PATH="/usr/local/narwhal/bin:$PATH"" will be appended to "~/.profile".
     Enter "yes" or "no":
     => yes [ENTER]
 
@@ -123,7 +123,7 @@ Now it will ask you for the value of `$CAPP_BUILD`. Answer “yes”:
     Before building Cappuccino we recommend you set the $CAPP_BUILD environment
     variable to a path where you wish to build Cappuccino. This can be automatically
     set to the default value of "/root/Build", or you can set $CAPP_BUILD yourself.
-        "export CAPP_BUILD="/root/Build"" will be appended to "/root/.bashrc".
+        "export CAPP_BUILD="/root/Build"" will be appended to "~/.profile".
     Enter "yes" or "no":
     => yes [ENTER]
 
@@ -135,9 +135,9 @@ Finally, you will get:
     you restart the shell.
 
 Forget about restarting the shell, we are adults, just re-source
-the `.bash_profile` or `.bashrc`:
+the `.profile` or `.bashrc`:
 
-    source ~/.bash_profile
+    source ~/.profile
 
 or
 
@@ -182,7 +182,7 @@ This is optional in a sense. It’s not required to build Cappuccino application
 
 This should also work with the HomeBrew version of Doxygen. But at the moment, the provided formula seems to have problems, so you may prefer the GUI Application. If you have no idea what we are talking about, no worries. You can view the documentation [right here](/learn/documentation).
 
-If you want the documentation to generate the images representing the class graphs, you need to install `graphviz`, a utility which provides `dot`. On the Mac you can use [HomeBrew](http://mxcl.github.com/homebrew/). Note this
+If you want the documentation to generate the images representing the class graphs, you need to install `graphviz`, a utility which provides `dot`. On the Mac you can use [HomeBrew](http://brew.sh/). Note this
 is optional.
 
 Once built, you can open the documentation using the following command:
