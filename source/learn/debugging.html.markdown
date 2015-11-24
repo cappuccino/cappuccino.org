@@ -101,7 +101,9 @@ Reload `index-debug.html` and look at the Console:
 
 ![Oops, an error](tuto-debugger-3.png)
 
-The Console shows an error: `ReferenceError: Can't find variable: notDefinedVariable`. In this example the cause is obvious, but sometimes it’s not. Let’s imagine you can’t find the cause.
+The Console shows compiling warnings as `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'notDefinedVariable'` and `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'withAnotherNotDefinedVariable'`. It is quite obvious to know what is wrong with our application here.
+
+The Console shows an error as well: `ReferenceError: Can't find variable: notDefinedVariable`. In this example the cause is obvious, but sometimes it’s not. Let’s imagine you can’t find the cause.
 
 When an unmatched exception is logged, it’s too late to go back and
 see the cause. The debugger has to be enabled **before** the error.
@@ -111,7 +113,7 @@ button:
 
 ![Console](tuto-debugger-4.png)
 
-The Debugger will become activated. Make sure the icon with a stop sign and two parallel lines is blue or purple. This activates the "Pause on [uncaught] exceptions" feature.
+The Debugger will become activated. Make sure the All Exceptions breakpoint icon is activated. This activates the "Pause on [uncaught] exceptions" feature.
 
 ![Console](tuto-debugger-5.png)
 
@@ -119,7 +121,11 @@ Reload the application. When the error occurs, the debugger will stop JavaScript
 
 ![Console](tuto-debugger-6.png)
 
-On the left side you can see the line of code in the code that caused the exception. On the right side you have the execution stack.
+On the left side, you can see the Call Stack of the application. This will contain methods called internally by Cappuccino.
+
+In the middle, this is your code compiled by Cappuccino and the debugger is blocked on the line of code that caused the exception.
+
+On the right side, you can see the local variables of the current scope, the closure variables and the global variables (this will contain all of the variables of Cappuccino).
 
 Note that the code has been compiled from Objective-J to JavaScript by Cappuccino at this point, so the code does not look exactly like your original code. For example:
 
@@ -129,11 +135,11 @@ Note that the code has been compiled from Objective-J to JavaScript by Cappuccin
 Is compiled into:
 
     :::objj
-    objj_msgSend(myObject, "saySomething:", "hello");
+    (myObject == null ? null : myObject.isa.objj_msgSend1(myObject, "saySomething:", "hello"));
 
 If you want to delve into the depths of the Objective-J runtime, take a look at the equivalent documentation for Objective-C: [Apple’s developer documentation](http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html). For the most part you don't need to understand it perfectly to find out what's wrong with your original code though.
 
-The Call Stack shown on the right hand side of the Debugger allows you to click on earlier calls in the execution stack to inspect what was going on at that point. You can also display the content of your objects by
+The Call Stack shown on the left hand side of the Debugger allows you to click on earlier calls in the execution stack to inspect what was going on at that point. You can also display the content of your objects by
 putting the mouse over a declaration:
 
 ![Console](tuto-debugger-7.png)

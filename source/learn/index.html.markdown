@@ -135,6 +135,7 @@ Cocoa and Cappuccino looks very similar:
     :::objc
     NSString *myString = @"hello world";
     NSArray *myArray = [NSArray array];
+
     [myArray addObject:myString];
 
 #### Cappuccino sample code
@@ -142,6 +143,7 @@ Cocoa and Cappuccino looks very similar:
     :::objj
     var myString = @"hello world",
         myArray = [CPArray array];
+
     [myArray addObject:myString];
 
 ## Thank You

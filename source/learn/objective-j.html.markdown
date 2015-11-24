@@ -122,6 +122,7 @@ and sets the name:
 
     :::objj
     var myPerson = [[Person alloc] init];
+
     [myPerson setName:"John"];
 
 Method calls in Objective-J are called "messages", and you send an
@@ -157,10 +158,12 @@ directly:
     - (id)initWithName:(CPString)aName
     {
         self = [super init];
+
         if (self)
         {
             name = aName;
         }
+
         return self;
     }
 
@@ -222,6 +225,40 @@ That isn't to say it's impossible to leak objects. As with any garbage
 collected language, it's possible to accidentally hold on to reference
 to objects such that they can't be freed, so keep this in mind.
 
+### Protocols
+
+A class interface declares the methods and properties associated with that
+class. A protocol, by contrast, is used to declare methods and properties
+that are independent of any specific class. The class implementing a protocol
+would need to implement the required methods, but they are not required to
+implement the optional methods.
+
+Create a protocol :
+
+    :::objj
+    @protocol Move <CPObject>
+
+    // Required methods
+    @required
+    - (void)walk;
+
+    // Optional methods
+    @optional
+    - (void)run;
+    - (void)jump;
+
+    @end
+
+Adopting a protocol :
+
+    :::objj
+    @implementation Person : CPObject <Move>
+    {
+        CPString name;
+    }
+
+    @end
+
 ### Categories
 
 Categories allow you to add methods to a class without needing to create
@@ -257,6 +294,7 @@ Now you can call reverse on any string to get the reversed string.
     :::objj
     var myString = "hello world",
         reversed = [myString reverse];
+
     alert(reversed);  // alerts "dlrow olleh"
 
 The syntax for the category is `@implementation`, followed by the class
@@ -510,6 +548,14 @@ The `@global` declaration is needed to tell the compiler about a variable that i
 
     :::objj
     @global CPInvalidArgumentException
+
+The `@typdef` declartion is needed to create new type to tell the compiler about new variable type. For example CPButton.j uses the typedef `CPButtonType` which is actually an integer. With the keyword typedef, the compiler will not raise any warning when using this key word in an interface classe. This how you should use it :
+
+    :::objj
+    @typedef CPButtonType
+    CPMomentaryLightButton  = 0;
+    CPPushOnPushOffButton   = 1;
+    CPToggleButton          = 2;
 
 ### Wrapping Up
 
