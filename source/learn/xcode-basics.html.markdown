@@ -28,7 +28,7 @@ shipped with Cappuccino. In the default installation, you'll find it here:
 
     /Applications/XcodeCapp.app/
 
-Once launched, you will see a small coffee machine icon in your Mac OS X menu bar that should be grayed out. The main window of the application shold be displayed as well, click on the only button of the application !
+Once launched, you will see a small coffee machine icon in your Mac OS X menu bar that should be grayed out. The main window of the application shold be displayed as well. There is only one button - go ahead and click it!
 
 [![](xcode/state1.png)](xcode/state1.png)
 
@@ -39,7 +39,7 @@ currently loading the project. The initial time to load a project
 depends on the size of the project. For a new template it should be very
 quick.
 
-Once loaded, this is the state you should see for your application :
+Once loaded you should see this:
 
 [![](xcode/state2.png)](xcode/state2.png)
 
@@ -97,18 +97,17 @@ like this:
 
 ### Conversion
 
-When your UI is ready, we need to convert the Xib file into a Cib file.
-XcodeCapp will do it automatically for us. Every time you save a change to the Xib file, XcodeCapp will convert it automatically.
+When your UI is ready, we need to convert the Xib file into a Cib file. XcodeCapp will do it automatically for us. Every time you save a change to the Xib file, XcodeCapp will convert it automatically.
 
-You will be noticed by an user notification if something went bad during the conversation.
+You will be noticed by a user notification if something goes wrong during the conversion.
 
 ![](xcode/xcode7.png)
 
-XcodeCapp will give you more informations about the current errors. When having erros or warning the icon will turn to orange.
+XcodeCapp will give you more information about any current errors. When there are errors or warnings, the icon will turn orange.
 
 ![](xcode/xcode9.png)
 
-In the operations tab you can see what XcodeCapp is currently processing. At any moment you can cancel an operation.
+In the operations tab you can see what XcodeCapp is currently processing. You can cancel any ongoing operations.
 
 ![](xcode/xcode15.png)
 

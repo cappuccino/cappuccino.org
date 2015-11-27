@@ -233,7 +233,7 @@ that are independent of any specific class. The class implementing a protocol
 would need to implement the required methods, but they are not required to
 implement the optional methods.
 
-Create a protocol :
+Create a protocol:
 
     :::objj
     @protocol Move <CPObject>
@@ -249,7 +249,7 @@ Create a protocol :
 
     @end
 
-Adopting a protocol :
+Adopt a protocol:
 
     :::objj
     @implementation Person : CPObject <Move>
@@ -549,7 +549,9 @@ The `@global` declaration is needed to tell the compiler about a variable that i
     :::objj
     @global CPInvalidArgumentException
 
-The `@typdef` declartion is needed to create new type to tell the compiler about new variable type. For example CPButton.j uses the typedef `CPButtonType` which is actually an integer. With the keyword typedef, the compiler will not raise any warning when using this key word in an interface classe. This how you should use it :
+### Declaring new types
+
+The `@typdef` declaration is used to tell the compiler about new variable types. For example `CPButton.j` creates the `CPButtonType` out of a regular integer. Thanks to the keyword typedef, the compiler will not raise any warning when using this type in class interfaces. Here's how it's done:
 
     :::objj
     @typedef CPButtonType

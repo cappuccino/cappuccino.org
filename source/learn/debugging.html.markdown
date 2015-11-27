@@ -101,7 +101,7 @@ Reload `index-debug.html` and look at the Console:
 
 ![Oops, an error](tuto-debugger-3.png)
 
-The Console shows compiling warnings as `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'notDefinedVariable'` and `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'withAnotherNotDefinedVariable'`. It is quite obvious to know what is wrong with our application here.
+There are compilation warnings such as `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'notDefinedVariable'` and `WARNING line 47 in file:/Users/Dogild/Downloads/Starter/NewApplication/AppController.j: Using unknown class or uninitialized global variable 'withAnotherNotDefinedVariable'`. 
 
 The Console shows an error as well: `ReferenceError: Can't find variable: notDefinedVariable`. In this example the cause is obvious, but sometimes it’s not. Let’s imagine you can’t find the cause.
 
@@ -113,7 +113,7 @@ button:
 
 ![Console](tuto-debugger-4.png)
 
-The Debugger will become activated. Make sure the All Exceptions breakpoint icon is activated. This activates the "Pause on [uncaught] exceptions" feature.
+The Debugger will become activated. Make sure to click the All Exceptions breakpoint icon. This activates the "Pause on [uncaught] exceptions" feature.
 
 ![Console](tuto-debugger-5.png)
 
@@ -121,11 +121,11 @@ Reload the application. When the error occurs, the debugger will stop JavaScript
 
 ![Console](tuto-debugger-6.png)
 
-On the left side, you can see the Call Stack of the application. This will contain methods called internally by Cappuccino.
+On the left side, you can see the Call Stack of the application. This contains methods called internally by Cappuccino.
 
-In the middle, this is your code compiled by Cappuccino and the debugger is blocked on the line of code that caused the exception.
+In the middle you have your code compiled by Cappuccino. The debugger has stopped on the line of code that caused the exception.
 
-On the right side, you can see the local variables of the current scope, the closure variables and the global variables (this will contain all of the variables of Cappuccino).
+On the right side you can see the local variables of the current scope, the closure(s) and the global scope. (There are quite a few global  variables in Cappuccino.)
 
 Note that the code has been compiled from Objective-J to JavaScript by Cappuccino at this point, so the code does not look exactly like your original code. For example:
 
