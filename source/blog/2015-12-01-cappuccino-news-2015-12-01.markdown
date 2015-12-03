@@ -17,66 +17,66 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ### Community
 
-The CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st March 2016. You can find more informations [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
+The CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st of March 2016. You can find more information [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
 
-A Worldwide Cappuccino Meetup has been created [here](http://www.meetup.com/World-Cappuccino-Meetup/). Events will be organize in Mountain View every 3-4 months from April 2016. These meetups will cover different themes such as testing, demos, libraries, good practices and more.
+A Worldwide Cappuccino Meetup has been created [here](http://www.meetup.com/World-Cappuccino-Meetup/). Events will be organized in Mountain View every 3-4 months from April 2016. These meetups will cover different themes such as testing, demos, libraries, good practices and more.
 
 ### Cappuccino
 
 ##### News
 
-- New: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Possibility to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`. Array and dictionary generate now more efficient code. This improves app speed by up 20%. ([mrcarlberg](https://github.com/mrcarlberg) - [8c2f0ba](https://github.com/cappuccino/cappuccino/commit/8c2f0bacf132789ab29dcb33a9eae98cfd286de8)
+- New: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Possibility to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`. Arrays and dictionaries use more efficient code. This improves app speed by up to 20%. ([mrcarlberg](https://github.com/mrcarlberg) - [8c2f0ba](https://github.com/cappuccino/cappuccino/commit/8c2f0bacf132789ab29dcb33a9eae98cfd286de8)
 
-- New: include by default type signatures when compiling a `objective-j` file. This can be disable by removing the compiler flag `IncludeTypeSignatures` or compiling with the option `-T` ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
+- New: include type signatures by default when compiling an Objective-J file. This can be disabled by removing the compiler flag `IncludeTypeSignatures` or compiling with the `-T` option. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
 
-- New: added runtime methods `method_copyReturnType`, `method_copyArgumentType` and `method_getNumberOfArguments`. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
+- New: runtime methods `method_copyReturnType`, `method_copyArgumentType` and `method_getNumberOfArguments`. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
 
 ##### Changes/Fixes
 
-- Fixed: `cib` performances improved by a better way to handle `CPThemeAttribute`. Speed improvement by up 20% when loading a `cib`. ([mrcarlberg](https://github.com/mrcarlberg) - [b929a8f](https://github.com/cappuccino/cappuccino/commit/b929a8fe2e3c9fb67bbce6daeb10e4c48e4eeba0)
+- Fixed: cib performances improved through a better way to handle `CPThemeAttribute`. Speed improvements of up 20% when loading a cib. ([mrcarlberg](https://github.com/mrcarlberg) - [b929a8f](https://github.com/cappuccino/cappuccino/commit/b929a8fe2e3c9fb67bbce6daeb10e4c48e4eeba0)
 
-- Fixed: default selection of a `CPTabView` does not work. ([zittix](https://github.com/zittix) - [5e94aaa](https://github.com/cappuccino/cappuccino/commit/5e94aaa2cb15896f6323436bbcef6c1cd08e90bc))
+- Fixed: default selection of a `CPTabView` didn't not work. ([zittix](https://github.com/zittix) - [5e94aaa](https://github.com/cappuccino/cappuccino/commit/5e94aaa2cb15896f6323436bbcef6c1cd08e90bc))
 
-- Fixed: `CPBundle +loadCibNamed:owner:` is asynchronous instead of being synchronous. ([Dogild](https://github.com/Dogild) - [0bc02de](https://github.com/cappuccino/cappuccino/commit/0bc02de0129e912e4f040d1f16c582ec843a4924))
+- Fixed: `CPBundle +loadCibNamed:owner:` was asynchronous instead of synchronous. ([Dogild](https://github.com/Dogild) - [0bc02de](https://github.com/cappuccino/cappuccino/commit/0bc02de0129e912e4f040d1f16c582ec843a4924))
 
-- Fixed: cursor position of a `CPTextField` is wrong when the `CPTextField` becomes first responder. ([Dogild](https://github.com/Dogild) - [78e29d2](https://github.com/cappuccino/cappuccino/commit/78e29d2bbfe43f5a8bda2e65d974f7effb8fcbd4))
+- Fixed: cursor position of a `CPTextField` was wrong when the `CPTextField` became the first responder. ([Dogild](https://github.com/Dogild) - [78e29d2](https://github.com/cappuccino/cappuccino/commit/78e29d2bbfe43f5a8bda2e65d974f7effb8fcbd4))
 
-- Fixed: `XcodeCapp` ignores by default the ressources folder. ([Dogild](https://github.com/Dogild) - [5457ddb](https://github.com/cappuccino/cappuccino/commit/5457ddb44fc7df0ac7d720b253746100937f914c))
+- New: XcodeCapp ignores the resources folder. ([Dogild](https://github.com/Dogild) - [5457ddb](https://github.com/cappuccino/cappuccino/commit/5457ddb44fc7df0ac7d720b253746100937f914c))
 
-- Fixed: `XCodeCapp` does not ignore `XcodeCapp` xib when having `XcodeCapp` in a `Cappuccino` project. ([Dogild](https://github.com/Dogild) - [2b17e17](https://github.com/cappuccino/cappuccino/commit/2b17e173f5b35b17c9cc4112a743a66e269494b9))
+- Fixed: XCodeCapp did not ignore its own xib when the XcodeCapp folder was in a Cappuccino project. ([Dogild](https://github.com/Dogild) - [2b17e17](https://github.com/cappuccino/cappuccino/commit/2b17e173f5b35b17c9cc4112a743a66e269494b9))
 
-- Optimized: memory leaks in `XcodeCapp`. ([Dogild](https://github.com/Dogild) - [671ed3c](https://github.com/cappuccino/cappuccino/commit/671ed3c2fec816d243e30cd8856ecdec423e7e15) [bacb701](https://github.com/cappuccino/cappuccino/commit/bacb7018cba2e892a952f80c669cac9f84c31c47))
+- Fixed: memory leaks in XcodeCapp. ([Dogild](https://github.com/Dogild) - [671ed3c](https://github.com/cappuccino/cappuccino/commit/671ed3c2fec816d243e30cd8856ecdec423e7e15) [bacb701](https://github.com/cappuccino/cappuccino/commit/bacb7018cba2e892a952f80c669cac9f84c31c47))
 
-- Optimized: reload the operations and errors table view only when they are displayed in `XcodeCapp`. ([Dogild](https://github.com/Dogild) - [2b17e17](https://github.com/cappuccino/cappuccino/commit/2b17e173f5b35b17c9cc4112a743a66e269494b9))
+- Optimized: reload the operations and errors table views only when they are visible in XcodeCapp. ([Dogild](https://github.com/Dogild) - [2b17e17](https://github.com/cappuccino/cappuccino/commit/2b17e173f5b35b17c9cc4112a743a66e269494b9))
 
-- Refactored: do not use `Lumberjack` in `XcodeCapp` anymore. ([Dogild](https://github.com/Dogild) - [f41504c](https://github.com/cappuccino/cappuccino/commit/f41504ca57d3cfc3b361626a26e2b16438745ec3) [51a88a2](https://github.com/cappuccino/cappuccino/commit/51a88a23acd7ecf366c0720fddf6f47e968f9f1c))
+- Refactored: do not use Lumberjack in XcodeCapp anymore. ([Dogild](https://github.com/Dogild) - [f41504c](https://github.com/cappuccino/cappuccino/commit/f41504ca57d3cfc3b361626a26e2b16438745ec3) [51a88a2](https://github.com/cappuccino/cappuccino/commit/51a88a23acd7ecf366c0720fddf6f47e968f9f1c))
 
-- Refactored: refactoring of the method `CPString -charPositionOfString:withFont:forPoint:`. ([Dogild](https://github.com/Dogild) - [e214bf3](https://github.com/cappuccino/cappuccino/commit/e214bf3581551f1c94ae30dc2e9723dc8964ed92))
+- Refactored: `CPString -charPositionOfString:withFont:forPoint:`. ([Dogild](https://github.com/Dogild) - [e214bf3](https://github.com/cappuccino/cappuccino/commit/e214bf3581551f1c94ae30dc2e9723dc8964ed92))
 
-- Test: manual test SmartFoldersDemo is broken. ([Dogild](https://github.com/Dogild) - [411a282](https://github.com/cappuccino/cappuccino/commit/411a282063e01b65c1c4daf519aaa04bb561bd3d))
+- Test: manual test SmartFoldersDemo fixed. ([Dogild](https://github.com/Dogild) - [411a282](https://github.com/cappuccino/cappuccino/commit/411a282063e01b65c1c4daf519aaa04bb561bd3d))
 
 ### Cucapp
 
 ##### News
 
-- New: `cucapp` uses now `watir-webdriver` as support for the browser. ([Dogild](https://github.com/Dogild) - [27f03e4](https://github.com/cappuccino/cucapp/commit/27f03e46b5928ecf18b67e165d3917bb64de2cd9))
+- New: Cucapp now uses `watir-webdriver` as support for the browser. ([Dogild](https://github.com/Dogild) - [27f03e4](https://github.com/cappuccino/cucapp/commit/27f03e46b5928ecf18b67e165d3917bb64de2cd9))
 
-- New: added environment variable `WATIR_CHROME_DRIVER` and `WATIR_CHROME_SWITCHES` to configure `watir` configuration for chrome. ([minimilk](https://github.com/minimilk) - [a12e068](https://github.com/cappuccino/cucapp/commit/a12e0686931ca28a15f1625d51343138c7642254))
+- New: environment variables `WATIR_CHROME_DRIVER` and `WATIR_CHROME_SWITCHES` to configure `watir` for Chrome. ([minimilk](https://github.com/minimilk) - [a12e068](https://github.com/cappuccino/cucapp/commit/a12e0686931ca28a15f1625d51343138c7642254))
 
-- New: files `CPResponder+CuCapp.j` and `CuCapp+Record.j` are now copied in the targeted folder when using the command `cucapp`. ([Dogild](https://github.com/Dogild) - [61b1906](https://github.com/cappuccino/cucapp/commit/61b19065656f96a676bf99d611ff21253836831b))
+- New: files `CPResponder+CuCapp.j` and `CuCapp+Record.j` are now copied to the targeted folder when using the `cucapp` command. ([Dogild](https://github.com/Dogild) - [61b1906](https://github.com/cappuccino/cucapp/commit/61b19065656f96a676bf99d611ff21253836831b))
 
-- New: `cucapp` now dispatches `DOM` events to the main document instead of sending events to the `CPApp`. ([Dogild](https://github.com/Dogild) - [7f830c1](https://github.com/cappuccino/cucapp/commit/7f830c173fafb1daf2ae79bf5b2d470601396d0a))
+- New: Cucapp now dispatches `DOM` events to the main document instead of sending events to the `CPApp`. ([Dogild](https://github.com/Dogild) - [7f830c1](https://github.com/cappuccino/cucapp/commit/7f830c173fafb1daf2ae79bf5b2d470601396d0a))
 
-- New: added default steps as clicking, hittig a key and chencking `CPControl` value in `test_application_steps.rb`. ([Dogild](https://github.com/Dogild) - [8075435](https://github.com/cappuccino/cucapp/commit/8075435cb1fb1d18469ccc279b355aeb662f2e6c))
+- New: default steps such as clicking, hitting a key and checking a `CPControl` value in `test_application_steps.rb`. ([Dogild](https://github.com/Dogild) - [8075435](https://github.com/cappuccino/cucapp/commit/8075435cb1fb1d18469ccc279b355aeb662f2e6c))
 
-- New: added environement variable `BROWSER_SIZE_WIDTH` and `BROWSER_SIZE_HEIGHT` to specify the size of the browser when testing. ([Dogild](https://github.com/Dogild) - [8075435](https://github.com/cappuccino/cucapp/commit/8075435cb1fb1d18469ccc279b355aeb662f2e6c))
+- New: environment variables `BROWSER_SIZE_WIDTH` and `BROWSER_SIZE_HEIGHT` to specify the size of the browser when testing. ([Dogild](https://github.com/Dogild) - [8075435](https://github.com/cappuccino/cucapp/commit/8075435cb1fb1d18469ccc279b355aeb662f2e6c))
 
-- New: added the possiblity to create screenshots from `cucapp`. ([Dogild](https://github.com/Dogild) - [3472386](https://github.com/cappuccino/cucapp/commit/3472386a917f676a3565a8a2b42cff68ba25f8bf))
+- New: possiblity to create screenshots from Cucapp. ([Dogild](https://github.com/Dogild) - [3472386](https://github.com/cappuccino/cucapp/commit/3472386a917f676a3565a8a2b42cff68ba25f8bf))
 
-- New: added support for `phantomjs`. ([Dogild](https://github.com/Dogild) - [10b3ff2](https://github.com/cappuccino/cucapp/commit/10b3ff2a1e8e110a6fb4a57493d7ee894417bd08))
+- New: support for phantomjs. ([Dogild](https://github.com/Dogild) - [10b3ff2](https://github.com/cappuccino/cucapp/commit/10b3ff2a1e8e110a6fb4a57493d7ee894417bd08))
 
 ### Website
 
 ##### Change/Fixes
 
-- Fixed: tutorials have been updated with last features of `XcodeCapp`, `safari` and `objective-j` ([Dogild](https://github.com/Dogild) - [c468440](https://github.com/cappuccino/cappuccino.org/commit/c468440923b8bb30d28c592040fcc5e83dec5893))
+- Fixed: tutorials have been updated with the latest features of XcodeCapp, Safari and Objective-J. ([Dogild](https://github.com/Dogild) - [c468440](https://github.com/cappuccino/cappuccino.org/commit/c468440923b8bb30d28c592040fcc5e83dec5893))
