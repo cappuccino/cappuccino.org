@@ -1,6 +1,6 @@
-`OJTest` is a collection Framework that aim to provide a comprehensive testing solution for Cappuccino applications. The `OJTest` framework is another repositoty of the Cappuccino project. You can find it [here](https://github.com/cappuccino/OJTest).
+`OJTest` is a collection Framework that aim to provide a comprehensive testing solution for Cappuccino applications. The `OJTest` frameworks is another repositoty of the Cappuccino project. You can find it [here](https://github.com/cappuccino/OJTest).
 
-`OJTest` are the perfect frameworks to create unit-tests and test algorithms. `OJTest` runs in a shell and do not use any headless browser, it means that no DOM element are created along with your tests. To achieve that, you can take a look to the next topic [cucapp](/learn/cucapp.html).
+`OJTest` are the perfect frameworks to create unit-tests and test algorithms. `OJTest` runs in a shell and do not use any headless browser, it means that no DOM element are created along with your tests. To achieve DOM element testing, you can take a look to the next topic [cucapp](/learn/cucapp.html).
 
 These frameworks are used to test the Framework Cappuccino, you can find a lot of examples in the folder `Tests/` of the Cappuccino's source.
 
@@ -102,7 +102,7 @@ This method is a test to check if the method `CPDateFormatter -stringFromDate` w
 
 One of the first thing you should notice, the name of the method starts with the key word test. This is a <b>must do</b>, it allows `OJTest` to know which methods are running tests.
 
-As you can see, we advice to seperate your test in three different parts. The first one is about the environement you want to use for your test, the second is the action you want to realize and the third one is the result you want to test.
+As you can see, we advice to seperate your test in three different parts. The first one is about the environement you want to use for your test, the second is the action you want to realize and the third one is the result you want to check.
 
 Also we advice to test one only thing per test. This will help you and your team when a test will fail in the future. And they will !
 
@@ -111,7 +111,7 @@ Also we advice to test one only thing per test. This will help you and your team
 Simply use the command `ojtest` on the targeted file :
 
     :::bash
-    ojtest Tests/Foundation/CPDateFormatterTest.j
+    ojtest path/to/your/test/repository/CPDateFormatterTest.j
 
 ### OJMoq - a mocking Framework
 
