@@ -225,7 +225,7 @@ You can run the test coverage along with your OJUnit test by using the option -c
     :::bash
     ojtest -c Tests/Foundation/CPDateFormatterTest.j
 
-### Addtional Info
+### Additional Info
 
 OJTest provides a doxygen help, you will find this help in the folder documentation of the repository OJTest.
 
