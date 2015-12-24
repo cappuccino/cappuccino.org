@@ -1,20 +1,20 @@
-Cucapp is a framework which allows you to create tests in [Cucumber](https://cucumber.io) for testing your Cappuccino Application. Cucapp can be used either for unit-testing or functional testing. Cucapp is a tool which can be used in a black / grey / white box testing.
+Cucapp is a framework which allows you to create tests in [Cucumber](https://cucumber.io) for testing your Cappuccino Application. Cucapp can be used either for unit-testing or functional testing. Cucapp is a tool which can be used in a black / grey / white box testing environment.
 
-By default Cucapp will launch the browser Firefox when running the tests. We advise you to work with a headless browser like [phantomjs](http://phantomjs.org) though.
+By default Cucapp will launch the browser Firefox when running the tests. We, however, advise you to work with a headless browser like [phantomjs](http://phantomjs.org).
 
-When launching your tests with Cucapp, the Cappuccino application is served via a [thin](http://code.macournoyer.com/thin/) server and a small piece of code is injected. This code connects back to your Cucumber script via AJAX requests.
+When launching your tests with Cucapp, the Cappuccino application is served via a [thin](http://code.macournoyer.com/thin/) server and a small piece of code is then injected. This code connects back to your Cucumber script via AJAX requests.
 
-Cucapp provides an abstract layer of steps to simulate actions and check values of controls.
+Cucapp provides an abstract layer of steps to simulate actions and check values of control.
 
 The Cucapp framework is another repository of the Cappuccino project. You can find it [here](https://github.com/cappuccino/cucapp).
 
 ### Installation
 
-Cappuccino has to be installed to use Cucapp. If not please follow the tutorial [Advanced: Install from Source](/learn/build-source.html).
+Cappuccino has to be installed prior to use Cucapp. If not installed, please follow the tutorial [Advanced: Install from Source](/learn/build-source.html).
 
-Cucapp is not installed at the same time as Cappuccino. Please follow the procedure below.
+Cucapp will not installed at the same time as Cappuccino. Please follow the procedure below.
 
-<span class="label label-info">Info</span> Ruby needs to be installed on your system. We advise to work with [RVM](http://rvm.io). It allows to easily manage a ruby environment.
+<span class="label label-info">Info</span> Ruby needs to be installed on your system. We advise to work with [RVM](http://rvm.io). It allows you to easily manage a ruby environment.
 
 To get started, download the current version of Cuccap:
 
@@ -26,9 +26,9 @@ Then install Cucapp on your system:
     :::bash
     cd cucapp; jake install
 
-When installing Cucapp, the following gems are going to be installed `Cucumber`, `Thin`, `Nokogiri`, `JSON` and `Watir-Webdriver`.
+When installing Cucapp, the following Ruby gems are going to be installed `Cucumber`, `Thin`, `Nokogiri`, `JSON` and `Watir-Webdriver`.
 
-<span class="label label-info">Info</span> `Nokogiri` can be painful to install on El Capitan. You can find helps [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html)
+<span class="label label-info">Info</span> `Nokogiri` can be painful to install on El Capitan. You can find help [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html)
 
 To be sure everything runs fine, verify that you have the `cucapp` command in your PATH:
 
@@ -40,7 +40,7 @@ Cucapp will use Firefox by default. If you want to use Chrome or Safari, you wil
 
 ### The cucapp command
 
-The `cucapp` command has only one goal yet. It allows you to create a testing architecture for your Cappuccino Application.
+The `cucapp` command has only one purpose at this time. It allows you to create a testing architecture for your Cappuccino Application.
 
 Launch `cucapp` on the targeted application with the following command:
 
@@ -69,11 +69,11 @@ The first step to create tests for this application is to link Cucapp to this pr
     :::bash
     cucapp -p path/to/AdvancedHelloWorld/
 
-Once done you should see the folder features in AdvancedHelloWorld.
+Once done you should see the folder `features` in AdvancedHelloWorld.
 
 #### Create the test
 
-First, for this test we need to make few modifications in the `AppController`. We need to import the category `CPResponder+CuCapp.j` and set a `cucappIdentifier` to the `CPTextField`. This allows us to have an unique identifier for our `CPTextFields`.
+First, for this test we need to make a few modifications in the `AppController`. We need to import the category `CPResponder+CuCapp.j` and set a `cucappIdentifier` to the `CPTextField`. This allows us to have a unique identifier for `CPTextFields`.
 
     :::objj
     /*
@@ -125,9 +125,9 @@ First, for this test we need to make few modifications in the `AppController`. W
 
     @end
 
-Now, we need to write our test. The test will be very easy, we will simulate an user who is typing the word Cucumber, then hitting enter and finally we will check that the word Cucumber is shown in the label.
+Now, we need to write our test. The test will be very easy, we will simulate a user who is typing the word Cucumber, then hitting enter and finally we will confirm that the word Cucumber is shown in the label.
 
-For that, open the file test_application.feature in the folder features and modify it as below :
+For that, open the file 'test_application.feature' in the folder `features` and modify it as shown below :
 
     :::gherkin
     Feature: Demo of cucapp
@@ -139,7 +139,7 @@ For that, open the file test_application.feature in the folder features and modi
         When I hit the key enter
         Then the field with the property cucapp-identifier set to myLabel should have the value Cucumber
 
-These steps are provided by the abstract steps layer of Cucapp. More default steps (click, drag and drop, scrolling etc.) can be used, you can find them in the [documentation](https://github.com/cappuccino/cucapp) of Cucapp.
+These steps are provided by the 'abstract steps' layer of Cucapp. More default steps (click, drag and drop, scrolling etc.) can be used, you can find them in the [documentation](https://github.com/cappuccino/cucapp) of Cucapp.
 
 #### Launch the tests
 
@@ -148,13 +148,13 @@ Simply use the command below :
     :::bash
     jake cucumber-test
 
-And voilà! If everything worked as expected you should have seen that the browser opened itself, then actions were performed in the interface and finally you terminal showed that the tests passed.
+Et voilà! If everything worked as expected, you should have seen that the browser opened itself up, then actions were performed, and finally your terminal showed that the tests passed.
 
 ![](cucapp-1-terminal.png)
 
 ### Create your own steps
 
-In the previous example, we used the abstract steps layer of Cucapp to write our test. Maybe you don't want that, maybe you want to be in control to know and understand what you are doing in your steps. And good news, Cucapp gives the possibility to write your own steps as well.
+In the previous example, we used the "abstract steps" layer of Cucapp to write our test. Maybe you don't want that, maybe you want to be in control to know and understand what you are doing in your steps. And good news, Cucapp gives the possibility to write your own steps as well.
 
 What about a personal step to click on the `CPTextField` and then enter the value Cucumber.
 
@@ -183,7 +183,7 @@ Then, in the folder `features/step_definitions`, create a new file `my_steps.rb`
       app.gui.simulate_keyboard_event   $CPNewlineCharacter
     end
 
-As you can see, we just tell to Cucapp to simulate actions. The object app provides an API to simulate everything that an user could do!
+As you can see, we just tell Cucapp to simulate actions. The object app provides an API to simulate everything that a user could do!
 
 You can find the source of this demo [here](files/AdvancedHelloWorldCucapp.zip).
 
