@@ -1,0 +1,62 @@
+---
+title: Cappuccino News 2016 January 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2016-01-01'
+tags:
+- Cappuccino
+- objj
+- update
+- cucapp
+- cappCon2016
+---
+
+Here's a quick update on what's new with Cappuccino in the last month.
+
+### Community
+
+The CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st of March 2016. You can find more information [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
+
+### Cappuccino
+
+##### New
+
+- New: implementation of `CPTrackingArea`. ([didierkorthoudt](https://github.com/didierkorthoudt) - [932b82](https://github.com/cappuccino/cappuccino/commit/932b82818be0f823b6c099f1a0be33288355b61) [770d5e](https://github.com/cappuccino/cappuccino/commit/770d5eb257f00b42908481faccde03e3aab28cdd))
+
+##### Changes/Fixes
+
+- Fixed: Cappuccino is now compatible with Internet Explorer 10. Properties `withCredentials` is set when a `XMLHttpRequest` is not yet open. ([Rosch](https://github.com/Rosch) - [04f8545](https://github.com/cappuccino/cappuccino/commit/04f8545397167019e5df397a2f9bf08003f127b6) [0508b70](https://github.com/cappuccino/cappuccino/commit/0508b70658a93d666a001885f7a1fbd54fe1360a))
+
+- Fixed: Subquery expressions containing variables of a `CPPredicate` are ignored. ([cacaodev](https://github.com/cacaodev) - [0ac0845](https://github.com/cappuccino/cappuccino/commit/0ac08456bc14b17c0c82596c15cc7aa6f38031bb))
+
+- Fixed: `CPDateFormatter` does not work with the symobols `MM` and `LL` for the month of December. ([Dogild](https://github.com/Dogild) - [b59b025](https://github.com/cappuccino/cappuccino/commit/b59b0259ca5d75fcb0e04dbc84209f77a01e0767))
+
+- Test: added a manual test for `CPTabViewBindings`. ([cacaodev](https://github.com/cacaodev) - [912fdea](https://github.com/cappuccino/cappuccino/commit/912fdeaf0969fe9d27fd1b9274f54976bbaffb92))
+
+### Cucapp
+
+##### News
+
+- New: added an abstract layer of steps. These steps can be used to quickly and easily write tests in Cucumber, they are totally abstract and can be used for every Cappuccino Application. They provide an API to simulate any actions a user could perform and to check values in the application. ([Dogild](https://github.com/Dogild) - [30786c5](https://github.com/cappuccino/cucapp/commit/30786c56a0af0d81faa8fae9ee575f2fcf9ac0d2))
+
+- New: the environment variable `CAPP_INSTALL_DIR` can be used to specify where Cucapp should be installed when using the command `jake install`. ([Dogild](https://github.com/Dogild) - [b172e5a](https://github.com/cappuccino/cucapp/commit/b172e5acaaf14b0b6675b9cac7744568f6a4e6e2))
+
+- New: added ruby methods to generate mouse up and down events. ([william57m](https://github.com/william57m) - [76551a5](https://github.com/cappuccino/cucapp/commit/76551a54b5b23404a0d5dbc8b4d75f08d5cfee6d))
+
+- New: added the environment variable `BROWSER_FULL_SCREEN` to have the browser in full screen when testing. ([william57m](https://github.com/william57m) - [76551a5](https://github.com/cappuccino/cucapp/commit/76551a54b5b23404a0d5dbc8b4d75f08d5cfee6d))
+
+##### Changes/Fixes
+
+- Fixed: refactoring of the class `Encumber`. Drag and drop events are generated from the Cappuccino side, they are now generated from the Cucumber side.  ([william57m](https://github.com/william57m) - [76551a5](https://github.com/cappuccino/cucapp/commit/76551a54b5b23404a0d5dbc8b4d75f08d5cfee6d))
+
+- Fixed: it is not possible to launch the tests other than the port 3000. ([Dogild](https://github.com/Dogild) - [a87e514](https://github.com/cappuccino/cucapp/commit/a87e514f93c43009e39008550d18735cf05bc7c0) [531645a](https://github.com/cappuccino/cucapp/commit/531645a6f12aef03ced015d01dbe3260c31ce833))
+
+### OJTest
+
+##### New
+
+- New: the command `jake install` will update OJTest on your system. ([Dogild](https://github.com/Dogild) - [d19e968](https://github.com/cappuccino/OJTest/commit/d19e968be94ec2328bf7536797de8c5f5e89451a))
+
+##### Change/Fixe
+
+- Fixed: rename duplicate unit-tests. ([tancred](https://github.com/tancred) - [522fcdf](https://github.com/cappuccino/OJTest/commit/522fcdfb51f1bed9dea65d4f340bdea92f7ae7c0))
