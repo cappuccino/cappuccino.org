@@ -1,26 +1,27 @@
-`OJTest` is a collection Framework that aims to provide a comprehensive testing solution for Cappuccino applications. The `OJTest` frameworks are another repository of the Cappuccino project. You can find it [here](https://github.com/cappuccino/OJTest).
+OJTest is a collection of frameworks which aim to provide a comprehensive testing solution for Cappuccino applications. They are separate from Cappuccino itself. You can find the framworks [here](https://github.com/cappuccino/OJTest).
 
-`OJTest` are the perfect frameworks to create unit-tests and test algorithms. `OJTest` run in a shell and do not use any headless browser, it means that no DOM element are created along with your tests. To achieve DOM element testing, you can take a look in the next topic [cucapp](/learn/cucapp.html).
+OJTest is used to create unit-tests and test algorithms. OJTest runs in a shell and, unlike say Cucapp, does not use a web browser. This means there are no DOM elements, the actual browser based bits and pieces that implement the UI in Cappuccino. You still have all the logic but it's running in a 'headless' mode so to speak. (To test with actual DOM elements in play (full UI simulation), see the next topic [Cucapp](/learn/cucapp.html).)
 
-These frameworks are used to test the Cappuccino Framework, you can find a lot of examples in the folder `Tests/` of the Cappuccino source.
+Cappuccino itself is tested using OJTest, so there are many examples in its source code on how to write tests. Check out the `Tests/` folder of the Cappuccino sources.
 
 ### Installation
 
-OJTest is installed by default when you install Cappuccino from the source. If you did not do it, please follow the tutorial [Advanced: Install from Source](/learn/build-source.html).
+OJTest is installed by default when you install Cappuccino from sources. If you did not do it, please follow the tutorial [Advanced: Install from Source](/learn/build-source.html).
 
-Once Cappuccino is installed, you do not have the lastest version of `OJTest` installed yet. If you like risks and you would like to use the latest version of `OJTest`, please follow the procedure below.
+Once Cappuccino is installed, you may choose to install the latest version of OJTest, which might be newer than the version included with Cappuccino. To do so, follow these steps.
 
-First, clone the git repository of OJTest :
+First, clone the git repository of OJTest:
 
     :::bash
     git clone https://github.com/cappuccino/OJTest
 
-Then move to the OJTest directory and launch the install command :
+Then enter the OJTest directory and launch the install command:
 
     :::bash
-    cd OJTest; jake install
+    cd OJTest
+    jake install
 
-To be sure everything runs fine, verify that you have the `ojtest` command in your PATH:
+Verify that `ojtest` is in your `PATH`:
 
     :::bash
     # ojtest -h
@@ -28,17 +29,17 @@ To be sure everything runs fine, verify that you have the `ojtest` command in yo
     [...]
 
 
-### OJUnit - a xUnit Framework
+### OJUnit - an xUnit Framework
 
-To explain how OJUnit works, we are going to create a very simple test to check if one feature of the class `CPDateFormatter` works as expected.
+To explain how OJUnit works we are going to create a very simple test to check if one feature of the class `CPDateFormatter` works as expected.
 
 #### Structure of your test file
 
-One of the first rule you need to follow when creating tests is how you name your test files. OJTest will only launch tests on files with names that follow the pattern `*Test.j`. In our case `CPDateFormatterTest.j`.
+There is a rule for how to name your test files when working with OJTest. OJTest will only run tests found in files with names that follow the pattern `*Test.j`. In our example, let's name the test file `CPDateFormatterTest.j`.
 
-Secondly, you need to create a class which has a <b>class name that exactly matches the name of your file</b>. This class should inherit from `OJTestCase`.
+Also, you need to name your test class inside of your test file to a <b>class name that exactly matches the name of your file</b>. The class should inherit from `OJTestCase`.
 
-`OJTest` gives possibilities to setup and clean your environment before and after your tests are executed.
+OJTest supports the `setUp` and `tearDown` methods like in other xUnit frameworks. They enable you to configure your test environment. Here's what we will use for this example.
 
     :::objj
     @import <Foundation/Foundation.j>
@@ -48,23 +49,21 @@ Secondly, you need to create a class which has a <b>class name that exactly matc
     {
     }
 
-    // Only called one time, before every tests
+    // Only called one time, before all the tests of the class.
     + (void)setUp
     {
-        // You could here create data files you are about to use in a test
+        // You could load data from a test file here or otherwise configure your environment for your test.
     }
 
-    // Only called one time, after every tests
+    // Only called one time, after all the tests of the class.
     + (void)tearDown
     {
-        // You could here delete the data files created in the setUp
+        // If you did anything in + setUp that needs to be undone, this is where to do that.
     }
 
-    // Called before each test
+    // Called before each test.
     - (void)setUp
     {
-        // Here we create a CPDate and a CPDateFormatter
-        // These objects are going to be used for our tests
         _date = [[CPDate alloc] initWithString:@"2011-10-05 16:34:38 -0900"];
 
         _dateFormatter = [[CPDateFormatter alloc] init];
@@ -74,56 +73,58 @@ Secondly, you need to create a class which has a <b>class name that exactly matc
         [_dateFormatter setTimeZone:[CPTimeZone timeZoneWithAbbreviation:@"PDT"]];
     }
 
-    // Called after each test
+    // Called after each test.
     - (void)tearDown
     {
-        // You could here do extra works on your test environement
+        // If you did anything in - setUp, this is there to undo it.
     }
 
     @end
 
 #### Write the test
 
-This method is a test to check if the method `CPDateFormatter -stringFromDate` works as expected with a specific environment.
+Here is the test we'll use for our example. It checks that `CPDateFormatter -stringFromDate` works as expected with a specific environment.
 
     :::objj
     - (void)testStringFromDateDateFullStyleTimeFullStyle
     {
-        // Here we put the environment we want to test
+        // Configure the environment we want to test.
         [_dateFormatter setDateStyle:CPDateFormatterFullStyle];
         [_dateFormatter setTimeStyle:CPDateFormatterFullStyle];
 
-        // Here we send a message stringFromDate to an instance of CPDateFormatter
+        // Send a message, stringFromDate, to an instance of CPDateFormatter.
         var result = [_dateFormatter stringFromDate:_date];
 
-        // Here we test if the result is the one we expect
+        // Test if the result is the one we expect.
         [self assert:result equals:@"Wednesday, October 5, 2011 6:34:38 PM Pacific Daylight Time"];
     }
 
-One of the first thing you should notice is that the name of the method starts with the keyword test. This is a <b>must</b>, it allows `OJTest` to know which methods are running tests.
+Note that the name of the method starts with the keyword test. This is <b>required</b>: it allows `OJTest` to know which methods are actual tests.
 
-As you can see, we advise to separate your test in three different parts. The first one is regarding the environment you want to use for your test, the second is the action you want to perform, and the third one is the result you want to validate.
+We advise you to separate your tests into three different parts. Test specific setup, an action and finally verification. Try to test only one thing per test. This will allow you to give each test a clear and purposeful name so that when a test fails you'll immediately know what failed (and conversely, when it succeeds you know what exactly it is that works).
 
-Lastly, we advise to check one thing per test prepared. This will help you and your team when a test fails in the future. And they will !
 
 #### Launch the tests
 
-Simply use the command `ojtest` on the targeted file :
+To run our tests we'll use the `ojtest` command:
 
     :::bash
-    ojtest path/to/your/test/repository/CPDateFormatterTest.j
+    ojtest CPDateFormatterTest.j
+
 
 ### OJMoq - a mocking Framework
 
-`OJMoq` allows you to replace parts of your system under test with mock objects and make assertions about how they have been used.
+OJMoq allows you to replace parts of your system under test with mock objects and make assertions about how they have been used.
 
-It provides a core `OJMoqSpy` class removing the need to create a host of stubs throughout your test suite. After performing an action, you can make assertions about which methods / attributes were used and arguments they were called with.
+It provides a core `OJMoqSpy` class which eliminates the need to create a host of stubs throughout your test suite. After performing an action, you can make assertions about which methods / attributes were used and which arguments they were called with.
 
-`OJMoq` can be used for a lot of different scenarios! For instance it's the perfect tool to test if a class calls delegate or dataSource methods with the good arguments and in order.
+OJMoq can be used for a lot of different scenarios! For instance it's the perfect tool to test if a class calls delegate or dataSource methods with correct arguments.
 
 #### Write a test
 
-Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of five objects, we know that the method `-numberOfRowsInTableView:` should be called one time and the method `tableView:objectValueForTableColumn:row:` should be called five times. Consequently; the argument row should increase from zero to four.
+Let us check the behaviour of the `CPTableView`'s data source. For a data set with five objects, we know that the method `-numberOfRowsInTableView:` should be called one time and the method `tableView:objectValueForTableColumn:row:` should be called five times. The latter method should receive increasing `row` parameters, from zero to four.
+
+Here's how we might test that.
 
     :::objj
     @import <Foundation/Foundation.j>
@@ -136,17 +137,17 @@ Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of 
         CPTableView     _tableView;
         CPTableColumn   _tableColumn;
 
-        OJMoqSpy    dataSourceSpy
+        OJMoqSpy        dataSourceSpy
     }
 
     - (void)setUp
     {
-        // This will init the global var CPApp which are used internally in the AppKit
+        // AppKit requires this to work.
         [[CPApplication alloc] init];
 
         _datas = [1, 2, 3, 4, 5];
 
-        // Here we create our CPTableView
+        // Create our CPTableView.
         _tableView = [[CPTableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
         _tableColumn = [[CPTableColumn alloc] initWithIdentifier:@"Foo"];
 
@@ -154,7 +155,7 @@ Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of 
 
         [_tableView setDataSource:self];
 
-        // Here we create a spy which will spy the class CPTableViewTest
+        // Create a spy which will spy the class CPTableViewTest.
         dataSourceSpy = spy(self);
     }
 
@@ -165,10 +166,10 @@ Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of 
 
     - (void)testDataSourceCPTableView
     {
-        // Reset the spy here, make sure to have an empty state when beginning the test
+        // Make sure we have empty starting point for the spy at the beginning of our test.
         [dataSourceSpy reset];
 
-        // As the class CPTableViewTest is the dataSource of the CPTableView, the following methods should be called when reloading the data
+        // As the class CPTableViewTest is the dataSource of the CPTableView, the following methods should be called when reloading the data.
         [dataSourceSpy selector:@selector(numberOfRowsInTableView:) times:1 arguments:[_tableView]];
         [dataSourceSpy selector:@selector(tableView:objectValueForTableColumn:row:) times:1 arguments:[_tableView, _tableColumn, 0]];
         [dataSourceSpy selector:@selector(tableView:objectValueForTableColumn:row:) times:1 arguments:[_tableView, _tableColumn, 1]];
@@ -176,14 +177,14 @@ Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of 
         [dataSourceSpy selector:@selector(tableView:objectValueForTableColumn:row:) times:1 arguments:[_tableView, _tableColumn, 3]];
         [dataSourceSpy selector:@selector(tableView:objectValueForTableColumn:row:) times:1 arguments:[_tableView, _tableColumn, 4]];
 
-        // Let's check that nothing is called with the argument row equals to 5
+        // At the same time we know there should be no call for row 5.
         [dataSourceSpy selector:@selector(tableView:objectValueForTableColumn:row:) times:0 arguments:[_tableView, _tableColumn, 5]];
 
-        // We reload the data here and flush the run loop
+        // We reload the data here and flush the run loop.
         [_tableView reloadData];
         [[CPRunLoop currentRunLoop] limitDateForMode:CPDefaultRunLoopMode];
 
-        // We verufy that every expectations were met
+        // Were our expectations met?
         [dataSourceSpy verifyThatAllExpectationsHaveBeenMetInOrder];
     }
 
@@ -204,32 +205,30 @@ Let us check the behaviour of the `CPTableView`'s dataSource. For a data set of 
 
     @end
 
-You should play with this example; try to change the order of the selectors or change the argument times and you will see how the test fails.
+You should play with this example. Try to change the order of the selectors or change the `times` argument and you should see the test fail.
 
 ### The ojtest command
 
-The command `ojtest` comes with different options, some of them are very useful when debugging or testing an application.
+The command `ojtest` comes with different options. Some of them are very useful when debugging or testing an application.
 
-You can stop your suite of tests after the first failure caught by using the option -x :
+You can stop your suite of tests after the first failure by using the `-x` option:
 
     :::bash
     ojtest -x Tests/Foundation/CPDateFormatterTest.j
 
-You can launch a single test of a test file by following the format below :
+You can launch a single test of a test file in this manner:
 
     :::bash
     ojtest Tests/Foundation/CPDateFormatterTest.j:testStringFromDateDateFullStyleTimeFullStyle
 
-You can run the test coverage along with your OJUnit test by using the option -c :
+You can check the test coverage while running your OJUnit test by using the `-c option:
 
     :::bash
     ojtest -c Tests/Foundation/CPDateFormatterTest.j
 
 ### Additional Info
 
-OJTest provides a doxygen help, you will find this help in the folder documentation of the repository OJTest.
+OJTest has a doxygen help document. You will find these docs in the `documentation` folder of the OJTest repository.
 
-If you have suggestions for improvements to this guide, or if you have
-questions that haven't been answered here, please let us know on
+If you have suggestions for improvements to this guide, or if you have questions that haven't been answered here, please let us know on
 [gitter](https://gitter.im/cappuccino/cappuccino).
-
