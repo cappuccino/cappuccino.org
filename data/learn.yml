@@ -19,9 +19,9 @@ pages:
         - "learn/xcode-basics.html"
     -   - "Debugging"
         - "learn/debugging.html"
-    -   - "Testing OJTest"
+    -   - "Testing with OJTest"
         - "learn/ojtest.html"
-    -   - "Testing Cucapp"
+    -   - "Testing with Cucapp"
         - "learn/cucapp.html"
 
 reference:
