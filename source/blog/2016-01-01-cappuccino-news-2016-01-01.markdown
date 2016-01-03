@@ -17,6 +17,8 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 The CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st of March 2016. You can find more information [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/).
 
+Two new tutorials have been added to the Cappuccino website. It is about testing a Cappuccino Application. The first tutorial explains how to use the OJTest frameworks, the second one is about using the framework Cucapp. You can find them [here](http://www.cappuccino-project.org/learn/ojtest.html) and [here](http://www.cappuccino-project.org/learn/cucapp.html).
+
 ### Cappuccino
 
 ##### New
