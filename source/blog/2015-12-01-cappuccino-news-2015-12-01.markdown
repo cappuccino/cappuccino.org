@@ -25,15 +25,15 @@ A Worldwide Cappuccino Meetup has been created [here](http://www.meetup.com/Worl
 
 ##### News
 
-- New: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Possibility to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`. Arrays and dictionaries use more efficient code. This improves app speed by up to 20%. ([mrcarlberg](https://github.com/mrcarlberg) - [8c2f0ba](https://github.com/cappuccino/cappuccino/commit/8c2f0bacf132789ab29dcb33a9eae98cfd286de8)
+- New: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Possibility to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`. Arrays and dictionaries use more efficient code. This improves app speed by up to 20%. ([mrcarlberg](https://github.com/mrcarlberg) - [8c2f0ba](https://github.com/cappuccino/cappuccino/commit/8c2f0bacf132789ab29dcb33a9eae98cfd286de8))
 
-- New: include type signatures by default when compiling an Objective-J file. This can be disabled by removing the compiler flag `IncludeTypeSignatures` or compiling with the `-T` option. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
+- New: include type signatures by default when compiling an Objective-J file. This can be disabled by removing the compiler flag `IncludeTypeSignatures` or compiling with the `-T` option. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3))
 
-- New: runtime methods `method_copyReturnType`, `method_copyArgumentType` and `method_getNumberOfArguments`. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3)
+- New: runtime methods `method_copyReturnType`, `method_copyArgumentType` and `method_getNumberOfArguments`. ([mrcarlberg](https://github.com/mrcarlberg) - [751e76b](https://github.com/cappuccino/cappuccino/commit/751e76b4532306ae1f89072378d07f801dad4dc3))
 
 ##### Changes/Fixes
 
-- Fixed: cib performances improved through a better way to handle `CPThemeAttribute`. Speed improvements of up 20% when loading a cib. ([mrcarlberg](https://github.com/mrcarlberg) - [b929a8f](https://github.com/cappuccino/cappuccino/commit/b929a8fe2e3c9fb67bbce6daeb10e4c48e4eeba0)
+- Fixed: cib performances improved through a better way to handle `CPThemeAttribute`. Speed improvements of up 20% when loading a cib. ([mrcarlberg](https://github.com/mrcarlberg) - [b929a8f](https://github.com/cappuccino/cappuccino/commit/b929a8fe2e3c9fb67bbce6daeb10e4c48e4eeba0))
 
 - Fixed: default selection of a `CPTabView` didn't not work. ([zittix](https://github.com/zittix) - [5e94aaa](https://github.com/cappuccino/cappuccino/commit/5e94aaa2cb15896f6323436bbcef6c1cd08e90bc))
 
