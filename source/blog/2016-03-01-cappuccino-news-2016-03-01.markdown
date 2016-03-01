@@ -15,26 +15,26 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ### Community
 
-The CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st of March 2016. You can find more information [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/). Few tickets left, don't forget to register yourself!
+CappCon 2016 has been announced. This conference will be held in Liège (Belgium) on the 31st of March 2016. You can find more information [here](http://www.cappuccino-project.org/events/cappCon2016/) and register yourself for free [here](http://www.meetup.com/World-Cappuccino-Meetup/events/226898401/). Few tickets left, don't forget to register!
 
 ### Cappuccino
 
 ##### New
 
-- New: add twitter account in the Readme of the Cappuccino repository. ([Dogild](https://github.com/Dogild) - [5e3fe13](https://github.com/cappuccino/cappuccino/commit/5e3fe139fca25f2698b046b72de37f2f7c990cb7))
+- New: added Twitter account to the Readme of the Cappuccino repository. ([Dogild](https://github.com/Dogild) - [5e3fe13](https://github.com/cappuccino/cappuccino/commit/5e3fe139fca25f2698b046b72de37f2f7c990cb7))
 
 ##### Changes/Fixes
 
-- Fixed: replace loops with `CPArray -arrayByApplyingBlock:`. ([cacaodev](https://github.com/cacaodev) - [96ae3da](https://github.com/cappuccino/cappuccino/commit/96ae3da1e01095e224baa546b02c5ed3e5a7a6fb))
+- Refactoring: replace loops with `CPArray -arrayByApplyingBlock:`. ([cacaodev](https://github.com/cacaodev) - [96ae3da](https://github.com/cappuccino/cappuccino/commit/96ae3da1e01095e224baa546b02c5ed3e5a7a6fb))
 
-- Fixed: allow build in directory with space in path. ([mrcarlberg](https://github.com/mrcarlberg) - [662db00](https://github.com/cappuccino/cappuccino/commit/662db009de355e867d3e67536fdf858fcbc433e3))
+- Fixed: build in directory with a space in the path would fail. ([mrcarlberg](https://github.com/mrcarlberg) - [662db00](https://github.com/cappuccino/cappuccino/commit/662db009de355e867d3e67536fdf858fcbc433e3))
 
-- Fixed: all manual tests have been fixed. ([Dogild](https://github.com/Dogild) - [4f13df6](https://github.com/cappuccino/cappuccino/commit/4f13df69c7d4503c776343b9509e27a8b87fe0d6))
+- Fixed: some manual tests were broken. ([Dogild](https://github.com/Dogild) - [4f13df6](https://github.com/cappuccino/cappuccino/commit/4f13df69c7d4503c776343b9509e27a8b87fe0d6))
 
 ### Cucapp
 
 ##### Changes/Fixes
 
-- Fixed: style in cappuccino_mappings.rb. ([Dogild](https://github.com/Dogild) - [bfd7537](https://github.com/cappuccino/cucapp/commit/bfd7537f0df1456dc1ed4a0477f3cc2616166047))
+- Fixed: style in `cappuccino_mappings.rb`. ([Dogild](https://github.com/Dogild) - [bfd7537](https://github.com/cappuccino/cucapp/commit/bfd7537f0df1456dc1ed4a0477f3cc2616166047))
 
-- Fixed: remove note about phantomjs in the Readme. ([Dogild](https://github.com/Dogild) - [0f2fb70](https://github.com/cappuccino/cucapp/commit/0f2fb701cd3b5773ba5f6ea2cbb2e7500fda609a))
+- Fixed: extraneous note about PhantomJS in the Readme. ([Dogild](https://github.com/Dogild) - [0f2fb70](https://github.com/cappuccino/cucapp/commit/0f2fb701cd3b5773ba5f6ea2cbb2e7500fda609a))
