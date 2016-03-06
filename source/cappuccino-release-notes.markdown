@@ -29,7 +29,7 @@ Foundation and Core
 
 * (630aa53) New: `CPCache` has been added to `Foundation`.
 * (58afc92) New: timeout and cache feature in `CPURLRequest`.
-* (806be9) New: `CPURLConnectionDelegate` protocol.
+* (806be95) New: `CPURLConnectionDelegate` protocol.
 * (8809c16) New: `CPURLConnection +sendAsynchronousRequest:queue:completionHandler:`.
 * (ce8f8c0) New: `CPNotificationQueue`.
 * (686f931) New: ability to localize a Cappuccino application. An app can be localized through `strings` and `cib`s. The language to use is selected from the brower or from the `Info.plist`.
