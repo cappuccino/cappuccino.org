@@ -1,0 +1,60 @@
+---
+title: Virtual Environments for Cappuccino
+author: Antoine Mercadal
+author_email: antoine.mercadal@gmail.cm
+date: '2016-03-05'
+tags:
+- Cappuccino
+- virtualenv
+- cappenv
+- capp_env
+---
+
+
+### capp_env
+
+It's been a little while, but Cappuccino Tools have now a newcomer: `capp_env`. This is a tool that basically works the same way than `virtualenv` for Python. It allows to create multiple self-contained Cappuccino environments. The purpose is to be able to have multiple parallels Cappuccino installations, with different sets of Libraries. This is extremely useful when you work on multiple projects with multiple branches. Here at Nuage Networks, we (sadly) have to deal with a lot of different branches. Each of them uses a specific version of Cappuccino, and a specific version of all our internal Frameworks. Switching from one branch to another required a lot of time to actually rebuild the different libraries and Cappuccino itself. And that was just not right.
+
+`capp_env` fixes this problem by providing a way to keep different built versions in confined environments. When you switch from a branch to another, you will just need to update what environment to use.
+
+The way it works is simple. First you have to create some new environments by doing:
+
+    capp_env -p ~/.cappuccino/environments/master
+    capp_env -p ~/.cappuccino/environments/v0.9.9 #teasing :)
+
+This will run a bootstrap process and install the latest `cappuccino-base` in that folder.
+
+Then you can activate it by doing:
+
+    source ~/.cappuccino/environments/master/bin/activate
+
+This will update your `$PATH` to force using all binaries from that environment and also will set the good `$CAPP_BUILD`.
+
+After that, you can go to any Cappuccino source repository and run
+
+    source ~/.cappuccino/environments/master/bin/activate
+    git checkout master
+    jake install
+    source ~/.cappuccino/environments/v0.9.7/bin/activate
+    git checkout v0.9.7
+    jake install
+
+It will build and install the master branch in `~/.cappuccino/environments/master/narwhal` and build and install the 0.9.9 to `~/.cappuccino/environments/v0.9.9.
+
+Now if you do:
+
+    source ~/.cappuccino/environments/master/bin/activate
+    cd TNKit && jake release && jake debug
+
+It will build the TNKit using the master version of Cappuccino
+
+    source ~/.cappuccino/environments/v0.9.9/bin/activate
+    cd TNKit && jake release && jake debug
+
+Then it will build the `TNKit` using the 0.9.9 version. According to the environment you're in, doing `capp gen -F TNKit .` will either use the version built against the master, or the version built against the 0.9.9.
+
+To deactivate a environment you can either type `capp_env_deactivate` or close your Terminal.
+
+Available today in Cappuccino's master.
+
+Enjoy.
