@@ -13,7 +13,7 @@ tags:
 
 ### capp_env
 
-It's been a little while, but Cappuccino Tools now have a newcomer: `capp_env`. This new tool is like `virtualenv` for Python. It maes it possible to create multiple self-contained Cappuccino environments. This way you can have multiple parallel Cappuccino installations, with different sets of libraries, and they won't interfere with each other. This is extremely useful when you work on multiple projects with multiple branches. Here at Nuage Networks, we (sadly) have to deal with a lot of different branches. Each of them uses a specific version of Cappuccino, and a specific version of all our internal Frameworks. Before `capp_env`, switching from one branch to another required a lot of time to actually rebuild the different libraries and Cappuccino itself. And that was just not right.
+It's been a little while, but Cappuccino Tools now have a newcomer: `capp_env`. This new tool is like `virtualenv` for Python. It makes it possible to create multiple self-contained Cappuccino environments. This way you can have multiple parallel Cappuccino installations, with different sets of libraries, and they won't interfere with each other. This is extremely useful when you work on multiple projects with multiple branches. Here at Nuage Networks, we (sadly) have to deal with a lot of different branches. Each of them uses a specific version of Cappuccino, and a specific version of all our internal Frameworks. Before `capp_env`, switching from one branch to another required a lot of time to actually rebuild the different libraries and Cappuccino itself. And that was just not right.
 
 `capp_env` fixes this problem by providing a way to keep different Cappuccino versions in confined environments. When you switch from a branch to another, you will just need to switch environment as well.
 
@@ -35,8 +35,8 @@ From this point you can easily switch between different environments with just a
     source ~/.cappuccino/environments/master/bin/activate
     git checkout master
     jake install
-    source ~/.cappuccino/environments/v0.9.7/bin/activate
-    git checkout v0.9.7
+    source ~/.cappuccino/environments/v0.9.9/bin/activate
+    git checkout v0.9.9
     jake install
 
 This example would build and install the master branch in `~/.cappuccino/environments/master/narwhal` and Cappuccino 0.9.9 into `~/.cappuccino/environments/v0.9.9.
