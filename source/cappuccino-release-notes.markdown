@@ -11,17 +11,17 @@ Cappuccino 0.9.9 introduces CPLocalization, XcodeCapp 4.0, CPTrackingArea, retin
 
 Highlights in this release:
 
-* New: `CPCache` support.
-* New: localization of a Cappuccino Application.
+* New: ability to localize a Cappuccino app using standard methods.
 * New: `CPUserNotification` and `CPUserNotificationCenter` support.
+* New: `CPCache` support.
 * New: `CPTrackingArea` support.
-* New: draw in high DPI when using `canvas2D support.
+* New: draw in high DPI (Retina drawing) when using `canvas2D`.
 * New: XcodeCapp 4.0.
-* New: `capp_env` support.
+* New: `capp_env` virtual environments support.
 * New: abstract library for `Cucapp`.
-* New: runtime method for objective-j (speed improvement of 20%).
+* New: runtime method binding for Objective-J (speed improvement of 20%).
 * New: `CPAppearance` and `CPVisualEffectView` support.
-* Fixed: optimization of the `CPTableView`.
+* Optimization of the `CPTableView`.
 
 
 Foundation and Core
@@ -39,45 +39,45 @@ Foundation and Core
 *Bug Fixes:*
 
 * (8599ad4) Fixed: the init method `CPArray initWithObjects:count:` did not work on a native `CPJavascriptArray` when the argument count was different than the length of the provided array.
-* (912930) Fixed: `CPDictionary -initWithObjectsAndKeys:` and `CPDictionary -initWithObjects:forKeys:` was not compliant with Cocoa when duplicated keys were passed to the method.
-* (3e29732) Fixed: the param queue of the method `CPNotificationCenter -addObserverForName:object:queue:usingBlock:` was ignored. It now creates a new operation and adds it to the given queue if needed.
+* (912930) Fixed: `CPDictionary -initWithObjectsAndKeys:` and `CPDictionary -initWithObjects:forKeys:` were not compliant with Cocoa when duplicated keys were passed to the method.
+* (3e29732) Fixed: the parameter `queue` of the method `CPNotificationCenter -addObserverForName:object:queue:usingBlock:` was ignored. It now creates a new operation and adds it to the given queue if needed.
 * (04f8545)(0508b70) Fixed: incompatibility with Internet Explorer 10. The `withCredentials` property is now set after the `XMLHttpRequest` has been opened.
 * (b59b025) Fixed: `CPDateFormatter` did not work with the symbols `MM` and `LL` for the month of December.
 * (ea644a2) Fixed: `CPObjectController -setValue:forKey:` incorrectly used the key as the value.
-* (ec55bdd) Fixed: Does not throw exception if plist is not valid. It will return nil instead.
+* (ec55bdd) Fixed:  not throw exception if plist is not valid. It will return nil instead.
 
 AppKit
 ------
 
 * (14349cb) New: `CPPlatformWindow -initWithWindow`. This feature allows you to manipulate a `CPPlatformWindow` through the given `CPWindow`, which is easier than regular platform window manipulation.
 * (4d7cb06) New: the theme attributes `image-search-inset` and `image-cancel-inset` have been added for `CPSearchField`.
-* (51bdfa4) New: the protocol `CPScrollViewDelegate` has been added in `CPScrollView.j`.
+* (51bdfa4) New: the protocol `CPScrollViewDelegate` has been added for `CPScrollView.j`.
 * (7b4365b) New: added the delegate method `windowWillResize:toSize:` for `CPWindow`.
 * (737ef58) New: added the delegate methods `windowDidMiniaturize:`, `windowWillMiniaturize:` and `windowDidDeminiaturize:` for `CPWindow`.
-* (0dad10d) New: send the `CPAppKitDefined` event when the application is launched.
+* (0dad10d) New: send the `CPAppKitDefined` notification when the application is launched.
 * (57b6888)(899bbc2)(0d17757) New: indeterminate spinning `CPProgressBarIndicator`.
 * (bdbf1fb) New: added the property `baseWritingDirection` to `CPControl`. This allows you to write from left to right or right to left.
 * (3a6a849) New: `CPUserNotification` and `CPUserNotificationCenter`.
 * (3f9f92) New: `CPPlatform +closeAllPlatformWindows`. This method is called when reloading or closing the Cappuccino application. The method closes every platform window opened in the application.
 * (058a73) New: delegate methods `applicationShouldTerminate` and `applicationShouldTerminateMessage` for the `CPApplicationDelegateProtocol`.
 * (ab61aef) New: `CPVisualEffectView` and `CPAppearance`.
-* (2f79b07) New: default system menu is now disabled for right clicks. Exception for a right click on `CPTextField`.
+* (2f79b07) New: default system menu is now disabled for right click, except for a right click on a `CPTextField`.
 * (448c2a2) New: speed up app loading by creating the `DOMCanvas` only if `CPView -drawRect:` or `CPView -viewWillDraw` are overridden, and do it lazily (on the first `viewWillLayout`).
 * (448c2a2) New: (private API) `CPView viewWillLayout` and `CPView viewDidLayout`.
-* (1fe1e6f) New: ability to more widely theme AppKit: in particular `CPColor alternateSelectedControlColor` and related `CPColor` fields can now be themed.
+* (1fe1e6f) New: ability to more widely theme AppKit. In particular `CPColor alternateSelectedControlColor` and related `CPColor` fields can now be themed.
 * (d5f38fe) New: `CPRunLoop -performBlock:argument:order:modes:`.
 * (932b82)(770d5e) New: `CPTrackingArea`.
-* (a2c0b47) New: The graphical `CPDatePicker` now disallows dates outside of the specified `minDate` and `maxDate`.
-* (2d474cc) New: By default, Cappuccino now draws in high DPI when using `canvas2D`. You can disable this feature globally using the method `CPView +setAllowsHighDPIDrawing:`.
-* (c04d3b2 ) `CPView -setNeedsLayout:` and `CPView -needsLayout` have been added. This makes it possible to choose not to lay out a view when needed, whereas previously once a layout had been scheduled it would always occur.
-* (1c9e9da) The method `CPTableView -viewAtColumn:row:makeIfNecessary` has been added.
+* (a2c0b47) New: the graphical `CPDatePicker` now disallows dates outside of the specified `minDate` and `maxDate`.
+* (2d474cc) New: by default, Cappuccino now draws in high DPI when using `canvas2D`. You can disable this feature globally using the method `CPView +setAllowsHighDPIDrawing:`.
+* (c04d3b2 ) New: `CPView -setNeedsLayout:` and `CPView -needsLayout` have been added. This makes it possible to choose not to lay out a view when needed, whereas previously once a layout had been scheduled it would always occur.
+* (1c9e9da) New: `CPTableView -viewAtColumn:row:makeIfNecessary`.
 
 *Bug Fixes:*
 
 * (eca9590) Fixed: `CPTableColumn`'s binding documentation was not clear.
 * (b16b838) Fixed: `CPSearchField`s were not properly aligned when coming from a xib.
 * (7c09517)(2b853df) Fixed: `CPSegmentedControl -widthForSegment:` and `CPSegmentedControl -frameForSegment:` did not return the correct value when using `CPSegmentedControl -sizeToFit`. The `selectedSegment` variable is now correctly updated.
-* (027a317) Fixed: memory leaks with toolTips in `CPView`. This was due to handlers not being released.
+* (027a317) Fixed: memory leaks with tooltips in `CPView`. This was due to handlers not being released.
 * (1dc0601) Fixed: closing a `CPPlatformWindow` did not close its main `CPWindow`.
 * (cf92fb9) Fixed: `CPComboBox`es were not properly aligned when coming from a xib.
 * (f2c5515) Fixed: `CPTableView -reloadData` caused an extra run loop perform.
@@ -86,23 +86,23 @@ AppKit
 * (44c686f) Fixed: the method `CPView -scrollRectToVisible:` did not behave like in Cocoa.
 * (914a3d7) Fixed: the height of a `CPSegmentedControl` brought in via `nib2cib` was incorrect.
 * (10792c0)(01ba6dd)(fd06844) Fixed: the `keyWindow` and `mainWindow` of the application were not updated when switching from a platform window to another one.
-* (9798b9f)Fixed: the overflow of a `CPPlatformWindow` was not clipped; it was possible to scroll a platform window.
+* (9798b9f) Fixed: the overflow of a `CPPlatformWindow` was not clipped; it was possible to scroll a platform window.
 * (769b379) Fixed: a `CPPopover` closed itself even on a click in another platform window.
 * (6efe563) Fixed: the private method `CPEvent -_initOtherEventWithType:location:modifierFlags:timestamp:windowNumber:context:` did not save the  `windowNumber` provided.
-* (0dad10d) Fixed: notifications `willBecomeActive:` and `didBecomeActive:` were called even if the application was already active. These notifications are now also sent when the application just finished to launch.
+* (0dad10d) Fixed: notifications `willBecomeActive:` and `didBecomeActive:` were called even if the application was already active. These notifications are now also sent when the application just finished launch.
 * (5c2e093) Fixed: notifications `willBecomeActive:`, `didBecomeActive:`, `willResignActive:`, `didResignActive:` were not sent when the application focus was lost or gained.
-* (da15cc4) Fixed: the `nextValidKeyView` calculated by Cappuccino in a `CPScrollView` did not behave as in Cocoa. It does now take in account the possibility of scrolling.
+* (da15cc4) Fixed: the `nextValidKeyView` calculated by Cappuccino in a `CPScrollView` did not behave as in Cocoa. It didn't take the scroll position into consideration.
 * (da15cc4) Fixed: a `CPTextField` could not become first responder when not visible.
-* (136138d)Fixed:  changed `CPTextField` first responder resignation behavior for a non key window `CPWindow`.
+* (136138d) Fixed: incorrect `CPTextField` first responder resignation behavior for a non key window `CPWindow`.
 * (65a379c) Fixed: the textual `CPDatePicker` did not respect the English format.
 * (f822268) Fixed: memory leaks in `CPSplitView` when using a delegate.
 * (a7b6010) Fixed: `CPScrollView -documentVisibleRect` did not return the expected result when the document view was scaled.
 * (9694c7) Fixed: `CPButton -sizeToFit` was broken when calling the method with a new title or a new image.
 * (d6b0fc)(d1e31d) Fixed: when selecting a label through a right click, its selectable state was not taken into consideration.
-* (6fe9da)(923d32) Fixed: `AppKit` unit-tests were not standalone.
+* (6fe9da)(923d32) Fixed: `AppKit` unit-tests were not stand-alone.
 * (5cd25e2) Fixed: type of boolean values lost when parsing a `CPPredicate` format.
 * (6420a51) Fixed: crash when a cell-based `CPTableView` contained a data view that contained an editable `CPTextField`.
-* (655bc39) Fixed: `CPPopover`s were blinking on `Chrome` and `Opera`.
+* (655bc39) Fixed: `CPPopover`s were blinking in Chrome and Opera.
 * (c9e83e0) Fixed: slow drawing on non-retina resolutions due to needless identity transform.
 * (3fcc37e) Fixed: `CPTabView` did not accept the first mouse event when the `CPTabView` was in an unfocused window.
 * (7a0b2c9) Fixed: crash with the `CPRuleEditor` when dragging the first row.
@@ -113,10 +113,10 @@ AppKit
 * (d5b90c9) New: `CPTabView` improvements. The methods `CPTabViewItem -tabViewItemWithViewController:` and `CPTabViewItem -setImage:` have been added. New bindings options (`CPContentBinding` - `CPSelectedIndexBinding` - `CPSelectionIndexesBinding`) have been added to `CPTabView`.
 * (d5b90c9) Fixed: `CPTabView -insertTabViewItem:atIndex:`.
 * (c30f8b0) Fixed: warning when compiling AppKit.
-* (40a9f19) Fixed: crash when a new `CPPlatformWindow` was blocked by the browser when opening (adblock for instance).
-* (f062fda) Fixed: optimization of `CPView -layoutSubviews` and `CPView -viewWillLayout`.
-* (b04e576) Fixed: new unittests for the method `CPString -stringByReplacingCharactersInRange:`.
-* (d4b1680) Fixed: copy and pasty did not work properly in a new `CPPlatformWindow`.
+* (40a9f19) Fixed: crash when a new `CPPlatformWindow` was blocked by the browser when opening (e.g. by a popup blocker).
+* (f062fda) Optimization: `CPView -layoutSubviews` and `CPView -viewWillLayout`.
+* (b04e576) Tests: new unit tests for the method `CPString -stringByReplacingCharactersInRange:`.
+* (d4b1680) Fixed: copy and paste did not work properly in a new `CPPlatformWindow`.
 * (d5f38fe) Fixed: timing key responder issue when a `CPTextField` became the first key responder.
 * (b929a8f) Fixed: cib performances improved through a better way to handle `CPThemeAttribute`. Speed improvements of up 20% when loading a cib.
 * (5e94aaa) Fixed: default selection of a `CPTabView` didn't not work.
@@ -129,43 +129,40 @@ AppKit
 * (5ec5198) Fixed: added a manual test to check the behavior of a `CPSplitView` divider when having one view.
 * (8908fb7) Fixed: view hierarchy was not updated while processing events and using the `CPTrackingArea`.
 * (2dda326) Fixed: `CPRadioButton` cropped in the manual test Theme Kitchen Sink.
-* (8403e36) Fixed: Theme Kitchen Sink test looks better.
+* (8403e36) New: Theme Kitchen Sink test looks better.
 * (5d88d07) Fixed: `CPPredicate`'s predicateFormat with a `CPNull` value as right expression wasn't working.
 * (96ae3da) Fixed: replace loops with `CPArray -arrayByApplyingBlock:`.
 * (4f13df6) Fixed: some manual tests were broken.
-* (f2528b5) Fixed: Changed the name of the method `CPDomDisplayServerSetStyleBackgroundSize` to `CPDOMDisplayServerSetStyleBackgroundSize`.
-* (63f634a) Fixed: Removed unreachable code in `CPDOMDisplayServer.h`.
-* (02f301d) Fixed: The `CPStepper` class initializer methods returns an object of type `id` instead of `CPStepper`.
-* (f9ce1d1)(01e69ce)(a2b38c8)(d50df6a)(cec746d)(71c0ba6) Fixed: The `CPTableView` class has been refactored and optimized. The methods `CPTableView -preparedViewAtColumn:row:` and `CPTableView -enumerateAvailableViewsUsingblock:` have been added.
-* (ee688d9) Fixed: The theme showcase works again.
-* (187a017) Fixed: Duplicated unit tests have been removed or renamed.
+* (f2528b5) Changed the name of the method `CPDomDisplayServerSetStyleBackgroundSize` to `CPDOMDisplayServerSetStyleBackgroundSize`.
+* (63f634a) Fixed: unreachable code in `CPDOMDisplayServer.h`.
+* (02f301d) Fixed: the `CPStepper` class initializer methods returned an object of type `id` instead of `CPStepper`.
+* (f9ce1d1)(01e69ce)(a2b38c8)(d50df6a)(cec746d)(71c0ba6) The `CPTableView` class has been refactored and optimized. The methods `CPTableView -preparedViewAtColumn:row:` and `CPTableView -enumerateAvailableViewsUsingblock:` have been added.
+* (ee688d9) Fixed: theme showcase didn't work.
+* (187a017) Fixed: duplicated unit tests.
 * (c0a2da4) Fixed: `CPDatePicker` will now raise `CPInvalidArgumentException` if given an invalid date.
-* (7c4cdef) Fixed: The divider color of a `CPSegmentedControl` now has the expected color.
-* (7c60ffa) Fixed: `CPPopover` updates its position when the frame of one of its superviews has changed.
-* (9cb3eef) Fixed: When the auto-complete menu for a `CPTokenField` is open, the Enter key is no longer forwarded to the application.
-* (808591d) Fixed: Allow CPObjectController to get `entityName` and `lazyFetching` attributes from the xib/cib file.
+* (7c4cdef) Fixed: wrong divider color of a `CPSegmentedControl`.
+* (7c60ffa) Fixed: `CPPopover` didn't update its position when the frame of one of its superviews changed.
+* (9cb3eef) Fixed: when the auto-complete menu for a `CPTokenField` was open, the enter key was not consumed by the menu but forwarded to the application.
 * (8f11917) Fixed: race condition when editing a `CPTextField` in a `CPTableView`.
 
 Objective-J
 -----------
 
-* (8c2f0ba) New: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Possibility to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`. Arrays and dictionaries use more efficient code. This improves app speed by up to 20%.
+(8c2f0ba) Optimization: runtime methods `objj_msgSend`, `objj_msgSendSuper` and `objj_method` are now faster. Arrays and dictionaries use more efficient code. This improves app speed by up to 20%. 
+New: ability to inline functions when compiling with the option `-O2` or the compiler flag `InlineMsgSend`.
 * (751e76b) New: include type signatures by default when compiling an Objective-J file. This can be disabled by removing the compiler flag `IncludeTypeSignatures` or compiling with the `-T` option.
 * (751e76b) New: runtime methods `method_copyReturnType`, `method_copyArgumentType` and `method_getNumberOfArguments`.
-
-*Bug Fixes:*
-
-* (4b81e0d) Fixed: some AppKit speed improvements through the use of the new `objj_msgSend` in some places including `CPTableView` and `CPWindow`.
+* (4b81e0d) Some AppKit speed improvements through the use of the new `objj_msgSend` in some places including `CPTableView` and `CPWindow`.
 
 XcodeCapp
 ---------
 
-* (47611b7)(d317744)(340d827) New: `XcodeCapp 4.0`.
+* (47611b7)(d317744)(340d827) New: XcodeCapp 4.0.
 
 *Bug Fixes:*
 
-* (5457ddb) Fixed: XcodeCapp ignores the resources folder.
-* (2b17e17) Fixed: XCodeCapp did not ignore its own xib when the XcodeCapp folder was in a Cappuccino project.
+* (5457ddb) Fixed: XcodeCapp ignored the resources folder.
+* (2b17e17) Fixed: XcodeCapp did not ignore its own xib when the XcodeCapp folder was in a Cappuccino project.
 * (671ed3c)(bacb701) Fixed: memory leaks in XcodeCapp.
 * (2b17e17) Fixed: reload the operations and errors table views only when they are visible in XcodeCapp.
 * (f41504c)(51a88a2) Refactored: do not use Lumberjack in XcodeCapp anymore.
@@ -179,13 +176,14 @@ Nib2cib
 
 * (2f5e7f3) Fixed: `nib2cib` failed when having a custom formatter in a cell.
 * (0326b7d)(00bdbcf)(d527139) Fixed: `nib2cib` failed when having a `CPTableView` in a `CPBox`.
+* (808591d) Fixed: `CPObjectController` didn't get `entityName` and `lazyFetching` attributes from the xib/cib file.
 
 Misc
 ----
 
 * (06c5976) New: added the tool `objj2objcskeleton`. This tool converts an Objective-J files to a basic Objective-C file containing an interface representing the original file.
 * (a0277ab) New: added the option `-x` (alternatively `--xml`) to `objj`. This option allows you to specify the output format of `objj` to be XML.
-* (245da9b)(0f62926)(c9f391d) New: `capp_env` has been added to Cappuccino. This tools allows you to create specific environments for Cappuccino.
+* (245da9b)(0f62926)(c9f391d) New: `capp_env` has been added to Cappuccino. This tools allows you to create virtual environments for Cappuccino.
 * (3f88e02) New: `-n` option added to `objj2objcskeleton`. This option allows you to specify the name of the generated file.
 * (d358f0) New: the XML output format of the command `objj` now has the key `sourcePath` instead of `path`.
 
@@ -208,19 +206,19 @@ OJTest
 *Bug Fixes:*
 
 * (09de5a2) Fixed: counting of a selector with `OBJMoq` and `OJMockSpy` worked incorrectly if set up multiple times with different arguments.
-* (f799634) Fixed: use runtime functions instead of accessing attribute names directly.
+* (f799634) Fixed: attribute names were used directly instead of through runtime functions.
 * (def9006) Fixed: `CPRunLoop` was not called at the end of every tests.
 * (522fcdf) Fixed: duplicated unit tests.
-* (1f6cc19) Fixed: The coverage option works again and checks which method has been called.
+* (1f6cc19) Fixed: the coverage option wasn't working.
 
 Cucapp
 ------
 
-* (986db18) New: the nodes `backgroundColor`, `textColor` and `borderColor` in the generated xml.
-* (af4fbc7) New: added the method `-simulateScrollWheelOnPoint:`.
-* (b432bd2) New: `Cucapp` now generates an error message for every `objj` exceptions caught.
-* (e0f276e) New: `jake install` for `cucapp`. The command will install `cucapp` in `narwhal` and every gems needed (`Cucumber`, `Thin`, `Nokogiri`, `Launchy` and `JSON`).
-* (e0f276e) New: added the command `cucapp`. This command allows you to create a testing architecture in your Cappuccino application. The architecture provides a new command `jake cucumber-test`, creates a soft link where `cucapp` is installed and creates every file needed to create cucumber tests.)
+* (986db18) New: nodes `backgroundColor`, `textColor` and `borderColor` in generated XML.
+* (af4fbc7) New:`-simulateScrollWheelOnPoint:`.
+* (b432bd2) New: Cucapp now generates an error message for every Objective-J exception caught.
+* (e0f276e) New: `jake install` for Cucapp. The command will install Cucapp in `narwhal` and the gems required (Cucumber, Thin, Nokogiri, Launchy and JSON).
+* (e0f276e) New: added the command `cucapp`. This command allows you to create a testing architecture in your Cappuccino application. The architecture provides a new command `jake cucumber-test`, creates a soft link to where Cucapp is installed and creates every file needed to create Ceucumber tests.
 * (27f03e4) New: Cucapp now uses `watir-webdriver` as support for the browser.
 * (a12e068) New: environment variables `WATIR_CHROME_DRIVER` and `WATIR_CHROME_SWITCHES` to configure `watir` for Chrome.
 * (61b1906) New: files `CPResponder+CuCapp.j` and `CuCapp+Record.j` are now copied to the targeted folder when using the `cucapp` command.
@@ -229,7 +227,7 @@ Cucapp
 * (8075435) New: environment variables `BROWSER_SIZE_WIDTH` and `BROWSER_SIZE_HEIGHT` to specify the size of the browser when testing.
 * (3472386) New: possibility to create screenshots from Cucapp.
 * (10b3ff2) New: support for phantomjs.
-* (30786c5) New: abstract layer of steps. These steps can be used to quickly and easily write tests in Cucumber. They are totally abstract and can be used for every Cappuccino application. They provide an API to simulate any actions a user could perform and to check values in the application.
+* (30786c5) New: abstract layer of steps. These steps can be used to quickly and easily write tests in Cucumber. They are totally abstract and can be used for every Cappuccino application. They provide an API to simulate any action a user could perform and to check values in the application.
 * (b172e5a) New: the environment variable `CAPP_INSTALL_DIR` can be used to specify where Cucapp should be installed when using `jake install`.
 * (76551a5) New: Ruby methods to generate mouse up and down events.
 * (76551a5) New: the environment variable `BROWSER_FULL_SCREEN` can be set to have the browser in full screen when testing.
@@ -242,7 +240,7 @@ Cucapp
 * (01b7ddc) Fixed: methods `textFor:` and `objectValue` did not return the string value of a `CPPopUpButton`.
 * (e93d795) Fixed: `CPWindow`s of the application not all closed when the test was over.
 * (fa281e8) Fixed: `CPRunLoop` was not called between every event simulated.
-* (76551a5) Fixed: Refactoring of the class `Encumber`. Drag and drop events were generated from the Cappuccino side. They are now generated from the Cucumber side instead.
+* (76551a5) Refactoring of the class `Encumber`. Drag and drop events were generated from the Cappuccino side. They are now generated from the Cucumber side instead.
 * (a87e514)(531645a) Fixed: it wasn't possible to launch the tests other than on port 3000.
 * (1854fd2) Fixed: the `document` used to dispatch the events generated by Cucapp could be null.
 * (1854fd2) Fixed: installation of gems could not be completed due to permission.
@@ -256,9 +254,9 @@ Other Changes
 -------------
 
 * (a439688) Fixed: private variables were shown in Cappuccino's documentation.
-* (6b4a1b) New: added the `Gitter` link to the README.
+* (6b4a1b) New: added the Gitter chat link to the README.
 * (c468440) Fixed: tutorials have been updated with the latest features of XcodeCapp, Safari and Objective-J.
-* (5e3fe13) New: added Twitter account to the Readme of the Cappuccino repository.
+* (5e3fe13) New: added Twitter account to the README.
 
 The changes above summarize a few hundred of the most important changes in Cappuccino 0.9.9. You can review the other 250 or so changes in the [0.9.8...0.9.9 compare view](https://github.com/cappuccino/cappuccino/compare/0.9.8...0.9.9).
 
