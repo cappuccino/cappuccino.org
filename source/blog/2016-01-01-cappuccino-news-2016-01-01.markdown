@@ -23,7 +23,7 @@ Two new tutorials on the subject of testing Cappuccino applications have been ad
 
 ##### New
 
-- New: `CPTrackingArea`. ([didierkorthoudt](https://github.com/didierkorthoudt) - [932b82](https://github.com/cappuccino/cappuccino/commit/932b82818be0f823b6c099f1a0be33288355b61) [770d5e](https://github.com/cappuccino/cappuccino/commit/770d5eb257f00b42908481faccde03e3aab28cdd))
+- New: `CPTrackingArea`. ([didierkorthoudt](https://github.com/didierkorthoudt) - [932b82](https://github.com/cappuccino/cappuccino/commit/932b825818be0f823b6c099f1a0be33288355b61) [770d5e](https://github.com/cappuccino/cappuccino/commit/770d5eb257f00b42908481faccde03e3aab28cdd))
 
 ##### Changes/Fixes
 
