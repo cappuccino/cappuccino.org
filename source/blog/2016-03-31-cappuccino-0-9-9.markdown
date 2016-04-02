@@ -87,7 +87,7 @@ This is a great new tool which gives you something like Python virtual environme
 
 XcodeCapp 4 comes with a brand new UI and much improved work flow for heavy users. You can find all the details in our updated [XcodeCapp tutorial](/learn/xcode-basics.html).
 
-[![](xcode/state1.png)](xcode/state1.png)
+[![](/img/cpo-uploads/2016/03/xcodecapp-4.png)](/img/cpo-uploads/2016/03/xcodecapp-4.png)
 
 #### Performance Improvements
 
