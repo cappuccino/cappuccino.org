@@ -33,7 +33,7 @@ For more information, please refer to the Cocoa documentation for now. (As alway
 
 There is one significant difference with Cocoa: you need to tell Cappuccino the names of your strings files. Cappuccino can't guess which files you have since it can't list folder contents through your web browser.
 
-You do this by adding some keys to your main `Info.plist` file:
+You do this by adding some keys to your `Info.plist` file:
 
     :::xml
     <key>CPBundleLocalizableStrings</key>
@@ -45,13 +45,13 @@ You do this by adding some keys to your main `Info.plist` file:
     <key>CPBundleTypeOfLocalization</key>
     <string>CPBundleBaseLocalizationType</string>
 
-At this time, the locale detection is not perfect (because web browser standards for communication locale preferences is not perfect), but it should work for major languages and locales automatically.
+At this time, the locale detection is not perfect (because web browser standards for communication locale preferences are not perfect), but it should work for major languages and locales automatically.
 
 #####  User Notification Center
 
-Deliver notifications to the user through their browser's built in notification support, when available and when the user has allowed it.
+Deliver notifications to the user through their browser's built in notification support. The browser may ask the user if they want to allow notifications, but assuming they do, your app will be able to send little OS level alerts whenever something of interest happens.
 
-For example, in Safari this is how it might look like -- but this will work in other browsers than Safari as well.
+For example, in Safari this is how it might look like (but this will work in other browsers than Safari as well):
 
 [![](/img/cpo-uploads/2016/03/CPUserNotification-1.png)](/img/cpo-uploads/2016/03/CPUserNotification-1.png)
 [![](/img/cpo-uploads/2016/03/CPUserNotification-2.png)](/img/cpo-uploads/2016/03/CPUserNotification-2.png)
@@ -73,7 +73,7 @@ The easiest approach is to do something like this in your view `initWithFrame`:
         owner:self
         userInfo:nil]];
 
-But if you would like to have improved performance, try to use small tracking areas with as few tracking options as you need enabled.
+But if you would like to have improved performance, try to use small tracking areas with as few tracking options as possible.
 
 ##### Retina support
 
