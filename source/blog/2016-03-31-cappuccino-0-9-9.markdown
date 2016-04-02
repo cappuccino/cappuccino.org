@@ -1,0 +1,106 @@
+---
+title: Cappuccino 0.9.9
+author: Alexander Ljungberg
+date: '2016-03-31'
+tags:
+- Cappuccino
+- release
+- update
+- releases
+---
+
+As announced at CappCon 2016, Cappuccino 0.9.9 has now been released! This release follows almost exactly a year from 0.9.8 and in that year we have been busy. No matter what your Cappuccino app is about, there is something in this release for you.
+
+
+#### Notable Improvements
+
+There is one backwards incompatible change. See the notes on tracking areas below.
+
+##### Full strings based localisation support
+
+You can now localise your Cappuccino app the same way you would a Mac app. Many translation professionals know how to work with strings files and you might already have a favourite from your Mac or iOS apps. Now you can leverage those same resources for web apps. You can translate any text in your code as well as full cib files.
+
+Whenever you want to use a string that can be translated:
+
+    :::objj
+    [myTextField setStringValue:CPLocalizedString(@"Languages are hard.", @"")];
+
+Then provide the translation in a `.strings` file:
+
+    "Languages are hard." = "言語は難しいです。";
+
+For more information, please refer to the Cocoa documentation for now. (As always, we are looking to improve our own documentation and invite you to help us out by writing tutorials or docs pages. We'd really appreciate it!)
+
+There is one significant difference with Cocoa: you need to tell Cappuccino the names of your strings files. Cappuccino can't guess which files you have since it can't list folder contents through your web browser.
+
+You do this by adding some keys to your main `Info.plist` file:
+
+    :::xml
+    <key>CPBundleLocalizableStrings</key>
+    <array>
+        <string>Localizable.strings</string>
+        <string>SecondLocalizable.strings</string>
+        <string>MainMenu.strings</string>
+    </array>
+    <key>CPBundleTypeOfLocalization</key>
+    <string>CPBundleBaseLocalizationType</string>
+
+At this time, the locale detection is not perfect (because web browser standards for communication locale preferences is not perfect), but it should work for major languages and locales automatically.
+
+#####  User Notification Center
+
+Deliver notifications to the user through their browser's built in notification support, when available and when the user has allowed it.
+
+For example, in Safari this is how it might look like -- but this will work in other browsers than Safari as well.
+
+[![](/img/cpo-uploads/2016/03/CPUserNotification-1.png)](/img/cpo-uploads/2016/03/CPUserNotification-1.png)
+[![](/img/cpo-uploads/2016/03/CPUserNotification-2.png)](/img/cpo-uploads/2016/03/CPUserNotification-2.png)
+
+##### Cache
+
+`CPCache` is a class which lets you easily cache objects which are expensive to create, and then set various policies (cost or count based) as to when to evict cached objects. It's one of those classes you end up writing yourself sooner or later in every big app and now you no longer have to.
+
+##### Tracking Areas
+
+The new `CPTrackingArea` support brings tracking areas to Cappuccino. This should lead to performance benefits in your app since fewer irrelevant mouse events will be passed.
+
+This is the only backwards incompatible change of Cappuccino 0.9.9: if you relied on `CPView` subclasses receiving `mouseEntered:`, `mouseExited:` or `mouseMoved:` events, you will now need to use a tracking area.
+
+The easiest approach is to do something like this in your view `initWithFrame`:
+
+    [self addTrackingArea:[[CPTrackingArea alloc] initWithRect:CGRectMakeZero()
+        options:CPTrackingMouseEnteredAndExited | CPTrackingMouseMoved | CPTrackingActiveInKeyWindow | CPTrackingInVisibleRect
+        owner:self
+        userInfo:nil]];
+
+But if you would like to have improved performance, try to use small tracking areas with as few tracking options as you need enabled.
+
+##### Retina support
+
+High DPI resolutions are now supported by default.
+
+##### capp_env
+
+This is a great new tool which gives you something like Python virtual environments for your Cappuccino apps. For all the details, see [our capp_env tutorial](/blog/2016/03/capp_env.html).
+
+##### XcodeCapp 4
+
+XcodeCapp 4 comes with a brand new UI and much improved work flow for heavy users. You can find all the details in our updated [XcodeCapp tutorial](/learn/xcode-basics.html).
+
+[![](xcode/state1.png)](xcode/state1.png)
+
+#### Performance Improvements
+
+There are performance improvements across the board in Cappuccino 0.9.9 -- for some apps performance is up to 20% faster. There is no additional work needed: just upgrade and benefit. Enjoy!
+
+---
+
+As always the full change log and release notes are available [here](/cappuccino-release-notes.html).
+
+We hope you are as excited about Cappuccino 0.9.9 as we are and that you will help us spread the word, and that you will create some fantastic applications with it!
+
+_- The Cappuccino Core Developer Team_
+
+[Download Cappuccino 0.9.9](/downloads.html)
+
+[Full Release Notes](/cappuccino-release-notes.html)
