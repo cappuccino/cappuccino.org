@@ -82,6 +82,8 @@ The easiest approach is to add an `updateTrackingAreas` method to your custom vi
 
 Consider this code a starting point. If you would like to have improved performance, you should be smarter about your tracking areas and make your areas as small as possible with as few active tracking options as you need.
 
+Check out this [tracking area introduction](https://github.com/cappuccino/cappuccino/wiki/CPTrackingArea-introduction) on our wiki for more information.
+
 ##### Retina support
 
 High DPI resolutions are now supported by default.
