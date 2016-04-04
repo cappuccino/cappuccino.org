@@ -56,6 +56,8 @@ For example, in Safari this is how it might look like (but this will work in oth
 [![](/img/cpo-uploads/2016/03/CPUserNotification-1.png)](/img/cpo-uploads/2016/03/CPUserNotification-1.png)
 [![](/img/cpo-uploads/2016/03/CPUserNotification-2.png)](/img/cpo-uploads/2016/03/CPUserNotification-2.png)
 
+Note that user notifications are not supported by all browsers, and cannot be used from `file://` URLs in many (any?) current browser. So in other words, use a webserver to serve even your test pages if you want to try this feature.
+
 ##### Cache
 
 `CPCache` is a class which lets you easily cache objects which are expensive to create, and then set various policies (cost or count based) as to when to evict cached objects. It's one of those classes you end up writing yourself sooner or later in every big app and now you no longer have to.
