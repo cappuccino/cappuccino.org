@@ -66,14 +66,21 @@ The new `CPTrackingArea` support brings tracking areas to Cappuccino. This shoul
 
 This is the only backwards incompatible change of Cappuccino 0.9.9: if you relied on `CPView` subclasses receiving `mouseEntered:`, `mouseExited:` or `mouseMoved:` events, you will now need to use a tracking area.
 
-The easiest approach is to do something like this in your view `initWithFrame`:
+The easiest approach is to add an `updateTrackingAreas` method to your custom view code:
 
-    [self addTrackingArea:[[CPTrackingArea alloc] initWithRect:CGRectMakeZero()
-        options:CPTrackingMouseEnteredAndExited | CPTrackingMouseMoved | CPTrackingActiveInKeyWindow | CPTrackingInVisibleRect
-        owner:self
-        userInfo:nil]];
+    - (void)updateTrackingAreas
+    {
+        [self removeAllTrackingAreas];
 
-But if you would like to have improved performance, try to use small tracking areas with as few tracking options as possible.
+        [self addTrackingArea:[[CPTrackingArea alloc] initWithRect:CGRectMakeZero()
+            options:CPTrackingMouseEnteredAndExited | CPTrackingMouseMoved | CPTrackingActiveInKeyWindow | CPTrackingInVisibleRect
+            owner:self
+            userInfo:nil]];
+    }
+
+(`removeAllTrackingAreas` is a convenience method in Cappuccino that does not exist in Cocoa.)
+
+Consider this code a starting point. If you would like to have improved performance, you should be smarter about your tracking areas and make your areas as small as possible with as few active tracking options as you need.
 
 ##### Retina support
 
