@@ -2,7 +2,7 @@
 title: Cappuccino News 2016 April 1st
 author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
-date: '2016-03-01'
+date: '2016-04-01'
 tags:
 - Cappuccino
 - objj
@@ -15,9 +15,9 @@ Here's a quick update on what's new with Cappuccino in the last month.
 
 ### Community
 
-Cappuccino 0.9.9 has now been released! This release follows almost exactly a year from 0.9.8 and in that year we have been busy. No matter what your Cappuccino app is about, there is something in this release for you. You should check it out here : http://www.cappuccino-project.org/blog/2016/03/cappuccino-0-9-9.html
+Cappuccino 0.9.9 has now been released! This release follows almost exactly a year from 0.9.8 and in that year we have been busy. No matter what your Cappuccino app is about, there is something in this release for you. You should check it out [at the official release post]( http://www.cappuccino-project.org/blog/2016/03/cappuccino-0-9-9.html).
 
-If you missed the CappCon2016, we will provide the story, videos, powerpoint and pictures about this amazing day at the Univeristy of Liège soon! 
+If you missed the CappCon2016, we will provide the story, videos, powerpoint and pictures about this amazing day at the Univeristy of Liège soon!
 
 ### Cappuccino
 
@@ -35,20 +35,20 @@ If you missed the CappCon2016, we will provide the story, videos, powerpoint and
 
 - Fixed: race condition when editing a `CPTextField` in a `CPTableView` with a double click, focus was lost in some conditions. ([aparajita](https://github.com/aparajita) - [8f11917](https://github.com/cappuccino/cappuccino/commit/8f1191733beaf0f402018240804298bcfe8c1cf1))
 
-- Fixed: does not throw an exception if a plist is not valid in `CPKeyedUnarchiver`. ([mrcarlberg](https://github.com/mrcarlberg) - [a995f3a](https://github.com/cappuccino/cappuccino/commit/a995f3ab520836fdfce216287b851f84ff10ad38))
+- Fixed: no exception thrown if a plist was not valid in `CPKeyedUnarchiver`. ([mrcarlberg](https://github.com/mrcarlberg) - [a995f3a](https://github.com/cappuccino/cappuccino/commit/a995f3ab520836fdfce216287b851f84ff10ad38))
 
-- Fixed: added method `CPNumber -integerValue` and `CPString -integerValue`. ([mrcarlberg](https://github.com/mrcarlberg) - [a10dfa4](https://github.com/cappuccino/cappuccino/commit/a10dfa4ab40e31c2a773c9d1f1bebebbdcd0bcaa))
+- New: `CPNumber -integerValue` and `CPString -integerValue`. ([mrcarlberg](https://github.com/mrcarlberg) - [a10dfa4](https://github.com/cappuccino/cappuccino/commit/a10dfa4ab40e31c2a773c9d1f1bebebbdcd0bcaa))
 
-- Fixed: `//@ sourceURL=...` replaced by `//# sourceURL=...` when compiling Objective-j code. ([mrcarlberg](https://github.com/mrcarlberg) - [3ba2158](https://github.com/cappuccino/cappuccino/commit/3ba215887cc40f3f7287675c376f02c063ed2cbd))
+- Fixed: outdated sourcemap syntax prevented showing the right sources when debugging in the browser. `//@ sourceURL=...` has now been replaced by `//# sourceURL=...` when compiling Objective-J code. ([mrcarlberg](https://github.com/mrcarlberg) - [3ba2158](https://github.com/cappuccino/cappuccino/commit/3ba215887cc40f3f7287675c376f02c063ed2cbd))
 
-- Fixed: `CPSearchField` now uses `CPMenuItem -setIndentationLevel:`. ([cacaodev](https://github.com/cacaodev) - [6d1a094](https://github.com/cappuccino/cappuccino/commit/6d1a094b1517edac9f835f136d5f3f0e82b03fe9))
+- Fixed: `CPSearchField` did not support `CPMenuItem -setIndentationLevel:`. ([cacaodev](https://github.com/cacaodev) - [6d1a094](https://github.com/cappuccino/cappuccino/commit/6d1a094b1517edac9f835f136d5f3f0e82b03fe9))
 
 ### Cucapp
 
 ##### Changes/Fixes
 
-- Fixed: removed code related to Nuage Networks with a network `CPTextfield`. ([Dogild](https://github.com/Dogild) - [67c767c](https://github.com/cappuccino/cucapp/commit/67c767c8b3ca17e75d52e8f19efed028b64df41d))
+- Fixed: accidental Nuage Networks specific code related to text fields made it into the general release. ([Dogild](https://github.com/Dogild) - [67c767c](https://github.com/cappuccino/cucapp/commit/67c767c8b3ca17e75d52e8f19efed028b64df41d))
 
-- Fixed: changed default path for loading Cucapp in the cli ([Dogild](https://github.com/Dogild) - [a924fcf](https://github.com/cappuccino/cucapp/commit/a924fcf5e26dc9e0a890a63873c65c6a5773a7ea))
+- Fixed: wrong default path for loading Cucapp in the CLI ([Dogild](https://github.com/Dogild) - [a924fcf](https://github.com/cappuccino/cucapp/commit/a924fcf5e26dc9e0a890a63873c65c6a5773a7ea))
 
-- Fixed: return html document of the page all the time instead of returning document of the key window. ([Dogild](https://github.com/Dogild) - [2fe795f](https://github.com/cappuccino/cucapp/commit/2fe795f5e853f148d95a22ea18a8df39b4304ddd))
+- Fixed: private API `_mainDOMWindow` did not actually return the main DOM window but the key DOM window. ([Dogild](https://github.com/Dogild) - [2fe795f](https://github.com/cappuccino/cucapp/commit/2fe795f5e853f148d95a22ea18a8df39b4304ddd))
