@@ -25,7 +25,7 @@ The CappCon 2016 was held at the University Of Liège in Belgium. Around 50 peop
 
 - [Alexander Ljunberg](https://twitter.com/slevenbits) introduced the audience to Cappuccino and the 0.9.9 release. Nice talk presenting how strong the foundations of Cappuccino are and why this framework was created. You can find the video [here]() as well as the slides used [here]().
 
-- [Antoine Mercadal](https://twitter.com/primalmotion) did a nice demo about the product they are creating at [Nuage Networks](http://www.nuagenetworks.net). Nuage Networks took the occasion to release new open source frameworks and Antoine Mercadal showed a demo of these new toys. [NUKit](https://github.com/nuagenetworks/nukit), [NUAristo](https://github.com/nuagenetworks/nukit-theme), [Bambou](https://github.com/nuagenetworks/objj-bambou) and [Garuda](https://github.com/nuagenetworks/garuda)are the frameworks released. You can find the video [here]() as the slides used [here]().
+- [Antoine Mercadal](https://twitter.com/primalmotion) did a nice demo about the product they are creating at [Nuage Networks](http://www.nuagenetworks.net). Nuage Networks took the occasion to release new open source frameworks and Antoine Mercadal showed a demo of these new toys. [NUKit](https://github.com/nuagenetworks/nukit), [NUAristo](https://github.com/nuagenetworks/nukit-theme), [Bambou](https://github.com/nuagenetworks/objj-bambou) and [Garuda](https://github.com/nuagenetworks/garuda)are the frameworks released. You can find the video [here]() as the slides used [here](/downloads/cappCon2016/AntoineMercadal-CappCon2016.pdf).
 
 - [Martin Carlberg](https://twitter.com/mrcarlberg) has presented how [Oops](http://www.oops.se) uses Cappuccino. Our Swedish core team member did a demo about the [LightObject Framework](https://github.com/mrcarlberg/LightObject), a Core Data framework for Cappuccino. And interesting fact, the server used for the demo was written in Objective-J and runs on NodeJS. You can find the video [here]() as the slides used [here]().
 
@@ -37,7 +37,7 @@ The CappCon 2016 was held at the University Of Liège in Belgium. Around 50 peop
 
 ### Every good thing has an end
 
-After 8 hours of talking about Cappuccino, it was the time to celebrate this second CappCon! We guess we all agree that Belgium beers have a good reputation (which they deserve) and we hope that everybody had fun during this evening!
+After 8 hours of talking about Cappuccino, it was the time to celebrate this s econd CappCon! We guess we all agree that Belgium beers have a good reputation (which they deserve) and we hope that everybody had fun during this evening!
 
 We hope that everybody enjoyed this CappCon and had a great time in Belgium!
 
