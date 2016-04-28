@@ -33,7 +33,7 @@ The CappCon 2016 was held at the University Of Liège in Belgium. Around 50 peop
 
 - [Alexandre Wilhelm](https://twitter.com/wilhelmalex) showed what kind of testing tools Cappuccino provides. If you want to learn more about testing, OJTest, Cucapp or Cucumber you need to watch his talk. You can find the video [here](/downloads/cappCon2016/AlexandreWilhelm-CappCon2016.pdf) as the slides used [here]().
 
-- [Christophe Serafin](https://twitter.com/t00f67) presented tricks and tips for Cappuccino during his talk. What Jake is, how it works, how to organize your project, your xib etc... If you are about to create a new application, you should watch his presentation. You can find the video [here]() as the slides used [here]().
+- [Christophe Serafin](https://twitter.com/t00f67) presented tricks and tips for Cappuccino during his talk. What Jake is, how it works, how to organize your project, your xib etc... If you are about to create a new application, you should watch his presentation. You can find the video [here]() as the slides used [here](/downloads/cappCon2016/ChristopheSerafin-CappCon2016.pdf).
 
 ### Every good thing has an end
 
