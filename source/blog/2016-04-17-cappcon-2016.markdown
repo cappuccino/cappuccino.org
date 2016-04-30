@@ -23,21 +23,25 @@ The CappCon 2016 was held at the University Of Liège in Belgium. Around 50 peop
 
 ### The Talkers
 
-- [Alexander Ljunberg](https://twitter.com/slevenbits) introduced the audience to Cappuccino and the 0.9.9 release. Nice talk presenting how strong the foundations of Cappuccino are and why this framework was created. You can find the video [here]() as well as the slides used [here]().
+- [Introduction video](https://youtu.be/pdUv9ewZhM4).
 
-- [Antoine Mercadal](https://twitter.com/primalmotion) did a nice demo about the product they are creating at [Nuage Networks](http://www.nuagenetworks.net). Nuage Networks took the occasion to release new open source frameworks and Antoine Mercadal showed a demo of these new toys. [NUKit](https://github.com/nuagenetworks/nukit), [NUAristo](https://github.com/nuagenetworks/nukit-theme), [Bambou](https://github.com/nuagenetworks/objj-bambou) and [Garuda](https://github.com/nuagenetworks/garuda)are the frameworks released. You can find the video [here]() as the slides used [here](/downloads/cappCon2016/AntoineMercadal-CappCon2016.pdf).
+- [Alexander Ljunberg](https://twitter.com/slevenbits) introduced the audience to Cappuccino and the 0.9.9 release. Nice talk presenting how strong the foundations of Cappuccino are and why this framework was created. You can find the video [here](https://youtu.be/kCu2_PPn_qE) as well as the slides used [here]().
 
-- [Martin Carlberg](https://twitter.com/mrcarlberg) has presented how [Oops](http://www.oops.se) uses Cappuccino. Our Swedish core team member did a demo about the [LightObject Framework](https://github.com/mrcarlberg/LightObject), a Core Data framework for Cappuccino. And interesting fact, the server used for the demo was written in Objective-J and runs on NodeJS. You can find the video [here]() as the slides used [here](/downloads/cappCon2016/MartinCarlberg-CappCon2016.pdf).
+- [Antoine Mercadal](https://twitter.com/primalmotion) did a nice demo about the product they are creating at [Nuage Networks](http://www.nuagenetworks.net). Nuage Networks took the occasion to release new open source frameworks and Antoine Mercadal showed a demo of these new toys. [NUKit](https://github.com/nuagenetworks/nukit), [NUAristo](https://github.com/nuagenetworks/nukit-theme), [Bambou](https://github.com/nuagenetworks/objj-bambou) and [Garuda](https://github.com/nuagenetworks/garuda)are the frameworks released. You can find the video [here](https://youtu.be/9hqpS_pJf3A) as the slides used [here](/downloads/cappCon2016/AntoineMercadal-CappCon2016.pdf).
 
-- [Tim Howell](https://twitter.com/rwelephant) told us his story about Cappuccino and his company [RWElephant](http://www.rwelephant.com). New to Cappuccino and wondering about how difficult it is to use this framework? You should watch this story where Tim explains how he learned Cappuccino and Cocoa during a road trip. You can find the video [here](/downloads/cappCon2016/RWElephant-CappCon2016.pdf) as the slides used [here]().
+- [Martin Carlberg](https://twitter.com/mrcarlberg) has presented how [Oops](http://www.oops.se) uses Cappuccino. Our Swedish core team member did a demo about the [LightObject Framework](https://github.com/mrcarlberg/LightObject), a Core Data framework for Cappuccino. And interesting fact, the server used for the demo was written in Objective-J and runs on NodeJS. You can find the video [here](https://youtu.be/j_W_kLBoPIw) as the slides used [here](/downloads/cappCon2016/MartinCarlberg-CappCon2016.pdf).
 
-- [Alexandre Wilhelm](https://twitter.com/wilhelmalex) showed what kind of testing tools Cappuccino provides. If you want to learn more about testing, OJTest, Cucapp or Cucumber you need to watch his talk. You can find the video [here](/downloads/cappCon2016/AlexandreWilhelm-CappCon2016.pdf) as the slides used [here]().
+- [Tim Howell](https://twitter.com/rwelephant) told us his story about Cappuccino and his company [RWElephant](http://www.rwelephant.com). New to Cappuccino and wondering about how difficult it is to use this framework? You should watch this story where Tim explains how he learned Cappuccino and Cocoa during a road trip. You can find the video [here](https://youtu.be/dae0-u1fBvY) as the slides used [here](/downloads/cappCon2016/RWElephant-CappCon2016.pdf).
 
-- [Christophe Serafin](https://twitter.com/t00f67) presented tricks and tips for Cappuccino during his talk. What Jake is, how it works, how to organize your project, your xib etc... If you are about to create a new application, you should watch his presentation. You can find the video [here]() as the slides used [here](/downloads/cappCon2016/ChristopheSerafin-CappCon2016.pdf).
+- [Alexandre Wilhelm](https://twitter.com/wilhelmalex) showed what kind of testing tools Cappuccino provides. If you want to learn more about testing, OJTest, Cucapp or Cucumber you need to watch his talk. You can find the video [here](https://youtu.be/pC1FB0FURYs) as the slides used [here](/downloads/cappCon2016/AlexandreWilhelm-CappCon2016.pdf).
+
+- [Christophe Serafin](https://twitter.com/t00f67) presented tricks and tips for Cappuccino during his talk. What Jake is, how it works, how to organize your project, your xib etc... If you are about to create a new application, you should watch his presentation. You can find the video [here](https://youtu.be/oTOYJiKw17g) as the slides used [here](/downloads/cappCon2016/ChristopheSerafin-CappCon2016.pdf).
+
+- [Alexander Ljunberg](https://twitter.com/slevenbits) closed this dense day with a "What's next ?" talk. You can find the video [here](https://youtu.be/e7Xx8EQy1xo).
 
 ### Every good thing has an end
 
-After 8 hours of talking about Cappuccino, it was the time to celebrate this s econd CappCon! We guess we all agree that Belgium beers have a good reputation (which they deserve) and we hope that everybody had fun during this evening!
+After 8 hours of talking about Cappuccino, it was the time to celebrate this second CappCon! We guess we all agree that Belgium beers have a good reputation (which they deserve) and we hope that everybody had fun during this evening!
 
 We hope that everybody enjoyed this CappCon and had a great time in Belgium!
 
