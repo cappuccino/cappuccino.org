@@ -25,7 +25,7 @@ The CappCon 2016 was held at the University Of Liège in Belgium. Around 50 peop
 
 - [Introduction video](https://youtu.be/pdUv9ewZhM4).
 
-- [Alexander Ljunberg](https://twitter.com/slevenbits) introduced the audience to Cappuccino and the 0.9.9 release. Nice talk presenting how strong the foundations of Cappuccino are and why this framework was created. You can find the video [here](https://youtu.be/kCu2_PPn_qE) as well as the slides used [here]().
+- [Alexander Ljunberg](https://twitter.com/slevenbits) introduced the audience to Cappuccino and the 0.9.9 release. Nice talk presenting how strong the foundations of Cappuccino are and why this framework was created. You can find the video [here](https://youtu.be/kCu2_PPn_qE) as well as the slides used [here](/downloads/cappCon2016/CappCon%202016%20Keynote.pdf).
 
 - [Antoine Mercadal](https://twitter.com/primalmotion) showed a nice demo about the product they are creating at [Nuage Networks](http://www.nuagenetworks.net). Nuage Networks took the occasion to release new open source frameworks and Antoine Mercadal showed a demo of these new toys. The new frameworks released are [NUKit](https://github.com/nuagenetworks/nukit), [NUAristo](https://github.com/nuagenetworks/nukit-theme), [Bambou](https://github.com/nuagenetworks/objj-bambou) and [Garuda](https://github.com/nuagenetworks/garuda). You can find the video [here](https://youtu.be/9hqpS_pJf3A) as well as the slides used [here](/downloads/cappCon2016/AntoineMercadal-CappCon2016.pdf).
 
