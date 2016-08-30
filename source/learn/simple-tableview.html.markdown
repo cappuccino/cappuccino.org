@@ -23,7 +23,7 @@ Let’s define the required instance variables:
 	{
 	    @outlet CPWindow    theWindow;
 	    @outlet CPTableView tableView;
-	    CPMutableArray      nameArray;
+	    CPMutableArray      _names;
 	}
 
 Our dataSource will be CPMutableArray:
@@ -33,7 +33,7 @@ Our dataSource will be CPMutableArray:
 	{
 	    if (self = [super init]);
 	    {
-	        nameArray = [[CPMutableArray alloc]initWithObjects:"Alpha", "Beta", "Charlie", "Delta"];
+	        _names = [[CPMutableArray alloc] initWithObjects:"Alpha", "Beta", "Charlie", "Delta"];
 	    }
 	    return self;
 	}
@@ -59,7 +59,7 @@ We are defining the number of rows of CPTableView, which is equivalent to the nu
 	:::objj
 	- (int)numberOfRowsInTableView:(CPTableView)aTableView
 	{
-	    return [nameArray count];
+	    return [_names count];
 	}
 
 This method will insert the elements of CPMutableArray into each row.
@@ -67,7 +67,7 @@ This method will insert the elements of CPMutableArray into each row.
 	:::objj
 	- (id)tableView:(CPTableView)aTableView objectValueForTableColumn:(CPTableColumn)aColumn row:(CPInteger)aRowIndex
 	{
-	    return [nameArray objectAtIndex:aRowIndex];
+	    return [_names objectAtIndex:aRowIndex];
 	}
 
 ### Flush the template
@@ -119,7 +119,7 @@ We have to add two objects from the library. One is CPTextField, the second one 
 You can change the CPButton title on the Attributes inspector tab
 ![](simpletableview/simpletableview12.png)
 
-Define the CPTextField as an outlet in the Appcontroller. This will help us to get its value.
+Define the CPTextField as an outlet in the AppController. This will help us to get its value.
 
 	:::objj
 	@outlet CPTextField textField;
@@ -130,7 +130,7 @@ Create the CPButton as an action.
 	- (@action)addItem:(id)sender
 	{
 	    // Get CPTextField value and add to our CPMutableArray 
-	    [nameArray addObject: [textField stringValue]];
+	    [_names addObject: [textField stringValue]];
 
 	    // Clear the CPTextField
 	    [textField setStringValue:""];
@@ -162,7 +162,7 @@ By selecting a row, we define the element we want to remove. Using `selectedRow`
 	    // Check if any row selected, if not the value is -1
 	    if ([tableView selectedRow] > -1)
 	    {
-	        [nameArray removeObject:[nameArray objectAtIndex:[tableView selectedRow]]];
+	        [_names removeObject:[_names objectAtIndex:[tableView selectedRow]]];
 	    }
 
 	    // Reload CPTableView to see the changes
