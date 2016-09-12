@@ -12,4 +12,4 @@ We have today posted a new tutorial for our learning section, written by [kicsip
 
 The tutorial is a getting starting guide for the powerful table view control. It really showcases how productive you can be with the tools that come out of the box with Cappuccino.
 
-[Table View Tutorial](/learn/learn/simple-tableview.html)
+The new tutorial can be found [here](/learn/simple-tableview.html).
