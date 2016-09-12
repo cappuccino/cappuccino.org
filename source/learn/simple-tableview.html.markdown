@@ -1,22 +1,20 @@
-In this tutorial we are creating a simple cell-based CTableView. CPTableView is one of the simplest way to organize our data into columns and rows.
-Following this tutorial you will be able to understand how populate data into CPTableView, how you can add or remove elements.
+In this tutorial we will create a simple cell-based table view. The table view control, `CPTableView`, is one of the simplest way to organize our data into columns and rows, whether that's just for display or for editing. At the conclusion of this tutorial you will know how to populate data into `CPTableView` and how to add and remove elements.
 ![](simpletableview/simpletableview1.png)
 
-We assume you already read and understood the [Xcode Interface Builder tutorial](xcode-basics.html).
+We will be using Xcode's Interface Builder in this tutorial, so if you haven't already you should read our [Xcode Interface Builder tutorial](xcode-basics.html).
 
 ### Create the project
 
-First, go to the folder in which you want create the project. Run
-the `capp` command:
+First, go to the folder in which you want create the project. Run the `capp` command:
 
     :::sh
     capp gen -l -t NibApplication SimpleTableView
 
-This will generate the startup project using the Nib template.
+This will generate an empty new project using the Nib template.
 
 ### Code
 
-Let’s define the required instance variables:
+Since we will be interacting with our table view in the app controller, let's start by giving it an outlet. While we're there let's add an ivar to store our content too. In `AppController.j`:
 
     :::objj
     @implementation AppController : CPObject
@@ -26,35 +24,32 @@ Let’s define the required instance variables:
         CPMutableArray      _names;
     }
 
-Our dataSource will be CPMutableArray:
+Tables need a data source from which to read its row data. In this case we'll store that data in a mutable array:
 
     :::objj
     - (id)init
     {
-        if (self = [super init]);
+        if (self = [super init])
         {
-            _names = [[CPMutableArray alloc] initWithObjects:"Alpha", "Beta", "Charlie", "Delta"];
+            _names = @["Alpha", "Beta", "Charlie", "Delta"];
         }
         return self;
     }
 
-As we wouldn't like a full screen application, do the following change in `awakeFromCib` method:
+Let's make a windowed application for this tutorial, by setting `setFullPlatformWindow:NO` in the `awakeFromCib` method:
 
     :::objj
     - (void)awakeFromCib
     {
-        // This is called when the cib is done loading.
-        // You can implement this method on any object instantiated from a Cib.
-        // It's a useful hook for setting up current UI values, and other things.
-
-        // In this case, we want the window from Cib to become our full browser window
         [theWindow setFullPlatformWindow:NO];
     }
 
-To present data in a CPTableView we need to define the number of rows and the data in each row as written in [CPTableView API](http://www.cappuccino-project.org/learn/documentation/interface_c_p_table_view.html):
-> CPTableView object displays record-oriented data in a table and allows the user to edit values and resize and rearrange columns. A CPTableView requires you to either set a data source which implements `numberOfRowsInTableView:` and `tableView:objectValueForTableColumn:row:` , or alternatively to provide data through Key Value Bindings.
+`CPTableView` uses a core concept in Cappuccino which you will see implemented in many different settings: a data source. The data source should at a minimum be able to let the table view know how many rows of data there are and what each row is.
 
-We are defining the number of rows of CPTableView, which is equivalent to the number of elements in our array.
+This is what the [CPTableView API docs](http://www.cappuccino-project.org/learn/documentation/interface_c_p_table_view.html) have to say about it:
+> ... displays record-oriented data in a table and allows the user to edit values and resize and rearrange columns. A `CPTableView` requires you to either set a data source which implements `numberOfRowsInTableView:` and `tableView:objectValueForTableColumn:row:` , or alternatively to provide data through Key Value Bindings.
+
+In our case the number of rows in the table view is equivalent to the number of elements in our array. We are going to make the app controller our data source, so let's add this method to `AppController.j`:
 
     :::objj
     - (int)numberOfRowsInTableView:(CPTableView)aTableView
@@ -62,7 +57,7 @@ We are defining the number of rows of CPTableView, which is equivalent to the nu
         return [_names count];
     }
 
-This method will insert the elements of CPMutableArray into each row.
+And then the method to actually return the elements of each row:
 
     :::objj
     - (id)tableView:(CPTableView)aTableView objectValueForTableColumn:(CPTableColumn)aColumn row:(CPInteger)aRowIndex
@@ -70,49 +65,52 @@ This method will insert the elements of CPMutableArray into each row.
         return [_names objectAtIndex:aRowIndex];
     }
 
-### Flush the template
 
-Let’s start. First, we are opening the main window, by double clicking Window - Window in the Object navigator.
+### Clean up the nib
+
+In Xcode, open up the main window by double clicking `Window - Window` in the Object navigator.
 ![](simpletableview/simpletableview2.png)
 
-By default, there is a text field and a slider. Select and remove them (using the Delete key).
+By default, there is a text field and a slider in the window. Select and remove them (using the Delete key).
 
 
 ### Creating the new interface
 
-Choose “Table View” from Object Library.
+Choose "Table View" from the Object Library.
 ![](simpletableview/simpletableview3.png)
 
-Drag and Drop “Table View” onto the Window.
+Drag and drop "Table View" onto the Window.
 ![](simpletableview/simpletableview4.png)
 
 By dragging the right corner of Table View, resize it to fill the Window.
 ![](simpletableview/simpletableview5.png)
 
-Choose “Table View” from Document Outline, then Click on Attributes inspector on the top right side of the Xcode.
-In our tutorial we add cells instead of views to CPTableView, so we need to change the “Content Mode” from “View based” to “Cell based”.
+Choose "Table View" in the Document Outline, then open the Attributes inspector by clicking its button on the top right side of Xcode. In this tutorial we will a cell based table view (rather than a view based one), so we need to change the "Content Mode" from "View based" to "Cell based".
 ![](simpletableview/simpletableview6.png)
 
-As we need only one column, reduce the column number from 2 to 1. We don’t need Header, unselect it. Set the “Column Sizing” to “First Column Only”. Select “Alternating Rows” too.
+As we need only one column, reduce the column number from 2 to 1. We don’t need a header, so uncheck that. Set the "Column Sizing" to "First Column Only". Let's enable "Alternating Rows" too.
 ![](simpletableview/simpletableview7.png)
 
-We have to connect the dataSource and delegate outlets.
+Now it's time to make use of our new data source by connecting the `dataSource` and `delegate` outlets.
 ![](simpletableview/datasource.png)
 ![](simpletableview/delegate.png)
 ![](simpletableview/tableview.png)
 
 ### Run the application
-Before opening our application in a browser, it is recommended to start a webserver:
+
+As usual the best way to run a Cappuccino app for testing is to start a local webserver. So in the root of your project folder, type:
 
     :::sh
     python -m SimpleHTTPServer
 
-Now, open your browser and type the address given by SimpleHTTPServer: `localhost:8000`
+Now, open your browser and type in the address given by SimpleHTTPServer: `localhost:8000`
 ![](simpletableview/simpletableview8.png)
 
 ### 'Add’ function
-So far so good, but what if I want to add elements to our list.
-We have to add two objects from the library. One is CPTextField, the second one is CPButton.
+
+So far so good, but what if we want to add elements to our list?
+
+Let's add two more controls fromthe library. One is CPTextField, the second one is CPButton.
 ![](simpletableview/simpletableview9.png)
 ![](simpletableview/simpletableview11.png)
 
@@ -144,22 +142,25 @@ Connect our newly added outlet and action.
 ![](simpletableview/add.png)
 
 ### Run the application
+
 Refresh your borwser.
+
 ![](simpletableview/simpletableview13.png)
 
 ### 'Remove’ function
-If we are able to add, we would like to remove items as well.
 
-Let’s add another CPButton as 'Remove’ button.
+Now that we are able to add, we would like to be able to remove items as well.
+
+Let's add another button called "Remove".
+
 ![](simpletableview/simpletableview14.png)
 
-By selecting a row, we define the element we want to remove. Using `selectedRow` we can easily tell the row index and pick the element and delete with
-`CPMutableArray removeObject: object`
+When the user selects a row in the table, that's the element they want to remove. Using the `selectedRow` attribute on the table we can find the row index to delete. Then we can delete it using `CPMutableArray removeObject:`. Here's the code:
 
     :::objj
     - (@action)removeItem:(id)sender
     {
-        // Check if any row selected, if not the value is -1
+        // Check if any row is selected; if not the value is -1.
         if ([tableView selectedRow] > -1)
         {
             [_names removeObject:[_names objectAtIndex:[tableView selectedRow]]];
@@ -170,9 +171,11 @@ By selecting a row, we define the element we want to remove. Using `selectedRow`
     }
 
 Connect the button and the action:
+
 ![](simpletableview/remove.png)
 
-Now, you have a fully functional application.
+Now, you have a fully functioning application!
 
 ### Source
+
 You can download the archive of this project [here](files/SimpleTableView.zip).

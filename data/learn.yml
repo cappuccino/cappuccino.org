@@ -17,7 +17,7 @@ pages:
         - "learn/automatic-layout.html"
     -   - "Tutorial: Xcode Interface Builder"
         - "learn/xcode-basics.html"
-    -   - "Tutorial: Simple CPTableView"
+    -   - "Tutorial: Simple Table View"
         - "learn/simple-tableview.html"
     -   - "Debugging"
         - "learn/debugging.html"
