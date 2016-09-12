@@ -91,7 +91,7 @@ We are getting close to a new release Cappuccino 0.9.10, which will probably be 
 
 - Fixed: missing import in `CPCollectionView`. ([cacaodev](https://github.com/cacaodev) - [5f1229](https://github.com/cappuccino/cappuccino/commit/5f12291ac4fab4351f0cfbc85df88066ac6ad329))
 
-- New: removed Native Host. ([didierkorthoudt](https://github.com/didierkorthoudt) - [5bc3609](https://github.com/cappuccino/cappuccino/commit/5bc3609ad7def39309d939e68e8497d428763527))
+- New: removed Native Host. ([daboe01](https://github.com/daboe01) - [5bc3609](https://github.com/cappuccino/cappuccino/commit/5bc3609ad7def39309d939e68e8497d428763527))
 
 - Fixed: `CPView` received multiple `-viewDidHide/Unhide` messages. ([cacaodev](https://github.com/cacaodev) - [12dde51](https://github.com/cappuccino/cappuccino/commit/12dde5154fbe9e1b27ec5a5d98ac6cb4993b38e1))
 
