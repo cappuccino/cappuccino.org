@@ -1,0 +1,118 @@
+---
+title: Cappuccino News 2016 September 1st
+author: Alexandre Wilhelm
+author_email: alexandre.wilhelmfr@gmail.com
+date: '2016-09-01'
+tags:
+- Cappuccino
+- objj
+- update
+- cucapp
+- cappCon2016
+---
+
+Here's a quick update on what's new with Cappuccino recently.
+
+### Community
+
+If you missed the CappCon2016, you can find the story of this amazing day [here](http://www.cappuccino-project.org/blog/2016/04/cappcon-2016.html)! Videos and slides have been released.
+
+In a bit of sad news for the Cappuccino Community, Aparajita Fishman has left the Cappuccino project to take on a role at Apple. Thanks you for all your great work on Cappuccino and we hope you’ll show them how it’s done over at Apple! More information [here](http://www.cappuccino-project.org/blog/2016/08/aparajita-leaves.html).
+
+Taking a step back to look at the last 6 months, we can see lots of improvements and news. To pick just a few, `CPView` has been optimized, while `CPAnimationContext` and `CPViewAnimator` have been added to the framework. As always, minor bugs have been fixed. The full list is below.
+
+We are getting close to a new release Cappuccino 0.9.10, which will probably be released in October 2016!
+
+### Cappuccino
+
+##### New
+
+- New: `CPAnimationContext` and `CPViewAnimator`. ([cacaodev](https://github.com/cacaodev) - [598a6eb](https://github.com/cappuccino/cappuccino/commit/598a6ebaed43f65fa91374cdfa2a976fc4cd19e4))
+
+- New: Sweden / Swedish as a possible locale. ([aljungberg](https://github.com/aljungberg) - [41a7417](https://github.com/cappuccino/cappuccino/commit/41a741724f7da85835ed3b7e12eee1376b0b0cfc))
+
+- New: `CPViewController -viewWill/DidAppear` and `CPViewController viewWill/didDisappear`. ([cacaodev](https://github.com/cacaodev) - [fedc7214](https://github.com/cappuccino/cappuccino/commit/fedc721432bb30c244030a5f632ca27474b966c2))
+
+- New: show successfully loaded `NSClasses` in `nib2cib` verbose. ([aljungberg](https://github.com/aljungberg) - [dde8059](https://github.com/cappuccino/cappuccino/commit/dde805931dbb2d04ad0ec8124da2b1cc5d2a0bd2))
+
+##### Changes/Fixes
+
+- Fixed: bump `XcodeCapp` copyright year. ([aljungberg](https://github.com/aljungberg) - [087e811](https://github.com/cappuccino/cappuccino/commit/087e811586879d9ceedb5316a5fb49f784653c8d))
+
+- Fixed: `CPNumber` intValue did not return an integer. ([aljungberg](https://github.com/aljungberg) - [fa07bc1](https://github.com/cappuccino/cappuccino/commit/fa07bc143e2427c2a1d373b5ea7149eb3d34d883))
+
+- Fixed: missed some version number bumps in the 0.9.9 release. ([aljungberg](https://github.com/aljungberg) - [e13f5ed](https://github.com/cappuccino/cappuccino/commit/e13f5ed730f52c77836654df2ad3f41e00b599f1))
+
+- Fixed: formatting `CPCache`. ([aljungberg](https://github.com/aljungberg) - [42d7e43](https://github.com/cappuccino/cappuccino/commit/42d7e4312bcfe4c7d1257e1aff9c5a5c68f71495))
+
+- Fixed: crash when having a `CPTableViewHeader` without a `CPTableView`. ([Dogild](https://github.com/Dogild) - [c24c386](https://github.com/cappuccino/cappuccino/commit/c24c3868bb78d942e4309d18329da4f2cedd84a9))
+
+- Fixed: cache control was not set properly in `CPURLRequest`. ([Dogild](https://github.com/Dogild) - [5c60819](https://github.com/cappuccino/cappuccino/commit/5c60819668b1446127e4989e059bc6f3b3c46cee))
+
+- Fixed : `capp_env` did not use the master version of cappuccino. ([primalmotion](https://github.com/primalmotion) - [584aebf](https://github.com/cappuccino/cappuccino/commit/584aebf76bf644fc18a630cf30be445301ec394b))
+
+- Fixed: cursor key binding methods did not fire in IE 11. ([herbatnik](https://github.com/herbatnik) - [43a2480](https://github.com/cappuccino/cappuccino/commit/43a248069921716ae2d30879ef9d7481b0ba3cfa))
+
+- Fixed: first `CPPopUpItem` is always selected if selected binding value is set before content binding value. ([mrcarlberg](https://github.com/mrcarlberg) - [5c58552](https://github.com/cappuccino/cappuccino/commit/5c58552d9165b0f5804e624ca7a0cb1472260519))
+
+- Fixed: `CPObjectController -setEntityName` did not work. ([mrcarlberg](https://github.com/mrcarlberg) - [cd92ebd](https://github.com/cappuccino/cappuccino/commit/cd92ebd69cad6b3cd6014614f3ff2f8935faa332))
+
+- Fixed: 'Unknown function getPropertyCSSValue' error in Chrome in `CPAnimationContext`. ([cacaodev](https://github.com/cacaodev) - [571891](https://github.com/cappuccino/cappuccino/commit/57189183d642e02c5724c82af178f19788cc0d3b))
+
+- Fixed: `CPTableView` `viewBasedCib` manual test was broken due to `CPBox`. ([cacaodev](https://github.com/cacaodev) - [1575c2b](https://github.com/cappuccino/cappuccino/commit/1575c2bc10715199d092ca359a624ddfe75375ee))
+
+- Fixed: manual test `SmartFoldersDemo`. ([cacaodev](https://github.com/cacaodev) - [ffcac67](https://github.com/cappuccino/cappuccino/commit/ffcac677e0d41bcd5e54654540f510f626d5d7e1))
+
+- Fixed: `CPCollectionView` content binding. ([cacaodev](https://github.com/cacaodev) - [f67faf](https://github.com/cappuccino/cappuccino/commit/f67fafdb8ece3a6cd921c63c9d9eaf9f58c86493))
+
+- Fixed: when dependent key paths use a relationship, only the first added observer would observe the attribute for the relationship object. ([mrcarlberg](https://github.com/mrcarlberg) - [ae5d317](https://github.com/cappuccino/cappuccino/commit/ae5d31746e9d157f2500a6e4a5996fb0d451a577))
+
+- Fixed: `CPViewController -isViewLoaded` property was always set to NO in async mode. ([cacaodev](https://github.com/cacaodev) - [3e6e5f9](https://github.com/cappuccino/cappuccino/commit/3e6e5f95ecc088126445eafa25e910263f7e6bf4))
+
+- Fixed: `CPObject +implementsSelector:` did not work with proxies and KVO swizzled classes. ([cacaodev](https://github.com/cacaodev) - [a192698](https://github.com/cappuccino/cappuccino/commit/a1926982c64216041e74e3502732e9ee7cf95b2e))
+
+- Fixed: date comparisons in `CPPredicateEditor`. ([eussam](https://github.com/eussam) - [818d5d5](https://github.com/cappuccino/cappuccino/commit/818d5d782fe3771563b0ada4e3f1e9af8aff0030))
+
+- Fixed: unit tests for `CPPredicateEditor`. ([cacaodev](https://github.com/cacaodev) - [c38daac](https://github.com/cappuccino/cappuccino/commit/c38daac6469e2cae92a07d9fc3f9f0991bef5d08) [c31f5b1](https://github.com/cappuccino/cappuccino/commit/c31f5b1d593484379dca362567b5e1b06a487b9b))
+
+- Fixed: `CPPredicateEditor` predicate when the template has a `CPFloatAttributeType`. ([cacaodev](https://github.com/cacaodev) - [333e112](https://github.com/cappuccino/cappuccino/commit/333e112e375f74e0d812cc9c02f2d90e2a825b05))
+
+- New: enable autoscrolling for table view columns. ([daboe01](https://github.com/daboe01) - [abb0799](https://github.com/cappuccino/cappuccino/commit/abb0799817aaad2a10e093eeaae3c30907a202dd))
+
+- Fixed: `CPColorPanel` always opened in main platform window. ([didierkorthoudt](https://github.com/didierkorthoudt) - [9273c9e](https://github.com/cappuccino/cappuccino/commit/9273c9ee10e109ca3698306c975ef85a6280ba85))
+
+- Fixed: `CPTextField` didn't optimize tracking areas management. ([didierkorthoudt](https://github.com/didierkorthoudt) - [1927bb4](https://github.com/cappuccino/cappuccino/commit/1927bb479813ffc3849d421aa424c356ab49425f))
+
+- Fixed: right mouse clicking during a drag operation canceled it. ([didierkorthoudt](https://github.com/didierkorthoudt) - [a28f9ce](https://github.com/cappuccino/cappuccino/commit/a28f9ceebac335a2a983dfd59ab0e5e100454bf8))
+
+- Fixed: the background of the brightness slider had a uniform color in `CPColorPicker` ([daboe01](https://github.com/daboe01) - [a84a7bb](https://github.com/cappuccino/cappuccino/commit/a84a7bb7c344ec674341fd12248fff8f7838cbb8))
+
+- New: merged in the parser and compiler that is used in the node objj-runtime. ([mrcarlberg](https://github.com/mrcarlberg) - [e134f91](https://github.com/cappuccino/cappuccino/commit/e134f910aadb6ccf9a518e00d0dd7d85107d53fb))
+
+- Fixed: missing import in `CPCollectionView`. ([cacaodev](https://github.com/cacaodev) - [5f1229](https://github.com/cappuccino/cappuccino/commit/5f12291ac4fab4351f0cfbc85df88066ac6ad329))
+
+- New: removed Native Host. ([daboe01](https://github.com/daboe01) - [5bc3609](https://github.com/cappuccino/cappuccino/commit/5bc3609ad7def39309d939e68e8497d428763527))
+
+- Fixed: `CPView` received multiple `-viewDidHide/Unhide` messages. ([cacaodev](https://github.com/cacaodev) - [12dde51](https://github.com/cappuccino/cappuccino/commit/12dde5154fbe9e1b27ec5a5d98ac6cb4993b38e1))
+
+- New: removed rakefile. ([daboe01](https://github.com/daboe01) - [80bfeb1](https://github.com/cappuccino/cappuccino/commit/80bfeb1a29ba52a0a3fd35a0189c48f9e8b5971e))
+
+- Fixed: XcodeCapp 'Preferences' menu item not in the standard place. ([enquora](https://github.com/enquora ) - [b09cb24](https://github.com/cappuccino/cappuccino/commit/b09cb2480464e1dccf45c40e892e344b7766d138))
+
+- Fixed: `nib2cib`'ed files different with jake release and jake deploy. ([aljungberg](https://github.com/aljungberg) - [f4c11d1](https://github.com/cappuccino/cappuccino/commit/f4c11d14e734cb6e78dd998735cbfac8af4734b8))
+
+- Fixed: XcodeCapp `nib2cib` incorrect vs jake release. ([aljungberg](https://github.com/aljungberg) - [3e56c8e](https://github.com/cappuccino/cappuccino/commit/3e56c8ed8b27284defdf9f46e0e9809b644fde3a))
+
+- Fixed: `CPPasteBoard` dead code. ([daboe01](https://github.com/daboe01) - [a2960a7](https://github.com/cappuccino/cappuccino/commit/a2960a7997ff82b12d9c679a449e46459d7dd4ee))
+
+- Fixed: missing requirements in the README. ([daboe01](https://github.com/daboe01) - [f9cc773](https://github.com/cappuccino/cappuccino/commit/f9cc77382a5fb3909198b22683a52c6d851d4274))
+
+- Fixed: scrolling events were not dispatched to the `CPApp` on slower system under Chrome 52. ([daboe01](https://github.com/daboe01) - [e4fce08](https://github.com/cappuccino/cappuccino/commit/e4fce08effcee54287eaaa512ccf14891e805cad))
+
+- Fixed: iOS virtual keyboard "done" button not working and tapping other text fields while editing (often) not working. ([aljungberg](https://github.com/aljungberg) - [4395c07](https://github.com/cappuccino/cappuccino/commit/4395c0764841655d1213002d9cd8da230b05f365))
+
+### Cucapp
+
+##### Changes/Fixes
+
+- Fixed: the function `dumpGuiObject` was called two times for the class `CPScrollView` ([t00f](https://github.com/t00f) - [732d77e](https://github.com/cappuccino/cucapp/commit/732d77ee8e686c74745df7dd4e128996920ad3f6))
