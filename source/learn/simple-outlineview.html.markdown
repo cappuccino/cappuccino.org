@@ -10,25 +10,25 @@ Run the `capp` command in your project folder:
 This will generate an empty new project using the Nib template.
 
 ### Code
-Our data source model will be created in a separate file to keep our code organised  In this way you can easily structure your project around MVC pattern. Create a new file with a name of `EmployeeData.j`.
+Our data source model will be created in a separate file to keep our code organized. In this way you can easily structure your project around MVC pattern. Create a new file with a name of `Employee.j`.
 
     :::objj    
     @import <Foundation/CPObject.j>
 
-    @implementation EmployeeData : CPObject
+    @implementation Employee : CPObject
     {
-        CPString       _name      @accessors;
-        CPString       _title     @accessors;
-        CPMutableArray _employees @accessors;
+        CPString       _name      @accessors( property=name );
+        CPString       _title     @accessors( property=title );
+        CPMutableArray employees  @accessors;
     }
 
-    - (id)initWithDetails:(CPString)aName title:(CPString)aTitle
+    - (id)initWithName:(CPString)aName title:(CPString)aTitle
     {
         if (self = [super init])
         {
             _name = aName;
             _title = aTitle;
-            _employees = [CPMutableArray array];
+            employees = [CPMutableArray array];
         }
         return self;
     }
@@ -36,20 +36,19 @@ Our data source model will be created in a separate file to keep our code organi
     @end
 
 Let’s go back to our AppController.j and import our previously created file:
-`@import "EmployeeData.j"` 
+`@import "Employee.j"` 
 
-Now, we can create the instance variable using the EmployeeData model and outlets for interaction between AppController and OutlineView.
+Now, we can create the instance variable using the Employee model and outlets for interaction between AppController and OutlineView.
 
     :::objj
     @implementation AppController : CPObject
     {
         @outlet CPWindow        theWindow;
-        @outlet CPOutlineView   _outlineView;
-        EmployeeData            ceo; // This will hold our root item
-        EmployeeData            employee; // This will hold the leaf items
+        @outlet CPOutlineView   outlineView;
+        Employee                _ceo; // This will hold our root item
     }
 
-Let's make a windowed application for this tutorial, by setting `setFullPlatformWindow:NO` in the `awakeFromCib` method:
+Let's make an application in a window for this tutorial, by setting `setFullPlatformWindow:NO` in the `awakeFromCib` method:
 
     :::objj
     - (void)awakeFromCib
@@ -57,7 +56,7 @@ Let's make a windowed application for this tutorial, by setting `setFullPlatform
         [theWindow setFullPlatformWindow:NO];
     }
 
-In the `init` method we are defining the data source using our EmployeeData model.
+In the `init` method we are defining the data source using our Employee model.
 
     :::objj
     - (id)init
@@ -66,30 +65,30 @@ In the `init` method we are defining the data source using our EmployeeData mode
         {
         
             // First we define our root item, the CEO
-            ceo = [[EmployeeData alloc] initWithDetails: "Ben" title: "CEO"];
+            _ceo = [[Employee alloc]initWithName:"Ben" title:"CEO"];
 
             // Then we create other employees and add them to their managers belong to
-            var simon = [[EmployeeData alloc] initWithDetails: "Simon" title: "CFO"];
+            var simon = [[Employee alloc]initWithName:"Simon" title:"CFO"];
 
             // We collect CEO reportees to his _employees array defined in Employee.j
             // Simon reports directly to CEO
-            [ceo._employees addObject:simon];
+            [[_ceo employees] addObject:simon];
 
-            var sarah = [[EmployeeData alloc] initWithDetails: "Sarah" title: "Assistant to CFO"];
+            var sarah = [[Employee alloc]initWithName:"Sarah" title:"Assistant to CFO"];
             // Sarah report to Simon
-            [simon._employees addObject:sarah];
+            [[simon employees] addObject:sarah];
 
-            var maarten = [[EmployeeData alloc] initWithDetails:"Maarten" title: "VP of Marketing"];
-            [ceo._employees addObject:maarten];
+            var maarten = [[Employee alloc]initWithName:"Maarten" title:"VP of Marketing"];
+            [[_ceo employees] addObject:maarten];
 
-            var donny = [[EmployeeData alloc] initWithDetails:"Donny" title: "Head of Communication"];
-            [maarten._employees addObject:donny];
+            var donny = [[Employee alloc]initWithName:"Donny" title:"Head of Communication"];
+            [[maarten employees] addObject:donny];
 
-            var ronan = [[EmployeeData alloc] initWithDetails: "Ronan" title: "Communication Specialist"];
-            [donny._employees addObject:ronan];
+            var ronan = [[Employee alloc]initWithName:"Ronan" title:"Communication Specialist"];
+            [[donny employees] addObject:ronan];
 
-            var dick = [[EmployeeData alloc] initWithDetails: "Dick" title: "Head of Legal"];
-            [ceo._employees addObject:dick];
+            var dick = [[Employee alloc]initWithName:"Dick" title:"Head of Legal"];
+            [[_ceo employees] addObject:dick];
 
         }
         return self;
@@ -124,16 +123,13 @@ The `item` will be nil, if it is the root item. Otherwise, we simply use the siz
     :::objj
     - (int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item
     {
-        if (item == nil)
+        if (!item)
         {
             // We have one root item, the CEO only
             return 1;
         }
-        else
-        {
-            employee = item
-            return ([employee._employees count]);
-        }
+
+        return ([[item employees] count]);
     }
 
 Next step to define whether the item has subitems. If it does, it will be expandable.
@@ -141,15 +137,12 @@ Next step to define whether the item has subitems. If it does, it will be expand
     :::objj
     - (BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item
     {
-        if (item == nil)
+        if (!item)
         {
             return YES;
         }
-        else
-        {
-            employee = item;
-            return ([employee._employees count] != 0);
-        }
+
+        return ([[item employees] count] != 0);
     }
 
 This method returns the child item at index of a item. If item is nil, returns the appropriate child item of the root object.
@@ -157,34 +150,31 @@ This method returns the child item at index of a item. If item is nil, returns t
     :::objj
     - (id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item
     {
-        if (item == nil)
+        if (!item)
         {
             // Our root item is the CEO
             return ceo;
         }
-        else
-        {
-            employee = item;
-            return (employee._employees[index]);
-        }
+        
+        return ([item employees][index]);
     }
 
 Finally, we are assigning the object values to columns. Our first column is “NameColumn”, the second is “TitleColumn”. We will setup these names later in the Interface Builder.
 
     :::objj
-    - (id)outlineView:(id)outlineView viewForTableColumn:(id)tableColumn item:(id)items
+    - (id)outlineView:(id)anOutlineView viewForTableColumn:(id)tableColumn item:(id)items
     {
         var identifier = [tableColumn identifier];
 
         if (identifier == "NameColumn")
         {
             var view = [outlineView makeViewWithIdentifier:"NameCell" owner:self];
-            [[view textField] setStringValue:item._name ];
+            [[view textField] setStringValue:i[tem name]];
         }
         else
         {
             var view = [outlineView makeViewWithIdentifier:"TitleCell" owner:self];
-            [[view textField] setStringValue:item._title ];
+            [[view textField] setStringValue:[item title]];
         }
         
         return view;
