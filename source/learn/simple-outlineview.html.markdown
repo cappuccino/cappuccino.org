@@ -169,7 +169,7 @@ Finally, we are assigning the object values to columns. Our first column is “N
         if (identifier == "NameColumn")
         {
             var view = [outlineView makeViewWithIdentifier:"NameCell" owner:self];
-            [[view textField] setStringValue:i[tem name]];
+            [[view textField] setStringValue:[item name]];
         }
         else
         {
