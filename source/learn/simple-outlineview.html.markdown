@@ -17,9 +17,9 @@ Our data source model will be created in a separate file to keep our code organi
 
     @implementation Employee : CPObject
     {
-        CPString       _name      @accessors( property=name );
-        CPString       _title     @accessors( property=title );
-        CPMutableArray employees  @accessors;
+        CPString       _name      @accessors(property=name);
+        CPString       _title     @accessors(property=title);
+        CPMutableArray _employees @accessors(property=employees);
     }
 
     - (id)initWithName:(CPString)aName title:(CPString)aTitle
@@ -28,7 +28,7 @@ Our data source model will be created in a separate file to keep our code organi
         {
             _name = aName;
             _title = aTitle;
-            employees = [CPMutableArray array];
+            _employees = [CPMutableArray array];
         }
         return self;
     }
@@ -65,29 +65,29 @@ In the `init` method we are defining the data source using our Employee model.
         {
         
             // First we define our root item, the CEO
-            _ceo = [[Employee alloc]initWithName:"Ben" title:"CEO"];
+            _ceo = [[Employee alloc] initWithName:"Ben" title:"CEO"];
 
             // Then we create other employees and add them to their managers belong to
-            var simon = [[Employee alloc]initWithName:"Simon" title:"CFO"];
+            var simon = [[Employee alloc] initWithName:"Simon" title:"CFO"];
 
             // We collect CEO reportees to his _employees array defined in Employee.j
             // Simon reports directly to CEO
             [[_ceo employees] addObject:simon];
 
-            var sarah = [[Employee alloc]initWithName:"Sarah" title:"Assistant to CFO"];
+            var sarah = [[Employee alloc] initWithName:"Sarah" title:"Assistant to CFO"];
             // Sarah report to Simon
             [[simon employees] addObject:sarah];
 
-            var maarten = [[Employee alloc]initWithName:"Maarten" title:"VP of Marketing"];
+            var maarten = [[Employee alloc] initWithName:"Maarten" title:"VP of Marketing"];
             [[_ceo employees] addObject:maarten];
 
-            var donny = [[Employee alloc]initWithName:"Donny" title:"Head of Communication"];
+            var donny = [[Employee alloc] initWithName:"Donny" title:"Head of Communication"];
             [[maarten employees] addObject:donny];
 
-            var ronan = [[Employee alloc]initWithName:"Ronan" title:"Communication Specialist"];
+            var ronan = [[Employee alloc] initWithName:"Ronan" title:"Communication Specialist"];
             [[donny employees] addObject:ronan];
 
-            var dick = [[Employee alloc]initWithName:"Dick" title:"Head of Legal"];
+            var dick = [[Employee alloc] initWithName:"Dick" title:"Head of Legal"];
             [[_ceo employees] addObject:dick];
 
         }
@@ -129,7 +129,7 @@ The `item` will be nil, if it is the root item. Otherwise, we simply use the siz
             return 1;
         }
 
-        return ([[item employees] count]);
+        return [[item employees] count];
     }
 
 Next step to define whether the item has subitems. If it does, it will be expandable.
@@ -142,7 +142,7 @@ Next step to define whether the item has subitems. If it does, it will be expand
             return YES;
         }
 
-        return ([[item employees] count] != 0);
+        return [[item employees] count] != 0;
     }
 
 This method returns the child item at index of a item. If item is nil, returns the appropriate child item of the root object.
@@ -156,7 +156,7 @@ This method returns the child item at index of a item. If item is nil, returns t
             return ceo;
         }
         
-        return ([item employees][index]);
+        return [item employees][index];
     }
 
 Finally, we are assigning the object values to columns. Our first column is “NameColumn”, the second is “TitleColumn”. We will setup these names later in the Interface Builder.
@@ -166,9 +166,10 @@ Finally, we are assigning the object values to columns. Our first column is “N
     {
         var identifier = [tableColumn identifier];
 
+        var view = [outlineView makeViewWithIdentifier:"NameCell" owner:self];
+
         if (identifier == "NameColumn")
         {
-            var view = [outlineView makeViewWithIdentifier:"NameCell" owner:self];
             [[view textField] setStringValue:[item name]];
         }
         else
