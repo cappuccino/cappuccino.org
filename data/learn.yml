@@ -19,6 +19,8 @@ pages:
         - "learn/xcode-basics.html"
     -   - "Tutorial: Simple Table View"
         - "learn/simple-tableview.html"
+    -   - "Tutorial: Simple Outline View"
+        - "learn/simple-outlineview.html"
     -   - "Debugging"
         - "learn/debugging.html"
     -   - "Testing with OJTest"
