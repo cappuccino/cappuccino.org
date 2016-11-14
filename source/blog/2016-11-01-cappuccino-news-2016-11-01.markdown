@@ -13,38 +13,38 @@ Here's a quick update on what's new with Cappuccino recently.
 
 ### Community
 
-A new tutorial has been added in the website! If you want to learn about the basic of the `CPTableView`, you should read this new tutorial [here](http://www.cappuccino-project.org/learn/simple-tableview.html). Thanks to `kicsipixel` for his help!
+A new tutorial has been added to the website! If you want to learn about the basic of the `CPTableView`, you should read this new tutorial [here](http://www.cappuccino-project.org/learn/simple-tableview.html). Thanks to `kicsipixel` for his help!
 
 ### Cappuccino
 
 ##### New
 
-- New: `CPTextView` has been added in AppKit. ([daboe01](https://github.com/daboe01) - [0aeccb](https://github.com/cappuccino/cappuccino/commit/0aeccbb02cf611ac447b3dfd04ebb2f55387c880) [bea03d](https://github.com/cappuccino/cappuccino/commit/bea03de5627a149f6b9ce9dd75ef8bd93596b10d)
+- New: `CPTextView` in AppKit. ([daboe01](https://github.com/daboe01) - [0aeccb](https://github.com/cappuccino/cappuccino/commit/0aeccbb02cf611ac447b3dfd04ebb2f55387c880) [bea03d](https://github.com/cappuccino/cappuccino/commit/bea03de5627a149f6b9ce9dd75ef8bd93596b10d)
 [65f701](https://github.com/cappuccino/cappuccino/commit/65f701d459b115c7540bedc312685fe54da3a3a0))
 
-- New: `CGContextText` added in CoreGraphics. ([daboe01](https://github.com/daboe01) - [315a7b9](https://github.com/cappuccino/cappuccino/commit/315a7b9e6a7f542bd83ae0c35932c0dff82d53c8))
+- New: `CGContextText` in CoreGraphics. ([daboe01](https://github.com/daboe01) - [315a7b9](https://github.com/cappuccino/cappuccino/commit/315a7b9e6a7f542bd83ae0c35932c0dff82d53c8))
 
 
 ##### Changes/Fixes
 
-- Fixed: edition in a cell-based `CPTableView` was broken in an editing session. ([daboe01](https://github.com/daboe01) - [1360caa](https://github.com/cappuccino/cappuccino/commit/1360caaa8133c34a7f4ae6b5d1a7330219f43598))
+- Fixed: editing in a cell-based `CPTableView` was broken in an editing session. ([daboe01](https://github.com/daboe01) - [1360caa](https://github.com/cappuccino/cappuccino/commit/1360caaa8133c34a7f4ae6b5d1a7330219f43598))
 
-- Fixed: `xCodeCapp` was broken under Mac OS Sierra. ([cacaodev](https://github.com/cacaodev) - [dd62c0](https://github.com/cappuccino/cappuccino/commit/dd62c08b09b78ac1dbad8f745d21c2a6fe1d594a))
+- Fixed: `xCodeCapp` was broken under macOS Sierra. ([cacaodev](https://github.com/cacaodev) - [dd62c0](https://github.com/cappuccino/cappuccino/commit/dd62c08b09b78ac1dbad8f745d21c2a6fe1d594a))
 
-- Fixed: added manual test for the `CPSegmentedControl`. ([cacaodev](https://github.com/cacaodev) - [606132](https://github.com/cappuccino/cappuccino/commit/6061323c361acca64952a107963fa88ae93f8e42))
+- New: manual test for `CPSegmentedControl`. ([cacaodev](https://github.com/cacaodev) - [606132](https://github.com/cappuccino/cappuccino/commit/6061323c361acca64952a107963fa88ae93f8e42))
 
-- Fixed: documentation for autoscroll of the `CPView` was missing. ([daboe01](https://github.com/daboe01) - [5059028](https://github.com/cappuccino/cappuccino/commit/5059028e8abf3611b7e166d825b44bcfff1af8c9))
+- New: documentation for autoscroll of `CPView`. ([daboe01](https://github.com/daboe01) - [5059028](https://github.com/cappuccino/cappuccino/commit/5059028e8abf3611b7e166d825b44bcfff1af8c9))
 
 - Fixed: typo in the documentation of `CPControl`. ([daboe01](https://github.com/daboe01) - [2f82fb8](https://github.com/cappuccino/cappuccino/commit/2f82fb842d3155d09c4786371e5c58b35191c7ff))
 
-- Fixed: formatting of the `CPView`. ([ahankinson](https://github.com/ahankinson ) - [c2b7cc7](https://github.com/cappuccino/cappuccino/commit/c2b7cc7964f368e6994bdd8e5229e02a137ee570))
+- Fixed: formatting of `CPView`. ([ahankinson](https://github.com/ahankinson ) - [c2b7cc7](https://github.com/cappuccino/cappuccino/commit/c2b7cc7964f368e6994bdd8e5229e02a137ee570))
 
 - Fixed: optimization of the tracking areas feature in `CPView`. ([didierkorthoudt ](https://github.com/didierkorthoudt  ) - [969d1d](https://github.com/cappuccino/cappuccino/commit/969d1dff2a36ce073758605253cc29a8c2d86d09))
 
 - Fixed: issues in `CPAnimationContext` and `CPView` animator. Added cucumber tests for `CPAnimationContext`. ([cacaodev](https://github.com/cacaodev) - [4b55a69](https://github.com/cappuccino/cappuccino/commit/4b55a691503273ee9bcb4cf01025110a8e14a6a0))
 
-- Fixed: type declaration in `CPCache`. ([cacaodev](https://github.com/cacaodev) - [62e5d8d](https://github.com/cappuccino/cappuccino/commit/62e5d8d8419844327552b711b07e60d85dc2c2c2))
+- Fixed: incorrect type declaration in `CPCache`. ([cacaodev](https://github.com/cacaodev) - [62e5d8d](https://github.com/cappuccino/cappuccino/commit/62e5d8d8419844327552b711b07e60d85dc2c2c2))
 
-- Fixed: `CPTabView` did not have selection when it was creating in xCode. ([cacaodev](https://github.com/cacaodev) - [c4bf67d](https://github.com/cappuccino/cappuccino/commit/c4bf67d133934ec62077f5272e50529046da55f4))
+- Fixed: selection in `CPTabView` when defined through `nib2cib`. ([cacaodev](https://github.com/cacaodev) - [c4bf67d](https://github.com/cappuccino/cappuccino/commit/c4bf67d133934ec62077f5272e50529046da55f4))
 
-- Fixed: `CPTabView` loads the views asynchronously when possible. ([cacaodev](https://github.com/cacaodev) - [0eb196e](https://github.com/cappuccino/cappuccino/commit/0eb196e852fa8d310f0e3fa2ed3f5a421566bdd4))
+- New: `CPTabView` loads the views asynchronously when possible. ([cacaodev](https://github.com/cacaodev) - [0eb196e](https://github.com/cappuccino/cappuccino/commit/0eb196e852fa8d310f0e3fa2ed3f5a421566bdd4))
