@@ -25,14 +25,14 @@ Everything will work as before except we can now choose Node.js as Javascript en
 
 1. Make sure [Node.js](https://nodejs.org) is installed.
 2. The new [Cappuccino-Base](https://github.com/cappuccino/cappuccino-base) is needed. It is included in the latest version of Cappuccino. Easiest installed by following the instructions [here](http://www.cappuccino-project.org/#download).
-3. Some Node.js modules are needed to be downloaded. Run the ```bash``` script at ```<Your Narwhal Folder>/packages/narwhal-node/bin/npm-install```.
+3. Some Node.js modules are needed to be downloaded. Run the ```bash``` script at <span style="white-space: nowrap">```<Your Narwhal Folder>/packages/narwhal-node/bin/npm-install```.</span>
 4. There are also some small changes to the Cappuccino framework to support Node.js. They are not included in the latest version so download the lastest master version from [Github](https://github.com/cappuccino/cappuccino).
 5. Set the environment variable ```NARWHAL_ENGINE``` to ```node```. In ```bash```you can type ```export NARWHAL_ENGINE=node```.
 
-Now everything works as normal and you can build Cappuccino with ```jake install```.
+Now everything works as normal and you can build the downloaded (step 4 above) Cappuccino framework with <span style="white-space: nowrap">```jake install```.</span>
 
 ### Performance
-Node.js is much faster than Rhino and is up to par with JavaScriptCore. Here are some build tests done with the different engines using the command ```jake install``` on a MacBook Pro:
+Node.js is much faster than Rhino and is up to par with JavaScriptCore. Here are some build tests done with the different engines using the command <span style="white-space: nowrap">```jake install```</span> on a MacBook Pro:
 
 1. Node: 2 minutes
 2. JavascriptCore: 2 minutes
