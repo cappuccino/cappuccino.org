@@ -1,0 +1,45 @@
+---
+title: Cappuccino 0.9.10
+author: Alexandre Wilhelm
+date: '2017-05-30'
+tags:
+- Cappuccino
+- release
+- update
+- releases
+---
+
+We are very proud to release this new version of Cappuccino 0.9.10! This release follows a bit more than a year from 0.9.10 and as usual we were quite busy. We are pretty sure that you will be as excited as us when reading the new improvements added in Cappuccino.
+
+#### Notable Improvements
+
+##### CPTextView
+
+The new `CPTextView` brings a rich control component in Cappuccino.
+
+[![](/img/cpo-uploads/2017/05/CPTextView.png)](/img/cpo-uploads/2017/05/CPTextView.png)
+
+##### CPViewAnimator and CPAnimationContext
+
+Cappuccino now provides an easy way to create smooth animations. Don't hesitate to take a look to the example under `Tests/Manual/CPAnimationPropertyContainerTest`.
+
+##### Node as Javascript Engine
+
+You can now use `node` as your javascript engine when using/building Cappuccino.
+More informations can be found [here](http://www.cappuccino-project.org/blog/2017/04/cappuccino-on-node-js.html)
+
+Cappuccino 0.9.10 will still use the javascript engine `jsc` by default. However, `node` will be the default engine from now in the master branch of Cappuccino, feel free to play with it and help to contribute to it.
+
+---
+
+Thanks to all the [Cappuccino contributors](https://github.com/cappuccino/cappuccino/graphs/contributors). We'd also like to call out Frank Rehwinkel who did the node integration with narwhal and Daniel Boehringer for his work on the CPTextView. Keep doing a good work like this! Thanks!
+
+As always the full change log and release notes are available [here](/cappuccino-release-notes.html).
+
+We hope you are as excited about Cappuccino 0.9.10 as we are and that you will help us spread the word, and that you will create some fantastic applications with it!
+
+_- The Cappuccino Core Developer Team_
+
+[Download Cappuccino 0.9.10](/downloads.html)
+
+[Full Release Notes](/cappuccino-release-notes.html)
