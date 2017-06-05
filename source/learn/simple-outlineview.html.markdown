@@ -12,7 +12,7 @@ This will generate an empty new project using the Nib template.
 ### Code
 Our data source model will be created in a separate file to keep our code organized. In this way you can easily structure your project around MVC pattern. Create a new file with a name of `Employee.j`.
 
-    :::objj    
+    :::objj
     @import <Foundation/CPObject.j>
 
     @implementation Employee : CPObject
@@ -36,7 +36,7 @@ Our data source model will be created in a separate file to keep our code organi
     @end
 
 Let’s go back to our AppController.j and import our previously created file:
-`@import "Employee.j"` 
+`@import "Employee.j"`
 
 Now, we can create the instance variable using the Employee model and outlets for interaction between AppController and OutlineView.
 
@@ -63,7 +63,7 @@ In the `init` method we are defining the data source using our Employee model.
     {
         if (self = [super init])
         {
-        
+
             // First we define our root item, the CEO
             _ceo = [[Employee alloc] initWithName:"Ben" title:"CEO"];
 
@@ -97,27 +97,27 @@ In the `init` method we are defining the data source using our Employee model.
 The [CPOutlineView API](http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html) tells us clearly the required methods to implement and gives a good explanations as well:
 
 
-- `(int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item; ` 
+- `(int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item; `
 
 Returns the number of child items of a given item. If item is nil you should return the number of top level (root) items.
 
 
-- `(BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item;` 
+- `(BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item;`
 
 Returns YES if the item is expandable, otherwise NO.
 
 
-- `(id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item;` 
+- `(id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item;`
 
 Returns the child item at an index of a given item. If item is nil you should return the appropriate root item.
 
 
-- `(id)outlineView:(CPOutlineView)outlineView objectValueForTableColumn:(CPTableColumn)tableColumn byItem:(id)item;` 
+- `(id)outlineView:(CPOutlineView)outlineView objectValueForTableColumn:(CPTableColumn)tableColumn byItem:(id)item;`
 
 Returns the object value of the item in a given column.
 
 #### Implementing the methods
-Most probably the easiest method is the `numberOfChildrenOfItem` . 
+Most probably the easiest method is the `numberOfChildrenOfItem` .
 The `item` will be nil, if it is the root item. Otherwise, we simply use the size of the `CPMutableArray` called `_employees` .
 
     :::objj
@@ -155,7 +155,7 @@ This method returns the child item at index of a item. If item is nil, returns t
             // Our root item is the CEO
             return ceo;
         }
-        
+
         return [item employees][index];
     }
 
@@ -177,7 +177,7 @@ Finally, we are assigning the object values to columns. Our first column is “N
             var view = [outlineView makeViewWithIdentifier:"TitleCell" owner:self];
             [[view textField] setStringValue:[item title]];
         }
-        
+
         return view;
     }
 
@@ -221,11 +221,11 @@ Before testing our new application, there is one more thing left. Connect CPOutl
 ![](simpleoutlineview/simpleoutlineviewoutlet.png)
 
 As usual the best way to run a Cappuccino app for testing is to start a local webserver. So in the root of your project folder, type:
-    
+
     :::sh
     python -m SimpleHTTPServer
 
-Now, open your browser and type in the address given by SimpleHTTPServer: `localhost:8000` 
+Now, open your browser and type in the address given by SimpleHTTPServer: `localhost:8000`
 ![](simpleoutlineview/simpleoutlineview.png)
 
 Now, you have a fully functioning application!
