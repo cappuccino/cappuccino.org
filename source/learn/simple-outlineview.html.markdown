@@ -1,8 +1,12 @@
-In this tutorial we will create a simple view-based outline view. `CPOutlineView` displays data in hierarchical format. In other programming languages it is referred as Tree-view. Although `CPOutlineView` is a subclass of `CPTableView` and inherits the row and column format, the implementation is slightly different. We will create an organisation chart of a company with the ability to expand and collapse items.
+In this tutorial we will create a simple view-based outline view. `CPOutlineView` displays data in hierarchical format. You might know it as a 'tree' view from other frameworks. Although `CPOutlineView` is a subclass of `CPTableView` and inherits the row and column format, you use it in a slightly different way. 
+
+In this tutorial we will create an organisation chart of a company with the ability to expand and collapse items.
+
 ![](simpleoutlineview/simpleoutlineview.png)
 
 ### Create the project
-Run the `capp` command in your project folder:
+
+We will start out the same was as in the table view tutorial. First, go to the folder in which you want create the project and run:
 
     :::sh
     capp gen -l -t NibApplication SimpleOutlineView
@@ -10,9 +14,10 @@ Run the `capp` command in your project folder:
 This will generate an empty new project using the Nib template.
 
 ### Code
-Our data source model will be created in a separate file to keep our code organized. In this way you can easily structure your project around MVC pattern. Create a new file with a name of `Employee.j`.
 
-    :::objj    
+To keep our code organized, we will create our data source model in a separate file. We want to structure our code according to the MVC pattern. In `Employee.j`:
+
+    :::objj
     @import <Foundation/CPObject.j>
 
     @implementation Employee : CPObject
@@ -35,10 +40,12 @@ Our data source model will be created in a separate file to keep our code organi
 
     @end
 
-Let’s go back to our AppController.j and import our previously created file:
-`@import "Employee.j"` 
+Open up `AppController.j` and add the import for our new file:
 
-Now, we can create the instance variable using the Employee model and outlets for interaction between AppController and OutlineView.
+  :::objj  
+  @import "Employee.j"`
+
+While we're in the app controller, let's add a var to hold our Employee model and some outlets.
 
     :::objj
     @implementation AppController : CPObject
@@ -48,7 +55,7 @@ Now, we can create the instance variable using the Employee model and outlets fo
         Employee                _ceo; // This will hold our root item
     }
 
-Let's make an application in a window for this tutorial, by setting `setFullPlatformWindow:NO` in the `awakeFromCib` method:
+Use a Cappuccino bordered window for this tutorial by sending `setFullPlatformWindow:NO` in the `awakeFromCib` method:
 
     :::objj
     - (void)awakeFromCib
@@ -56,26 +63,26 @@ Let's make an application in a window for this tutorial, by setting `setFullPlat
         [theWindow setFullPlatformWindow:NO];
     }
 
-In the `init` method we are defining the data source using our Employee model.
+In the `init` method we will define the data source using our Employee model.
 
     :::objj
     - (id)init
     {
         if (self = [super init])
         {
-        
-            // First we define our root item, the CEO
+
+            // First we create our root item, the CEO.
             _ceo = [[Employee alloc] initWithName:"Ben" title:"CEO"];
 
-            // Then we create other employees and add them to their managers belong to
+            // Then we create other employees and add them under their respective managers.
             var simon = [[Employee alloc] initWithName:"Simon" title:"CFO"];
 
-            // We collect CEO reportees to his _employees array defined in Employee.j
-            // Simon reports directly to CEO
+            // We have an array called 'employees' in our Employee class, to represent who reports to whom.
+            // Simon reports directly to the CEO:
             [[_ceo employees] addObject:simon];
 
             var sarah = [[Employee alloc] initWithName:"Sarah" title:"Assistant to CFO"];
-            // Sarah report to Simon
+            // Sarah reports to Simon.
             [[simon employees] addObject:sarah];
 
             var maarten = [[Employee alloc] initWithName:"Maarten" title:"VP of Marketing"];
@@ -94,31 +101,33 @@ In the `init` method we are defining the data source using our Employee model.
         return self;
     }
 
-The [CPOutlineView API](http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html) tells us clearly the required methods to implement and gives a good explanations as well:
+Our next stop is the [oultine view documentation](http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html) to see what methods we need to provide data.
 
 
-- `(int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item; ` 
+- `(int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item; `
 
 Returns the number of child items of a given item. If item is nil you should return the number of top level (root) items.
 
 
-- `(BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item;` 
+- `(BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item;`
 
 Returns YES if the item is expandable, otherwise NO.
 
 
-- `(id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item;` 
+- `(id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item;`
 
 Returns the child item at an index of a given item. If item is nil you should return the appropriate root item.
 
 
-- `(id)outlineView:(CPOutlineView)outlineView objectValueForTableColumn:(CPTableColumn)tableColumn byItem:(id)item;` 
+- `(id)outlineView:(CPOutlineView)outlineView objectValueForTableColumn:(CPTableColumn)tableColumn byItem:(id)item;`
 
 Returns the object value of the item in a given column.
 
 #### Implementing the methods
-Most probably the easiest method is the `numberOfChildrenOfItem` . 
-The `item` will be nil, if it is the root item. Otherwise, we simply use the size of the `CPMutableArray` called `_employees` .
+
+The easiest method to implement is `numberOfChildrenOfItem`.
+
+The `item` will be nil when the outline view is asking about the root. In all other cases, we will be interested in how many "child nodes" the current item has. Recall that above we stored the children of each employee in the `employees` array. 
 
     :::objj
     - (int)outlineView:(CPOutlineView)outlineView numberOfChildrenOfItem:(id)item
@@ -132,7 +141,7 @@ The `item` will be nil, if it is the root item. Otherwise, we simply use the siz
         return [[item employees] count];
     }
 
-Next step to define whether the item has subitems. If it does, it will be expandable.
+The next step is to signal whether the item has subitems. Such items will be expandable in the outline view.
 
     :::objj
     - (BOOL)outlineView:(CPOutlineView)outlineView isItemExpandable:(id)item
@@ -145,7 +154,7 @@ Next step to define whether the item has subitems. If it does, it will be expand
         return [[item employees] count] != 0;
     }
 
-This method returns the child item at index of a item. If item is nil, returns the appropriate child item of the root object.
+The next method is to provide the child items at a certain point in the tree. If `item` is nil, we are being asked about the child items of the root.
 
     :::objj
     - (id)outlineView:(CPOutlineView)outlineView child:(CPInteger)index ofItem:(id)item
@@ -155,11 +164,11 @@ This method returns the child item at index of a item. If item is nil, returns t
             // Our root item is the CEO
             return ceo;
         }
-        
+
         return [item employees][index];
     }
 
-Finally, we are assigning the object values to columns. Our first column is “NameColumn”, the second is “TitleColumn”. We will setup these names later in the Interface Builder.
+Finally, we need to provide the object values of the actual columns for a given item. Our first column is called “NameColumn” and the second is “TitleColumn”. We will set up these names later in the Interface Builder.
 
     :::objj
     - (id)outlineView:(id)anOutlineView viewForTableColumn:(id)tableColumn item:(id)items
@@ -177,55 +186,57 @@ Finally, we are assigning the object values to columns. Our first column is “N
             var view = [outlineView makeViewWithIdentifier:"TitleCell" owner:self];
             [[view textField] setStringValue:[item title]];
         }
-        
+
         return view;
     }
 
 ### Clean up the nib
-First, open up the main window, by double clicking Window - Window in the Object navigator.
+
+Open up the main window by double clicking Window - Window in the Object navigator.
 ![](simpleoutlineview/simpleoutlineview2.png)
 
 By default, there is a text field and a slider. Select and remove them (using the Delete key).
 
 ### Creating the new interface
-Choose “Outline View” from Object Library.
+
+Choose “Outline View” from the Object Library.
 ![](simpleoutlineview/simpleoutlineview3.png)
 
-Drag and Drop “Outline View” onto the Window.
+Drag and Drop an Outline View onto the Window.
 ![](simpleoutlineview/simpleoutlineview4.png)
 
 By dragging the right corner of Outline View, resize it to fill the Window.
 ![](simpleoutlineview/simpleoutlineview5.png)
 
-Remember that  in the `(id)outlineView:(id)outlineView viewForTableColumn:(id)tableColumn item:(id)item` method we have to use tableColumn identifier and view identifier. Let’s add these to our Interface Builder document.
+Remember that in the `(id)outlineView:(id)outlineView viewForTableColumn:(id)tableColumn item:(id)item` method we used both the table column identifier and the view identifier. Where do those come from? We're going to add them right now.
 
-Choose “Outline View” from Document Outline, expand the items until you reach Table Column. Now, let’s click on Identity Inspector on the top right side of the Xcode, set the Identifier to “NameColumn”.
+Choose the Outline View from the Document Outline. Expand the items until you reach Table Column. Now, click on Identity Inspector on the top right side of the Xcode and set the Identifier to “NameColumn”.
 ![](simpleoutlineview/simpleoutlineview6.png)
 
 Repeat the same for the second column, and set its Identifier to “TitleColumn”.
 ![](simpleoutlineview/simpleoutlineview7.png)
 
-Expand the NameColumn and add “NameCell” to Table Cell View’s Identifier.
+Expand the NameColumn and add “NameCell” as the Table Cell View’s Identifier.
 ![](simpleoutlineview/simpleoutlineview8.png)
 
 Do the same for TitleColumn with “TitleCell”.
 ![](simpleoutlineview/simpleoutlineview9.png)
 
-Double click on the Header of the Ouline View, and set it “Name” and “Title”.
+Double click on the Header of the Ouline View, and set its “Name” and “Title”.
 ![](simpleoutlineview/simpleoutlineview10.png)
 ![](simpleoutlineview/simpleoutlineview11.png)
 
-Before testing our new application, there is one more thing left. Connect CPOutlineView to our AppDelegate.
+Before testing our new application, there is one more thing left: connect the Outline View to our `AppDelegate`.
 ![](simpleoutlineview/simpleoutlineviewdatasource.png)
 ![](simpleoutlineview/simpleoutlineviewdelegate.png)
 ![](simpleoutlineview/simpleoutlineviewoutlet.png)
 
 As usual the best way to run a Cappuccino app for testing is to start a local webserver. So in the root of your project folder, type:
-    
+
     :::sh
     python -m SimpleHTTPServer
 
-Now, open your browser and type in the address given by SimpleHTTPServer: `localhost:8000` 
+Now, open your browser and type in the address given by SimpleHTTPServer: `localhost:8000`.
 ![](simpleoutlineview/simpleoutlineview.png)
 
 Now, you have a fully functioning application!
