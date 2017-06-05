@@ -74,20 +74,12 @@ set :markdown, :fenced_code_blocks => true,
 
 require 'rack/codehighlighter'
 require "pygments"
-Pygments.start('/Users/siker/dev/pygments-main/')
+Pygments.start('/app/vendor/pygments-main/')
 use Rack::Codehighlighter,
   :pygments,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
-
-activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.user = "deployer"
-  deploy.host = "se2.hosting.wireload.net"
-  deploy.path = "/www/www.cappuccino-project.org"
-  deploy.clean = true
-end
 
 activate :blog do |blog|
   blog.paginate = true

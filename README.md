@@ -4,33 +4,40 @@ This is the new GitHub forkable and pull-request ready, static HTML & JS modern 
 
 ### How to Contribute to this Site
 
-1. Install bundler.
+You will need Docker.
 
-        gem install bundler
+#### Build the site
+```
+docker build -t middleman .
+docker run --rm --volume "`pwd`":/app -t middleman bundle exec middleman build
+```
 
-2. Install the gems used by the site.
+#### Preview the site
 
-        cd /path/to/site
-        bundle install
+```
+docker run --rm --publish 4567:4567 --volume "`pwd`":/app -t middleman bundle exec middleman server
+```
 
-3. Run it in server mode:
+Open [http://localhost:4567/](http://localhost:4567/) to view the site. When you're done stop the Docker container with Ctrl-C.
 
-        bundle exec middleman
-
-4. Open [http://localhost:4567/](http://localhost:4567/) to view site.
-
-Now you can simply edit the markdown, HAML, CSS, JavaScript and so on which makes up the site. Middleman will automatically compile it.
+While it's running you can simply edit the markdown, HAML, CSS, JavaScript and so on which makes up the site. Middleman will automatically compile it as needed and you can preview the results in your browser.
 
 When you are done, create a fork of this repository, make a branch of master, commit your changes, and make a pull request.
 
 ### How to Add a Blog Post
 
-    bundle exec middleman article "Article Title"
+Copy an existing blog post to a file with a new name in the right folder. Then modify the preamble (the bit on the top of the post) to indicate the right date and author.
 
 ### How to Deploy
 
-    bundle exec middleman build
-    bundle exec middleman deploy
+- Rsync the contents of `build/` to the hosting server.
+- Clear the Cloudflare cache.
+
+### Notes
+
+#### Why is `pygments-main` copied into the `vendor` folder? 
+
+I didn't find a git repo for this to clone so I checked out the mercurial version and hacked it to improve Objective-J support. Ideally we go to some less hacky solution in the long run.
 
 ### Credits
 
