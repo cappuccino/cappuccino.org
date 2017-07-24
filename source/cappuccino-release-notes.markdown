@@ -5,13 +5,13 @@ layout: markdown
 
 ## What's New in Cappuccino 0.9.10
 
-*Release date: 2017-05-30*
+*Release date: 2017-07-11*
 
-Cappuccino 0.9.10 introduces CPTextView, CPViewAnimator, CGContextText, support of node as a narwhal engine and over 100 other changes and improvements.
+Cappuccino 0.9.10 introduces `CPTextView`, `CPViewAnimator`, `CGContextText`, support of node as a narwhal engine and over 100 other changes and improvements.
 
 Highlights in this release:
 
-* New: node can be now set as a narwhal engine.
+* New: node can be now set as the narwhal engine.
 * New: `CPTextView` in AppKit.
 * New: `CGContextText` in AppKit.
 * New: `CPAnimationContext` and `CPViewAnimator` in AppKit.
@@ -21,44 +21,42 @@ Foundation and Core
 
 * (a10dfa4) New: `CPNumber -integerValue` and `CPString -integerValue`.
 * (41a7417) New: Sweden / Swedish as a possible locale.
-* (5da8728) New: `CPObject +instancesImplementSelector:(SEL)aSelector`
+* (5da8728) New: `CPObject +instancesImplementSelector:(SEL)aSelector`.
 
 *Bug fixes:*
 
 * (a995f3a) Fixed: no exception thrown if a plist was not valid in `CPKeyedUnarchiver`.
-* (e13f5ed) Fixed: `CPNumber` intValue did not return an integer.
-* (42d7e43) Fixed: formatting `CPCache`.
+* (e13f5ed) Fixed: `CPNumber intValue` did not return an integer.
+* (42d7e43) Fixed: formatting of `CPCache`.
 * (5c60819) Fixed: cache control was not set properly in `CPURLRequest`.
-* (ae5d317) Fixed: when dependent key paths use a relationship, only the first added observer would observe the attribute for the relationship object.
+* (ae5d317) Fixed: when dependent key paths used a relationship, only the first added observer would observe the attribute for the relationship object.
 * (a192698) Fixed: `CPObject +implementsSelector:` did not work with proxies and KVO swizzled classes.
-* (12ed42e) Fixed: regular expression were not compatible for `gcc` > 4.9
+* (12ed42e) Fixed: regular expression were not compatible with `gcc` > 4.9.
 
 AppKit
 ------
 
-* (b12d149) New: added method `CPViewController -loadViewAsynchronously:`.
-* (598a6eb) New: `CPAnimationContext` and `CPViewAnimator`.
+* (b12d149) New: `CPViewController -loadViewAsynchronously:`.
+* (598a6eb) (571891) (410ad0d) New: `CPAnimationContext` and `CPViewAnimator`.
 * (fedc721) New: `CPViewController -viewWill/DidAppear` and `CPViewController viewWill/didDisappear`.
-* (abb0799) New: enable autoscrolling for table view columns.
-* (0aeccb) (bea03d) (65f701) New: `CPTextView` in AppKit.
+* (abb0799) New: autoscrolling for table view columns.
+* (0aeccb) (bea03d) (65f701) (6c9c135) (249ebeb) New: `CPTextView` in AppKit.
 * (315a7b9) New: `CGContextText` in CoreGraphics.
 * (606132)  New: manual test for `CPSegmentedControl`.
 * (5059028) New: documentation for autoscroll of `CPView`.
 * (0eb196e) New: `CPTabView` loads the views asynchronously when possible.
-* (6652a27) New: allow a text based control to stay on a single line when text wraps
-* (6c9c135) New: bindings support for `CPTextView` + dragging improvements
+* (6652a27) New: allow a text based control to stay on a single line when text wraps.
 * (3f64b74) New: `CPSetPlatformFeature` function in `CPCompatibility`.
-* (f18074b) New: Optional declarative layout for use in `CoreAnimation` (css animations).
+* (f18074b) New: optional declarative layout for use in `CoreAnimation` ('CSS animations').
 
 *Bug fixes:*
 
-* (8f11917) Fixed: race condition when editing a `CPTextField` in a `CPTableView` with a double click, focus was lost in some conditions.
+* (8f11917) Fixed: race condition when editing a `CPTextField` in a `CPTableView` with a double click; focus was lost under some conditions.
 * (6d1a094) Fixed: `CPSearchField` did not support `CPMenuItem -setIndentationLevel:`.
 * (c24c386) Fixed: crash when having a `CPTableViewHeader` without a `CPTableView`.
 * (43a2480) Fixed: cursor key binding methods did not fire in IE 11.
-* (5c58552) Fixed: first `CPPopUpItem` is always selected if selected binding value is set before content binding value.
+* (5c58552) Fixed: first `CPPopUpItem` was always selected if selected binding value was set before content binding value.
 * (cd92ebd) Fixed: `CPObjectController -setEntityName` did not work.
-* (571891)  Fixed: 'Unknown function getPropertyCSSValue' error in Chrome in `CPAnimationContext`.
 * (1575c2b) Fixed: `CPTableView` `viewBasedCib` manual test was broken due to `CPBox`.
 * (ffcac67) Fixed: manual test `SmartFoldersDemo`.
 * (f67faf)  Fixed: `CPCollectionView` content binding.
@@ -73,23 +71,21 @@ AppKit
 * (5f1229)  Fixed: missing import in `CPCollectionView`.
 * (12dde51) Fixed: `CPView` received multiple `-viewDidHide/Unhide` messages.
 * (a2960a7) Fixed: `CPPasteBoard` dead code.
-* (e4fce08) Fixed: scrolling events were not dispatched to the `CPApp` on slower system under Chrome 52.
+* (e4fce08) Fixed: scrolling events were not dispatched to the `CPApp` on slower systems under Chrome 52.
 * (4395c07) Fixed: iOS virtual keyboard "done" button not working and tapping other text fields while editing (often) not working.
 * (1360caa) Fixed: editing in a cell-based `CPTableView` was broken in an editing session.
 * (2f82fb8) Fixed: typo in the documentation of `CPControl`.
 * (c2b7cc7) Fixed: formatting of `CPView`.
 * (969d1d)  Fixed: optimization of the tracking areas feature in `CPView`.
-* (4b55a69) Fixed: issues in `CPAnimationContext` and `CPView` animator. Added cucumber tests for `CPAnimationContext`.
+* (4b55a69) Fixed: issues in `CPAnimationContext` and `CPView` animator.
 * (62e5d8d) Fixed: incorrect type declaration in `CPCache`.
-* (037bc4e) Fixed: added test to demonstrate the new `wantsPeriodicFrameUpdates` animator property.
-* (cfbef14) Fixed: Inhibit DOM updates during size animation in `CPAnimationContext`.
-* (410ad0d) Fixed: print debug logs in debug mode only in `CPAnimationContext`.
+* (037bc4e) New: test to demonstrate the `wantsPeriodicFrameUpdates` animator property.
+* (cfbef14) New: inhibit DOM updates during size animation in `CPAnimationContext`.
 * (3d9b42f) Fixed: `CSSAnimation` linting.
-* (8d403f5) Fixed: IB connections in CPTabViewNibTest.
+* (8d403f5) Fixed: IB connections in `CPTabViewNibTest`.
 * (eeea21c) Fixed: `CPViewAnimator` was not giving correct frame information.
-* (249ebeb) Fixed: caret did not blink in empty `CPTextView`.
 * (60b2f7d) Fixed: legacy scrollers were not clickable under some circumstances.
-* (51b9b40) Fixed: native paste on chrome was not working as robustly as it should.
+* (51b9b40) Fixed: native paste in Chrome was not working as robustly as it should.
 * (6aea016) Fixed: text-sizing by canvas and via DOM sizing differed by 1px.
 * (1a299d8) Fixed: `CPBox` drawing artifacts when used in `CPSeparator` mode.
 * (f00a5fb) Fixed: delegate `-tableView:didDragTableColumn:` was never sent.
@@ -97,7 +93,7 @@ AppKit
 Objective-J
 -----------
 
-* (f24c4b0) New: node can be used as a narwhal engine
+* (f24c4b0) New: node can be used as a narwhal engine.
 * (e134f91) New: merged in the parser and compiler that is used in the node objj-runtime.
 
 *Bug fixes:*
@@ -109,9 +105,9 @@ XcodeCapp
 
 *Bug fixes:*
 
-* (087e811) Fixed: bump `XcodeCapp` copyright year.
+* (087e811) New: bump `XcodeCapp` copyright year.
 * (b09cb24) Fixed: XcodeCapp 'Preferences' menu item not in the standard place.
-* (dd62c0)  Fixed: `xCodeCapp` was broken under macOS Sierra.
+* (dd62c0)  Fixed: `XcodeCapp` was broken under macOS Sierra.
 
 Misc
 ----
@@ -120,8 +116,8 @@ Misc
 
 *Bug fixes:*
 
-* (584aebf) Fixed : `capp_env` did not use the master version of cappuccino.
-* (80bfeb1) Fixed: removed rakefile.
+* (584aebf) Fixed: `capp_env` did not use the master version of Cappuccino.
+* (80bfeb1) Fixed: vestigial rakefile.
 
 Nib2Cib
 -------
@@ -130,10 +126,10 @@ Nib2Cib
 
 *Bug fixes:*
 
-* (dde8059) New: show successfully loaded `NSClasses` in `nib2cib` verbose.
+* (dde8059) New: show successfully loaded `NSClasses` in `nib2cib` verbose mode.
 * (f4c11d1) Fixed: `nib2cib`'ed files different with jake release and jake deploy.
 * (3e56c8e) Fixed: XcodeCapp `nib2cib` incorrect vs jake release.
-* (c4bf67d) Fixed: selection in `CPTabView` when defined through `nib2cib`.
+* (c4bf67d) Fixed: selection in `CPTabView` when set through `nib2cib`.
 
 Cucapp
 ---------
@@ -143,12 +139,12 @@ Cucapp
 * (67c767c) Fixed: accidental Nuage Networks specific code related to text fields made it into the general release.
 * (a924fcf) Fixed: wrong default path for loading Cucapp in the CLI.
 * (2fe795f) Fixed: private API `_mainDOMWindow` did not actually return the main DOM window but the key DOM window.
-* (732d77e) Fixed: the function `dumpGuiObject` was called two times for the class `CPScrollView`
+* (732d77e) Fixed: the function `dumpGuiObject` was called two times for the class `CPScrollView`.
 
 Other changes
 -------------
 
-* (598a482) New: added gitter badge in the README.
+* (598a482) New: Gitter badge in the README.
 
 *Bug fixes:*
 
