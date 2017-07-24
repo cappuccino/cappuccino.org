@@ -1,7 +1,7 @@
 ---
 title: Cappuccino 0.9.10
 author: Alexandre Wilhelm
-date: '2017-05-30'
+date: '2017-07-11'
 tags:
 - Cappuccino
 - release
@@ -9,30 +9,29 @@ tags:
 - releases
 ---
 
-We are very proud to release this new version of Cappuccino 0.9.10! This release follows a bit more than a year from 0.9.10 and as usual we were quite busy. We are pretty sure that you will be as excited as us when reading the new improvements added in Cappuccino.
+We are very proud to release this new version of Cappuccino: 0.9.10! This release follows a bit more than a year from 0.9.9 and as usual we have been quite busy. We are pretty sure that you will be as excited as us about the new improvements made to Cappuccino.
 
 #### Notable Improvements
 
 ##### CPTextView
 
-The new `CPTextView` brings a rich control component in Cappuccino.
+After years of development, the new `CPTextView` brings a rich text control to Cappuccino. This is much more than traditional web text editors as it doesn't rely much on the browser but instead actually understands content layout and formatting, allowing incredible control over the details and integration with the rest of Cappuccino.
 
 [![](/img/cpo-uploads/2017/05/CPTextView.png)](/img/cpo-uploads/2017/05/CPTextView.png)
 
 ##### CPViewAnimator and CPAnimationContext
 
-Cappuccino now provides an easy way to create smooth animations. Don't hesitate to take a look to the example under `Tests/Manual/CPAnimationPropertyContainerTest`.
+Cappuccino now provides a new, easy way to create smooth animations. Take a look at the example under `Tests/Manual/CPAnimationPropertyContainerTest`.
 
 ##### Node as Javascript Engine
 
-You can now use `node` as your javascript engine when using/building Cappuccino.
-More informations can be found [here](http://www.cappuccino-project.org/blog/2017/04/cappuccino-on-node-js.html)
+You can now use `node` as your javascript engine when using/building Cappuccino. More informations can be found [here](http://www.cappuccino-project.org/blog/2017/04/cappuccino-on-node-js.html).
 
-Cappuccino 0.9.10 will still use the javascript engine `jsc` by default. However, `node` will be the default engine from now in the master branch of Cappuccino, feel free to play with it and help to contribute to it.
+Cappuccino 0.9.10 will still use the javascript engine `jsc` by default. However, `node` will be the default engine from now on in the master branch of Cappuccino, so feel free to play with it and help to contribute to it! This should be great news especially if you are on a platform which doesn't support JavaScriptCore: you should get a substantial speedup by switching.
 
 ---
 
-Thanks to all the [Cappuccino contributors](https://github.com/cappuccino/cappuccino/graphs/contributors). We'd also like to call out Frank Rehwinkel who did the node integration with narwhal and Daniel Boehringer for his work on the CPTextView. Keep doing a good work like this! Thanks!
+Thanks to all the [Cappuccino contributors](https://github.com/cappuccino/cappuccino/graphs/contributors). We'd also like to call out Frank Rehwinkel who did the node integration for narwhal and Daniel Boehringer for his work on the CPTextView. Keep doing a good work like this! Thanks!
 
 As always the full change log and release notes are available [here](/cappuccino-release-notes.html).
 
