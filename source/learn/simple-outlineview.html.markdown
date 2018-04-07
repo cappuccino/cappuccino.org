@@ -42,8 +42,8 @@ To keep our code organized, we will create our data source model in a separate f
 
 Open up `AppController.j` and add the import for our new file:
 
-  :::objj  
-  @import "Employee.j"`
+    :::objj  
+    @import "Employee.j"
 
 While we're in the app controller, let's add a var to hold our Employee model and some outlets.
 
