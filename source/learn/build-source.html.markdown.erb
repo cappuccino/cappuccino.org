@@ -17,13 +17,28 @@ If you're happy with the starter package you may skip ahead to [<%= next_topic[0
 
 ##### Get Developers Tools (Mac OS X only)
 
-In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 7 is the current version.
+In order to use Xcode's Interface Builder, and to compile Cappuccino itself, you need the Mac developer tools installed. You can get the latest version from the [AppStore for free](http://itunes.apple.com/en/app/xcode/id448457090). Xcode 11 is the current version.
+
+###### autoconf
+
+Apple no longer includes autoconf in the developer tools. You can check if you have it by entering the following command in your Terminal:
+
+    :::bash
+    # autoconf --version
+    autoconf (GNU Autoconf) 2.69
+
+If you don't have it you can get it installed via Homebrew:
+
+    ::bash
+    # brew install autoconf
+
+More info here: [How to install autoconf](https://superuser.com/questions/383580/how-to-install-autoconf-automake-and-related-tools-on-mac-os-x-from-source)
 
 ##### Install Git
 
 If you wish to install the Cappuccino sources you'll need the source control management software Git.
 
-Git is included with Xcode 4. You can check you have it by entering the following command in your Terminal:
+Git has been included in the developer tools since Xcode 4. You can check you have it by entering the following command in your Terminal:
 
     :::bash
     # git --version
@@ -127,7 +142,7 @@ Now it will ask you for the value of `$CAPP_BUILD`. Answer “yes”:
     Enter "yes" or "no":
     => yes [ENTER]
 
-Finally, you will get:
+There will be some warnings when building narwhal, but these are mostly harmless. Finally, you will get:
 
     ================================================================================
     Bootstrapping of Cappuccino and other required tools is complete.

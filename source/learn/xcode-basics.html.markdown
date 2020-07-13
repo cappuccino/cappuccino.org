@@ -1,6 +1,6 @@
-In this tutorial, we will create a simple "Hellow World" app using Xcode to edit the user interface. You will see that even for a small project there are big time saving benefits in graphical UI editing.
+In this tutorial, we will create a simple "Hello World" app using Xcode to edit the user interface. You will see that even for a small project there are big time saving benefits in graphical UI editing.
 
-This tutorial assumes you have a Mac with Xcode 7 installed and that you have installed the Cappuccino toolchain using [bootstrap.sh](index.html) or by [installing from source](build-source.html). It also assumes that you have installed the current master version of Cappuccino.
+This tutorial assumes you have a Mac and that you have installed the Cappuccino toolchain using [bootstrap.sh](index.html) or by [installing from source](build-source.html). It also assumes that you have installed the current master version of Cappuccino.
 
 ### Create the project
 
