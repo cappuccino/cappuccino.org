@@ -1,4 +1,3 @@
-# The current stack is not compatible with Ruby 2.4 for similar reasons to this https://github.com/backup/backup/issues/820.
 FROM ruby:2.6.10
 
 RUN mkdir /app
