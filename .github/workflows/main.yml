@@ -12,8 +12,9 @@ jobs:
     - name: Install Middleman and dependencies to build the site
       uses: ruby/setup-ruby@v1.118.0
       with:
-        ruby-version: 2.3
+        ruby-version: 2.6
         bundler-cache: true
+        bundler: 1.17.3
     - run: bundle exec middleman build
 
     - name: Init new repo in dist folder and commit generated files
