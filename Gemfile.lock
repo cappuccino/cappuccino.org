@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/wbzyl/rack-codehighlighter.git
+  remote: https://github.com/wbzyl/rack-codehighlighter.git
   revision: 64bf50520cb1d563432832ae30d85bbd94cec5bd
   specs:
     rack-codehighlighter (0.5.0)

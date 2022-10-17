@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build static site using Middleman
+    - name: Install Middleman and dependencies to build the site
       uses: ruby/setup-ruby@v1.118.0
       with:
         ruby-version: 2.3
