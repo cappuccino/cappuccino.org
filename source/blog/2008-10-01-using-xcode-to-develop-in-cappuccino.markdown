@@ -8,7 +8,7 @@ date: '2008-10-01'
 categories:
 - Cappuccino
 tags:
-- Cappuccino
+- cappuccino
 - xcode
 - ide
 ---
@@ -37,6 +37,7 @@ You'll find AppController.j in the Classes folder, and your other, mostly standa
 Now you can edit in style with syntax coloring, (basic) code completion, and many of the other powerful features Xcode offers. Thanks again to Raphael for this exciting contribution to Cappuccino! If there's some feature you'd like to see in the next version of the plugin, post it to the comments.
 
 Update: I should have mentioned that it requires Xcode 3.1. The developer is working on support for earlier versions.
+
 
 
 

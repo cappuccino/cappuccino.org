@@ -4,10 +4,12 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-11-20'
 tags:
-- Cappuccino
+- cappuccino
 - meetup
 - cappcon2016
 - cappcon
+categories:
+- Uncategorized
 ---
 
 Hi guys,
@@ -23,3 +25,4 @@ The first Meetup will be the CappCon2016 in Liège (Belgium). You can register f
 If you would like to organize a meetup on your own somewhere else, let us know on [gitter](https://gitter.im/cappuccino/cappuccino).
 
 Thanks and see you soon!
+

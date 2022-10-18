@@ -9,9 +9,9 @@ categories:
 - Cappuccino
 - Tutorials
 tags:
-- CPURLConnection
-- AJAX
-- XMLHTTPRequest
+- cpurlconnection
+- ajax
+- xmlhttprequest
 - tutorial
 ---
 
@@ -215,6 +215,7 @@ JSONP does have it's own security implications. Because you're essentially allow
 There's been some confusion about when to use CPURLConnection versus CPJSONPConnection, due largely in part to the lack of documentation or discussion on the issue. In general, you should only use JSONP with third-party services that you trust, and only when doing so doesn't involve sensitive information. For example, getting public Flickr photos, or performing a Google search using Google's AJAX search API. If you're communicating with your own service, even if you use JSON as the transmission format, you should use CPURLConnection. Their are numerous advantages to this approach, especially the additional security.
 
 I hope this has illustrated both when and how to use CPURLConnection and CPJSONPConnection. As we continue to develop Cappuccino, we'll be improving both of these classes, and introducing new communication methods as well. If you have questions, sound off in the comments, or try the [mailing list or irc channel](http://www.cappuccino-project.org/discuss/list.php).
+
 
 
 

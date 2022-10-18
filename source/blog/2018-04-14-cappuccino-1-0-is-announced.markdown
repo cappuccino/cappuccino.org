@@ -1,11 +1,13 @@
 ---
 title: CappCon 2018 and the release of Cappuccino 1.0!
-author: Martin Carlberg 
+author: Martin Carlberg
 date: '2018-04-14'
 tags:
-- Cappuccino
+- cappuccino
 - release
 - update
+categories:
+- Uncategorized
 ---
 
 
@@ -34,3 +36,4 @@ The first release candidate of version 1.0 is scheduled for August 4, 2018. Afte
 _- Martin Carlberg_
 
 [Register for CappCon 2018](https://www.meetup.com/CappCon/events/248886408) | [Join the discussion](https://gitter.im/cappuccino/cappuccino) | [Download Cappuccino](/downloads.html)
+

@@ -1,5 +1,5 @@
 ---
-title: ! 'Introducing Jake: A Build Tool for JavaScript'
+title: 'Introducing Jake: A Build Tool for JavaScript'
 author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 660
@@ -9,6 +9,8 @@ tags:
 - tools
 - jake
 - rake
+categories:
+- Uncategorized
 ---
 
 Now that we've [shipped Cappuccino 0.8](http://www.cappuccino-project.org/discuss/2010/04/07/cappuccino-0-8/), I wanted to take some time to describe in more detail what might be one of the most exciting new features our users may not even notice: [Jake](http://github.com/280north/jake). Jake is a new build tool built entirely in JavaScript that runs on top of the CommonJS standard. As its name suggests, it is based on the existing and already popular Rake tool and benefits from the same simplicity.
@@ -137,3 +139,4 @@ You can of course also [get the source code](http://github.com/280north/jake) as
 	$ git clone git://github.com/280north/jake.git
 
 Perhaps one of the coolest results of this is that Cappuccino is really now self-hosting: **the entire stack is finally JavaScript** and easily accessible for hacking.
+

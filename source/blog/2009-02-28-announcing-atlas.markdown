@@ -10,6 +10,8 @@ tags:
 - cappuccino
 - objective-j
 - tools
+categories:
+- Uncategorized
 ---
 
 Over at [280 North](http://280north.com), we announced our next product, called Atlas, at the [Future of Web Apps](http://events.carsonified.com/fowa) conference in Miami this week.
@@ -25,3 +27,4 @@ We're really excited about the ways Atlas could change the process of developing
 Furthermore, Atlas allows non-programmers, such as many graphic designers, to join in on the process of actually building an application, rather than just providing mockups that must then be replicated in code by a developer.
 
 Atlas will be available this summer. Sign up for updates on [280atlas.com](http://280atlas.com) and we'll let you know of the progress on Atlas.
+

@@ -4,9 +4,11 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-11-01'
 tags:
-- Cappuccino
+- cappuccino
 - update
-- Cucapp
+- cucapp
+categories:
+- Uncategorized
 ---
 
 > Every two weeks, we show you how Cappuccino is growing.

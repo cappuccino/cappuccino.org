@@ -6,8 +6,10 @@ wordpress_id: 1289
 wordpress_url: http://cappuccino.org/discuss/?p=1289
 date: '2012-05-28'
 tags:
-- Cappuccino
+- cappuccino
 - issues
+categories:
+- Uncategorized
 ---
 
 
@@ -25,6 +27,7 @@ Our new reviewers are (in alphabetical order):
 The issue reviewers will be helping the project tremendously with their diligence and volunteering of time, so we hope we speak for everyone in the Cappuccino project in saying: welcome!
 
 _- The Cappuccino Core Developer Team_
+
 
 
 

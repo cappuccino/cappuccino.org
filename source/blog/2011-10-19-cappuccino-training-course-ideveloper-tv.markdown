@@ -1,5 +1,5 @@
 ---
-title: ! 'Cappuccino Training Course: iDeveloper TV'
+title: 'Cappuccino Training Course: iDeveloper TV'
 author: Randy Luecke
 author_email: rclu222@uky.edu
 wordpress_id: 1194
@@ -9,6 +9,8 @@ tags:
 - cappuccino
 - tutorial
 - community highlights
+categories:
+- Uncategorized
 ---
 
 
@@ -35,3 +37,4 @@ I'm extremely proud of the work I did in creating this course, and I think Dave 
 I hope you enjoy the course. Feedback is greatly appreciated. Hopefully, I'll have the chance to make some additional courseware in the future.
 
 _John Fox_
+

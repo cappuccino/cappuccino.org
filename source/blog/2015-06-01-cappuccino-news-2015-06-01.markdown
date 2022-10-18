@@ -4,10 +4,12 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-06-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - objj2objcskeleton
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -35,3 +37,4 @@ Here's a quick update on what's new with Cappuccino in the last month.
 - Fixed: `CPScrollView -documentVisibleRect` did not return the expected result when the document view was scaled. ([Dogild](https://github.com/dogild) - [a7b6010](https://github.com/cappuccino/cappuccino/pull/2358))
 
 - Fixed: private variables were shown in Cappuccino's documentation. ([Dogild](https://github.com/dogild) - [a439688](https://github.com/cappuccino/cappuccino/commit/a439688b3cc4e73d68d6e68475775e7670655f3a))
+

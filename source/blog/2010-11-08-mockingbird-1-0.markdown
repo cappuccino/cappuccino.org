@@ -7,6 +7,8 @@ wordpress_url: http://cappuccino.org/discuss/?p=936
 date: '2010-11-08'
 tags:
 - community highlights
+categories:
+- Uncategorized
 ---
 
 [![](/img/cpo-uploads/2010/11/realtimeshot21.png)](/img/cpo-uploads/2010/11/realtimeshot21.png)
@@ -18,3 +20,4 @@ If you're not familiar with Mockingbird, it's an application for building and sh
 If you were a beta tester be sure to check your email for a special discount, and visit the website to [sign up](https://gomockingbird.com/signup/) or if you're a beta tester [upgrade here](https://gomockingbird.com/mockingbird/#upgrade). Be sure to also [read the official announcement](http://blog.gomockingbird.com/10-and-real-time-collaboration).
 
 Mockingbird is an exceptional example of what Cappuccino is capable of, so congratulations again to Saikat and Sheena from the entire Cappuccino community!
+

@@ -4,8 +4,10 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-10-01'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 > Every two weeks, we show you how Cappuccino is growing.
@@ -63,3 +65,4 @@ tags:
 - Correctly set key code of the `CPEvent` when simulating a keyboard event. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/13))
 
 - Simulated events now use integral location points. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/12))
+

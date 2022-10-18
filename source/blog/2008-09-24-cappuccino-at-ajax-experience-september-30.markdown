@@ -9,8 +9,8 @@ categories:
 - Cappuccino
 - Events
 tags:
-- Events
-- Conferences
+- events
+- conferences
 ---
 
 
@@ -31,6 +31,7 @@ with&nbsp;[Francisco Tolmasky](http://ajaxexperience.techtarget.com/east/html/sp
 This lightening round introduces Cappuccino and Objective-J and the road to going open source. Cappuccino was implemented using a new programming language called Objective-J, which is modeled after Objective-C and built entirely on top of JavaScript. Programs written in Objective-J are interpreted in the client, so no compilation or plug-ins are required. Hear from Francisco Tolmasky, creator of the Objective-J language.
 
 If you're at AJAX Experience, be sure to check out these talks, and introduce yourself to Francisco! (don't worry, he doesn't bite, usually)
+
 
 
 

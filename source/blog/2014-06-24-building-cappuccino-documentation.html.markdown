@@ -3,9 +3,11 @@ title: Building Cappuccino Documentation
 date: '2014-06-24'
 author: Andrew Hankinson
 tags:
- - documentation
- - doxygen
- - docsets
+- documentation
+- doxygen
+- docsets
+categories:
+- Uncategorized
 ---
 
 In this post I will explain how you can use the `jake` command to build the Cappuccino documentation straight from the source. I will cover building both the HTML version of the source, as well as a DocSet version suitable for use in [Dash](http://kapeli.com/dash) or XCode.
@@ -102,3 +104,4 @@ You can also open the docsets in XCode by placing the .docset file in `~/Library
 ### Wrapping up
 
 The Cappuccino documentation still has a long way to go (and we're always looking for volunteers to help!) but hopefully this post has provided some help for building the latest version of the documentation straight from the source.
+

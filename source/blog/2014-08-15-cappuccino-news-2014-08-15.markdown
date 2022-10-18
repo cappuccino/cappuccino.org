@@ -4,8 +4,10 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-08-15'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino for the last two weeks.
@@ -36,3 +38,4 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 ##### Cucapp
 
 - The method `def simulate_mouse_moved_on_point x, y, flags` has been added. You can now simulate the `CPMouseMoved` event in your tests.
+

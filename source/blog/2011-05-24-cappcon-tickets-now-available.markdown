@@ -9,6 +9,8 @@ tags:
 - update
 - events
 - conferences
+categories:
+- Uncategorized
 ---
 
 CappCon 2011 is shaping up nicely with some great speakers including legendary indie developer Wolf Rentzsch, Pete LePage from Google, Jorn van Dijk of Sofa, and of course many others.
@@ -18,3 +20,4 @@ Tickets for CappCon are now available along with more details at [http://cappcon
 Also, be sure to tell your friends in person, on Twitter, and Facebook: we want to see the whole Cappuccino community there!
 
 See you in June!
+

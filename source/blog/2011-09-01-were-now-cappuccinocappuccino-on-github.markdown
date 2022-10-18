@@ -9,6 +9,8 @@ tags:
 - cappuccino
 - 280 north
 - github
+categories:
+- Uncategorized
 ---
 
 
@@ -34,6 +36,7 @@ becomes:
     https://github.com/cappuccino/cappuccino/issues/10
 
 Feel free to help out and update links in the [wiki](https://github.com/cappuccino/cappuccino/wiki).
+
 
 
 

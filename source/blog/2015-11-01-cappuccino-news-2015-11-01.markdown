@@ -4,14 +4,16 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-11-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
 - cucapp
 - localization
-- CPNotificationQueue
+- cpnotificationqueue
 - theme
 - ojtest
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -86,3 +88,4 @@ More information [here](http://www.cappuccino-project.org/blog/2015/10/cappcon-2
 - Fixed: use runtime functions instead of accessing attribute names directly. ([mrcarlberg](https://github.com/mrcarlberg) - [f799634](https://github.com/cappuccino/OJTest/commit/f799634d20a62c32ef421eef8d7fd8660e7ee860))
 
 - Fixed: `CPRunLoop` was not called at the end of every tests. ([Dogild](https://github.com/dogild) - [def9006](https://github.com/cappuccino/OJTest/commit/def9006f14ed05d218623388145e1c44edf24c51))
+

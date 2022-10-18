@@ -4,8 +4,10 @@ author: Daniel Boehringer
 author_email: daboe01@gmail.com
 date: '2014-10-15'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 > Every two weeks, we show you how Cappuccino is growing.
@@ -18,3 +20,4 @@ tags:
 - The method `- (BOOL)popoverShouldClose:` is now called called in transient and semi-transient mode. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/5979baa874f18eb0582dbdc33c0599276c299cb5))
 
 - Popover windows now trap the next mouse event automatically if the popover is still visible after a `- performClose:`. ([primalmotion](https://github.com/primalmotion) - [PR](https://github.com/cappuccino/cappuccino/commit/608480c1d26c1a858e1cec6e0027cefc02181bb4))
+
