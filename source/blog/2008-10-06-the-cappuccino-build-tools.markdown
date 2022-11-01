@@ -10,9 +10,9 @@ categories:
 - Tutorials
 - Tools
 tags:
-- Cappuccino
+- cappuccino
 - build tool
-- Objective-J
+- objective-j
 ---
 
 
@@ -76,6 +76,7 @@ Finally, the application is archived and gzipped, scp'd to one or more servers, 
 ### Conclusion
 
 Cappuccino's build tools are great at optimizing your deployed application, but there are further web server specific optimizations possible as well, including enabling [gzipping](http://httpd.apache.org/docs/2.0/mod/mod_deflate.html) and caching. These will be discussed in subsequent articles.
+
 
 
 

@@ -6,8 +6,10 @@ wordpress_id: 1265
 wordpress_url: http://cappuccino.org/discuss/?p=1265
 date: '2012-04-17'
 tags:
-- Cappuccino
-- Update
+- cappuccino
+- update
+categories:
+- Uncategorized
 ---
 
 
@@ -119,3 +121,4 @@ Please pay special attention to the **Fixes & Changes** section, there may be ch
 * ~36 closed in the last 10 days.
 * 18 open pull requests.
 * 27 pull requests merged or closed in the past 10 days.
+

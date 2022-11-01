@@ -1,5 +1,5 @@
 ---
-title: ! 'Cappuccino Tools: "bake"'
+title: 'Cappuccino Tools: "bake"'
 author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 135
@@ -9,6 +9,8 @@ tags:
 - cappuccino
 - tutorials
 - tools
+categories:
+- Uncategorized
 ---
 
 _Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
@@ -119,3 +121,4 @@ One important thing to note about "bake" is that since the old deployment remain
 ### Conclusion
 
 Once again I should stress that this tool is by no means required for writing a Cappuccino application. It was written to help deploy our production application, [280 Slides](http://280slides.com), but we have made it available for anyone who has similar deployment requirements. If it doesn't quite fit your requirements, please feel free to suggest improvements, or even better, make improvements yourself and contribute them back!
+

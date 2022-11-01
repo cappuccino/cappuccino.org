@@ -8,7 +8,7 @@ date: '2009-02-26'
 categories:
 - Uncategorized
 tags:
-- Cappuccino
+- cappuccino
 - slicehost
 - 280north
 ---
@@ -21,6 +21,7 @@ We've been using Slicehost for some of our development work at 280 North and hav
 During the day, if you see a few odd glitches, they are likely the result of the DNS switching over or us tweaking some of the configurations. Everything should settle down by the end of the day.
 
 We're extremely thankful for this support from Slicehost. If you're in the market for a server, you should consider Slicehost.
+
 
 
 

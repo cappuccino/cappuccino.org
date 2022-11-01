@@ -4,8 +4,10 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-09-01'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 > Every two weeks, we show you how Cappuccino is growing.
@@ -47,3 +49,4 @@ tags:
 ##### Changes/Fixes
 
 - The category `Cucumber+Extensions.j` doesn't raise an exception in Firefox anymore.
+

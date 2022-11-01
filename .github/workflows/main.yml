@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Middleman and dependencies to build the site
+      uses: ruby/setup-ruby@v1.118.0
+      with:
+        ruby-version: 2.6
+        bundler-cache: true
+        bundler: 1.17.3
+    - run: bundle exec middleman build
+
+    - name: Push to destination repo
+      uses: cpina/github-action-push-to-another-repository@9e487f29582587eeb4837c0552c886bb0644b6b9
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      with:
+        source-directory: 'build'
+        destination-github-username: 'cappuccino'
+        destination-repository-name: 'cappuccino.github.io'
+        user-email: cappdeploybot@example.com
+        target-branch: master

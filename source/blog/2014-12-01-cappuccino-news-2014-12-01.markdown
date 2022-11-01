@@ -4,9 +4,11 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-12-01'
 tags:
-- Cappuccino
-- Objective-J
+- cappuccino
+- objective-j
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino for the last two weeks.
@@ -63,3 +65,4 @@ Example:
 - It's now possible to chain sheet dialogs in a `CPWindow`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2238))
 
 - Fixed: opening a `CPMenu` with items and then opening a `CPMenu` without any items would cause a crash. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2260))
+

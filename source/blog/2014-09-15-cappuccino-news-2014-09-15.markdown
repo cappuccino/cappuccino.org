@@ -4,8 +4,10 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-09-15'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 > Every two weeks, we show you how Cappuccino is growing.
@@ -51,3 +53,4 @@ tags:
 - The API link in now presents in the navigation bar. ([Dogild](https://github.com/Dogild))
 
 - The Gitter and Gittip links have been added to the bottom bar. ([Dogild](https://github.com/Dogild))
+

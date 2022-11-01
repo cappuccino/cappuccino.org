@@ -4,11 +4,13 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-10-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
 - cucapp
 - cappuccino.org
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -41,3 +43,4 @@ Here's a quick update on what's new with Cappuccino in the last month.
 ##### Changes/Fixes
 
 - Fixed: `CPWindow`s of the application not all closed when the test was over. ([Dogild](https://github.com/dogild) - [e93d795](https://github.com/cappuccino/cucapp/commit/e93d79552e7ef4ff01d73749e925ade99aa02399))
+

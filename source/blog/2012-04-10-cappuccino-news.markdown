@@ -6,8 +6,10 @@ wordpress_id: 1270
 wordpress_url: http://cappuccino.org/discuss/?p=1270
 date: '2012-04-10'
 tags:
-- Cappuccino
-- Update
+- cappuccino
+- update
+categories:
+- Uncategorized
 ---
 
 
@@ -42,3 +44,4 @@ What's new in Cappuccino in the past two weeks:
 - Added `CPURL -URLByDeletingLastPathComponent`.
 
 - Windows now automatically set up the key loop and if no view has been set as the initial first responder, sets the first key view as the initial first responder.
+

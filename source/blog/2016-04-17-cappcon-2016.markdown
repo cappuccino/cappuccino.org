@@ -3,10 +3,12 @@ title: CappCon 2016
 author: Alexandre Wilhelm
 date: '2016-04-17'
 tags:
-- Cappuccino
+- cappuccino
 - release
 - update
 - cappcon
+categories:
+- Uncategorized
 ---
 
 ### Major releases
@@ -50,3 +52,4 @@ It was very exciting for us and we hope to organize another CappCon soon again!
 To finish , we would like to thanks our sponsors who made this possible! Thank you to [Nuage Networks](http://www.nuagenetworks.net), [Oops](http://www.oops.se), [RWElephant](http://www.rwelephant.com) and the [University of Liège](https://www.ulg.ac.be).
 
 _- The Cappuccino Core Developer Team_
+

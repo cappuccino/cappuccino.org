@@ -4,9 +4,11 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-05-01'
 tags:
-- Cappuccino
-- Cucapp
+- cappuccino
+- cucapp
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -57,3 +59,4 @@ Here's a quick update on what's new with Cappuccino in the last month.
 ##### Change/Fixe
 
 - Fixed: methods `textFor:` and `objectValue` did not return the string value of a `CPPopUpButton`. ([Dogild](https://github.com/Dogild) - [01b7ddc](https://github.com/cappuccino/cucapp/commit/01b7ddcc2d6059ad9cdde1eee80c9d54dc341e3e))
+

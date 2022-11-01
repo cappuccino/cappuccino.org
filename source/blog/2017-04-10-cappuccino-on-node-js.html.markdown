@@ -4,11 +4,13 @@ author: Martin Carlberg
 author_email: martin@carlberg.org
 date: '2017-04-10'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
-- Node.js
-- Node
+- node.js
+- node
+categories:
+- Uncategorized
 ---
 
 ### Background
@@ -49,3 +51,4 @@ Node.js is much faster than Rhino and is up to par with JavaScriptCore. Here are
 As soon as possible we will drop support for Rhino as it is old and not maintained. It will allow us to be more up to date and for example support the ES6 release of Javascript. 
 
 The build process is still dependent on a couple of non Javascript tools like [gcc](https://gcc.gnu.org) and [ShrinkSafe](http://shrinksafe.dojotoolkit.org) etc. When we have removed all dependencies it will be much easier to build Cappuccino on all platforms including Windows. Also in the long run it would be nice to remove Narwhal and maybe replace Jake (our build system) with something more modern. Work is being done to remove gcc and if you want to get involved in working with removing any of these dependancies please get in contact with us on the [mailing list](https://groups.google.com/forum/#!forum/objectivej) or on [Gitter](https://gitter.im/cappuccino/cappuccino).
+

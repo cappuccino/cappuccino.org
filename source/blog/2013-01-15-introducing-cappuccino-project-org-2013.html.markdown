@@ -5,6 +5,8 @@ author: Alexander Ljungberg
 tags:
 - update
 - website
+categories:
+- Uncategorized
 ---
 
 We're extremely excited to today unveil the new Cappuccino project website. We've been hard at work with this site for quite a while now, and we think it represents a major step forward for Cappuccino as an open source project. READMORE Here are some of the new features:
@@ -21,3 +23,4 @@ While we've taken pains to convert every single blog post and every important pa
 If you have any links pointing to the old domain, cappuccino.org, please go ahead and update them to cappuccino-project.org. Redirects from most pages of the old site to the new site will be in place for some time, but perhaps not forever.
 
 We think you'll really like the new site, and we hope that some of you will be making your own contributions to it. If you see a typo, or you think you've got some great new content that could help out the Cappuccino project, please [open up a pull request](https://github.com/cappuccino/cappuccino.org).
+

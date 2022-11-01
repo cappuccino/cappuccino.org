@@ -3,10 +3,12 @@ title: Multi-Nib Applications with Interface Builder
 date: '2014-10-29'
 author: Andrew Hankinson
 tags:
- - interface builder
- - xcode
- - xcodecapp
- - tutorial
+- interface builder
+- xcode
+- xcodecapp
+- tutorial
+categories:
+- Uncategorized
 ---
 
 This post will take you through how to set up a very basic application using objects contained in multiple NIB files. After scouring the web I could find very few clear instructions on how to set this up and, while it turns out that it is quite simple, a step-by-step guide may prove to be helpful.
@@ -89,3 +91,4 @@ Now it's time to test it out. Open your `index.html` file (I find it best to run
 ## Next Steps
 
 Hopefully this gives you enough to get started writing your own multi-Nib applications with Interface Builder. Although this tutorial has focused on using a window controller, the process of using, for example, a view controller is very similar. The crucial part is customizing the "File's Owner" object to point to a controller class.
+

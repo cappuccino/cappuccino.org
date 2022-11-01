@@ -5,6 +5,8 @@ author: Alexander Ljungberg
 tags:
 - update
 - objective-j
+categories:
+- Uncategorized
 ---
 
 Objective-J 2.0 now supports pass by reference using the new `@ref` and `@deref` syntax. Pass by reference allows you to store a reference to a variable in a different variable and then to pass it around. Among other things this makes it possible to send a message which returns multiple values (one as the return value, and an arbitrary number as output variables).
@@ -49,3 +51,4 @@ Whereas in Objective-J you would write:
 Once you have a reference you can pass it around, save it, and dereference it as needed. It's not an actual pointer though so pointer arithmetic is not possible.
 
 The `@ref` feature is available today in [Cappuccino master](https://github.com/cappuccino/cappuccino/commits/master) if you [build from source](/learn/build-source.html).
+

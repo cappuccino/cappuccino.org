@@ -1,5 +1,5 @@
 ---
-title: ! 'CappCon 2011: Success!'
+title: 'CappCon 2011: Success!'
 author: Randy Luecke
 author_email: rclu222@uky.edu
 wordpress_id: 1152
@@ -13,6 +13,8 @@ tags:
 - sofa
 - code
 - community highlights
+categories:
+- Uncategorized
 ---
 
 The first ever Cappuccino conference was a massive success. [CappCon 2011](http://cappcon.org) had a diverse set of attendees from six different continents and included both speakers and sponsors from Pixar, Google, Sofa, Push Pop Press, Shopify, and many others. The overall theme of the conference was "Design, Develop, Distribute"; everything you need in order to build a successful app. The talks explored this theme and covered a huge breadth of knowledge, while each one explored its topic in satisfying detail. In addition, all seven members of the core team were in the same room at the same time to answer questions from the community.
@@ -35,3 +37,4 @@ Of course there were many more announcements and talks, and the videos and slide
 Most importantly, everyone present was a part of the future of Cappuccino. The takeaway from the event is that Cappuccino is stronger than ever, and with some incredible things in the pipeline, it's poised to get even better.
 
 Thanks to everyone who could attend, and we hope to see everyone again next year!
+

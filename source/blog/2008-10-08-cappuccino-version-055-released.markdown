@@ -10,8 +10,8 @@ categories:
 - Update
 - Releases
 tags:
-- Cappuccino
-- Update
+- cappuccino
+- update
 ---
 
 
@@ -30,6 +30,7 @@ Version 0.5.5 includes over 60 fixes, and several key new features, including:
 [Full list of resolved bugs since 0.5.1.](http://cappuccino.lighthouseapp.com/projects/16499-cappuccino/tickets?q=state%3Aclosed+updated%3A%22since+9%2F13%2F08%22&filter=all)
 
 Download the update directly: [Starter](http://download.cappuccino.org/CappuccinoStarter-0.5.5.zip), [Tools](http://download.cappuccino.org/CappuccinoTools-0.5.5.zip).
+
 
 
 

@@ -4,12 +4,14 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-03-01'
 tags:
-- Cappuccino
-- Cucapp
-- Cucumber
-- Objective-J
+- cappuccino
+- cucapp
+- cucumber
+- objective-j
 - update
-- OJTest
+- ojtest
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -71,4 +73,5 @@ Here's a quick update on what's new with Cappuccino in the last month.
 ##### Change/Fix
 
 - The coverage option works again and checks which method has been called. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/OJTest/commit/1f6cc197071eef09f81924c72f05eb45ba184f42))
+
 

@@ -1,5 +1,5 @@
 ---
-title: ! 'WWDC: CPCoder Night, hosted by Sofa and 280 North'
+title: 'WWDC: CPCoder Night, hosted by Sofa and 280 North'
 author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 364
@@ -19,6 +19,7 @@ If you're in town for [WWDC](http://developer.apple.com/wwdc/), or happen to be 
 Thanks to sponsorship by Sofa there will be food!
 
 If you can't make it before 9:00 we'll likely be hanging around the bar at Jillian's after, but check [@280north](http://twitter.com/280north) on Twitter for updates.
+
 
 
 

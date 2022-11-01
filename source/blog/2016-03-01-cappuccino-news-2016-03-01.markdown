@@ -4,11 +4,13 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2016-03-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
 - cucapp
-- cappCon2016
+- cappcon2016
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
