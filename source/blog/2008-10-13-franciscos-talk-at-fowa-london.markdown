@@ -11,6 +11,8 @@ tags:
 - cappuccino
 - fowa
 - london
+categories:
+- Uncategorized
 ---
 
 If you were in London last week at the [Future of Web Apps](http://london2008.futureofwebapps.com/) conference put on by [Carsonified](http://carsonified.com/), you may have had the opportunity to see our very own Francisco Tolmasky talk about Objective-J, Cappuccino, and, well, the future of web apps.
@@ -24,3 +26,4 @@ You can also follow along with the slides:
 <div style="width:425px;text-align:left" id="__ss_648627"><a style="font:14px Helvetica,Arial,Sans-serif;display:block;margin:12px 0 3px 0;text-decoration:underline;" href="/web/20120522061911/http://www.slideshare.net/carsonified/building-desktop-caliber-web-applications-with-objectivej-and-cappuccino-francisco-tolmasky-presentation?type=powerpoint" title="Building Desktop Caliber Web Applications with Objective-J and Cappuccino - Francisco Tolmasky">Building Desktop Caliber Web Applications with Objective-J and Cappuccino – Francisco Tolmasky</a><object style="margin:0px" width="425" height="355" title="Adobe Flash Player"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=280north-1223623160225910-9&amp;stripped_title=building-desktop-caliber-web-applications-with-objectivej-and-cappuccino-francisco-tolmasky-presentation"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="/web/20120522061911oe_/http://static.slideshare.net/swf/ssplayer2.swf?doc=280north-1223623160225910-9&amp;stripped_title=building-desktop-caliber-web-applications-with-objectivej-and-cappuccino-francisco-tolmasky-presentation" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></object>
 <div style="font-size:11px;font-family:tahoma,arial;height:26px;padding-top:2px;">View SlideShare <a style="text-decoration:underline;" href="/web/20120522061911/http://www.slideshare.net/carsonified/building-desktop-caliber-web-applications-with-objectivej-and-cappuccino-francisco-tolmasky-presentation?type=powerpoint" title="View Building Desktop Caliber Web Applications with Objective-J and Cappuccino - Francisco Tolmasky on SlideShare">presentation</a> or <a style="text-decoration:underline;" href="/web/20120522061911/http://www.slideshare.net/upload?type=powerpoint">Upload</a> your own. (tags: <a style="text-decoration:underline;" href="/web/20120522061911/http://slideshare.net/tag/apps">apps</a> <a style="text-decoration:underline;" href="/web/20120522061911/http://slideshare.net/tag/fowa">fowa</a>)</div>
 </div>
+

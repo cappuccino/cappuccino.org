@@ -10,6 +10,8 @@ tags:
 - update
 - objective-j
 - releases
+categories:
+- Uncategorized
 ---
 
 Today we are extremely excited to announce Cappuccino 0.9.5, featuring over 90 new features and improvements in addition to numerous bug fixes. Here are some of the new features we think you'll really like.
@@ -87,3 +89,4 @@ For the full list of changes, see the [Cappuccino 0.9.5 change log](https://gist
 _- The Cappuccino Core Developer Team_
 
 [Download Cappuccino](/#download)
+

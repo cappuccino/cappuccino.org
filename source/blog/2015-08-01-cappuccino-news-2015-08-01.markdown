@@ -4,10 +4,12 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-08-01'
 tags:
-- Cappuccino
+- cappuccino
 - capp_env
 - objj
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.

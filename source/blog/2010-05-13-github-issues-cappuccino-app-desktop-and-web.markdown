@@ -1,5 +1,5 @@
 ---
-title: ! 'GitHub Issues Cappuccino App: Desktop and Web'
+title: 'GitHub Issues Cappuccino App: Desktop and Web'
 author: Francisco Tolmasky
 author_email: francisco@280north.com
 wordpress_id: 803
@@ -41,4 +41,5 @@ The online version is running on Heroku's Node.js beta at [http://githubissues.h
 ### Thanks!
 
  I wanted to thank everyone who helped bring this app together, including the fantastic guys at the [GitHub](http://github.com) and [Heroku](http://heroku.com/), and of course [Randy Luecke](http://github.com/me1000/) and [Ludwig Pettersson](http://github.com/luddep) who actually did the hard work of putting this thing together.
+
 

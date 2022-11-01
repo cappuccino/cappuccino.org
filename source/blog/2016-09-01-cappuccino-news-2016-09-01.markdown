@@ -4,11 +4,13 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2016-09-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
 - cucapp
-- cappCon2016
+- cappcon2016
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino recently.
@@ -116,3 +118,4 @@ We are getting close to a new release Cappuccino 0.9.10, which will probably be 
 ##### Changes/Fixes
 
 - Fixed: the function `dumpGuiObject` was called two times for the class `CPScrollView` ([t00f](https://github.com/t00f) - [732d77e](https://github.com/cappuccino/cucapp/commit/732d77ee8e686c74745df7dd4e128996920ad3f6))
+

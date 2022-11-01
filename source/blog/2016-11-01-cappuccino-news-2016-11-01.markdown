@@ -4,9 +4,11 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2016-11-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino recently.
@@ -48,3 +50,4 @@ A new tutorial has been added to the website! If you want to learn about the bas
 - Fixed: selection in `CPTabView` when defined through `nib2cib`. ([cacaodev](https://github.com/cacaodev) - [c4bf67d](https://github.com/cappuccino/cappuccino/commit/c4bf67d133934ec62077f5272e50529046da55f4))
 
 - New: `CPTabView` loads the views asynchronously when possible. ([cacaodev](https://github.com/cacaodev) - [0eb196e](https://github.com/cappuccino/cappuccino/commit/0eb196e852fa8d310f0e3fa2ed3f5a421566bdd4))
+

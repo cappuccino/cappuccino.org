@@ -1,5 +1,5 @@
 ---
-title: ! 'Internet Explorer: Global Variables, and Stack Overflows'
+title: 'Internet Explorer: Global Variables, and Stack Overflows'
 author: Ross Boucher
 author_email: ross@280north.com
 wordpress_id: 560
@@ -133,3 +133,4 @@ The final version of the code is almost exactly the same, except rather than doi
 I want to give another thank you to all the folks at Microsoft who helped us track down the problem and provided us with a simple test case that reproduced the problem. They were quite helpful, and we (along with all of our users) appreciate it. Now hopefully we'll see this issue addressed in IE9, along with a faster JavaScript engine :).
 
 **Update:** Re-reading this post a year later, I realize I never made it clear that the issue isn't just recursion. IE won't support _any_ execution stack longer than 12 frames.
+

@@ -5,6 +5,8 @@ author: Aparajita Fishman
 tags:
 - cappuccino
 - frameworks
+categories:
+- Uncategorized
 ---
 
 A common need for Cappuccino apps is the ability to upload files. Until now, the only native Cappuccino upload solution was [DeepDropUpload](https://github.com/davidcann/deepDropUpload) by David Cann. While DeepDropUpload works, it hasn't been updated in two years, and it doesn't integrate directly with Interface Builder.
@@ -25,3 +27,4 @@ When used with Interface Builder \(Xcode\), sophisticated uploaders can be desig
 You can find the source for Cup [on github](https://github.com/aparajita/Cup/wiki), along with complete documentation and a [demo app](https://github.com/aparajita/Cup-demo). I hope you find it useful!
 
   _Aparajita_
+

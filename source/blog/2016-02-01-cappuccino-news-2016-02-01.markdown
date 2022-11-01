@@ -4,11 +4,13 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2016-02-01'
 tags:
-- Cappuccino
+- cappuccino
 - objj
 - update
 - cucapp
-- cappCon2016
+- cappcon2016
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -56,3 +58,4 @@ CappCon 2016 has been announced. This conference will be held in Liège (Belgium
 - Fixed: installation of gems could not be completed due to permission. ([primalmotion](https://github.com/primalmotion) - [1854fd2](https://github.com/cappuccino/cucapp/commit/1854fd2d4e1e5f8c0a2fdfb88b23d34ca0d467af))
 
 - Fixed: documentation about how to install phantomjs has been added to the documentation. ([primalmotion](https://github.com/primalmotion) - [74a7a3c](https://github.com/cappuccino/cucapp/commit/74a7a3c9c24e4da2ce36f3dff77a4b40430465a9))
+

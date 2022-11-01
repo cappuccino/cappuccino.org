@@ -6,8 +6,10 @@ wordpress_id: 1284
 wordpress_url: http://cappuccino.org/discuss/?p=1284
 date: '2012-04-24'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 
@@ -45,3 +47,4 @@ tags:
 * ~20 closed in the last 8 days.
 * 22 open pull requests
 * 1 pull request closed in the last 8 days.
+

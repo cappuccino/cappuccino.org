@@ -7,6 +7,8 @@ tags:
 - update
 - objective-j
 - releases
+categories:
+- Uncategorized
 ---
 
 Cappuccino 0.9.6 is a stable build of Cappuccino for those of you not yet ready to update to Objective-J 2.0.
@@ -55,3 +57,4 @@ _- The Cappuccino Core Developer Team_
 [Download Cappuccino](/downloads.html)
 
 [Full Release Notes](/cappuccino-release-notes.html)
+

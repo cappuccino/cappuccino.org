@@ -74,7 +74,7 @@ set :markdown, :fenced_code_blocks => true,
 
 require 'rack/codehighlighter'
 require "pygments"
-Pygments.start('/app/vendor/pygments-main/')
+Pygments.start('vendor/pygments-main/')
 use Rack::Codehighlighter,
   :pygments,
   :element => "pre>code",

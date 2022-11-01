@@ -4,10 +4,12 @@ author: Antoine Mercadal
 author_email: antoine.mercadal@gmail.cm
 date: '2016-03-05'
 tags:
-- Cappuccino
+- cappuccino
 - virtualenv
 - cappenv
 - capp_env
+categories:
+- Uncategorized
 ---
 
 
@@ -56,3 +58,4 @@ And this will build the `TNKit` using the 0.9.9 version. As per the environment 
 To deactivate an environment you can either type `capp_env_deactivate` or close your Terminal.
 
 Available today in Cappuccino's master. Enjoy!
+

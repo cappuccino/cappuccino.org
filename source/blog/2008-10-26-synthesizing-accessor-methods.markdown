@@ -8,9 +8,9 @@ date: '2008-10-26'
 categories:
 - Objective-J
 tags:
-- Objective-J
-- Accessor Synthesizing
-- ! '@accessors'
+- objective-j
+- accessor synthesizing
+- '@accessors'
 ---
 
 
@@ -126,6 +126,7 @@ The main goal we want to achieve is eliminating the need to write your own acces
 Accessor synthesizing will reduce the amount of boilerplate code that needs to be written, and make the language just a little bit easier to develop in. Overall, we think it's a worthwhile addition to the language. If you have an opinion, we'd love to hear it, so sound off in the comments. Although this new syntax isn't yet written in stone, we won't expect to change it after version 0.6 of Cappuccino ships. Checkout the latest version of the git repository to start using this new feature.
 
 We're also considering other language features that might make it easier to program in Objective-J. If you've got an idea, or you're interested in being part of the discussion, you should sign up for the [mailing list](/discuss/list.php), where we'll be discussing some of the new proposals.
+
 
 
 

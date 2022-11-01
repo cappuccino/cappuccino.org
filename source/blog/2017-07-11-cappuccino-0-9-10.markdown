@@ -3,10 +3,12 @@ title: Cappuccino 0.9.10
 author: Alexandre Wilhelm
 date: '2017-07-11'
 tags:
-- Cappuccino
+- cappuccino
 - release
 - update
 - releases
+categories:
+- Uncategorized
 ---
 
 We are very proud to release this new version of Cappuccino: 0.9.10! This release follows a bit more than a year from 0.9.9 and as usual we have been quite busy. We are pretty sure that you will be as excited as us about the new improvements made to Cappuccino.
@@ -42,3 +44,4 @@ _- The Cappuccino Core Developer Team_
 [Download Cappuccino 0.9.10](/downloads.html)
 
 [Full Release Notes](/cappuccino-release-notes.html)
+

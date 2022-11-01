@@ -1,5 +1,5 @@
 ---
-title: ! 'Cappuccino Tools: &ldquo;press&rdquo;'
+title: 'Cappuccino Tools: &ldquo;press&rdquo;'
 author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 104
@@ -10,6 +10,8 @@ tags:
 - tutorials
 - tools
 - build tool
+categories:
+- Uncategorized
 ---
 
 _Note: please check the [tools page](https://github.com/cappuccino/cappuccino/wiki/tools) on the wiki for the latest information on Cappuccino's tools._
@@ -43,3 +45,4 @@ If you're interested in how press works, read on. It starts by loading your appl
 ### Conclusion
 
 press is a already a great tool, but there is much room for improvement. In the future we would like to add finer-granularity code stripping, such as method-level rather than file-level. Additionally, we're working on an automatic [image spriting](http://www.alistapart.com/articles/sprites) and optimization feature which determines exactly which images are required for your application and includes them in a single image, vastly reducing the number of HTTP requests to load your application.
+

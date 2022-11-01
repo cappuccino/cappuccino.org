@@ -8,6 +8,8 @@ date: '2008-12-08'
 tags:
 - cappuccino
 - objective-j
+categories:
+- Uncategorized
 ---
 
 In a [recent post](http://ejohn.org/blog/javascript-language-abstractions/) by John Resig, and in many of the comments, there seems to be the mistaken belief that Objective-J was designed to allow existing Objective-C programmers to write code that runs on the web. It's been compared to GWT, where developers program almost exclusively in Java and are allowed to "circumvent" JavaScript. This however is not the case with Objective-J at all. For starters, Objective-J is simply a language addition to JavaScript, and exists separately from the actual Cappuccino framework (which I'll discuss a little later). It does not directly have anything to do with the DOM or AJAX, etc. The purpose behind Objective-J was to facilitate the development of Cappuccino, and when we originally set out to do that we simply wanted to add a few key missing features to the existing JavaScript "standard". In other words, Objective-J is our take on JavaScript 2.0.
@@ -152,3 +154,4 @@ The important thing is that when this happens, and it _will_ eventually happen, 
 ### Conclusion
 
 To me what we've done with Objective-J and Cappuccino seems inevitable. Even the most conservative major JavaScript libraries can't get away without adding features to the language, and we've simply taken the next logical step with Objective-J. Similarly, Cappuccino is a tool that allows you to stop thinking about web pages and browser incompatibilities, and instead focus on the complex problems presented by the challenge of creating full-on applications on the web. As we've said [countless](http://www.cappuccino-project.org/discuss/2008/10/21/web-pages/) [times](http://www.cappuccino-project.org/learn/), Cappuccino isn't for everything. All of this abstraction isn't necessary if you're simply trying to add dynamic elements to a site like bankofamerica or digg. Cappuccino is for building rich applications in the browser, a small minority in the web world today. We believe that this is where things are headed, and we designed Cappuccino specifically to get _us_ there.
+

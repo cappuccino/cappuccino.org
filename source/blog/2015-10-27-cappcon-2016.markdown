@@ -21,3 +21,4 @@ Please let us know if you would like to join us for this event by taking this [s
 Location and time to be decided!
 
 If you have any quick questions you can ping [@cappuccino](http://twitter.com/cappuccino) on Twitter, ask questions on [gitter](https://gitter.im/cappuccino/cappuccino) or on the [forum](https://groups.google.com/forum/?fromgroups#!forum/objectivej).
+

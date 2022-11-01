@@ -5,6 +5,8 @@ author: Martin Carlberg
 tags:
 - cappuccino
 - compiler
+categories:
+- Uncategorized
 ---
 
 The new Objective-J 2.0 compiler has three components: tokenizer, parser and code generator. The merging of [this pull request](https://github.com/cappuccino/cappuccino/pull/1929) brought major improvements to the tokenizer and code generator.
@@ -191,3 +193,4 @@ Here are some things you might notice if you look at your compiled code:
 Happy coding!
 
 \- Martin
+

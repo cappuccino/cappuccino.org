@@ -3,10 +3,12 @@ title: Cappuccino 0.9.9
 author: Alexander Ljungberg
 date: '2016-03-31'
 tags:
-- Cappuccino
+- cappuccino
 - release
 - update
 - releases
+categories:
+- Uncategorized
 ---
 
 As announced at CappCon 2016, Cappuccino 0.9.9 has now been released! This release follows almost exactly a year from 0.9.8 and in that year we have been busy. No matter what your Cappuccino app is about, there is something in this release for you.
@@ -115,3 +117,4 @@ _- The Cappuccino Core Developer Team_
 [Download Cappuccino 0.9.9](/downloads.html)
 
 [Full Release Notes](/cappuccino-release-notes.html)
+

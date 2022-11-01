@@ -5,6 +5,8 @@ author: Alexander Ljungberg
 tags:
 - update
 - objective-j
+categories:
+- Uncategorized
 ---
 
 Support for dictionary literals has today been added to Objective-J 2.0 in [Cappuccino master](https://github.com/cappuccino/cappuccino/commit/5200f945fe905d5f00addaa00bb78ae09a3cedaf). A dictionary literal allows you to allocate a `CPDictionary` with specific contents in a concise and readable manner.
@@ -52,3 +54,4 @@ Regular JavaScript dictionaries will continue to work as normal.
 For the sake of completeness, Objective-J 2.0 also implements array literals: `@[1, 2, 3]`. Since Objective-J already bridges `CPArray` and JavaScript arrays, this is equivalent to just `[1, 2, 3]`. This is similar to how `@"string" == "string"` in Objective-J today.
 
 The dictionary literals feature is available today if you [build from source](/learn/build-source.html).
+

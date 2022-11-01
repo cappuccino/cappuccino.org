@@ -9,6 +9,8 @@ tags:
 - cappuccino
 - objective-j
 - code
+categories:
+- Uncategorized
 ---
 
 
@@ -36,6 +38,7 @@ We've even take the time to properly -autorelease all objects returned from clas
 We'll be including these exciting new features in a future release, so you should get started adding manual memory management code to every single line of Cappuccino you've ever written! In the meantime, check out the [working code on Github](http://github.com/280north/cappuccino/commit/6678bba94f7778b245d8219292b3a6ac85d31678).
 
 _Please note this is an April Fools joke!_
+
 
 
 

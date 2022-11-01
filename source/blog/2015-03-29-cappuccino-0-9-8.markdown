@@ -4,10 +4,12 @@ author: Antoine Mercadal
 author_email: antoine.mercadal@gmail.com
 date: '2015-03-29'
 tags:
-- Cappuccino
-- Release
-- Update
+- cappuccino
+- release
+- update
 - releases
+categories:
+- Uncategorized
 ---
 
 Today we are very happy announce that Cappuccino 0.9.8 has just been released and it's ready for you to use. This release if focused on stability and bug fixes (~200 bugs squashed) but also delivers some very cool new features.
@@ -71,3 +73,4 @@ _- Antoine and the Cappuccino Core Developer Team_
 [Download Cappuccino 0.9.8](/downloads.html)
 
 [Full Release Notes](/cappuccino-release-notes.html)
+

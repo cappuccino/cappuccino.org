@@ -4,11 +4,13 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-01-15'
 tags:
-- Cappuccino
-- Cucapp
-- Cucumber
-- Objective-J
+- cappuccino
+- cucapp
+- cucumber
+- objective-j
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino for the last month.
@@ -57,3 +59,4 @@ Here's a quick update on what's new with Cappuccino for the last month.
 ##### News
 
 - `Cucapp` now prints what it is about to simulate when using `Cucumber`. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cucapp/pull/23))
+

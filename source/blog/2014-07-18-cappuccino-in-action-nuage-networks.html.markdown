@@ -6,6 +6,8 @@ tags:
 - nuagenetworks
 - sdn
 - showcase
+categories:
+- Uncategorized
 ---
 
 > This is the first in a series of articles where the community can showcase what they are doing with Cappuccino.
@@ -60,3 +62,4 @@ For everything related to unit testing, we use the standard [OJTest](https://git
 #### Conclusion
 
 Nuage Networks and our VSP Architect are living proof that Cappuccino can help you build very complex applications, with style, even in the context of a big company working on huge products. Cappuccino is incredibly powerful and very stable. Almost without exception, it works just like you would expect. All Cocoa developers around know this, but, hell! It's running in a browser!
+

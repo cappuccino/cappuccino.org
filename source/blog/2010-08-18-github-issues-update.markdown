@@ -7,6 +7,8 @@ wordpress_url: http://cappuccino.org/discuss/?p=889
 date: '2010-08-18'
 tags:
 - update
+categories:
+- Uncategorized
 ---
 
 
@@ -45,3 +47,4 @@ If you are looking at a GitHub repository and click the button in the toolbar yo
 This plugin has been open source and is available on [GitHub](http://github.com/Me1000/PrettyIssues), but if you just want to install it you can download it [here](http://github.com/downloads/Me1000/PrettyIssues/PrettyIssues-1.1.safariextz.zip).
 
 We hope you are as excited about this revision as we are, and we hope this update will make our application even more useful to you!
+

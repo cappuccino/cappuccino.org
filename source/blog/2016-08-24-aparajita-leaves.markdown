@@ -3,9 +3,11 @@ title: Aparajita Fishman Leaves
 author: Alexander Ljungberg
 date: '2016-08-24'
 tags:
-- Cappuccino
+- cappuccino
 - update
 - team
+categories:
+- Uncategorized
 ---
 
 As of last month, Aparajita Fishman has left the Cappuccino project to take on a role at Apple.
@@ -16,3 +18,4 @@ Aparajita, thank you for all your great work on Cappuccino and we hope you'll sh
 
 
 _- The Cappuccino Core Developer Team_
+

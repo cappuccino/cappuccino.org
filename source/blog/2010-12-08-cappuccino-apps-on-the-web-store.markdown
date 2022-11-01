@@ -7,6 +7,8 @@ wordpress_url: http://cappuccino.org/discuss/?p=954
 date: '2010-12-08'
 tags:
 - community highlights
+categories:
+- Uncategorized
 ---
 
 Yesterday Google announced their revolutionary web store. We're super excited about this and thrilled that there are already eight Cappuccino apps on the web store today.
@@ -45,6 +47,7 @@ PicsEngine is an easy way to manage your photos online. It offers unlimited spac
 
 [![Spanning Backup](/img/cpo-uploads/2010/12/13001.png)](https://chrome.google.com/webstore/detail/gbogokblcdfahcieocignhkkmknkfjpn)
 **Spanning Backup:** Highest-rated Google Apps backup solution, Spanning Backup continually backs up Google Calendar, Contacts, and Docs to the cloud to make sure your most important data is never lost.
+
 
 
 

@@ -9,14 +9,14 @@ categories:
 - Cappuccino
 - Releases
 tags:
-- Cappuccino
-- Objective-J
-- Rake
+- cappuccino
+- objective-j
+- rake
 - nib2cib
-- Aristo
-- Sofa
+- aristo
+- sofa
 - open source
-- Narwhal
+- narwhal
 ---
 
 
@@ -59,6 +59,7 @@ Narwhal is still in the early stages, but eventually it will be a set of standar
 Thanks again to everyone who's contributed to Cappuccino for the 0.7 release, and to everyone using Cappuccino!
 
 - Ross
+
 
 
 

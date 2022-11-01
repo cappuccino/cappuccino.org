@@ -1,5 +1,5 @@
 ---
-title: ! 'Cappuccino Tools: "objjc" and "steam"'
+title: 'Cappuccino Tools: "objjc" and "steam"'
 author: Tom Robinson
 author_email: tom@280north.com
 wordpress_id: 93
@@ -10,9 +10,9 @@ categories:
 - Tutorials
 - Tools
 tags:
-- Cappuccino
+- cappuccino
 - build tool
-- Objective-J
+- objective-j
 ---
 
 
@@ -118,6 +118,7 @@ The compiled application or framework can then be used in place of the original 
 This article covered the core Cappuccino build tools, objjc and steam. Remember that you will probably never want to call objjc directly, but rather rely on the "steam build" command to manage the build process for you. Additionally, remember the build process is entirely optional (except if you're editing the Cappuccino frameworks themselves), and is only necessary as a deploy-time optimization.
 
 In subsequent articles we'll cover the remaining more advanced build tools, press and bake, as well as further deployment optimizations.
+
 
 
 

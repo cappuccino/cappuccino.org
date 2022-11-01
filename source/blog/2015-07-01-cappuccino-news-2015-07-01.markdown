@@ -4,10 +4,12 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-07-01'
 tags:
-- Cappuccino
+- cappuccino
 - capp_env
 - objj
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -33,3 +35,4 @@ Here's a quick update on what's new with Cappuccino in the last month.
 - New: the XML output format of the command `objj` now has the key `sourcePath` instead of `path`. ([Dogild](https://github.com/dogild) - [d358f0](https://github.com/cappuccino/cappuccino/commit/d358f0d27bb26850a400158ac761775697b8f231))
 
 - Fixed: `CPButton -sizeToFit` was broken when calling the method with a new title or a new image. ([Dogild](https://github.com/dogild) - [9694c7](https://github.com/cappuccino/cappuccino/commit/9694c796e39c3d63e7d230628c28cc7f28cf9ae3))
+

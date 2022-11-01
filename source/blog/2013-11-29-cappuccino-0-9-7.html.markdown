@@ -7,6 +7,8 @@ tags:
 - update
 - objective-j
 - releases
+categories:
+- Uncategorized
 ---
 
 After nearly a year's worth of work we are truly excited to introduce Cappuccino 0.9.7, a major update to the Cappuccino framework featuring a massive number of new features.
@@ -38,3 +40,4 @@ _- Alexander and the Cappuccino Core Developer Team_
 [Download Cappuccino 0.9.7](/downloads.html)
 
 [Full Release Notes](/cappuccino-release-notes.html)
+

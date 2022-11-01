@@ -4,12 +4,14 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-07-29'
 tags:
-- Cucumber
-- Cucapp
+- cucumber
+- cucapp
 - test
-- Automation test
-- Functional test
-- Nuage Networks
+- automation test
+- functional test
+- nuage networks
+categories:
+- Uncategorized
 ---
 
 At [Nuage Networks](http://www.nuagenetworks.net) we needed a solution to test our [Cappuccino application](http://www.cappuccino-project.org/blog/2014/07/cappuccino-in-action-nuage-networks.html). We now have two different suites of tests: unit tests and functional tests.
@@ -176,3 +178,4 @@ A full demo of what Cucapp can do is available [here](https://github.com/Dogild/
 > Updated on the 19th of October, 2014 with additional information.
 
 Follow me on [@WilhelmAlex](https://twitter.com/WilhelmAlex) or [github](https://github.com/Dogild).
+

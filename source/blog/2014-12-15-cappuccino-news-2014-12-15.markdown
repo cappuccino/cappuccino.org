@@ -4,9 +4,11 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-12-15'
 tags:
-- Cappuccino
-- Objective-J
+- cappuccino
+- objective-j
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino for the last two weeks.
@@ -30,4 +32,5 @@ Here's a quick update on what's new with Cappuccino for the last two weeks.
 - The buttons of a `CPButtonBar` are no longer removed and readded to the view each time the button bar is laid out. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2275))
 
 - Fixed: after recent changes, a `CPPopover` would no longer move together with the control it was attached to. ([Dogild](https://github.com/Dogild) - [PR](https://github.com/cappuccino/cappuccino/pull/2276))
+
 

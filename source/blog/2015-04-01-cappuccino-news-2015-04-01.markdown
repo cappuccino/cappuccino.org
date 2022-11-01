@@ -4,12 +4,14 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2015-04-01'
 tags:
-- Cappuccino
-- Cucapp
-- Cucumber
-- Objective-J
-- OJTest
+- cappuccino
+- cucapp
+- cucumber
+- objective-j
+- ojtest
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino in the last month.
@@ -75,3 +77,4 @@ Here's a quick update on what's new with Cappuccino in the last month.
 ##### Change/Fixes
 
 - Fixed: counting of a selector with `OBJMoq` and `OJMockSpy` worked incorrectly if set up multiple times with different arguments. ([Dogild](https://github.com/Dogild) - [09de5a2](https://github.com/cappuccino/OJTest/commit/09de5a27af4791466ba744062ef5ae2d8e2eccad))
+

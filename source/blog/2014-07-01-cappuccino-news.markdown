@@ -4,8 +4,10 @@ author: Alexandre Wilhelm
 author_email: alexandre.wilhelmfr@gmail.com
 date: '2014-07-01'
 tags:
-- Cappuccino
+- cappuccino
 - update
+categories:
+- Uncategorized
 ---
 
 Here's a quick update on what's new with Cappuccino this past month.
@@ -40,3 +42,4 @@ Here's a quick update on what's new with Cappuccino this past month.
 * 8 new pull requests
 * 3570 additions
 * 230 deletions
+

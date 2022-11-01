@@ -9,13 +9,13 @@ You will need Docker.
 #### Build the site
 ```
 docker build -t middleman .
-docker run --rm --volume "$PWD":/app -t middleman bundle exec middleman build
+docker run --rm --volume "$PWD":/app -t middleman bundle _1.17.3_ exec middleman build
 ```
 
 #### Preview the site
 
 ```
-docker run --rm --publish 4567:4567 --volume "$PWD":/app -t middleman bundle exec middleman server
+docker run --rm --publish 4567:4567 --volume "$PWD":/app -t middleman bundle _1.17.3_ exec middleman server
 ```
 
 Open [http://localhost:4567/](http://localhost:4567/) to view the site. When you're done stop the Docker container with Ctrl-C.

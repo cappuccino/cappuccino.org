@@ -5,6 +5,8 @@ author: Aparajita Fishman
 tags:
 - cappuccino
 - projects
+categories:
+- Uncategorized
 ---
 
 The time has come to move Cappuccino to [Node.js](nodejs.org). Why move to Node? There are three main reasons:
@@ -68,3 +70,4 @@ You can donate here:
 Thank you for using Cappuccino, and thank you for your support!
 
 _The Cappuccino Core Team_
+
