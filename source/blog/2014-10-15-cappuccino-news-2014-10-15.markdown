@@ -1,5 +1,6 @@
 ---
 title: Cappuccino News 2014 October 15th
+title: Cappuccino News 2014 October 15st
 author: Daniel Boehringer
 author_email: daboe01@gmail.com
 date: '2014-10-15'
