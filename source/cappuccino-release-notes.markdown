@@ -11,7 +11,7 @@ Cappuccino 1.3.0 introduces full support for ECMAScript 2022 in Objective-J. Thi
 
 Highlights in this release:
 
-* New: node can be now set as the narwhal engine.
+* Full support for ECMAScript 2022 in Objective-J.
 * Many bugixes and minor improvements.
 
 ## What's New in Cappuccino 0.9.10
