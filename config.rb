@@ -61,8 +61,11 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-# Prevent HAML from indenting everything, even <pre> content.
-set :haml, { ugly: true }
+# Supress these HAML warnings because according to [this ticket](https://github.com/middleman/middleman/issues/2113) they are harmless.
+# Haml::TempleEngine: Option :locals is invalid
+# Haml::TempleEngine: Option :ugly is invalid
+# Haml::TempleEngine: Option :outvar is invalid
+Haml::TempleEngine.disable_option_validator!
 
 require "redcarpet"
 set :markdown_engine, :redcarpet
