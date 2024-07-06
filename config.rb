@@ -128,6 +128,8 @@ configure :build do
     `mv build/downloads/Starter/Documentation/* build/learn/documentation/`
     `cd build/learn/ && curl -s -L http://github.com/cappuccino/cappuccino-demos/tarball/master >demos.tgz && tar -xzf demos.tgz && rm -Rf demos && mv cappuccino-cappuccino-demos-* demos`
     `cd build/aristo/showcase && rm -Rf Aristo2Showcase README __MACOSX Frameworks Resources && unzip ../../downloads/Aristo2Showcase.zip && mv Aristo2Showcase/* .`
+    # For Github Pages
+    `echo "www.cappuccino.dev" > build/CNAME`
     `find build/ -name .git -delete`
   end
 end
