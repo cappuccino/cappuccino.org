@@ -3,6 +3,17 @@ title: Cappuccino Release Notes
 layout: markdown
 ---
 
+## What's New in Cappuccino 1.3.0
+
+*Release date: 2022-?-?*
+
+Cappuccino 1.3.0 introduces full support for ECMAScript 2022 in Objective-J. This includes `async` and `await`.
+
+Highlights in this release:
+
+* Full support for ECMAScript 2022 in Objective-J.
+* Many bugixes and minor improvements.
+
 ## What's New in Cappuccino 0.9.10
 
 *Release date: 2017-07-11*
