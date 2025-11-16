@@ -61,8 +61,11 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-# Prevent HAML from indenting everything, even <pre> content.
-set :haml, { ugly: true }
+# Supress these HAML warnings because according to [this ticket](https://github.com/middleman/middleman/issues/2113) they are harmless.
+# Haml::TempleEngine: Option :locals is invalid
+# Haml::TempleEngine: Option :ugly is invalid
+# Haml::TempleEngine: Option :outvar is invalid
+Haml::TempleEngine.disable_option_validator!
 
 require "redcarpet"
 set :markdown_engine, :redcarpet
@@ -122,8 +125,11 @@ configure :build do
   after_build do
     # The server uses the current Starter to serve /learn/documentation and Frameworks/ of demo apps.
     `cd build/downloads/ && rm -Rf Starter && unzip CappuccinoStarter-1.0.0.zip`
+    `mv build/downloads/Starter/Documentation/* build/learn/documentation/`
     `cd build/learn/ && curl -s -L http://github.com/cappuccino/cappuccino-demos/tarball/master >demos.tgz && tar -xzf demos.tgz && rm -Rf demos && mv cappuccino-cappuccino-demos-* demos`
     `cd build/aristo/showcase && rm -Rf Aristo2Showcase README __MACOSX Frameworks Resources && unzip ../../downloads/Aristo2Showcase.zip && mv Aristo2Showcase/* .`
+    # For Github Pages
+    `echo "www.cappuccino.dev" > build/CNAME`
     `find build/ -name .git -delete`
   end
 end
