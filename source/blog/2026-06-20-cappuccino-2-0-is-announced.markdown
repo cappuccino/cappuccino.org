@@ -41,6 +41,7 @@ Rather than just incremental fixes, this iteration introduces major new architec
     *   Visual components like `CPOutlineView` now utilize these animations for smooth disclosure triangle transitions and row expansion.
 *   **Ecosystem and Theme Refinements**:
     *   **SVG-Native UI**: Legacy bitmap-based icons inside the Aristo3 theme have been replaced with scalable vector graphics (SVG) for crisp rendering at any zoom level.
+    *   Conversion of CPTableView from Canvas to DOM with modern animations
     *   **Dark Mode Foundations**: Systematic cleanup of background and control colors has been conducted to allow better styling under system Dark Mode settings.
     *   **Mobile & Touch Optimization**: Native momentum-scrolling support has been added to touch gestures alongside dedicated iPad soft-keyboard and double-tap emulation refinements.
 
