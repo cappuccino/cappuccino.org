@@ -27,7 +27,6 @@ Daniel has completed a resolution-independent Aristo3 theme, alongside hundreds 
 
 Rather than just incremental fixes, this iteration introduces major new architectural components and optimizations since the 1.0 baseline:
 
-*   **Performance Leaps in Text Layout**: We resolved a critical $O(N^2)$ layout bottleneck in `CPLayoutManager` when rendering large text documents. Text-heavy applications should now load and scroll noticeably faster.
 *   **New Layout & Controller Architecture**: 
     *   `CPStackView` has been introduced to make fluid, linear interface layouts straightforward to manage.
     *   `CPSplitViewController` and `CPSplitViewItem` bring modern split-pane layouts in line with macOS.
@@ -36,6 +35,7 @@ Rather than just incremental fixes, this iteration introduces major new architec
     *   Native table rendering with round-trip RTF and Markdown (`CPMarkdownParser`) parser support.
     *   Support for baseline offsets, superscript, and subscript text formatting.
     *   Addition of native context menus and reliable clipboard copy/paste mechanisms.
+    *   We resolved a critical $O(N^2)$ layout bottleneck in `CPLayoutManager` when rendering large text documents. Text-heavy applications should now load and scroll noticeably faster.
 *   **Modern Core Animation (CA) Support**: 
     *   `CAAnimationGroup` and timer-based animations have been integrated directly into `CALayer`.
     *   Visual components like `CPOutlineView` now utilize these animations for smooth disclosure triangle transitions and row expansion.
