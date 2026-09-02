@@ -551,13 +551,119 @@ The `@global` declaration is needed to tell the compiler about a variable that i
 
 ### Declaring new types
 
-The `@typdef` declaration is used to tell the compiler about new variable types. For example `CPButton.j` creates the `CPButtonType` out of a regular integer. Thanks to the keyword typedef, the compiler will not raise any warning when using this type in class interfaces. Here's how it's done:
+The `@typedef` declaration is used to tell the compiler about new variable types. For example `CPButton.j` creates the `CPButtonType` out of a regular integer. Thanks to the keyword typedef, the compiler will not raise any warning when using this type in class interfaces. Here's how it's done:
 
     :::objj
     @typedef CPButtonType
     CPMomentaryLightButton  = 0;
     CPPushOnPushOffButton   = 1;
     CPToggleButton          = 2;
+
+### ECMAScript 2022 (ES2022) Features
+
+Objective-J supports modern JavaScript (ECMAScript 2022) features, allowing you to write cleaner and more expressive code.
+
+#### Object Destructuring
+
+Object destructuring is very convenient when working with Cappuccino data structures like `CPPoint`, `CPRect`, and `CPSize`.
+
+    :::objj
+    let { x, y } = CPPointMake(12, 13);
+
+This assigns `x` and `y` to `12` and `13`.
+
+Variables can also be renamed during destructuring:
+
+    :::objj
+    let { x: myX, y: myY } = CPPointMake(12, 13);
+
+This assigns `myX` to `12` and `myY` to `13`.
+
+Destructuring also works with nested structures such as `CPRect`:
+
+    :::objj
+    let { origin: { x, y }, size: { width, height } } = CPRectMake(20, 10, 100, 200);
+
+Custom variable names can be used here as well:
+
+    :::objj
+    let { origin: { x: myX, y: myY }, size: { width: myWidth, height: myHeight } } = CPRectMake(20, 10, 100, 200);
+
+#### Arrow Functions
+
+Arrow functions offer concise syntax for inline callbacks and block invocations:
+
+    :::objj
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let result = 0;
+    [array enumerateObjectsUsingBlock:e => result += e];
+
+Compared to traditional function expressions:
+
+    :::objj
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let result = 0;
+    [array enumerateObjectsUsingBlock:function(e) { result += e }];
+
+#### `for (... of ...)`
+
+The `for...of` statement iterates over iterable objects, such as arrays, sets, and custom iterators:
+
+    :::objj
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (const element of array) {
+        console.log(element); // prints the element
+    }
+
+With custom iterators, `for...of` can also iterate over data structures like `CPDictionary`:
+
+    :::objj
+    let dict = @{ @"a": 1, @"b": 2 };
+    for (const { key, value } of dict) {
+        console.log(key + @": " + value);
+    }
+
+Output:
+
+    a: 1
+    b: 2
+
+#### Async / Await
+
+Objective-J supports `async` and `await` for managing asynchronous operations. For example, asynchronous methods in `CPURLConnection` can be wrapped in promises:
+
+    :::objj
+    + (async JSObject)sendAsynchronousRequest:(CPURLRequest)aRequest queue:(CPOperationQueue)aQueue
+    {
+        return new Promise(function(resolve, reject) {
+            [[self alloc] _initWithRequest:aRequest queue:aQueue completionHandler:function(aResponse, aData, anError) {
+                resolve({ response: aResponse, data: aData, error: anError });
+            }];
+        });
+    }
+
+    + (async JSObject)sendAsynchronousRequest:(CPURLRequest)aRequest
+    {
+        return new Promise(function(resolve, reject) {
+            [[self alloc] _initWithRequest:aRequest queue:[CPOperationQueue mainQueue] completionHandler:function(aResponse, aData, anError) {
+                resolve({ response: aResponse, data: aData, error: anError });
+            }];
+        });
+    }
+
+You can then consume these asynchronous methods using `await`:
+
+    :::objj
+    - (async @action)doAction:(id)sender
+    {
+        const { response, data, error } = await [CPURLConnection sendAsynchronousRequest:[CPURLRequest requestWithURL:@"http://cappuccino.dev"]];
+        if (error == nil) {
+            let statusCode = [response statusCode];
+            // do work...
+        } else {
+            // handle errors
+        }
+    }
 
 ### Wrapping Up
 
