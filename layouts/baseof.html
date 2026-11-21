@@ -1,30 +1,50 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.Locale | default site.Language.Lang | default "en" }}">
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}">
     <head>
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
-                <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+                <meta name="color-scheme" content="light dark">
+                    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} &mdash; {{ site.Title }}{{ end }}</title>
+                    <link rel="stylesheet" href="/css/site.css">
     </head>
     <body>
-        <header class="site-header">
-            <div class="container masthead">
-                <a class="site-brand" href="{{ "" | relLangURL }}">{{ site.Title }}</a>
-                <nav class="site-nav" aria-label="Primary">
-                    {{ range site.Menus.main }}
-                    <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-                    {{ end }}
-                </nav>
+        <header class="site-masthead">
+            <div class="site-masthead__inner">
+                <a class="site-brand" href="{{ "/" | relURL }}">
+                    <img class="site-brand__mark" src="/img/cappuccino-icon.png" alt="Cappuccino">
+                        <img class="site-brand__wordmark" src="/img/cappuccino-website-logo.png" alt="Cappuccino">
+                        </a>
+
+                <input class="site-nav-toggle" id="site-nav-toggle" type="checkbox">
+                    <label class="site-nav-burger" for="site-nav-toggle" aria-label="Toggle navigation">
+                        <span class="site-nav-burger__line" aria-hidden="true"></span>
+                        <span class="site-nav-burger__line" aria-hidden="true"></span>
+                        <span class="site-nav-burger__line" aria-hidden="true"></span>
+                    </label>
+
+                    {{- $currentPage := . -}}
+                    <nav class="site-nav" aria-label="Primary">
+                        <ul class="site-nav__list">
+                            {{- range site.Menus.main -}}
+                            {{- $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+                            <li>
+                                <a class="site-nav__link{{ if $active }} site-nav__link--active{{ end }}"
+                                    href="{{ .URL | relURL }}"
+                                    {{- if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                            </li>
+                            {{- end -}}
+                        </ul>
+                    </nav>
             </div>
         </header>
 
-        <main class="container page-main">
+        <main class="site-main">
             {{ block "main" . }}{{ end }}
         </main>
 
         <footer class="site-footer">
-            <div class="container">
-                <p>{{ site.Title }}</p>
+            <div class="site-footer__inner">
+                <p class="site-footer__copy">{{ site.Title }}</p>
             </div>
         </footer>
     </body>
