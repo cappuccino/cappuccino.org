@@ -26,11 +26,21 @@
     --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-    --bg: #f8f7f4;
+    --bg: #f7f6f2;
+    --bg-end: #e5e2da;
     --surface: #ffffff;
     --border: #dcdad3;
     --fg: #1b1d20;
     --muted: #555a61;
+    --prose-border: rgba(27, 29, 32, 0.28);
+    --prose-shadow: rgba(0, 0, 0, 0.14);
+    --prose-grad-top: rgba(255, 255, 255, 0.92);
+    --prose-grad-mid: rgba(255, 255, 255, 0.62);
+    --prose-grad-bot: rgba(244, 241, 234, 0.78);
+    --sheen-top: rgba(255, 255, 255, 0.92);
+    --sheen-mid: rgba(255, 255, 255, 0.48);
+    --sheen-end: rgba(244, 242, 236, 0.35);
+    --sheen-border: rgba(255, 255, 255, 0.88);
 
     --masthead-bg: #262b30;
     --masthead-surface: #2f353b;
@@ -54,11 +64,21 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #32383e;
+        --bg: #394149;
+        --bg-end: #272c31;
         --surface: #3a4148;
         --border: #485058;
         --fg: #f1f3f5;
         --muted: #c2c8cf;
+        --prose-border: rgba(255, 255, 255, 0.22);
+        --prose-shadow: rgba(0, 0, 0, 0.42);
+        --prose-grad-top: rgba(255, 255, 255, 0.10);
+        --prose-grad-mid: rgba(255, 255, 255, 0.04);
+        --prose-grad-bot: rgba(0, 0, 0, 0.12);
+        --sheen-top: rgba(255, 255, 255, 0.11);
+        --sheen-mid: rgba(255, 255, 255, 0.04);
+        --sheen-end: rgba(255, 255, 255, 0.01);
+        --sheen-border: rgba(255, 255, 255, 0.16);
     }
 }
 
@@ -75,6 +95,8 @@ html {
 
 body {
     background-color: var(--bg);
+    background-image: linear-gradient(180deg, var(--bg) 0%, var(--bg-end) 100%);
+    background-attachment: fixed;
     color: var(--fg);
     font-family: inherit;
     margin: 0;
@@ -94,6 +116,8 @@ button, input, select, textarea {
     background-color: var(--masthead-bg);
     border-bottom: 1px solid var(--masthead-border);
     color: var(--masthead-fg);
+    position: relative;
+    z-index: 2;
 }
 
 .site-masthead__inner {
@@ -212,17 +236,53 @@ button, input, select, textarea {
     margin-inline: auto;
     max-width: var(--measure);
     padding: 2.25rem var(--gutter) 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .site-main > :first-child {
     margin-top: 0;
 }
 
+.site-main p:not(blockquote p) {
+    background-image: linear-gradient(
+    180deg,
+    var(--prose-grad-top) 0%,
+    var(--prose-grad-mid) 50%,
+    var(--prose-grad-bot) 100%
+    );
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.site-main p:not(blockquote p):first-of-type {
+    border-top: 1px solid var(--prose-border);
+    box-shadow: inset 0 9px 14px -9px var(--prose-shadow);
+    margin-top: 1.5rem;
+    padding-top: 1.15rem;
+}
+
+.site-main p:not(blockquote p):last-of-type {
+    border-bottom: 1px solid var(--prose-border);
+    box-shadow: inset 0 -9px 14px -9px var(--prose-shadow);
+    padding-bottom: 1.15rem;
+}
+
+.site-main p:not(blockquote p):first-of-type:last-of-type {
+    box-shadow:
+    inset 0 9px 14px -9px var(--prose-shadow),
+    inset 0 -9px 14px -9px var(--prose-shadow);
+}
+
 blockquote {
+    background-image: linear-gradient(180deg, var(--sheen-top) 0%, var(--sheen-mid) 48%, var(--sheen-end) 100%);
     border-left: 3px solid var(--masthead-accent);
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-top: 1px solid var(--sheen-border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     color: var(--muted);
     margin: 1.5rem 0;
-    padding: 0.25rem 0 0.25rem 1.15rem;
+    padding: 0.65rem 1rem 0.65rem 1.15rem;
 }
 
 code, pre {
@@ -234,6 +294,8 @@ code, pre {
     border-top: 1px solid var(--footer-border);
     color: var(--footer-muted);
     font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
 }
 
 .site-footer__inner {
