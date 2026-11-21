@@ -1,5 +1,5 @@
 baseURL = "https://cappuccino.dev/"
-languageCode = "en-us"
+language.Locale = "en-us"
 title = "Cappuccino"
 
 [params]

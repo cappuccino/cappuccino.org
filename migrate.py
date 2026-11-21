@@ -15,7 +15,7 @@ IMG_REF_RE = re.compile(r"""(?:src=["']|\]\()(?P<url>(?:/?img/|cpo-uploads/)[^"'
 RAW_HTML_TAG_RE = re.compile(r"<(?:div|span|table|iframe|script|style|object|embed)\b", re.IGNORECASE)
 
 DEFAULT_HUGO_TOML = """baseURL = "https://cappuccino.dev/"
-languageCode = "en-us"
+language.Locale = "en-us"
 title = "Cappuccino"
 
 [params]
@@ -41,7 +41,7 @@ description = "Objective-J, Foundation, and AppKit for the web."
 """
 
 BASEOF_HTML = """<!DOCTYPE html>
-<html lang="{{ site.LanguageCode | default "en" }}">
+<html lang="{{ Site.Language.Locale | default "en" }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
