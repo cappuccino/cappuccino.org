@@ -1,5 +1,5 @@
 ---
-title: "Cappuccino, for Web Apps"
+title: "Cappuccino, for serious Web Apps"
 ---
 
 > The technology used to create the WWW,\
@@ -11,4 +11,4 @@ In late 1990, Tim Berners-Lee built `WorldWideWeb`—the first web browser, edit
 
 Cappuccino is a transliteration of that same application architecture, the AppKit and Foundation frameworks, to the web browser through Objective-J—carrying it as far as the browser platform allows. In a real sense, the first web client and server were born inside this model; bringing it back into the browser returns application development to where the web began.
 
-Cappuccino provides a complete application foundation out of the box, on its own—with styling, document models, undo/redo stacks, responder chains, drag-and-drop protocols, window management, and unified event routing built into a single cohesive model—instead of leaving teams to assemble view libraries, state stores, styling utilities, and routing or layout primitives from scratch on each project. Its architecture was already mature before its first line of Objective-J was written in 2008; eighteen years into its own production life, it delivers productive web application development where longevity, maintainability, performance, and an absence of arbitrary functionality ceilings are required.
+Cappuccino provides a complete application foundation out of the box, on its own—with infrastructure-grade tooling, styling, document models, undo/redo stacks, responder chains, drag-and-drop protocols, window management, and unified event routing built into a single cohesive model—instead of leaving teams to stitch together build pipelines, view libraries, state stores, styling utilities, and routing or layout primitives from scratch on each project. Its architecture was already mature before its first line of Objective-J was written in 2008; eighteen years into its own production life, it delivers productive web application development where longevity, maintainability, performance, and an absence of arbitrary functionality ceilings are required. It was state-of-the-art at inception nearly four decades ago and remains so to this date.
