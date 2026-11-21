@@ -37,7 +37,7 @@ To explain how OJUnit works we are going to create a very simple test to check i
 
 There is a rule for how to name your test files when working with OJTest. OJTest will only run tests found in files with names that follow the pattern `*Test.j`. In our example, let's name the test file `CPDateFormatterTest.j`.
 
-Also, you need to name your test class inside of your test file to a <b>class name that exactly matches the name of your file</b>. The class should inherit from `OJTestCase`.
+Also, you need to name your test class inside of your test file to a **class name that exactly matches the name of your file**. The class should inherit from `OJTestCase`.
 
 OJTest supports the `setUp` and `tearDown` methods like in other xUnit frameworks. They enable you to configure your test environment. Here's what we will use for this example.
 
@@ -99,7 +99,7 @@ Here is the test we'll use for our example. It checks that `CPDateFormatter -str
         [self assert:result equals:@"Wednesday, October 5, 2011 6:34:38 PM Pacific Daylight Time"];
     }
 
-Note that the name of the method starts with the keyword test. This is <b>required</b>: it allows `OJTest` to know which methods are actual tests.
+Note that the name of the method starts with the keyword test. This is **required**: it allows `OJTest` to know which methods are actual tests.
 
 We advise you to separate your tests into three different parts. Test specific setup, an action and finally verification. Try to test only one thing per test. This will allow you to give each test a clear and purposeful name so that when a test fails you'll immediately know what failed (and conversely, when it succeeds you know what exactly it is that works).
 

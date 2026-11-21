@@ -1081,7 +1081,7 @@ Everything that was new in RC1 and RC2 and the following:
 
 ### Foundation and Core
 
-* (4684856) New: improve `describe` format of `CPDictionary` and `CPArray` to be more like literals.  E.g. a dictionary is expressed as @{key1: value1}, an array like @[value2, value2], a string like @"<value>".
+* (4684856) New: improve `describe` format of `CPDictionary` and `CPArray` to be more like literals.  E.g. a dictionary is expressed as @{key1: value1}, an array like @[value2, value2], a string like `@"<value>"`.
 * (eb2bb24) New: added support for `CPNumberFormatterPercentStyle` in `CPNumberFormatter`.
 * (797bfee) New: implement `CPPointInRect`.  This improves source code compatibility with Cocoa when replacing NS with CP.
 * (7485c4e) New: -`CPHTTPURLResponse allHeaderFields`.  When a `CPURLConnection` response is of the `CPHTTPURLResponse` type, the raw HTTP headers can now be retrieved through the allHeaderFields message.

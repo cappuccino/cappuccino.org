@@ -18,12 +18,7 @@ aliases: ["/blog/2008/09/27/lights-off-porting-the-iphone-app-to-cappuccino.html
 
 A couple days ago, [Steven Troughton-Smith](http://steventroughtonsmith.blogspot.com/) decided to try his luck at Cappuccino. With a background in Cocoa programming, and recent work on rewriting Lights Off for the iPhone (the game originally released by Lucas Newman for jailbroken phones), he thought it would be interesting to port Lights Off to Cappuccino.  In only an hour or two, he had the complete app running in a web browser on top of Cappuccino.
 
-<figure>
-<object width="400" height="300" title="Adobe Flash Player"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=1820770&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1"><embed src="/web/20121021143059oe_/http://vimeo.com/moogaloop.swf?clip_id=1820770&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></object>
-<figcaption>
-<a href="http://vimeo.com/1820770?pg=embed&amp;sec=1820770">Lights Off Final Demo (Cappuccino)</a> from <a href="http://vimeo.com/user784130?pg=embed&amp;sec=1820770">Steven Troughton-Smith</a> on <a href="http://vimeo.com?pg=embed&amp;sec=1820770">Vimeo</a>.
-</figcaption>
-</figure>
+* Video: [Lights Off Final Demo (Cappuccino)](https://vimeo.com/1820770) from [Steven Troughton-Smith](https://vimeo.com/user784130) on [Vimeo](https://vimeo.com).
 
 Steven had to say this about Cappuccino:
 
@@ -34,7 +29,3 @@ This is a testament to the power of Cappuccino, and the ease with which existing
 Right now we're working on tools to boost performance and usability on the iPhone, and once they're ready we'll get Lights Off running on the iPhone to show it off. I think everyone will be impressed with how well it works. In the meantime, I hope this inspires you existing Cocoa developers to try out Cappuccino and see what it can do!
 
 * [Lights Off Cappuccino Google Code project](http://code.google.com/p/lightsoffcappuccino/)
-
-
-
-

@@ -4,19 +4,6 @@ layout: markdown
 ---
 
 
-### Search
-
-To search the mailing list and this site:
-
-<div class="row">
-<div class="span8">
-    <form action="http://google.com/cse" id="cse-search-box">
-        <input name="cx" type="hidden" value="003886841673136914364:g4k5gxiukag"><input name="ie" type="hidden" value="UTF-8"><input class="input-large search-query span6" name="q" placeholder="Search" type="text">
-        <input class="btn pull-right" name="sa" type="submit" value="Search">
-    </form>
-</div>
-</div>
-
 ### Mailing List
 
 Cappuccino and Objective-J share Google Group mailing lists. There are
@@ -61,7 +48,4 @@ IRC details:
     Server: irc.freenode.net
     Room:   #cappuccino
 
-Join the chat below, or [in a separate window](http://webchat.freenode.net/?channels=cappuccino).
-
-<iframe src="http://webchat.freenode.net/?channels=cappuccino" width="647" height="400"></iframe>
-
+Join the chat via [Freenode Webchat](http://webchat.freenode.net/?channels=cappuccino).

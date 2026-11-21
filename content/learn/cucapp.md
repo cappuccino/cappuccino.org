@@ -14,7 +14,7 @@ If you haven't installed Cappuccino from source, please follow the tutorial [Adv
 
 Cucapp is a separate install on top of Cappuccino. Let's set that up next.
 
-<span class="label label-info">Info</span> Ruby needs to be installed on your system. [RVM](http://rvm.io) is a good choice which allows you to easily manage a Ruby environment.
+> **Info:** Ruby needs to be installed on your system. [RVM](http://rvm.io) is a good choice which allows you to easily manage a Ruby environment.
 
 To get started, download the current version of Cuccap:
 
@@ -29,7 +29,7 @@ Then install Cucapp on your system:
 
 When installing Cucapp, the following Ruby gems are going to be installed: `Cucumber`, `Thin`, `Nokogiri`, `JSON` and `Watir-Webdriver`.
 
-<span class="label label-info">Info</span> `Nokogiri` can be painful to install on El Capitan. You can find help [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
+> **Info:** `Nokogiri` can be painful to install on El Capitan. You can find help [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
 
 Verify that you have the `cucapp` command in your `PATH`:
 

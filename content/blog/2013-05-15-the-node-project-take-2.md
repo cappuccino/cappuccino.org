@@ -52,24 +52,18 @@ More users means more support from the community, more funds for development, an
 
 This is a big project -- we will be rebuilding Cappuccino from the ground up and rewriting many of the tools.
 
-<hr>
+---
+
 **Our fundraising goal: $5000**
-<hr>
+
+---
 
 A few months ago, we received almost half of that, and had to abandon the project at that time. But now we are ready to try again. Let's make it happen this time!
 
 If you donated before, thank you! Please donate again. If you didn't donate the first time, now is your chance to contribute to a brighter future for Cappuccino. Any amount, great or small, is more than welcome and greatly appreciated.
 
-You can donate here:
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="C2EG6R4LHBHT2">
-<input type="image" src="http://www.aparajitaworld.com/cappuccino/Donate-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+*(Archived PayPal donation form omitted)*
 
 Thank you for using Cappuccino, and thank you for your support!
 
 _The Cappuccino Core Team_
-

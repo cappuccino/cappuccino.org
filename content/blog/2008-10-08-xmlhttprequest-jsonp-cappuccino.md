@@ -129,7 +129,7 @@ Finally, there are two additional CPURLConnection delegate methods we chose not 
 
 One of the limitations of the XHR is that it must follow what is known in the web security world as the [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy). The model requires that requests can only be sent to URLs with the same protocol, domain, and port number as the web page. This policy makes it difficult to interact with third party web services without having to proxy requests first through your own webserver. Several people developed their own workarounds to the limitation, but eventually [JSONP](http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/) emerged as the standard mechanism.
 
-JSONP stands for JSON with Padding, and it comprises two components. The first part deals with getting around the same origin policy itself. XMLHTTPRequests may not work across multiple domains, but <script> tags have no such limitation. JSONP takes advantage of this by dynamically generating a <script> tag and appending it to the page. The script's src property is set to the URL of the remote API, including all request parameters in the query string. The second component of JSONP deals with what to do once the API returns a response.
+JSONP stands for JSON with Padding, and it comprises two components. The first part deals with getting around the same origin policy itself. XMLHTTPRequests may not work across multiple domains, but `<script>` tags have no such limitation. JSONP takes advantage of this by dynamically generating a `<script>` tag and appending it to the page. The script's src property is set to the URL of the remote API, including all request parameters in the query string. The second component of JSONP deals with what to do once the API returns a response.
 
 As the name suggests, JSONP APIs return their data in the JSON format, but instead of returning a plain JSON string, they wrap the JSON response in a function call. This extra function call is the "padding" in JSONP, and it effectively works around the browser's security policy. Typically, function name is a parameter of the request, which you can see demonstrated in the Flickr API. This API allows you to specify _format=json_ to get a JSON response, and _jsoncallback=myfunctionname_ to specify your custom function wrapper for the response. An example request might look something like this:
 
@@ -156,7 +156,7 @@ The additional parameter, **callback:**, is a string that specifies the name of 
 
 
 
-	- (void)connection:(CPJSONPConnection)aConnection didFailWithError:(CPString)error
+	- (void)connection:(CPURLConnection)aConnection didFailWithError:(CPString)error
 	{
 	 //will be called if the connection fails
 	 //will see improvements in an upcoming release
@@ -217,7 +217,3 @@ JSONP does have it's own security implications. Because you're essentially allow
 There's been some confusion about when to use CPURLConnection versus CPJSONPConnection, due largely in part to the lack of documentation or discussion on the issue. In general, you should only use JSONP with third-party services that you trust, and only when doing so doesn't involve sensitive information. For example, getting public Flickr photos, or performing a Google search using Google's AJAX search API. If you're communicating with your own service, even if you use JSON as the transmission format, you should use CPURLConnection. Their are numerous advantages to this approach, especially the additional security.
 
 I hope this has illustrated both when and how to use CPURLConnection and CPJSONPConnection. As we continue to develop Cappuccino, we'll be improving both of these classes, and introducing new communication methods as well. If you have questions, sound off in the comments, or try the [mailing list or irc channel](http://www.cappuccino-project.org/discuss/list.php).
-
-
-
-

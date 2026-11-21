@@ -20,5 +20,4 @@ From a technology perspective, Enstore is a real milestone as the UI was built a
 
 Klaas Pieter has written up an excellent [blog post](http://www.madebysofa.com/#blog/managing_enstore) about his experiences creating Enstore at Sofa where you can learn more, and a special thanks to him as well for contributing a lot of bug fixes along the way!
 
-<object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/w-H2dLdZGeM&amp;hl=en&amp;fs=1&amp;rel=0&amp;hd=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="/web/20120510085540oe_/http://www.youtube.com/v/w-H2dLdZGeM&amp;hl=en&amp;fs=1&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505" title="Adobe Flash Player"></object>
-
+* Video: [Enstore in Checkout 3 (YouTube)](https://www.youtube.com/watch?v=w-H2dLdZGeM)

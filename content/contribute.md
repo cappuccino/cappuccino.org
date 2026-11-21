@@ -9,7 +9,7 @@ future of Cappuccino. Whether you're looking to write code, add new
 documentation, or just report a bug, you'll be helping everyone who uses
 Cappuccino in the future.
 
-### Reporting Bugs or Missing Features <a name="bug-reports">&nbsp;</a>
+### Reporting Bugs or Missing Features
 
 We use the [GitHub issue tracker](http://github.com/cappuccino/cappuccino/issues) to report and
 follow bugs in Cappuccino. If you think you've found a problem in
@@ -69,7 +69,7 @@ When you have everything ready, go ahead and [open a new ticket](https://github.
 Once the ticket is created, there is a [well-defined lifecycle](/contribute/issue-lifecycle.html) it goes through. We track its progress
 through the lifecycle with tags so you know what its status is.
 
-### Getting the Code <a name="get-code">&nbsp;</a>
+### Getting the Code
 
 Cappuccino is hosted on
 [GitHub](http://github.com/cappuccino/cappuccino) using the

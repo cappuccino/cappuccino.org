@@ -134,7 +134,7 @@ title of the issue will be updated to show the latest bump count. In
 addition, the core team will be notified so we have an idea which issues
 are a priority for the community.
 
-## How We Make Decisions <a name="#how-we-make-decisions">&nbsp;</a>
+## How We Make Decisions
 
 We strive to be as transparent and democratic as possible, so when a new
 feature or design decision will have a significant impact on the
@@ -171,7 +171,7 @@ team if:
 -   There are no -1 votes from members of the core team.
 
 When calling for a vote, the caller should specify a deadline by which
-votes must be received, with one week being the minimum amount of time.
+votes must be received, with one week being the minimum of time.
 
 Since this process allows any core developer to veto a proposal, any -1
 votes must be accompanied by a thorough explanation of what it would

@@ -2,24 +2,11 @@
 
 Cappuccino is supported on the following platforms:
 
-<table class="table span9">
-<tbody><tr>
-<th>Platform</th>
-<th>Supported features</th>
-</tr>
-<tr>
-<td>Mac OS X</td>
-<td>Toolchain, Interface Builder</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Toolchain</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>Toolchain with installation of <a href="http://cygwin.org">Cygwin</a></td>
-</tr>
-</tbody></table>
+| Platform | Supported features |
+| :--- | :--- |
+| Mac OS X | Toolchain, Interface Builder |
+| Linux | Toolchain |
+| Windows | Toolchain with installation of [Cygwin](http://cygwin.org) |
 
 This tutorial will be written based on Mac OS X, with notes on any differences with other platforms included.
 
@@ -40,7 +27,7 @@ should end up with something that looks like this (in Safari):
 
 ![New Application running in Safari](/img/new-app-running-safari.png)
 
-<span class="label label-info">Info</span>  This will only work in some browsers. Normally you'll need to start a web server too.
+> **Info:** This will only work in some browsers. Normally you'll need to start a web server too.
 One easy way to start a web server is to use Python: just run `python -m SimpleHTTPServer` from the folder in which your project is located.
 
 ### The Code
@@ -207,4 +194,3 @@ complete changes, you can download this copy of
 This concludes our quick introduction to the Cappuccino Starter package,
 and to modifying your first application. Now that you've got your feet
 wet, you can move on to a more advanced tutorial.
-

@@ -70,7 +70,7 @@ his is normal, because you have opened `index.html` which logs nothing by defaul
 
 ![Console](tuto-debugger-2.png)
 
-<span class="label label-info">Info</span>  You can enable logging in `index.html` as well by registering a logger using `CPLogRegister`.
+> **Info:** You can enable logging in `index.html` as well by registering a logger using `CPLogRegister`.
 
 There are 6 logging levels: `fatal`, `error`, `warn`, `info`, `debug` and `trace`. You use them with `CPLog.fatal()`, `CPLog.warn()`, `CPLog.info()` etc.
 

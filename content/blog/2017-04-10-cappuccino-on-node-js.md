@@ -34,7 +34,7 @@ Everything works as before except we can now choose Node.js as the Javascript en
 
 1. Make sure [Node.js](https://nodejs.org) is installed.
 2. The latest [Cappuccino-Base](https://github.com/cappuccino/cappuccino-base) is needed. It is included in the latest version of Cappuccino. It's most easily installed by following the instructions [here](http://www.cappuccino-project.org/#download).
-3. Some Node.js modules are required. Run the Bash script at <span style="white-space: nowrap">```<Your Narwhal Folder>/packages/narwhal-node/bin/npm-install```.</span>
+3. Some Node.js modules are required. Run the Bash script at `<Your Narwhal Folder>/packages/narwhal-node/bin/npm-install`.
 4. There are also some small changes to the Cappuccino framework necessary to support Node.js. They are not included in the latest version so you should use the master branch from [Github](https://github.com/cappuccino/cappuccino).
 5. Set the environment variable `NARWHAL_ENGINE` to `node`. In Bash this is `export NARWHAL_ENGINE=node`.
 
@@ -52,5 +52,4 @@ Node.js is much faster than Rhino and is up to par with JavaScriptCore. Here are
 
 As soon as possible we will drop support for Rhino as it is old and not maintained. It will allow us to be more up to date and for example support the ES6 release of Javascript. 
 
-The build process is still dependent on a couple of non Javascript tools like [gcc](https://gcc.gnu.org) and [ShrinkSafe](http://shrinksafe.dojotoolkit.org) etc. When we have removed all dependencies it will be much easier to build Cappuccino on all platforms including Windows. Also in the long run it would be nice to remove Narwhal and maybe replace Jake (our build system) with something more modern. Work is being done to remove gcc and if you want to get involved in working with removing any of these dependancies please get in contact with us on the [mailing list](https://groups.google.com/forum/#!forum/objectivej) or on [Gitter](https://gitter.im/cappuccino/cappuccino).
-
+The build process is still dependent on a couple of non Javascript tools like [gcc](https://gcc.gnu.org) and [ShrinkSafe](http://shrinksafe.dojotoolkit.org) etc. When we have removed all dependencies it will be much easier to build Cappuccino on all platforms including Windows. Also in the long run it will be nice to remove Narwhal and maybe replace Jake (our build system) with something more modern. Work is being done to remove gcc and if you want to get involved in working with removing any of these dependancies please get in contact with us on the [mailing list](https://groups.google.com/forum/#!forum/objectivej) or on [Gitter](https://gitter.im/cappuccino/cappuccino).
