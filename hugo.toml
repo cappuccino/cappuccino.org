@@ -1,0 +1,24 @@
+baseURL = "https://cappuccino.dev/"
+languageCode = "en-us"
+title = "Cappuccino"
+
+[params]
+description = "Objective-J, Foundation, and AppKit for the web."
+
+[menu]
+    [[menu.main]]
+        name = "Learn"
+        url = "/learn/"
+        weight = 10
+    [[menu.main]]
+        name = "Blog"
+        url = "/blog/"
+        weight = 20
+    [[menu.main]]
+        name = "Support"
+        url = "/support/"
+        weight = 30
+    [[menu.main]]
+        name = "Contribute"
+        url = "/contribute/"
+        weight = 40
