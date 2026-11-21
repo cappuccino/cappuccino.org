@@ -17,3 +17,9 @@
 *.pyc
 /.hugo_build.lock
 /public
+/public/
+/resources/_gen/
+/public/
+/resources/_gen/
+/public/
+/resources/_gen/
