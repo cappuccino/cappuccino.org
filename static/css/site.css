@@ -1,29 +1,14 @@
+/* If serving a variable Nunito WOFF2 file, use a weight range (e.g., 200 900) and point src to the variable font. */
 @font-face {
-    font-family: "Lato";
+    font-family: "Nunito";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200 900;
     font-display: swap;
-    src: local("Lato Regular"), local("Lato-Regular"), url("/fonts/Lato-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Lato Medium"), local("Lato-Medium"), url("/fonts/Lato-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Lato Bold"), local("Lato-Bold"), url("/fonts/Lato-Bold.woff2") format("woff2");
+    src: local("Nunito"), local("Nunito Variable"), url("/fonts/Nunito-Variable.woff2") format("woff2");
 }
 
 :root {
-    --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --font-sans: "Nunito", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
     --bg: #f7f6f2;
@@ -32,11 +17,6 @@
     --border: #dcdad3;
     --fg: #1b1d20;
     --muted: #555a61;
-    --prose-border: rgba(27, 29, 32, 0.28);
-    --prose-shadow: rgba(0, 0, 0, 0.14);
-    --prose-grad-top: rgba(255, 255, 255, 0.92);
-    --prose-grad-mid: rgba(255, 255, 255, 0.62);
-    --prose-grad-bot: rgba(244, 241, 234, 0.78);
     --sheen-top: rgba(255, 255, 255, 0.92);
     --sheen-mid: rgba(255, 255, 255, 0.48);
     --sheen-end: rgba(244, 242, 236, 0.35);
@@ -61,12 +41,14 @@
     --footer-link: #56b4d3;
     --footer-link-hover: #82cae2;
 
-    --measure: 44rem;
+    --measure: 65ch;
     --gutter: 1.5rem;
+    /* Wider than --gutter so masthead edges stay anchored at larger viewports. */
     --masthead-gutter: 3rem;
     /* Slight top bias compensates for deep script descenders in the wordmark pulling visual weight downward. */
     --masthead-pad-top: 0.2rem;
     --masthead-pad-bottom: 0rem;
+    /* Wider than --measure to match top-level header alignment. */
     --masthead-max-width: 72rem;
     /* Explicit height (rather than min-height/padding) is required so child percentage heights resolve reliably. */
     --masthead-height: clamp(5.5rem, 11vw, 8rem);
@@ -80,11 +62,6 @@
         --border: #485058;
         --fg: #f1f3f5;
         --muted: #c2c8cf;
-        --prose-border: rgba(255, 255, 255, 0.22);
-        --prose-shadow: rgba(0, 0, 0, 0.42);
-        --prose-grad-top: rgba(255, 255, 255, 0.10);
-        --prose-grad-mid: rgba(255, 255, 255, 0.04);
-        --prose-grad-bot: rgba(0, 0, 0, 0.12);
         --sheen-top: rgba(255, 255, 255, 0.11);
         --sheen-mid: rgba(255, 255, 255, 0.04);
         --sheen-end: rgba(255, 255, 255, 0.01);
@@ -101,10 +78,16 @@
     box-sizing: border-box;
 }
 
+/* Base body size, weight, and spacing live here so prose scales consistently across the document. */
 html {
     color-scheme: light dark;
     font-family: var(--font-sans);
-    line-height: 1.65;
+    font-size: 1.125rem;
+    font-weight: 425;
+    letter-spacing: 0.005em;
+    line-height: 1.78;
+    text-align: left;
+    word-spacing: 0.04em;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -114,6 +97,7 @@ body {
     background-attachment: fixed;
     color: var(--fg);
     font-family: inherit;
+    font-weight: inherit;
     margin: 0;
     /* Must track --masthead-height so fixed masthead never covers initial flow content. */
     padding-top: var(--masthead-height);
@@ -263,7 +247,7 @@ button, input, select, textarea {
 .site-main {
     margin-inline: auto;
     max-width: var(--measure);
-    padding: 2.25rem var(--gutter) 3rem;
+    padding: 3rem var(--gutter) 4rem;
     position: relative;
     z-index: 1;
 }
@@ -272,34 +256,31 @@ button, input, select, textarea {
     margin-top: 0;
 }
 
+.site-main h1,
+.site-main h2,
+.site-main h3 {
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+
+.site-main h1 {
+    font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+    margin: 0 0 1.5rem;
+}
+
+.site-main h2 {
+    font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+    margin: 2.5rem 0 0.9rem;
+}
+
+.site-main h3 {
+    font-size: 1.15rem;
+    margin: 2rem 0 0.65rem;
+}
+
+/* Spacing between paragraphs relies strictly on vertical margin and line-height without boxing. */
 .site-main p:not(blockquote p) {
-    background-image: linear-gradient(
-    180deg,
-    var(--prose-grad-top) 0%,
-    var(--prose-grad-mid) 50%,
-    var(--prose-grad-bot) 100%
-    );
-    margin: 0;
-    padding: 0.5rem 1rem;
-}
-
-.site-main p:not(blockquote p):first-of-type {
-    border-top: 1px solid var(--prose-border);
-    box-shadow: inset 0 9px 14px -9px var(--prose-shadow);
-    margin-top: 1.5rem;
-    padding-top: 1.15rem;
-}
-
-.site-main p:not(blockquote p):last-of-type {
-    border-bottom: 1px solid var(--prose-border);
-    box-shadow: inset 0 -9px 14px -9px var(--prose-shadow);
-    padding-bottom: 1.15rem;
-}
-
-.site-main p:not(blockquote p):first-of-type:last-of-type {
-    box-shadow:
-    inset 0 9px 14px -9px var(--prose-shadow),
-    inset 0 -9px 14px -9px var(--prose-shadow);
+    margin: 1.35rem 0;
 }
 
 blockquote {
@@ -309,8 +290,8 @@ blockquote {
     border-top: 1px solid var(--sheen-border);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     color: var(--muted);
-    margin: 1.5rem 0;
-    padding: 0.65rem 1rem 0.65rem 1.15rem;
+    margin: 1.85rem 0;
+    padding: 0.75rem 1.1rem 0.75rem 1.25rem;
 }
 
 code, pre {
