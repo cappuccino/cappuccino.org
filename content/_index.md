@@ -6,7 +6,7 @@ description: "The application architecture the web was built on, complete in the
 > The technology used to create the WWW,\
 > brought home to applications running on it.
 
-Serious web application development demands Cappuccino: a complete, open-source port of AppKit and Foundation — the architecture under which the World Wide Web itself was first built — delivering the application fundamentals the platform still ships without, ready for everyone from a lone developer to the largest team.
+Cappuccino provides the best foundation for development of zero-deployment, work-station calibre web applications. It is an open-source port of AppKit and Foundation — the architecture under which the World Wide Web itself was first built — delivering the application fundamentals the platform still ships without, ready for everyone from a lone developer to the largest team.
 
 The web development ecosystem is a wilderness of shifting sands: tooling that requires manual assembly, interoperates poorly, and loses support as quickly as it appears. The most successful commercial enterprises in human history require industrial-scale resources to bring real application functionality to the web, and even they ship without the fundamentals. Gmail has no application-wide undo, to this day. In Cappuccino, an undo stack is not a research program; it is table stakes.
 
